@@ -131,7 +131,7 @@ later passes, target behavior, and code size, so the best choice is not captured
 well by one simple rule
 \cite{godbolt2019optimizations,theodoridis2022optimal}.
 
-Inlining replaces a function call with the body of the callee. It can remove
+Inlining substitutes a call site with the instructions of the called function. It can remove
 call overhead and expose constant propagation, devirtualization, dead-code
 elimination, and other later optimizations. It can also duplicate code and grow
 the final binary when the copied body is not useful enough. Production
