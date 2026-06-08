@@ -302,6 +302,7 @@ across the merged code region
 
 \section{Cases Where Inlining Helps}
 
+The examples in this chapter are simplified examples written for this thesis.
 Small arithmetic helper functions represent typical good inlining candidates:
 
 \begin{figure}[H]
@@ -475,13 +476,16 @@ The possible action choice is binary:
   A = \{0,1\}, \qquad 0 = \text{do not inline}, \qquad 1 = \text{inline}.
 \]
 
-A policy therefore refers to a function
+A probabilistic policy assigns a score or probability to each action:
 \[
-  \pi_\theta : \mathcal{X} \rightarrow A, \qquad
   \pi_\theta(a \mid x)
 \]
-where the second form denotes the likelihood of choosing action \(a\), given
-feature vector \(x\).
+where \(\pi_\theta(a \mid x)\) denotes the likelihood of choosing action \(a\),
+given feature vector \(x\). The deterministic inline/no-inline decision used
+by the prototype is then
+\[
+  d_\theta(x) = \arg\max_{a \in A}\pi_\theta(a \mid x).
+\]
 
 Because of inlining, the problem is chronological and interdependent. If a
 policy \(\pi\) is applied to a program \(P\), it creates the trajectory:
@@ -1157,6 +1161,12 @@ still grows IR, while \texttt{deep\_forest} is closest to the selected-teacher
 reference in rewritten IR size. Similar label agreement can therefore lead to
 different size behavior.
 
+The student families, thresholds, and hyperparameters are fixed in the scripts
+before this evaluation. The phrase ``best held-out student'' is descriptive:
+it reports which fixed model had the smallest held-out rewritten IR in this
+run. No additional hyperparameter search or model-family selection is performed
+on the held-out split.
+
 \begin{table}[H]
 \centering
 \begin{minipage}[t]{0.54\textwidth}
@@ -1223,27 +1233,24 @@ All 80 & 1.22\% & 1.08\% \\
 }
 \vspace{0.35em}
 
-\includegraphics[width=0.78\linewidth]{../out/real_signal_run_all/summary_plot.pdf}
+\includegraphics[width=0.56\linewidth]{../out/real_signal_run_all/summary_plot.pdf}
 \caption{All-real-source isolated run. The experiment retrains and rewrites only
-real-source modules in \texttt{out/real\_signal\_run\_all/}, leaving the main
-reported artifacts unchanged.}
+real-source modules; the plot visualizes the same reductions as the table.}
 \label{tab:real-signal-all}
 \end{table}
 
-Positive reductions mean smaller rewritten IR than never-inline, while negative
-values mean code growth. The best held-out student is \texttt{deep\_forest},
-with 1559.62 average IR instructions, a 0.61\% reduction, and a
-7.58-instruction gap to the selected teacher. On the full artifact set,
-\texttt{conservative\_forest} is best, reducing all modules by 1.18\%.
-Absolute held-out reductions remain small because many real-source modules
-leave little profitable local inlining margin under the rewritten-IR objective,
-and because the rewrite approximation does not recompute features after each
-accepted decision.
+Positive reductions mean smaller rewritten IR than never-inline. The best
+held-out student is \texttt{deep\_forest}, with 1559.62 average IR instructions,
+a 0.61\% reduction, and a 7.58-instruction gap to the selected teacher. On the
+full artifact set, \texttt{conservative\_forest} is best, reducing all modules
+by 1.18\%. The held-out reductions remain small because many real-source modules
+leave little profitable local inlining margin and because features are not
+recomputed after each accepted rewrite.
 
-Table~\ref{tab:llvm-oz-comparison} shows why the learned policies should be
-read as prototype results rather than production replacements. LLVM
-\texttt{-Oz} remains the stronger native-size baseline, while \texttt{knn} and
-\texttt{small\_mlp} show that weak generalization can still grow held-out IR.
+Table~\ref{tab:llvm-oz-comparison} frames the learned policies as prototype
+results rather than production replacements. On held-out rewritten objects,
+\texttt{deep\_forest} reduces average \texttt{.text} from 5755.23 to 5705.23
+bytes, but LLVM \texttt{-Oz} remains the much stronger native-size baseline.
 
 A three-round BC-Max-style check also fed the previous best student back into
 the candidate pool. The selected-policy reference stayed at 1.10\% held-out IR
