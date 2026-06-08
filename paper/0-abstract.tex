@@ -1,39 +1,36 @@
 \begin{abstractpage}
 \begin{abstract}{english}
-The research area of compiler optimization continues to be relevant in
-computer science because software is expected to stay compact and efficient
-across different hardware environments while still meeting increasing
-performance requirements. Even though compile-time inlining is a fundamental
-optimization, choosing which call sites should be inlined remains difficult.
-One local choice can change the following call graph and therefore the
-optimization opportunities that later passes can still use. As a result,
-inlining can either decrease or increase the size of the generated intermediate
-representation and of the final binary.
+The research area of compiler optimization remains relevant in computer
+science, since software is expected to stay compact across different hardware
+environments while also being fast enough to keep up with industry needs. Even
+though compile-time inlining is a fundamental optimization, choosing which call
+sites should be inlined remains complicated. One local choice can affect the
+future call graph and, therefore, later optimization opportunities. As a
+result, inlining can increase or decrease the size of the generated
+intermediate representation and of the final binary.
 
-In this work, the inlining problem is framed as an offline policy-learning
-problem. For the implementation, C and C++ source files are collected from a
-small DCMTK snapshot and from a varied public-source supplement, while
-deterministic synthetic modules are added to extend the dataset with
-controlled inlining cases. The files pass through the Clang frontend with the
-inlining option turned off, in order to generate LLVM IR modules. Information
-extracted from individual call sites is translated into feature vectors that
-contain caller, callee, call-site, and call-graph information.
+In this work, the inlining problem is framed in an offline policy-learning
+setting. For the implementation, C and C++ source files are collected from a
+small DCMTK snapshot and a varied public-source supplement. Deterministic
+synthetic modules are also added to extend the dataset with controlled inlining
+cases. The files pass through the Clang frontend with inlining turned off, in
+order to generate LLVM IR modules. The information extracted from individual
+call sites is translated into feature vectors.
 
 Multiple heuristics with a teacher role are used. Each module passes through
 this heuristic set in order to determine which one minimizes rewritten IR size
 best for that module. The selected heuristic's call-site choices become the
 dataset for a supervised learning strategy, in which student models learn to
-imitate teacher trajectories through behavior cloning. The students'
-predictions are then integrated back into LLVM IR through call-site-level
-rewrites. The reported run
+mimic their teachers' paths through behavior cloning. The students' predictions
+are then integrated back into LLVM IR through call-site-level rewrites. The reported run
 compiles 163 C/C++ sources, evaluates 150 LLVM modules with local call sites,
 and extracts 10394 call-site samples. On the held-out split, the
 selected-teacher reference reduces rewritten LLVM IR instruction count by
 1.10\% relative to never-inline, while the best held-out student reaches a
 0.61\% reduction. These results do not outperform LLVM's production
 \texttt{-Oz} pipeline, but they give insight into the possibility of treating
-compile-time inlining decisions as machine-learning policy problems, not only
-as fixed classical heuristics.
+compile-time inlining decisions as machine-learning policy problems, rather
+than only as fixed classical heuristic problems.
 \end{abstract}
 \end{abstractpage}
 
