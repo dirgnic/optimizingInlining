@@ -39,10 +39,6 @@ The demo compiles four generated modules, extracts call sites, applies the
 first decisions, and writes `out/demo/demo_decisions.json` plus rewritten IR
 under `out/demo/rewritten/`.
 
-For the defense, record one successful terminal run before the presentation and
-keep the generated `out/` artifacts available. The command is still suitable for
-a live demo, but a pre-recorded run avoids losing time to local toolchain noise.
-
 ## Default Script Order
 
 | Step | Script | Role |
