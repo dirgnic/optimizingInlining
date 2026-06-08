@@ -25,9 +25,19 @@ C++ sources
 The full command is:
 
 ```bash
-cd thesis
 python3 scripts/run.py all
 ```
+
+For a short inspection run, use:
+
+```bash
+python3 scripts/run.py demo
+```
+
+The demo compiles four generated modules, extracts call sites, applies the
+`small_callee` teacher through the same clone-and-`opt` rewrite path, prints the
+first decisions, and writes `out/demo/demo_decisions.json` plus rewritten IR
+under `out/demo/rewritten/`.
 
 For the defense, record one successful terminal run before the presentation and
 keep the generated `out/` artifacts available. The command is still suitable for
@@ -59,7 +69,7 @@ The source-level anchor is a small DCMTK snapshot:
 source_snapshot/DCMTK/config/tests/*.cc
 ```
 
-The run also generates 64 deterministic C++ modules under:
+The run also generates 70 deterministic C++ modules under:
 
 ```text
 source_snapshot/DCMTK/generated_inlining/
@@ -73,6 +83,14 @@ recursion. This creates varied inline-positive and inline-negative call sites.
 ## How IR Rewriting Works
 
 The rewrite is implemented in `scripts/rewrite.py`.
+
+Call-site analysis has a deterministic textual order. `scripts/ir.py` reads
+LLVM IR modules by sorted `.ll` filename, visits functions in the order their
+`define` blocks appear in the IR file, and scans call instructions from top to
+bottom inside each function. Non-greedy teacher policies and student policies
+preserve that order when preparing rewrites. The `greedy_ir_size` teacher is
+the exception: it filters plausible candidates, sorts them by benefit/cost
+score, and keeps a candidate only if the measured rewritten IR gets smaller.
 
 For each selected inline call site:
 

@@ -91,9 +91,9 @@ def callsite_height(
     return memo[caller]
 
 
-def extract_features() -> list[Callsite]:
+def extract_features_from_paths(module_paths: list[Path], output_path: Path | None = None) -> list[Callsite]:
     rows: list[Callsite] = []
-    for module_path in sorted(IR_DIR.glob("*.ll")):
+    for module_path in sorted(module_paths):
         if is_local_copy_artifact(module_path):
             continue
         functions = parse_functions(module_path)
@@ -156,6 +156,12 @@ def extract_features() -> list[Callsite]:
                 )
             )
 
-    payload = {"feature_names": FEATURE_NAMES, "callsites": [asdict(row) for row in rows]}
-    (OUT / "features.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    if output_path is not None:
+        payload = {"feature_names": FEATURE_NAMES, "callsites": [asdict(row) for row in rows]}
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
     return rows
+
+
+def extract_features() -> list[Callsite]:
+    return extract_features_from_paths(list(IR_DIR.glob("*.ll")), OUT / "features.json")

@@ -960,8 +960,8 @@ policy.
 
 \chapter{Implementation}
 
-The main pipeline and implementation are located in the project root directory
-\texttt{thesis}. The implementation generates synthetic modules, uses
+The main pipeline and implementation are located in the repository root. The
+implementation generates synthetic modules, uses
 compilation stages to reach LLVM IR, extracts call-site features, evaluates
 teacher policies, trains students from the best-performing teachers, rewrites
 selected call sites, and writes artifacts that can be inspected. The source
@@ -974,8 +974,11 @@ repository is available at:
 
 The scripts cover generation, feature extraction, teacher selection, student
 training, rewriting, and figure generation. After cloning the repository, the
-full pipeline can be run with \texttt{cd thesis} followed by
-\texttt{python3 scripts/run.py all}. The reported numbers come from
+full pipeline can be run from the repository root with
+\texttt{python3 scripts/run.py all}. A short inspection run is available as
+\texttt{python3 scripts/run.py demo}; it compiles a few generated modules,
+prints the extracted call-site order and inline/keep decisions, and writes
+before/after demo IR under \texttt{out/demo/rewritten/}. The reported numbers come from
 deterministic source generation, a small number of DCMTK files, and a fixed
 module-level train/test split, with artifacts written under \texttt{out/}.
 
@@ -994,7 +997,8 @@ Step & Script & Role \\
 call-site data structures. \\
 \hline
 1 & \texttt{run.py} & coordinates the full command
-\texttt{cd thesis} followed by \texttt{python3 scripts/run.py all}. \\
+\texttt{python3 scripts/run.py all} and the short demo command
+\texttt{python3 scripts/run.py demo}. \\
 \hline
 2 & \texttt{build.py} & generates the deterministic synthetic modules, compiles
 C/C++ sources to LLVM IR, and measures native compiler baselines. \\
@@ -1043,6 +1047,16 @@ inliner, but a smaller reproducible inlining mechanism built for the experiment.
 During evaluation, inline predictions trigger this rewrite path, while no-inline
 predictions leave the call site unchanged; the final metric is therefore
 measured after predictions are materialized in LLVM IR.
+
+The call-site order is deterministic and textual. Modules are analyzed in sorted
+\texttt{.ll} filename order. Within each module, functions are visited in the
+order in which their LLVM \texttt{define} blocks appear. Within each function,
+call instructions are scanned from top to bottom. This is not dynamic execution
+order and not a topological call-graph order. Non-greedy teachers and student
+policies keep this extracted order when preparing rewrites. The measured
+\texttt{greedy\_ir\_size} teacher is the exception: it first filters plausible
+non-recursive candidates, orders them by benefit/cost score, and accepts a
+candidate only when the actual rewritten IR instruction count decreases.
 
 \begin{table}[H]
 \centering
@@ -1330,18 +1344,18 @@ with readable labels and values.
 \vspace{-0.6em}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.74\linewidth,height=0.25\textheight,keepaspectratio]{source_group_ir_reduction.pdf}
+\begin{minipage}[t]{0.46\linewidth}
+\centering
+\includegraphics[width=\linewidth,height=0.20\textheight,keepaspectratio]{source_group_ir_reduction.pdf}
 \caption{Teacher and student IR reduction by source group.}
 \label{fig:appendix-source-groups}
-\end{figure}
-
-\clearpage
-\vspace{-0.6em}
-\begin{figure}[H]
+\end{minipage}\hfill
+\begin{minipage}[t]{0.50\linewidth}
 \centering
-\includegraphics[width=0.68\linewidth,height=0.16\textheight,keepaspectratio]{student_teacher_match.pdf}
+\includegraphics[width=\linewidth,height=0.22\textheight,keepaspectratio]{student_teacher_match.pdf}
 \caption{Held-out teacher-label match for student models.}
 \label{fig:appendix-student-match}
+\end{minipage}
 \end{figure}
 
 \vspace{-0.6em}

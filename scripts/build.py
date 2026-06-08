@@ -372,7 +372,7 @@ def compile_to_ir(sources: list[Path] | None = None) -> dict:
 
 def compile_demo_sources() -> dict:
     """Compile a few representative generated sources for a quick live demo."""
-    clang = ensure_clang()
+    ensure_clang()
     demo_dir = OUT / "demo"
     demo_ir_dir = demo_dir / "ir"
     demo_ir_dir.mkdir(parents=True, exist_ok=True)
@@ -382,17 +382,19 @@ def compile_demo_sources() -> dict:
     for module in selected:
         source = GENERATED_DIR / f"generated_{module:03d}.cc"
         target = demo_ir_dir / f"generated_{module:03d}.ll"
+        source_arg = f"./{source.relative_to(ROOT)}"
+        target_arg = f"./{target.relative_to(ROOT)}"
         cmd = [
-            clang,
+            compiler_for(source),
             standard_for(source),
             "-S",
             "-emit-llvm",
             "-O0",
             "-fno-inline",
             "-fno-discard-value-names",
-            str(source),
+            source_arg,
             "-o",
-            str(target),
+            target_arg,
         ]
         proc = run(cmd)
         item = {

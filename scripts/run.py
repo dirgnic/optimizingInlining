@@ -1,22 +1,30 @@
 from __future__ import annotations
 
 import argparse
+import json
+from dataclasses import asdict
+from pathlib import Path
 
 from build import compile_demo_sources, compile_native_baselines, compile_to_ir, source_files
 from data import OUT, ROOT
 from graph import changing_callgraph_trace
-from ir import extract_features
+from ir import extract_features, extract_features_from_paths
 from learn import train_students
 from paper import write_feature_rationale, write_paper
 from real_signal_run import run_real_signal_pipeline
 from rewrite import (
     add_split_summaries,
     compile_rewritten_native_sizes,
+    local_call_count,
+    opt_path,
+    prepare_policy_ir,
+    run,
     rewrite_student_policies,
     rewrite_teacher_policies,
+    total_instructions,
 )
 from secondary_real_subset import write_secondary_real_subset
-from teach import make_bc_dataset
+from teach import make_bc_dataset, teacher_action
 from visual import write_visuals
 
 
@@ -49,6 +57,117 @@ def all_pipeline() -> None:
     print(f"paper summary:    {ROOT / 'paper' / 'model_paper.md'}")
     print(f"trace:            {OUT / 'callgraph_trace.md'}")
     print(f"visuals:          {OUT / 'visual_index.md'}")
+
+
+def relative(path: Path) -> str:
+    return str(path.relative_to(ROOT))
+
+
+def sanitize_demo_ir(path: Path) -> None:
+    text = path.read_text(encoding="utf-8", errors="ignore")
+    text = text.replace(str(ROOT) + "/", "")
+    text = text.replace(str(ROOT), ".")
+    path.write_text(text, encoding="utf-8")
+
+
+def demo_pipeline() -> None:
+    report = compile_demo_sources()
+    demo_dir = OUT / "demo"
+    rewrite_dir = demo_dir / "rewritten"
+    rewrite_dir.mkdir(parents=True, exist_ok=True)
+    ir_paths = [ROOT / item["ir"] for item in report["compiled"]]
+    rows = extract_features_from_paths(ir_paths, demo_dir / "demo_features.json")
+    rows_by_module: dict[str, list] = {}
+    for row in rows:
+        rows_by_module.setdefault(row.module, []).append(row)
+
+    decision_report = {
+        "command": "python3 scripts/run.py demo",
+        "order": (
+            "demo IR files are sorted by filename; functions are visited in textual "
+            "LLVM IR definition order; call instructions are scanned top-to-bottom "
+            "inside each function"
+        ),
+        "teacher": "small_callee",
+        "compiled": report["compiled"],
+        "failed": report["failed"],
+        "modules": {},
+    }
+
+    for module_path in ir_paths:
+        module_rows = rows_by_module.get(module_path.name, [])
+        inline_rows = [row for row in module_rows if teacher_action("small_callee", row)]
+        prepared = rewrite_dir / f"{module_path.stem}.prepared.ll"
+        rewritten = rewrite_dir / module_path.name
+        stats = prepare_policy_ir(module_path, prepared, inline_rows)
+        proc = run(
+            [
+                opt_path(),
+                "-S",
+                "-passes=always-inline,globaldce,instcombine,simplifycfg,dce",
+                str(prepared),
+                "-o",
+                str(rewritten),
+            ]
+        )
+        if proc.returncode != 0:
+            proc = run([opt_path(), "-S", "-passes=always-inline,globaldce", str(prepared), "-o", str(rewritten)])
+        if proc.returncode == 0:
+            sanitize_demo_ir(rewritten)
+
+        item = {
+            "input_ir": relative(module_path),
+            "prepared_ir": relative(prepared),
+            "rewritten_ir": relative(rewritten),
+            "callsites": [
+                {
+                    **asdict(row),
+                    "order_index": index,
+                    "decision": "inline" if row in inline_rows else "keep",
+                }
+                for index, row in enumerate(module_rows)
+            ],
+            "rewrite": {
+                **stats,
+                "returncode": proc.returncode,
+                "stderr": proc.stderr[-2000:],
+                "before_instruction_count": total_instructions(module_path),
+                "before_local_call_count": local_call_count(module_path),
+            },
+        }
+        if proc.returncode == 0:
+            item["rewrite"]["after_instruction_count"] = total_instructions(rewritten)
+            item["rewrite"]["after_local_call_count"] = local_call_count(rewritten)
+        decision_report["modules"][module_path.name] = item
+
+    (demo_dir / "demo_decisions.json").write_text(json.dumps(decision_report, indent=2), encoding="utf-8")
+
+    inline_total = sum(
+        1
+        for module in decision_report["modules"].values()
+        for callsite in module["callsites"]
+        if callsite["decision"] == "inline"
+    )
+    print("demo")
+    print("----")
+    print(f"compiled demo modules: {len(report['compiled'])}")
+    print(f"failed demo modules:   {len(report['failed'])}")
+    print(f"demo callsites:        {len(rows)}")
+    print(f"inline decisions:      {inline_total}")
+    print("order: sorted .ll files -> LLVM function definition order -> call-line order")
+    for module, item in decision_report["modules"].items():
+        rewrite = item["rewrite"]
+        print(
+            f"{module}: calls={len(item['callsites'])}, inline={sum(1 for c in item['callsites'] if c['decision'] == 'inline')}, "
+            f"local calls {rewrite['before_local_call_count']} -> {rewrite.get('after_local_call_count', rewrite['before_local_call_count'])}, "
+            f"instr {rewrite['before_instruction_count']} -> {rewrite.get('after_instruction_count', rewrite['before_instruction_count'])}"
+        )
+        for callsite in item["callsites"][:5]:
+            print(
+                f"  [{callsite['order_index']:02d}] {callsite['caller']} -> {callsite['callee']}: {callsite['decision']}"
+            )
+    print(f"decisions JSON:        {demo_dir / 'demo_decisions.json'}")
+    print(f"rewritten IR:          {rewrite_dir}")
 
 
 def main() -> None:
@@ -93,13 +212,7 @@ def main() -> None:
         teacher_rewrite = rewrite_teacher_policies(rows)
         changing_callgraph_trace(rows, make_bc_dataset(rows, teacher_rewrite))
     elif args.command == "demo":
-        report = compile_demo_sources()
-        print("demo")
-        print("----")
-        for item in report["compiled"]:
-            print(f"{item['source']} -> {item['ir']}")
-        if report["failed"]:
-            print(f"failed: {len(report['failed'])}")
+        demo_pipeline()
     elif args.command == "real-subset":
         result = write_secondary_real_subset()
         print("secondary real-source subset")
