@@ -1,0 +1,24 @@
+DCMTK source citation for thesis.
+
+DCMTK is the DICOM Toolkit source package maintained by OFFIS e.V.
+
+Local source:
+source_snapshot/DCMTK
+
+Upstream repository:
+https://github.com/DCMTK/dcmtk.git
+
+Local documentation consulted:
+- DCMTK/README.md
+- DCMTK/COPYRIGHT
+
+Copyright/license note from the local checkout:
+Copyright (C) 1994-2026, OFFIS e.V. All rights reserved.
+Redistribution and use in source and binary forms, with or without modification,
+are permitted under the conditions listed in the DCMTK COPYRIGHT file.
+
+How this attempt uses DCMTK:
+- It copies a small standalone subset of DCMTK configuration test sources.
+- It compiles them to LLVM IR with Clang without inlining optimizations.
+- It extracts callsites and trains/evaluates offline imitation-learning policies
+  over the resulting LLVM IR features.

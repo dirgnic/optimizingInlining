@@ -1,0 +1,82 @@
+{
+  "compiled": 162,
+  "failed": 1,
+  "features": 9540,
+  "modules": 149,
+  "teacher_counts": {
+    "cost_budget": 5,
+    "single_caller": 15,
+    "small_callee": 37,
+    "loop_averse": 14,
+    "never_inline": 63,
+    "constant_argument": 4,
+    "llvm_like_size": 2,
+    "aggressive_speed": 5,
+    "benefit_cost_ratio": 2,
+    "hot_leaf": 1,
+    "balanced_score": 1
+  },
+  "label_counts": {
+    "1": 580,
+    "0": 8960
+  },
+  "group_modules": {
+    "DCMTK": 4,
+    "generated": 70,
+    "curated public C/C++": 70,
+    "cBench": 1,
+    "SQLite": 4
+  },
+  "group_callsites": {
+    "DCMTK": 40,
+    "generated": 1226,
+    "curated public C/C++": 8162,
+    "cBench": 34,
+    "SQLite": 78
+  },
+  "group_inline_labels": {
+    "DCMTK": 34,
+    "generated": 304,
+    "curated public C/C++": 230,
+    "cBench": 6,
+    "SQLite": 6
+  },
+  "teacher_by_group": {
+    "DCMTK": {
+      "cost_budget": 1,
+      "single_caller": 1,
+      "small_callee": 2
+    },
+    "generated": {
+      "small_callee": 22,
+      "single_caller": 7,
+      "loop_averse": 13,
+      "never_inline": 18,
+      "constant_argument": 2,
+      "llvm_like_size": 1,
+      "aggressive_speed": 5,
+      "benefit_cost_ratio": 2
+    },
+    "curated public C/C++": {
+      "never_inline": 45,
+      "cost_budget": 3,
+      "small_callee": 12,
+      "llvm_like_size": 1,
+      "single_caller": 6,
+      "balanced_score": 1,
+      "constant_argument": 2
+    },
+    "cBench": {
+      "loop_averse": 1
+    },
+    "SQLite": {
+      "small_callee": 1,
+      "hot_leaf": 1,
+      "single_caller": 1,
+      "cost_budget": 1
+    }
+  },
+  "failed_sources": [
+    "source_snapshot/DCMTK/config/tests/lfs64.cc"
+  ]
+}

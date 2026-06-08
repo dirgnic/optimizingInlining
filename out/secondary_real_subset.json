@@ -1,0 +1,345 @@
+{
+  "metric": "actual_rewritten_ir_instruction_count",
+  "selection_rule": "real-source modules only, sorted by selected-teacher reduction relative to never_inline; top N kept as a secondary diagnostic",
+  "limit": 30,
+  "available_real_source_modules": 80,
+  "selected_module_count": 30,
+  "never_inline_total_ir": 89208,
+  "selected_teacher_total_ir": 86083,
+  "selected_teacher_reduction_pct": 3.503049053896511,
+  "best_student": "deep_forest",
+  "best_student_total_ir": 86288,
+  "best_student_reduction_pct": 3.2732490359609003,
+  "student_totals": {
+    "logistic_regression": {
+      "total_ir": 86522,
+      "reduction_vs_never_inline_pct": 3.0109407228051293
+    },
+    "decision_tree": {
+      "total_ir": 86542,
+      "reduction_vs_never_inline_pct": 2.988521208860192
+    },
+    "knn": {
+      "total_ir": 87895,
+      "reduction_vs_never_inline_pct": 1.4718410904851582
+    },
+    "random_forest": {
+      "total_ir": 86289,
+      "reduction_vs_never_inline_pct": 3.2721280602636535
+    },
+    "deep_forest": {
+      "total_ir": 86288,
+      "reduction_vs_never_inline_pct": 3.2732490359609003
+    },
+    "conservative_forest": {
+      "total_ir": 86378,
+      "reduction_vs_never_inline_pct": 3.1723612232086804
+    },
+    "small_mlp": {
+      "total_ir": 86388,
+      "reduction_vs_never_inline_pct": 3.1611514662362117
+    }
+  },
+  "modules": [
+    {
+      "module": "source_snapshot_DCMTK_config_tests_cxx14.ll",
+      "never_inline_ir": 60,
+      "selected_teacher": "single_caller",
+      "selected_teacher_ir": 27,
+      "selected_teacher_reduction_pct": 55.00000000000001,
+      "best_student": "decision_tree",
+      "best_student_ir": 27,
+      "best_student_reduction_pct": 55.00000000000001
+    },
+    {
+      "module": "source_snapshot_DCMTK_config_tests_cxx11.ll",
+      "never_inline_ir": 143,
+      "selected_teacher": "greedy_ir_size",
+      "selected_teacher_ir": 98,
+      "selected_teacher_reduction_pct": 31.46853146853147,
+      "best_student": "random_forest",
+      "best_student_ir": 105,
+      "best_student_reduction_pct": 26.573426573426573
+    },
+    {
+      "module": "source_snapshot_DCMTK_config_tests_cxx17.ll",
+      "never_inline_ir": 146,
+      "selected_teacher": "greedy_ir_size",
+      "selected_teacher_ir": 118,
+      "selected_teacher_reduction_pct": 19.17808219178082,
+      "best_student": "knn",
+      "best_student_ir": 123,
+      "best_student_reduction_pct": 15.753424657534246
+    },
+    {
+      "module": "source_snapshot_public_repos_tracy_examples_ToyPathTracer_Source_enkiTS_TaskScheduler_c.ll",
+      "never_inline_ir": 177,
+      "selected_teacher": "single_caller",
+      "selected_teacher_ir": 169,
+      "selected_teacher_reduction_pct": 4.519774011299435,
+      "best_student": "decision_tree",
+      "best_student_ir": 169,
+      "best_student_reduction_pct": 4.519774011299435
+    },
+    {
+      "module": "source_snapshot_public_repos_lz4_lib_lz4.ll",
+      "never_inline_ir": 59756,
+      "selected_teacher": "small_callee",
+      "selected_teacher_ir": 57093,
+      "selected_teacher_reduction_pct": 4.456456255438784,
+      "best_student": "conservative_forest",
+      "best_student_ir": 57087,
+      "best_student_reduction_pct": 4.466497088158512
+    },
+    {
+      "module": "source_snapshot_public_repos_tinyexpr_repl.ll",
+      "never_inline_ir": 144,
+      "selected_teacher": "small_callee",
+      "selected_teacher_ir": 138,
+      "selected_teacher_reduction_pct": 4.166666666666666,
+      "best_student": "decision_tree",
+      "best_student_ir": 138,
+      "best_student_reduction_pct": 4.166666666666666
+    },
+    {
+      "module": "source_snapshot_public_repos_tracy_public_libbacktrace_alloc.ll",
+      "never_inline_ir": 178,
+      "selected_teacher": "small_callee",
+      "selected_teacher_ir": 172,
+      "selected_teacher_reduction_pct": 3.3707865168539324,
+      "best_student": "decision_tree",
+      "best_student_ir": 172,
+      "best_student_reduction_pct": 3.3707865168539324
+    },
+    {
+      "module": "source_snapshot_public_repos_zlib_contrib_iostream3_test.ll",
+      "never_inline_ir": 663,
+      "selected_teacher": "greedy_ir_size",
+      "selected_teacher_ir": 645,
+      "selected_teacher_reduction_pct": 2.7149321266968327,
+      "best_student": "logistic_regression",
+      "best_student_ir": 663,
+      "best_student_reduction_pct": 0.0
+    },
+    {
+      "module": "source_snapshot_public_repos_tracy_profiler_src_ResolvService.ll",
+      "never_inline_ir": 1734,
+      "selected_teacher": "balanced_score",
+      "selected_teacher_ir": 1689,
+      "selected_teacher_reduction_pct": 2.5951557093425603,
+      "best_student": "decision_tree",
+      "best_student_ir": 1683,
+      "best_student_reduction_pct": 2.941176470588235
+    },
+    {
+      "module": "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_rtp.ll",
+      "never_inline_ir": 272,
+      "selected_teacher": "loop_averse",
+      "selected_teacher_ir": 265,
+      "selected_teacher_reduction_pct": 2.5735294117647056,
+      "best_student": "decision_tree",
+      "best_student_ir": 265,
+      "best_student_reduction_pct": 2.5735294117647056
+    },
+    {
+      "module": "source_snapshot_public_repos_tracy_examples_ToyPathTracer_Source_enkiTS_TaskScheduler.ll",
+      "never_inline_ir": 1012,
+      "selected_teacher": "llvm_like_size",
+      "selected_teacher_ir": 989,
+      "selected_teacher_reduction_pct": 2.272727272727273,
+      "best_student": "random_forest",
+      "best_student_ir": 997,
+      "best_student_reduction_pct": 1.4822134387351777
+    },
+    {
+      "module": "source_snapshot_public_repos_tiny-AES-c_test.ll",
+      "never_inline_ir": 191,
+      "selected_teacher": "small_callee",
+      "selected_teacher_ir": 187,
+      "selected_teacher_reduction_pct": 2.094240837696335,
+      "best_student": "decision_tree",
+      "best_student_ir": 187,
+      "best_student_reduction_pct": 2.094240837696335
+    },
+    {
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_bzip2.ll",
+      "never_inline_ir": 2650,
+      "selected_teacher": "greedy_ir_size",
+      "selected_teacher_ir": 2598,
+      "selected_teacher_reduction_pct": 1.9622641509433962,
+      "best_student": "deep_forest",
+      "best_student_ir": 2604,
+      "best_student_reduction_pct": 1.7358490566037734
+    },
+    {
+      "module": "source_snapshot_public_repos_log.c_src_log.ll",
+      "never_inline_ir": 231,
+      "selected_teacher": "small_callee",
+      "selected_teacher_ir": 227,
+      "selected_teacher_reduction_pct": 1.7316017316017316,
+      "best_student": "decision_tree",
+      "best_student_ir": 227,
+      "best_student_reduction_pct": 1.7316017316017316
+    },
+    {
+      "module": "source_snapshot_public_repos_tracy_server_TracyTaskDispatch.ll",
+      "never_inline_ir": 2752,
+      "selected_teacher": "single_caller",
+      "selected_teacher_ir": 2712,
+      "selected_teacher_reduction_pct": 1.4534883720930232,
+      "best_student": "decision_tree",
+      "best_student_ir": 2716,
+      "best_student_reduction_pct": 1.308139534883721
+    },
+    {
+      "module": "source_snapshot_public_repos_zlib_examples_gzjoin.ll",
+      "never_inline_ir": 1081,
+      "selected_teacher": "greedy_ir_size",
+      "selected_teacher_ir": 1069,
+      "selected_teacher_reduction_pct": 1.1100832562442182,
+      "best_student": "knn",
+      "best_student_ir": 1079,
+      "best_student_reduction_pct": 0.18501387604070307
+    },
+    {
+      "module": "source_snapshot_public_repos_mibench_network_patricia_patricia_test.ll",
+      "never_inline_ir": 184,
+      "selected_teacher": "small_callee",
+      "selected_teacher_ir": 182,
+      "selected_teacher_reduction_pct": 1.0869565217391304,
+      "best_student": "logistic_regression",
+      "best_student_ir": 182,
+      "best_student_reduction_pct": 1.0869565217391304
+    },
+    {
+      "module": "source_snapshot_public_repos_zlib_contrib_iostream3_zfstream.ll",
+      "never_inline_ir": 1537,
+      "selected_teacher": "greedy_ir_size",
+      "selected_teacher_ir": 1521,
+      "selected_teacher_reduction_pct": 1.040988939492518,
+      "best_student": "conservative_forest",
+      "best_student_ir": 1537,
+      "best_student_reduction_pct": 0.0
+    },
+    {
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-telecom-gsm_toast.ll",
+      "never_inline_ir": 1078,
+      "selected_teacher": "greedy_ir_size",
+      "selected_teacher_ir": 1068,
+      "selected_teacher_reduction_pct": 0.927643784786642,
+      "best_student": "random_forest",
+      "best_student_ir": 1076,
+      "best_student_reduction_pct": 0.1855287569573284
+    },
+    {
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_intl_loadmsgcat.ll",
+      "never_inline_ir": 229,
+      "selected_teacher": "loop_averse",
+      "selected_teacher_ir": 227,
+      "selected_teacher_reduction_pct": 0.8733624454148471,
+      "best_student": "decision_tree",
+      "best_student_ir": 227,
+      "best_student_reduction_pct": 0.8733624454148471
+    },
+    {
+      "module": "source_snapshot_public_repos_lz4_lib_lz4frame.ll",
+      "never_inline_ir": 4456,
+      "selected_teacher": "greedy_ir_size",
+      "selected_teacher_ir": 4420,
+      "selected_teacher_reduction_pct": 0.807899461400359,
+      "best_student": "deep_forest",
+      "best_student_ir": 4423,
+      "best_student_reduction_pct": 0.7405745062836625
+    },
+    {
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcmarker.ll",
+      "never_inline_ir": 825,
+      "selected_teacher": "single_caller",
+      "selected_teacher_ir": 819,
+      "selected_teacher_reduction_pct": 0.7272727272727273,
+      "best_student": "decision_tree",
+      "best_student_ir": 821,
+      "best_student_reduction_pct": 0.48484848484848486
+    },
+    {
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jcmarker.ll",
+      "never_inline_ir": 825,
+      "selected_teacher": "single_caller",
+      "selected_teacher_ir": 819,
+      "selected_teacher_reduction_pct": 0.7272727272727273,
+      "best_student": "decision_tree",
+      "best_student_ir": 821,
+      "best_student_reduction_pct": 0.48484848484848486
+    },
+    {
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jcmarker.ll",
+      "never_inline_ir": 825,
+      "selected_teacher": "single_caller",
+      "selected_teacher_ir": 819,
+      "selected_teacher_reduction_pct": 0.7272727272727273,
+      "best_student": "decision_tree",
+      "best_student_ir": 821,
+      "best_student_reduction_pct": 0.48484848484848486
+    },
+    {
+      "module": "source_snapshot_public_repos_tracy_public_common_TracySocket.ll",
+      "never_inline_ir": 1150,
+      "selected_teacher": "greedy_ir_size",
+      "selected_teacher_ir": 1142,
+      "selected_teacher_reduction_pct": 0.6956521739130435,
+      "best_student": "knn",
+      "best_student_ir": 1150,
+      "best_student_reduction_pct": 0.0
+    },
+    {
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdjpgcom.ll",
+      "never_inline_ir": 455,
+      "selected_teacher": "greedy_ir_size",
+      "selected_teacher_ir": 452,
+      "selected_teacher_reduction_pct": 0.6593406593406593,
+      "best_student": "logistic_regression",
+      "best_student_ir": 455,
+      "best_student_reduction_pct": 0.0
+    },
+    {
+      "module": "source_snapshot_public_repos_zlib_contrib_minizip_miniunz.ll",
+      "never_inline_ir": 958,
+      "selected_teacher": "small_callee",
+      "selected_teacher_ir": 952,
+      "selected_teacher_reduction_pct": 0.6263048016701461,
+      "best_student": "decision_tree",
+      "best_student_ir": 952,
+      "best_student_reduction_pct": 0.6263048016701461
+    },
+    {
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jmemname.ll",
+      "never_inline_ir": 171,
+      "selected_teacher": "single_caller",
+      "selected_teacher_ir": 170,
+      "selected_teacher_reduction_pct": 0.5847953216374269,
+      "best_student": "decision_tree",
+      "best_student_ir": 170,
+      "best_student_reduction_pct": 0.5847953216374269
+    },
+    {
+      "module": "source_snapshot_public_repos_tracy_examples_ToyPathTracer_Source_Test.ll",
+      "never_inline_ir": 4588,
+      "selected_teacher": "greedy_ir_size",
+      "selected_teacher_ir": 4563,
+      "selected_teacher_reduction_pct": 0.5448997384481256,
+      "best_student": "logistic_regression",
+      "best_student_ir": 4582,
+      "best_student_reduction_pct": 0.13077593722755013
+    },
+    {
+      "module": "source_snapshot_public_repos_zlib_contrib_minizip_minizip.ll",
+      "never_inline_ir": 737,
+      "selected_teacher": "small_callee",
+      "selected_teacher_ir": 733,
+      "selected_teacher_reduction_pct": 0.5427408412483039,
+      "best_student": "logistic_regression",
+      "best_student_ir": 733,
+      "best_student_reduction_pct": 0.5427408412483039
+    }
+  ]
+}

@@ -1,0 +1,676 @@
+{
+  "compiled": [
+    {
+      "source": "source_snapshot/DCMTK/config/tests/algo.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_config_tests_algo.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/config/tests/cxx11.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_config_tests_cxx11.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/config/tests/cxx14.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_config_tests_cxx14.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/config/tests/cxx17.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_config_tests_cxx17.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/config/tests/cxx20.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_config_tests_cxx20.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/config/tests/iconv.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_config_tests_iconv.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/config/tests/lciconv.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_config_tests_lciconv.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/config/tests/limits.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_config_tests_limits.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/config/tests/list.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_config_tests_list.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/config/tests/map.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_config_tests_map.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/config/tests/memory.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_config_tests_memory.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/config/tests/stack.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_config_tests_stack.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/config/tests/string.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_config_tests_string.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/config/tests/syserr.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_config_tests_syserr.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/config/tests/ttraits.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_config_tests_ttraits.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/config/tests/tuple.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_config_tests_tuple.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/config/tests/vector.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_config_tests_vector.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_000.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_000.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_001.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_001.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_002.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_002.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_003.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_003.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_004.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_004.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_005.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_005.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_006.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_006.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_007.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_007.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_008.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_008.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_009.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_009.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_010.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_010.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_011.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_011.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_012.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_012.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_013.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_013.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_014.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_014.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_015.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_015.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_016.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_016.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_017.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_017.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_018.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_018.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_019.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_019.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_020.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_020.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_021.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_021.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_022.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_022.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_023.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_023.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_024.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_024.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_025.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_025.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_026.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_026.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_027.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_027.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_028.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_028.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_029.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_029.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_030.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_030.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_031.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_031.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_032.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_032.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_033.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_033.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_034.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_034.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_035.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_035.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_036.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_036.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_037.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_037.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_038.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_038.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_039.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_039.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_040.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_040.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_041.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_041.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_042.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_042.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_043.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_043.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_044.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_044.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_045.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_045.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_046.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_046.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_047.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_047.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_048.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_048.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_049.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_049.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_050.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_050.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_051.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_051.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_052.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_052.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_053.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_053.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_054.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_054.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_055.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_055.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_056.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_056.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_057.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_057.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_058.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_058.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_059.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_059.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_060.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_060.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_061.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_061.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_062.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_062.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_063.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_063.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_064.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_064.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_065.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_065.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_066.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_066.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_067.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_067.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_068.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_068.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_069.cc",
+      "ir": "out/ir/source_snapshot_DCMTK_generated_inlining_generated_069.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/inih/cpp/INIReader.cpp",
+      "ir": "out/ir/source_snapshot_public_repos_inih_cpp_INIReader.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/inih/examples/INIReaderExample.cpp",
+      "ir": "out/ir/source_snapshot_public_repos_inih_examples_INIReaderExample.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/inih/examples/INIReaderExampleErrors.cpp",
+      "ir": "out/ir/source_snapshot_public_repos_inih_examples_INIReaderExampleErrors.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/tracy/examples/ToyPathTracer/Source/Test.cpp",
+      "ir": "out/ir/source_snapshot_public_repos_tracy_examples_ToyPathTracer_Source_Test.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/tracy/examples/ToyPathTracer/Source/enkiTS/TaskScheduler.cpp",
+      "ir": "out/ir/source_snapshot_public_repos_tracy_examples_ToyPathTracer_Source_enkiTS_TaskScheduler.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/tracy/examples/ToyPathTracer/Source/enkiTS/TaskScheduler_c.cpp",
+      "ir": "out/ir/source_snapshot_public_repos_tracy_examples_ToyPathTracer_Source_enkiTS_TaskScheduler_c.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/tracy/profiler/src/ResolvService.cpp",
+      "ir": "out/ir/source_snapshot_public_repos_tracy_profiler_src_ResolvService.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/tracy/public/common/TracySocket.cpp",
+      "ir": "out/ir/source_snapshot_public_repos_tracy_public_common_TracySocket.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/tracy/public/libbacktrace/alloc.cpp",
+      "ir": "out/ir/source_snapshot_public_repos_tracy_public_libbacktrace_alloc.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/tracy/public/libbacktrace/macho.cpp",
+      "ir": "out/ir/source_snapshot_public_repos_tracy_public_libbacktrace_macho.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/tracy/server/TracyPrint.cpp",
+      "ir": "out/ir/source_snapshot_public_repos_tracy_server_TracyPrint.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/tracy/server/TracyTaskDispatch.cpp",
+      "ir": "out/ir/source_snapshot_public_repos_tracy_server_TracyTaskDispatch.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/tracy/update/src/OfflineSymbolResolverAddr2Line.cpp",
+      "ir": "out/ir/source_snapshot_public_repos_tracy_update_src_OfflineSymbolResolverAddr2Line.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/contrib/iostream3/test.cc",
+      "ir": "out/ir/source_snapshot_public_repos_zlib_contrib_iostream3_test.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/contrib/iostream3/zfstream.cc",
+      "ir": "out/ir/source_snapshot_public_repos_zlib_contrib_iostream3_zfstream.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/cJSON.c",
+      "ir": "out/ir/source_snapshot_public_repos_cJSON_cJSON.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/cjson_add.c",
+      "ir": "out/ir/source_snapshot_public_repos_cJSON_tests_cjson_add.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/compare_tests.c",
+      "ir": "out/ir/source_snapshot_public_repos_cJSON_tests_compare_tests.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/json_patch_tests.c",
+      "ir": "out/ir/source_snapshot_public_repos_cJSON_tests_json_patch_tests.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/minify_tests.c",
+      "ir": "out/ir/source_snapshot_public_repos_cJSON_tests_minify_tests.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/misc_tests.c",
+      "ir": "out/ir/source_snapshot_public_repos_cJSON_tests_misc_tests.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/misc_utils_tests.c",
+      "ir": "out/ir/source_snapshot_public_repos_cJSON_tests_misc_utils_tests.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/old_utils_tests.c",
+      "ir": "out/ir/source_snapshot_public_repos_cJSON_tests_old_utils_tests.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/parse_array.c",
+      "ir": "out/ir/source_snapshot_public_repos_cJSON_tests_parse_array.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/parse_examples.c",
+      "ir": "out/ir/source_snapshot_public_repos_cJSON_tests_parse_examples.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/parse_hex4.c",
+      "ir": "out/ir/source_snapshot_public_repos_cJSON_tests_parse_hex4.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/parse_number.c",
+      "ir": "out/ir/source_snapshot_public_repos_cJSON_tests_parse_number.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/parse_object.c",
+      "ir": "out/ir/source_snapshot_public_repos_cJSON_tests_parse_object.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/parse_string.c",
+      "ir": "out/ir/source_snapshot_public_repos_cJSON_tests_parse_string.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/parse_value.c",
+      "ir": "out/ir/source_snapshot_public_repos_cJSON_tests_parse_value.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/parse_with_opts.c",
+      "ir": "out/ir/source_snapshot_public_repos_cJSON_tests_parse_with_opts.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/print_array.c",
+      "ir": "out/ir/source_snapshot_public_repos_cJSON_tests_print_array.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/print_number.c",
+      "ir": "out/ir/source_snapshot_public_repos_cJSON_tests_print_number.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/print_object.c",
+      "ir": "out/ir/source_snapshot_public_repos_cJSON_tests_print_object.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/print_string.c",
+      "ir": "out/ir/source_snapshot_public_repos_cJSON_tests_print_string.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/print_value.c",
+      "ir": "out/ir/source_snapshot_public_repos_cJSON_tests_print_value.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/readme_examples.c",
+      "ir": "out/ir/source_snapshot_public_repos_cJSON_tests_readme_examples.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/unity/src/unity.c",
+      "ir": "out/ir/source_snapshot_public_repos_cJSON_tests_unity_src_unity.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-bzip2/bzip2.c",
+      "ir": "out/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_bzip2.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-bzip2/bzlib.c",
+      "ir": "out/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_bzlib.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcmarker.c",
+      "ir": "out/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcmarker.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdmarker.c",
+      "ir": "out/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdmarker.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jquant1.c",
+      "ir": "out/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jquant1.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jcmarker.c",
+      "ir": "out/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jcmarker.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jquant1.c",
+      "ir": "out/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jquant1.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/wrgif.c",
+      "ir": "out/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_wrgif.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/trees.c",
+      "ir": "out/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_trees.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-telecom-gsm/toast.c",
+      "ir": "out/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-telecom-gsm_toast.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/picojpeg/libpicojpeg.c",
+      "ir": "out/ir/source_snapshot_public_repos_embench-iot_src_picojpeg_libpicojpeg.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/log.c/src/log.c",
+      "ir": "out/ir/source_snapshot_public_repos_log.c_src_log.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/lz4/lib/lz4.c",
+      "ir": "out/ir/source_snapshot_public_repos_lz4_lib_lz4.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/lz4/lib/lz4frame.c",
+      "ir": "out/ir/source_snapshot_public_repos_lz4_lib_lz4frame.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jcmarker.c",
+      "ir": "out/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jcmarker.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdmarker.c",
+      "ir": "out/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdmarker.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jmemname.c",
+      "ir": "out/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jmemname.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jquant1.c",
+      "ir": "out/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jquant1.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/rdjpgcom.c",
+      "ir": "out/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdjpgcom.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/wrgif.c",
+      "ir": "out/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_wrgif.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/wrjpgcom.c",
+      "ir": "out/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_wrjpgcom.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/rtp.c",
+      "ir": "out/ir/source_snapshot_public_repos_mibench_consumer_lame_lame3.70_rtp.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/intl/loadmsgcat.c",
+      "ir": "out/ir/source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_intl_loadmsgcat.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/libz/trees.c",
+      "ir": "out/ir/source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_libz_trees.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/network/patricia/patricia_test.c",
+      "ir": "out/ir/source_snapshot_public_repos_mibench_network_patricia_patricia_test.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/parson/parson.c",
+      "ir": "out/ir/source_snapshot_public_repos_parson_parson.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/sqlite/ext/misc/basexx.c",
+      "ir": "out/ir/source_snapshot_public_repos_sqlite_ext_misc_basexx.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/sqlite/ext/misc/fileio.c",
+      "ir": "out/ir/source_snapshot_public_repos_sqlite_ext_misc_fileio.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/sqlite/ext/misc/fossildelta.c",
+      "ir": "out/ir/source_snapshot_public_repos_sqlite_ext_misc_fossildelta.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/sqlite/ext/misc/percentile.c",
+      "ir": "out/ir/source_snapshot_public_repos_sqlite_ext_misc_percentile.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/tiny-AES-c/test.c",
+      "ir": "out/ir/source_snapshot_public_repos_tiny-AES-c_test.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/tinyexpr/repl.c",
+      "ir": "out/ir/source_snapshot_public_repos_tinyexpr_repl.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/contrib/minizip/miniunz.c",
+      "ir": "out/ir/source_snapshot_public_repos_zlib_contrib_minizip_miniunz.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/contrib/minizip/minizip.c",
+      "ir": "out/ir/source_snapshot_public_repos_zlib_contrib_minizip_minizip.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/contrib/minizip/zip.c",
+      "ir": "out/ir/source_snapshot_public_repos_zlib_contrib_minizip_zip.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/examples/enough.c",
+      "ir": "out/ir/source_snapshot_public_repos_zlib_examples_enough.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/examples/gzjoin.c",
+      "ir": "out/ir/source_snapshot_public_repos_zlib_examples_gzjoin.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/trees.c",
+      "ir": "out/ir/source_snapshot_public_repos_zlib_trees.ll"
+    }
+  ],
+  "imported_ir": [],
+  "skipped_ir": [],
+  "failed": [
+    {
+      "source": "source_snapshot/DCMTK/config/tests/lfs64.cc",
+      "command": [
+        "/opt/homebrew/bin/clang++",
+        "-std=c++17",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/DCMTK/config/tests/lfs64.cc",
+        "-o",
+        "./out/ir/source_snapshot_DCMTK_config_tests_lfs64.ll"
+      ],
+      "stderr": "./source_snapshot/DCMTK/config/tests/lfs64.cc:27:13: error: use of undeclared identifier 'fopen64'; did you mean 'fopen'?\n  FILE *f = fopen64(\"name\", \"r\");\n            ^~~~~~~\n            fopen\n/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdio.h:243:7: note: 'fopen' declared here\nFILE    *fopen(const char * __restrict __filename, const char * __restrict __mode) __DARWIN_ALIAS_STARTING(__MAC_10_6, __IPHONE_2_0, __DARWIN_ALIAS(fopen));\n         ^\n1 error generated.\n"
+    }
+  ]
+}

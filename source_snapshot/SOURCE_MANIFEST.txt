@@ -1,0 +1,58 @@
+Source snapshot copied from main_pipeline/data/repos/DCMTK.
+
+Repository source:
+- Name: DCMTK
+- Local path: source_snapshot/DCMTK
+- Upstream GitHub remote: https://github.com/DCMTK/dcmtk.git
+- Project description: DICOM Toolkit source package maintained by OFFIS e.V.
+- License/copyright source: DCMTK/COPYRIGHT in the local checkout.
+
+Full local DCMTK C++ implementation-file count:
+- 1099 files matching *.cc, *.cpp, or *.cxx under main_pipeline/data/repos/DCMTK.
+
+Copied source subset used by this attempt:
+- 18 files, all from DCMTK/config/tests.
+- These are small DCMTK configuration/compiler test programs. They are useful here
+  because most compile standalone with Clang, without the full DCMTK build system.
+
+Copied files:
+1. DCMTK/config/tests/algo.cc
+2. DCMTK/config/tests/cxx11.cc
+3. DCMTK/config/tests/cxx14.cc
+4. DCMTK/config/tests/cxx17.cc
+5. DCMTK/config/tests/cxx20.cc
+6. DCMTK/config/tests/iconv.cc
+7. DCMTK/config/tests/lciconv.cc
+8. DCMTK/config/tests/lfs64.cc
+9. DCMTK/config/tests/limits.cc
+10. DCMTK/config/tests/list.cc
+11. DCMTK/config/tests/map.cc
+12. DCMTK/config/tests/memory.cc
+13. DCMTK/config/tests/stack.cc
+14. DCMTK/config/tests/string.cc
+15. DCMTK/config/tests/syserr.cc
+16. DCMTK/config/tests/ttraits.cc
+17. DCMTK/config/tests/tuple.cc
+18. DCMTK/config/tests/vector.cc
+
+Compile result from the current pipeline run:
+- 17 files compiled to LLVM IR with clang++ -O0 -fno-inline.
+- cxx20.cc is compiled with -std=c++20; the other files use -std=c++17.
+- 1 file failed on this local macOS toolchain:
+  - lfs64.cc references fopen64, unavailable on this platform.
+
+Native baseline result from the current pipeline run:
+- 17 files compiled to object files for each native baseline mode.
+- The measured metric is the object-file __text/.text section size.
+- The modes are -Oz, -Oz -fno-inline, and -O0 -fno-inline.
+
+IR rewrite result from the current pipeline run:
+- Modules with local callsites are rewritten through LLVM opt.
+- Policy-selected callees are marked alwaysinline, then opt runs always-inline
+  and cleanup passes.
+- This is real IR rewriting, but function-level rather than callsite-exact.
+
+Important scope note:
+- The attempt uses only copied DCMTK C++ source files.
+- Project-owned C++ files from main_pipeline and the previous custom example were removed
+  from this attempt to keep the data source clean.

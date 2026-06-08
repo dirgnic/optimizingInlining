@@ -1,0 +1,3630 @@
+; ModuleID = './out/inlinefriendly_mibench_scan/rewritten_ir/teacher_bandit_ucb_proxy/source_snapshot_public_repos_mibench_consumer_tiff-v3.5.4_libtiff_tif_dir.prepared.ll'
+source_filename = "./source_snapshot/public_repos/mibench/consumer/tiff-v3.5.4/libtiff/tif_dir.c"
+target datalayout = "e-m:o-i64:64-i128:128-n32:64-S128"
+target triple = "arm64-apple-macosx15.0.0"
+
+%struct.tiff = type { ptr, i32, i32, i64, i64, i64, %struct.TIFFDirectory, %struct.TIFFHeader, ptr, ptr, ptr, i64, i16, i64, i64, i64, i16, i64, i64, i64, i64, ptr, ptr, ptr, ptr, ptr, ptr, ptr, ptr, ptr, ptr, ptr, ptr, ptr, ptr, ptr, ptr, ptr, i64, i64, ptr, i64, ptr, i64, ptr, i64, ptr, ptr, ptr, ptr, ptr, ptr, ptr, ptr, ptr, ptr, i32, ptr, ptr, ptr }
+%struct.TIFFDirectory = type { [3 x i64], i64, i64, i64, i64, i64, i64, i64, i16, i16, i16, i16, i16, i16, i16, i16, i64, i16, i16, double, double, float, float, i16, i16, float, float, [2 x i16], [3 x ptr], [2 x i16], i16, ptr, double, ptr, ptr, ptr, ptr, ptr, ptr, ptr, ptr, ptr, i64, i64, ptr, ptr, i16, ptr, ptr, [2 x i16], i16, ptr, ptr, ptr, [3 x ptr], i16, i16, [2 x i16], i32, ptr, ptr, i64, ptr, i64, ptr, i64, ptr, i64, i64, ptr, ptr, float, ptr, ptr }
+%struct.TIFFHeader = type { i16, i16, i64 }
+%struct.TIFFFieldInfo = type { i64, i16, i16, i32, i16, i8, i8, ptr }
+
+@_TIFFextender = internal global ptr null, align 8
+@TIFFUnlinkDirectory.module = internal constant [20 x i8] c"TIFFUnlinkDirectory\00", align 1
+@.str = private unnamed_addr constant [43 x i8] c"Can not unlink directory in read-only file\00", align 1
+@.str.1 = private unnamed_addr constant [28 x i8] c"Directory %d does not exist\00", align 1
+@.str.2 = private unnamed_addr constant [29 x i8] c"Error writing directory link\00", align 1
+@TIFFReassignTagToIgnore.TIFFignoretags = internal global [95 x i32] zeroinitializer, align 4
+@TIFFReassignTagToIgnore.tagcount = internal global i32 0, align 4
+@.str.3 = private unnamed_addr constant [13 x i8] c"TIFFSetField\00", align 1
+@.str.4 = private unnamed_addr constant [21 x i8] c"%s: Unknown %stag %u\00", align 1
+@.str.5 = private unnamed_addr constant [8 x i8] c"pseudo-\00", align 1
+@.str.6 = private unnamed_addr constant [1 x i8] zeroinitializer, align 1
+@.str.7 = private unnamed_addr constant [41 x i8] c"%s: Cannot modify tag \22%s\22 while writing\00", align 1
+@.str.8 = private unnamed_addr constant [69 x i8] c"LZW compression no longer supported due to Unisys patent enforcement\00", align 1
+@.str.9 = private unnamed_addr constant [35 x i8] c"Bad value %ld for \22%s\22 tag ignored\00", align 1
+@.str.10 = private unnamed_addr constant [40 x i8] c"Nonstandard tile width %d, convert file\00", align 1
+@.str.11 = private unnamed_addr constant [41 x i8] c"Nonstandard tile length %d, convert file\00", align 1
+@.str.12 = private unnamed_addr constant [27 x i8] c"Sorry, cannot nest SubIFDs\00", align 1
+@.str.13 = private unnamed_addr constant [48 x i8] c"%s: Invalid %stag \22%s\22 (not supported by codec)\00", align 1
+@.str.14 = private unnamed_addr constant [8 x i8] c"pseduo-\00", align 1
+@.str.15 = private unnamed_addr constant [23 x i8] c"%d: Bad value for \22%s\22\00", align 1
+@.str.16 = private unnamed_addr constant [24 x i8] c"%ld: Bad value for \22%s\22\00", align 1
+@.str.17 = private unnamed_addr constant [23 x i8] c"%f: Bad value for \22%s\22\00", align 1
+@.str.18 = private unnamed_addr constant [57 x i8] c"%s: Invalid InkNames value; expecting %d names, found %d\00", align 1
+@.str.19 = private unnamed_addr constant [13 x i8] c"TIFFGetField\00", align 1
+@TIFFAdvanceDirectory.module = internal constant [21 x i8] c"TIFFAdvanceDirectory\00", align 1
+@.str.20 = private unnamed_addr constant [35 x i8] c"%s: Error fetching directory count\00", align 1
+@.str.21 = private unnamed_addr constant [34 x i8] c"%s: Error fetching directory link\00", align 1
+
+; Function Attrs: nounwind ssp uwtable
+define void @_TIFFsetByteArray(ptr noundef %vpp, ptr noundef %vp, i64 noundef %n) #0 {
+entry:
+  %vpp.addr = alloca ptr, align 8
+  %vp.addr = alloca ptr, align 8
+  %n.addr = alloca i64, align 8
+  store ptr %vpp, ptr %vpp.addr, align 8
+  store ptr %vp, ptr %vp.addr, align 8
+  store i64 %n, ptr %n.addr, align 8
+  %0 = load ptr, ptr %vpp, align 8
+  %tobool.not = icmp eq ptr %0, null
+  br i1 %tobool.not, label %if.end, label %if.then
+
+if.then:                                          ; preds = %entry
+  %1 = load ptr, ptr %vpp.addr, align 8
+  %2 = load ptr, ptr %1, align 8
+  call void @_TIFFfree(ptr noundef %2) #5
+  store ptr null, ptr %1, align 8
+  br label %if.end
+
+if.end:                                           ; preds = %if.then, %entry
+  %3 = load ptr, ptr %vp.addr, align 8
+  %tobool1.not = icmp eq ptr %3, null
+  br i1 %tobool1.not, label %if.end4, label %land.lhs.true
+
+land.lhs.true:                                    ; preds = %if.end
+  %4 = load i64, ptr %n.addr, align 8
+  %call = call ptr @_TIFFmalloc(i64 noundef %4) #5
+  %5 = load ptr, ptr %vpp.addr, align 8
+  store ptr %call, ptr %5, align 8
+  %tobool2.not = icmp eq ptr %call, null
+  br i1 %tobool2.not, label %if.end4, label %if.then3
+
+if.then3:                                         ; preds = %land.lhs.true
+  %6 = load ptr, ptr %vpp.addr, align 8
+  %7 = load ptr, ptr %6, align 8
+  %8 = load ptr, ptr %vp.addr, align 8
+  %9 = load i64, ptr %n.addr, align 8
+  call void @_TIFFmemcpy(ptr noundef %7, ptr noundef %8, i64 noundef %9) #5
+  br label %if.end4
+
+if.end4:                                          ; preds = %if.then3, %land.lhs.true, %if.end
+  ret void
+}
+
+declare void @_TIFFfree(ptr noundef) #1
+
+declare ptr @_TIFFmalloc(i64 noundef) #1
+
+declare void @_TIFFmemcpy(ptr noundef, ptr noundef, i64 noundef) #1
+
+; Function Attrs: nounwind ssp uwtable
+define void @_TIFFsetString(ptr noundef %cpp, ptr noundef %cp) #0 {
+entry:
+  %call = call i64 @strlen(ptr noundef nonnull dereferenceable(1) %cp) #5
+  %add = add i64 %call, 1
+  call void @_TIFFsetByteArray(ptr noundef %cpp, ptr noundef %cp, i64 noundef %add)
+  ret void
+}
+
+declare i64 @strlen(ptr noundef) #1
+
+; Function Attrs: nounwind ssp uwtable
+define void @_TIFFsetNString(ptr noundef %cpp, ptr noundef %cp, i64 noundef %n) #0 {
+entry:
+  call void @_TIFFsetByteArray(ptr noundef %cpp, ptr noundef %cp, i64 noundef %n)
+  ret void
+}
+
+; Function Attrs: nounwind ssp uwtable
+define void @_TIFFsetShortArray(ptr noundef %wpp, ptr noundef %wp, i64 noundef %n) #0 {
+entry:
+  %mul = shl i64 %n, 1
+  call void @_TIFFsetByteArray(ptr noundef %wpp, ptr noundef %wp, i64 noundef %mul)
+  ret void
+}
+
+; Function Attrs: nounwind ssp uwtable
+define void @_TIFFsetLongArray(ptr noundef %lpp, ptr noundef %lp, i64 noundef %n) #0 {
+entry:
+  %mul = shl i64 %n, 3
+  call void @_TIFFsetByteArray(ptr noundef %lpp, ptr noundef %lp, i64 noundef %mul)
+  ret void
+}
+
+; Function Attrs: nounwind ssp uwtable
+define void @_TIFFsetFloatArray(ptr noundef %fpp, ptr noundef %fp, i64 noundef %n) #0 {
+entry:
+  %mul = shl i64 %n, 2
+  call void @_TIFFsetByteArray(ptr noundef %fpp, ptr noundef %fp, i64 noundef %mul)
+  ret void
+}
+
+; Function Attrs: nounwind ssp uwtable
+define void @_TIFFsetDoubleArray(ptr noundef %dpp, ptr noundef %dp, i64 noundef %n) #0 {
+entry:
+  %mul = shl i64 %n, 3
+  call void @_TIFFsetByteArray(ptr noundef %dpp, ptr noundef %dp, i64 noundef %mul)
+  ret void
+}
+
+; Function Attrs: nounwind ssp uwtable
+define i32 @TIFFSetField(ptr noundef %tif, i64 noundef %tag, ...) #0 {
+entry:
+  %ap = alloca ptr, align 8
+  call void @llvm.va_start(ptr nonnull %ap)
+  %0 = load ptr, ptr %ap, align 8
+  %call = call i32 @TIFFVSetField(ptr noundef %tif, i64 noundef %tag, ptr noundef %0)
+  call void @llvm.va_end(ptr %ap)
+  ret i32 %call
+}
+
+; Function Attrs: nocallback nofree nosync nounwind willreturn
+declare void @llvm.va_start(ptr) #2
+
+; Function Attrs: nounwind ssp uwtable
+define i32 @TIFFVSetField(ptr noundef %tif, i64 noundef %tag, ptr noundef %ap) #0 {
+entry:
+  %tif.addr = alloca ptr, align 8
+  %tag.addr = alloca i64, align 8
+  %ap.addr = alloca ptr, align 8
+  store ptr %tif, ptr %tif.addr, align 8
+  store i64 %tag, ptr %tag.addr, align 8
+  store ptr %ap, ptr %ap.addr, align 8
+  %call = call i32 @OkToChangeTag(ptr noundef %tif, i64 noundef %tag)
+  %tobool.not = icmp eq i32 %call, 0
+  br i1 %tobool.not, label %cond.end, label %cond.true
+
+cond.true:                                        ; preds = %entry
+  %0 = load ptr, ptr %tif.addr, align 8
+  %tif_vsetfield = getelementptr inbounds %struct.tiff, ptr %0, i64 0, i32 57
+  %1 = load ptr, ptr %tif_vsetfield, align 8
+  %2 = load i64, ptr %tag.addr, align 8
+  %3 = load ptr, ptr %ap.addr, align 8
+  %call1 = call i32 %1(ptr noundef %0, i64 noundef %2, ptr noundef %3) #5
+  br label %cond.end
+
+cond.end:                                         ; preds = %entry, %cond.true
+  %cond = phi i32 [ %call1, %cond.true ], [ 0, %entry ]
+  ret i32 %cond
+}
+
+; Function Attrs: nocallback nofree nosync nounwind willreturn
+declare void @llvm.va_end(ptr) #2
+
+; Function Attrs: nounwind ssp uwtable
+define internal i32 @OkToChangeTag(ptr noundef %tif, i64 noundef %tag) #0 {
+entry:
+  %retval = alloca i32, align 4
+  %tif.addr = alloca ptr, align 8
+  %tag.addr = alloca i64, align 8
+  %fip = alloca ptr, align 8
+  store ptr %tif, ptr %tif.addr, align 8
+  store i64 %tag, ptr %tag.addr, align 8
+  %call = call ptr @_TIFFFindFieldInfo(ptr noundef %tif, i64 noundef %tag, i32 noundef 0) #5
+  store ptr %call, ptr %fip, align 8
+  %tobool.not = icmp eq ptr %call, null
+  br i1 %tobool.not, label %if.then, label %if.end
+
+if.then:                                          ; preds = %entry
+  %0 = load ptr, ptr %tif.addr, align 8
+  %1 = load ptr, ptr %0, align 8
+  %2 = load i64, ptr %tag.addr, align 8
+  %cmp = icmp ugt i64 %2, 65535
+  %cond = select i1 %cmp, ptr @.str.5, ptr @.str.6
+  call void (ptr, ptr, ...) @TIFFError(ptr noundef nonnull @.str.3, ptr noundef nonnull @.str.4, ptr noundef %1, ptr noundef nonnull %cond, i64 noundef %2) #5
+  store i32 0, ptr %retval, align 4
+  br label %return
+
+if.end:                                           ; preds = %entry
+  %3 = load i64, ptr %tag.addr, align 8
+  %cmp1.not = icmp eq i64 %3, 257
+  br i1 %cmp1.not, label %if.end7, label %land.lhs.true
+
+land.lhs.true:                                    ; preds = %if.end
+  %4 = load ptr, ptr %tif.addr, align 8
+  %tif_flags = getelementptr inbounds %struct.tiff, ptr %4, i64 0, i32 3
+  %5 = load i64, ptr %tif_flags, align 8
+  %and = and i64 %5, 64
+  %tobool2.not = icmp eq i64 %and, 0
+  br i1 %tobool2.not, label %if.end7, label %land.lhs.true3
+
+land.lhs.true3:                                   ; preds = %land.lhs.true
+  %6 = load ptr, ptr %fip, align 8
+  %field_oktochange = getelementptr inbounds %struct.TIFFFieldInfo, ptr %6, i64 0, i32 5
+  %7 = load i8, ptr %field_oktochange, align 2
+  %tobool4.not = icmp eq i8 %7, 0
+  br i1 %tobool4.not, label %if.then5, label %if.end7
+
+if.then5:                                         ; preds = %land.lhs.true3
+  %8 = load ptr, ptr %tif.addr, align 8
+  %9 = load ptr, ptr %8, align 8
+  %10 = load ptr, ptr %fip, align 8
+  %field_name = getelementptr inbounds %struct.TIFFFieldInfo, ptr %10, i64 0, i32 7
+  %11 = load ptr, ptr %field_name, align 8
+  call void (ptr, ptr, ...) @TIFFError(ptr noundef nonnull @.str.3, ptr noundef nonnull @.str.7, ptr noundef %9, ptr noundef %11) #5
+  store i32 0, ptr %retval, align 4
+  br label %return
+
+if.end7:                                          ; preds = %land.lhs.true3, %land.lhs.true, %if.end
+  store i32 1, ptr %retval, align 4
+  br label %return
+
+return:                                           ; preds = %if.end7, %if.then5, %if.then
+  %12 = load i32, ptr %retval, align 4
+  ret i32 %12
+}
+
+; Function Attrs: nounwind ssp uwtable
+define i32 @TIFFGetField(ptr noundef %tif, i64 noundef %tag, ...) #0 {
+entry:
+  %ap = alloca ptr, align 8
+  call void @llvm.va_start(ptr nonnull %ap)
+  %0 = load ptr, ptr %ap, align 8
+  %call = call i32 @TIFFVGetField(ptr noundef %tif, i64 noundef %tag, ptr noundef %0)
+  call void @llvm.va_end(ptr %ap)
+  ret i32 %call
+}
+
+; Function Attrs: nounwind ssp uwtable
+define i32 @TIFFVGetField(ptr noundef %tif, i64 noundef %tag, ptr noundef %ap) #0 {
+entry:
+  %tif.addr = alloca ptr, align 8
+  %tag.addr = alloca i64, align 8
+  %ap.addr = alloca ptr, align 8
+  %fip = alloca ptr, align 8
+  store ptr %tif, ptr %tif.addr, align 8
+  store i64 %tag, ptr %tag.addr, align 8
+  store ptr %ap, ptr %ap.addr, align 8
+  %call = call ptr @_TIFFFindFieldInfo(ptr noundef %tif, i64 noundef %tag, i32 noundef 0) #5
+  store ptr %call, ptr %fip, align 8
+  %tobool.not = icmp eq ptr %call, null
+  br i1 %tobool.not, label %cond.end, label %land.lhs.true
+
+land.lhs.true:                                    ; preds = %entry
+  %0 = load i64, ptr %tag.addr, align 8
+  %cmp = icmp ugt i64 %0, 65535
+  br i1 %cmp, label %cond.true, label %lor.lhs.false
+
+lor.lhs.false:                                    ; preds = %land.lhs.true
+  %1 = load ptr, ptr %tif.addr, align 8
+  %tif_dir = getelementptr inbounds %struct.tiff, ptr %1, i64 0, i32 6
+  %2 = load ptr, ptr %fip, align 8
+  %field_bit = getelementptr inbounds %struct.TIFFFieldInfo, ptr %2, i64 0, i32 4
+  %3 = load i16, ptr %field_bit, align 8
+  %4 = lshr i16 %3, 5
+  %idxprom = zext i16 %4 to i64
+  %arrayidx = getelementptr inbounds [3 x i64], ptr %tif_dir, i64 0, i64 %idxprom
+  %5 = load i64, ptr %arrayidx, align 8
+  %6 = load ptr, ptr %fip, align 8
+  %field_bit1 = getelementptr inbounds %struct.TIFFFieldInfo, ptr %6, i64 0, i32 4
+  %7 = load i16, ptr %field_bit1, align 8
+  %8 = and i16 %7, 31
+  %sh_prom = zext i16 %8 to i64
+  %shl = shl i64 1, %sh_prom
+  %and3 = and i64 %5, %shl
+  %tobool4.not = icmp eq i64 %and3, 0
+  br i1 %tobool4.not, label %cond.end, label %cond.true
+
+cond.true:                                        ; preds = %lor.lhs.false, %land.lhs.true
+  %9 = load ptr, ptr %tif.addr, align 8
+  %tif_vgetfield = getelementptr inbounds %struct.tiff, ptr %9, i64 0, i32 58
+  %10 = load ptr, ptr %tif_vgetfield, align 8
+  %11 = load i64, ptr %tag.addr, align 8
+  %12 = load ptr, ptr %ap.addr, align 8
+  %call5 = call i32 %10(ptr noundef %9, i64 noundef %11, ptr noundef %12) #5
+  br label %cond.end
+
+cond.end:                                         ; preds = %entry, %lor.lhs.false, %cond.true
+  %cond = phi i32 [ %call5, %cond.true ], [ 0, %lor.lhs.false ], [ 0, %entry ]
+  ret i32 %cond
+}
+
+declare ptr @_TIFFFindFieldInfo(ptr noundef, i64 noundef, i32 noundef) #1
+
+; Function Attrs: nounwind ssp uwtable
+define void @TIFFFreeDirectory(ptr noundef %tif) #0 {
+entry:
+  %td = alloca ptr, align 8
+  %tif_dir = getelementptr inbounds %struct.tiff, ptr %tif, i64 0, i32 6
+  store ptr %tif_dir, ptr %td, align 8
+  %td_colormap = getelementptr inbounds %struct.tiff, ptr %tif, i64 0, i32 6, i32 28
+  %0 = load ptr, ptr %td_colormap, align 8
+  %tobool.not = icmp eq ptr %0, null
+  br i1 %tobool.not, label %if.end, label %if.then
+
+if.then:                                          ; preds = %entry
+  %1 = load ptr, ptr %td, align 8
+  %td_colormap1 = getelementptr inbounds %struct.TIFFDirectory, ptr %1, i64 0, i32 28
+  %2 = load ptr, ptr %td_colormap1, align 8
+  call void @_TIFFfree(ptr noundef %2) #5
+  %td_colormap3 = getelementptr inbounds %struct.TIFFDirectory, ptr %1, i64 0, i32 28
+  store ptr null, ptr %td_colormap3, align 8
+  br label %if.end
+
+if.end:                                           ; preds = %if.then, %entry
+  %3 = load ptr, ptr %td, align 8
+  %arrayidx6 = getelementptr inbounds %struct.TIFFDirectory, ptr %3, i64 0, i32 28, i64 1
+  %4 = load ptr, ptr %arrayidx6, align 8
+  %tobool7.not = icmp eq ptr %4, null
+  br i1 %tobool7.not, label %if.end13, label %if.then8
+
+if.then8:                                         ; preds = %if.end
+  %5 = load ptr, ptr %td, align 8
+  %arrayidx10 = getelementptr inbounds %struct.TIFFDirectory, ptr %5, i64 0, i32 28, i64 1
+  %6 = load ptr, ptr %arrayidx10, align 8
+  call void @_TIFFfree(ptr noundef %6) #5
+  %arrayidx12 = getelementptr inbounds %struct.TIFFDirectory, ptr %5, i64 0, i32 28, i64 1
+  store ptr null, ptr %arrayidx12, align 8
+  br label %if.end13
+
+if.end13:                                         ; preds = %if.then8, %if.end
+  %7 = load ptr, ptr %td, align 8
+  %arrayidx15 = getelementptr inbounds %struct.TIFFDirectory, ptr %7, i64 0, i32 28, i64 2
+  %8 = load ptr, ptr %arrayidx15, align 8
+  %tobool16.not = icmp eq ptr %8, null
+  br i1 %tobool16.not, label %if.end22, label %if.then17
+
+if.then17:                                        ; preds = %if.end13
+  %9 = load ptr, ptr %td, align 8
+  %arrayidx19 = getelementptr inbounds %struct.TIFFDirectory, ptr %9, i64 0, i32 28, i64 2
+  %10 = load ptr, ptr %arrayidx19, align 8
+  call void @_TIFFfree(ptr noundef %10) #5
+  %arrayidx21 = getelementptr inbounds %struct.TIFFDirectory, ptr %9, i64 0, i32 28, i64 2
+  store ptr null, ptr %arrayidx21, align 8
+  br label %if.end22
+
+if.end22:                                         ; preds = %if.then17, %if.end13
+  %11 = load ptr, ptr %td, align 8
+  %td_documentname = getelementptr inbounds %struct.TIFFDirectory, ptr %11, i64 0, i32 33
+  %12 = load ptr, ptr %td_documentname, align 8
+  %tobool23.not = icmp eq ptr %12, null
+  br i1 %tobool23.not, label %if.end27, label %if.then24
+
+if.then24:                                        ; preds = %if.end22
+  %13 = load ptr, ptr %td, align 8
+  %td_documentname25 = getelementptr inbounds %struct.TIFFDirectory, ptr %13, i64 0, i32 33
+  %14 = load ptr, ptr %td_documentname25, align 8
+  call void @_TIFFfree(ptr noundef %14) #5
+  %td_documentname26 = getelementptr inbounds %struct.TIFFDirectory, ptr %13, i64 0, i32 33
+  store ptr null, ptr %td_documentname26, align 8
+  br label %if.end27
+
+if.end27:                                         ; preds = %if.then24, %if.end22
+  %15 = load ptr, ptr %td, align 8
+  %td_artist = getelementptr inbounds %struct.TIFFDirectory, ptr %15, i64 0, i32 34
+  %16 = load ptr, ptr %td_artist, align 8
+  %tobool28.not = icmp eq ptr %16, null
+  br i1 %tobool28.not, label %if.end32, label %if.then29
+
+if.then29:                                        ; preds = %if.end27
+  %17 = load ptr, ptr %td, align 8
+  %td_artist30 = getelementptr inbounds %struct.TIFFDirectory, ptr %17, i64 0, i32 34
+  %18 = load ptr, ptr %td_artist30, align 8
+  call void @_TIFFfree(ptr noundef %18) #5
+  %td_artist31 = getelementptr inbounds %struct.TIFFDirectory, ptr %17, i64 0, i32 34
+  store ptr null, ptr %td_artist31, align 8
+  br label %if.end32
+
+if.end32:                                         ; preds = %if.then29, %if.end27
+  %19 = load ptr, ptr %td, align 8
+  %td_datetime = getelementptr inbounds %struct.TIFFDirectory, ptr %19, i64 0, i32 35
+  %20 = load ptr, ptr %td_datetime, align 8
+  %tobool33.not = icmp eq ptr %20, null
+  br i1 %tobool33.not, label %if.end37, label %if.then34
+
+if.then34:                                        ; preds = %if.end32
+  %21 = load ptr, ptr %td, align 8
+  %td_datetime35 = getelementptr inbounds %struct.TIFFDirectory, ptr %21, i64 0, i32 35
+  %22 = load ptr, ptr %td_datetime35, align 8
+  call void @_TIFFfree(ptr noundef %22) #5
+  %td_datetime36 = getelementptr inbounds %struct.TIFFDirectory, ptr %21, i64 0, i32 35
+  store ptr null, ptr %td_datetime36, align 8
+  br label %if.end37
+
+if.end37:                                         ; preds = %if.then34, %if.end32
+  %23 = load ptr, ptr %td, align 8
+  %td_hostcomputer = getelementptr inbounds %struct.TIFFDirectory, ptr %23, i64 0, i32 36
+  %24 = load ptr, ptr %td_hostcomputer, align 8
+  %tobool38.not = icmp eq ptr %24, null
+  br i1 %tobool38.not, label %if.end42, label %if.then39
+
+if.then39:                                        ; preds = %if.end37
+  %25 = load ptr, ptr %td, align 8
+  %td_hostcomputer40 = getelementptr inbounds %struct.TIFFDirectory, ptr %25, i64 0, i32 36
+  %26 = load ptr, ptr %td_hostcomputer40, align 8
+  call void @_TIFFfree(ptr noundef %26) #5
+  %td_hostcomputer41 = getelementptr inbounds %struct.TIFFDirectory, ptr %25, i64 0, i32 36
+  store ptr null, ptr %td_hostcomputer41, align 8
+  br label %if.end42
+
+if.end42:                                         ; preds = %if.then39, %if.end37
+  %27 = load ptr, ptr %td, align 8
+  %td_imagedescription = getelementptr inbounds %struct.TIFFDirectory, ptr %27, i64 0, i32 37
+  %28 = load ptr, ptr %td_imagedescription, align 8
+  %tobool43.not = icmp eq ptr %28, null
+  br i1 %tobool43.not, label %if.end47, label %if.then44
+
+if.then44:                                        ; preds = %if.end42
+  %29 = load ptr, ptr %td, align 8
+  %td_imagedescription45 = getelementptr inbounds %struct.TIFFDirectory, ptr %29, i64 0, i32 37
+  %30 = load ptr, ptr %td_imagedescription45, align 8
+  call void @_TIFFfree(ptr noundef %30) #5
+  %td_imagedescription46 = getelementptr inbounds %struct.TIFFDirectory, ptr %29, i64 0, i32 37
+  store ptr null, ptr %td_imagedescription46, align 8
+  br label %if.end47
+
+if.end47:                                         ; preds = %if.then44, %if.end42
+  %31 = load ptr, ptr %td, align 8
+  %td_make = getelementptr inbounds %struct.TIFFDirectory, ptr %31, i64 0, i32 38
+  %32 = load ptr, ptr %td_make, align 8
+  %tobool48.not = icmp eq ptr %32, null
+  br i1 %tobool48.not, label %if.end52, label %if.then49
+
+if.then49:                                        ; preds = %if.end47
+  %33 = load ptr, ptr %td, align 8
+  %td_make50 = getelementptr inbounds %struct.TIFFDirectory, ptr %33, i64 0, i32 38
+  %34 = load ptr, ptr %td_make50, align 8
+  call void @_TIFFfree(ptr noundef %34) #5
+  %td_make51 = getelementptr inbounds %struct.TIFFDirectory, ptr %33, i64 0, i32 38
+  store ptr null, ptr %td_make51, align 8
+  br label %if.end52
+
+if.end52:                                         ; preds = %if.then49, %if.end47
+  %35 = load ptr, ptr %td, align 8
+  %td_model = getelementptr inbounds %struct.TIFFDirectory, ptr %35, i64 0, i32 39
+  %36 = load ptr, ptr %td_model, align 8
+  %tobool53.not = icmp eq ptr %36, null
+  br i1 %tobool53.not, label %if.end57, label %if.then54
+
+if.then54:                                        ; preds = %if.end52
+  %37 = load ptr, ptr %td, align 8
+  %td_model55 = getelementptr inbounds %struct.TIFFDirectory, ptr %37, i64 0, i32 39
+  %38 = load ptr, ptr %td_model55, align 8
+  call void @_TIFFfree(ptr noundef %38) #5
+  %td_model56 = getelementptr inbounds %struct.TIFFDirectory, ptr %37, i64 0, i32 39
+  store ptr null, ptr %td_model56, align 8
+  br label %if.end57
+
+if.end57:                                         ; preds = %if.then54, %if.end52
+  %39 = load ptr, ptr %td, align 8
+  %td_software = getelementptr inbounds %struct.TIFFDirectory, ptr %39, i64 0, i32 40
+  %40 = load ptr, ptr %td_software, align 8
+  %tobool58.not = icmp eq ptr %40, null
+  br i1 %tobool58.not, label %if.end62, label %if.then59
+
+if.then59:                                        ; preds = %if.end57
+  %41 = load ptr, ptr %td, align 8
+  %td_software60 = getelementptr inbounds %struct.TIFFDirectory, ptr %41, i64 0, i32 40
+  %42 = load ptr, ptr %td_software60, align 8
+  call void @_TIFFfree(ptr noundef %42) #5
+  %td_software61 = getelementptr inbounds %struct.TIFFDirectory, ptr %41, i64 0, i32 40
+  store ptr null, ptr %td_software61, align 8
+  br label %if.end62
+
+if.end62:                                         ; preds = %if.then59, %if.end57
+  %43 = load ptr, ptr %td, align 8
+  %td_pagename = getelementptr inbounds %struct.TIFFDirectory, ptr %43, i64 0, i32 41
+  %44 = load ptr, ptr %td_pagename, align 8
+  %tobool63.not = icmp eq ptr %44, null
+  br i1 %tobool63.not, label %if.end67, label %if.then64
+
+if.then64:                                        ; preds = %if.end62
+  %45 = load ptr, ptr %td, align 8
+  %td_pagename65 = getelementptr inbounds %struct.TIFFDirectory, ptr %45, i64 0, i32 41
+  %46 = load ptr, ptr %td_pagename65, align 8
+  call void @_TIFFfree(ptr noundef %46) #5
+  %td_pagename66 = getelementptr inbounds %struct.TIFFDirectory, ptr %45, i64 0, i32 41
+  store ptr null, ptr %td_pagename66, align 8
+  br label %if.end67
+
+if.end67:                                         ; preds = %if.then64, %if.end62
+  %47 = load ptr, ptr %td, align 8
+  %td_sampleinfo = getelementptr inbounds %struct.TIFFDirectory, ptr %47, i64 0, i32 31
+  %48 = load ptr, ptr %td_sampleinfo, align 8
+  %tobool68.not = icmp eq ptr %48, null
+  br i1 %tobool68.not, label %if.end72, label %if.then69
+
+if.then69:                                        ; preds = %if.end67
+  %49 = load ptr, ptr %td, align 8
+  %td_sampleinfo70 = getelementptr inbounds %struct.TIFFDirectory, ptr %49, i64 0, i32 31
+  %50 = load ptr, ptr %td_sampleinfo70, align 8
+  call void @_TIFFfree(ptr noundef %50) #5
+  %td_sampleinfo71 = getelementptr inbounds %struct.TIFFDirectory, ptr %49, i64 0, i32 31
+  store ptr null, ptr %td_sampleinfo71, align 8
+  br label %if.end72
+
+if.end72:                                         ; preds = %if.then69, %if.end67
+  %51 = load ptr, ptr %td, align 8
+  %td_subifd = getelementptr inbounds %struct.TIFFDirectory, ptr %51, i64 0, i32 47
+  %52 = load ptr, ptr %td_subifd, align 8
+  %tobool73.not = icmp eq ptr %52, null
+  br i1 %tobool73.not, label %if.end77, label %if.then74
+
+if.then74:                                        ; preds = %if.end72
+  %53 = load ptr, ptr %td, align 8
+  %td_subifd75 = getelementptr inbounds %struct.TIFFDirectory, ptr %53, i64 0, i32 47
+  %54 = load ptr, ptr %td_subifd75, align 8
+  call void @_TIFFfree(ptr noundef %54) #5
+  %td_subifd76 = getelementptr inbounds %struct.TIFFDirectory, ptr %53, i64 0, i32 47
+  store ptr null, ptr %td_subifd76, align 8
+  br label %if.end77
+
+if.end77:                                         ; preds = %if.then74, %if.end72
+  %55 = load ptr, ptr %td, align 8
+  %td_ycbcrcoeffs = getelementptr inbounds %struct.TIFFDirectory, ptr %55, i64 0, i32 48
+  %56 = load ptr, ptr %td_ycbcrcoeffs, align 8
+  %tobool78.not = icmp eq ptr %56, null
+  br i1 %tobool78.not, label %if.end82, label %if.then79
+
+if.then79:                                        ; preds = %if.end77
+  %57 = load ptr, ptr %td, align 8
+  %td_ycbcrcoeffs80 = getelementptr inbounds %struct.TIFFDirectory, ptr %57, i64 0, i32 48
+  %58 = load ptr, ptr %td_ycbcrcoeffs80, align 8
+  call void @_TIFFfree(ptr noundef %58) #5
+  %td_ycbcrcoeffs81 = getelementptr inbounds %struct.TIFFDirectory, ptr %57, i64 0, i32 48
+  store ptr null, ptr %td_ycbcrcoeffs81, align 8
+  br label %if.end82
+
+if.end82:                                         ; preds = %if.then79, %if.end77
+  %59 = load ptr, ptr %td, align 8
+  %td_inknames = getelementptr inbounds %struct.TIFFDirectory, ptr %59, i64 0, i32 59
+  %60 = load ptr, ptr %td_inknames, align 8
+  %tobool83.not = icmp eq ptr %60, null
+  br i1 %tobool83.not, label %if.end87, label %if.then84
+
+if.then84:                                        ; preds = %if.end82
+  %61 = load ptr, ptr %td, align 8
+  %td_inknames85 = getelementptr inbounds %struct.TIFFDirectory, ptr %61, i64 0, i32 59
+  %62 = load ptr, ptr %td_inknames85, align 8
+  call void @_TIFFfree(ptr noundef %62) #5
+  %td_inknames86 = getelementptr inbounds %struct.TIFFDirectory, ptr %61, i64 0, i32 59
+  store ptr null, ptr %td_inknames86, align 8
+  br label %if.end87
+
+if.end87:                                         ; preds = %if.then84, %if.end82
+  %63 = load ptr, ptr %td, align 8
+  %td_targetprinter = getelementptr inbounds %struct.TIFFDirectory, ptr %63, i64 0, i32 60
+  %64 = load ptr, ptr %td_targetprinter, align 8
+  %tobool88.not = icmp eq ptr %64, null
+  br i1 %tobool88.not, label %if.end92, label %if.then89
+
+if.then89:                                        ; preds = %if.end87
+  %65 = load ptr, ptr %td, align 8
+  %td_targetprinter90 = getelementptr inbounds %struct.TIFFDirectory, ptr %65, i64 0, i32 60
+  %66 = load ptr, ptr %td_targetprinter90, align 8
+  call void @_TIFFfree(ptr noundef %66) #5
+  %td_targetprinter91 = getelementptr inbounds %struct.TIFFDirectory, ptr %65, i64 0, i32 60
+  store ptr null, ptr %td_targetprinter91, align 8
+  br label %if.end92
+
+if.end92:                                         ; preds = %if.then89, %if.end87
+  %67 = load ptr, ptr %td, align 8
+  %td_whitepoint = getelementptr inbounds %struct.TIFFDirectory, ptr %67, i64 0, i32 51
+  %68 = load ptr, ptr %td_whitepoint, align 8
+  %tobool93.not = icmp eq ptr %68, null
+  br i1 %tobool93.not, label %if.end97, label %if.then94
+
+if.then94:                                        ; preds = %if.end92
+  %69 = load ptr, ptr %td, align 8
+  %td_whitepoint95 = getelementptr inbounds %struct.TIFFDirectory, ptr %69, i64 0, i32 51
+  %70 = load ptr, ptr %td_whitepoint95, align 8
+  call void @_TIFFfree(ptr noundef %70) #5
+  %td_whitepoint96 = getelementptr inbounds %struct.TIFFDirectory, ptr %69, i64 0, i32 51
+  store ptr null, ptr %td_whitepoint96, align 8
+  br label %if.end97
+
+if.end97:                                         ; preds = %if.then94, %if.end92
+  %71 = load ptr, ptr %td, align 8
+  %td_primarychromas = getelementptr inbounds %struct.TIFFDirectory, ptr %71, i64 0, i32 52
+  %72 = load ptr, ptr %td_primarychromas, align 8
+  %tobool98.not = icmp eq ptr %72, null
+  br i1 %tobool98.not, label %if.end102, label %if.then99
+
+if.then99:                                        ; preds = %if.end97
+  %73 = load ptr, ptr %td, align 8
+  %td_primarychromas100 = getelementptr inbounds %struct.TIFFDirectory, ptr %73, i64 0, i32 52
+  %74 = load ptr, ptr %td_primarychromas100, align 8
+  call void @_TIFFfree(ptr noundef %74) #5
+  %td_primarychromas101 = getelementptr inbounds %struct.TIFFDirectory, ptr %73, i64 0, i32 52
+  store ptr null, ptr %td_primarychromas101, align 8
+  br label %if.end102
+
+if.end102:                                        ; preds = %if.then99, %if.end97
+  %75 = load ptr, ptr %td, align 8
+  %td_refblackwhite = getelementptr inbounds %struct.TIFFDirectory, ptr %75, i64 0, i32 53
+  %76 = load ptr, ptr %td_refblackwhite, align 8
+  %tobool103.not = icmp eq ptr %76, null
+  br i1 %tobool103.not, label %if.end107, label %if.then104
+
+if.then104:                                       ; preds = %if.end102
+  %77 = load ptr, ptr %td, align 8
+  %td_refblackwhite105 = getelementptr inbounds %struct.TIFFDirectory, ptr %77, i64 0, i32 53
+  %78 = load ptr, ptr %td_refblackwhite105, align 8
+  call void @_TIFFfree(ptr noundef %78) #5
+  %td_refblackwhite106 = getelementptr inbounds %struct.TIFFDirectory, ptr %77, i64 0, i32 53
+  store ptr null, ptr %td_refblackwhite106, align 8
+  br label %if.end107
+
+if.end107:                                        ; preds = %if.then104, %if.end102
+  %79 = load ptr, ptr %td, align 8
+  %td_transferfunction = getelementptr inbounds %struct.TIFFDirectory, ptr %79, i64 0, i32 54
+  %80 = load ptr, ptr %td_transferfunction, align 8
+  %tobool109.not = icmp eq ptr %80, null
+  br i1 %tobool109.not, label %if.end115, label %if.then110
+
+if.then110:                                       ; preds = %if.end107
+  %81 = load ptr, ptr %td, align 8
+  %td_transferfunction111 = getelementptr inbounds %struct.TIFFDirectory, ptr %81, i64 0, i32 54
+  %82 = load ptr, ptr %td_transferfunction111, align 8
+  call void @_TIFFfree(ptr noundef %82) #5
+  %td_transferfunction113 = getelementptr inbounds %struct.TIFFDirectory, ptr %81, i64 0, i32 54
+  store ptr null, ptr %td_transferfunction113, align 8
+  br label %if.end115
+
+if.end115:                                        ; preds = %if.then110, %if.end107
+  %83 = load ptr, ptr %td, align 8
+  %arrayidx117 = getelementptr inbounds %struct.TIFFDirectory, ptr %83, i64 0, i32 54, i64 1
+  %84 = load ptr, ptr %arrayidx117, align 8
+  %tobool118.not = icmp eq ptr %84, null
+  br i1 %tobool118.not, label %if.end124, label %if.then119
+
+if.then119:                                       ; preds = %if.end115
+  %85 = load ptr, ptr %td, align 8
+  %arrayidx121 = getelementptr inbounds %struct.TIFFDirectory, ptr %85, i64 0, i32 54, i64 1
+  %86 = load ptr, ptr %arrayidx121, align 8
+  call void @_TIFFfree(ptr noundef %86) #5
+  %arrayidx123 = getelementptr inbounds %struct.TIFFDirectory, ptr %85, i64 0, i32 54, i64 1
+  store ptr null, ptr %arrayidx123, align 8
+  br label %if.end124
+
+if.end124:                                        ; preds = %if.then119, %if.end115
+  %87 = load ptr, ptr %td, align 8
+  %arrayidx126 = getelementptr inbounds %struct.TIFFDirectory, ptr %87, i64 0, i32 54, i64 2
+  %88 = load ptr, ptr %arrayidx126, align 8
+  %tobool127.not = icmp eq ptr %88, null
+  br i1 %tobool127.not, label %if.end133, label %if.then128
+
+if.then128:                                       ; preds = %if.end124
+  %89 = load ptr, ptr %td, align 8
+  %arrayidx130 = getelementptr inbounds %struct.TIFFDirectory, ptr %89, i64 0, i32 54, i64 2
+  %90 = load ptr, ptr %arrayidx130, align 8
+  call void @_TIFFfree(ptr noundef %90) #5
+  %arrayidx132 = getelementptr inbounds %struct.TIFFDirectory, ptr %89, i64 0, i32 54, i64 2
+  store ptr null, ptr %arrayidx132, align 8
+  br label %if.end133
+
+if.end133:                                        ; preds = %if.then128, %if.end124
+  %91 = load ptr, ptr %td, align 8
+  %td_profileData = getelementptr inbounds %struct.TIFFDirectory, ptr %91, i64 0, i32 62
+  %92 = load ptr, ptr %td_profileData, align 8
+  %tobool134.not = icmp eq ptr %92, null
+  br i1 %tobool134.not, label %if.end138, label %if.then135
+
+if.then135:                                       ; preds = %if.end133
+  %93 = load ptr, ptr %td, align 8
+  %td_profileData136 = getelementptr inbounds %struct.TIFFDirectory, ptr %93, i64 0, i32 62
+  %94 = load ptr, ptr %td_profileData136, align 8
+  call void @_TIFFfree(ptr noundef %94) #5
+  %td_profileData137 = getelementptr inbounds %struct.TIFFDirectory, ptr %93, i64 0, i32 62
+  store ptr null, ptr %td_profileData137, align 8
+  br label %if.end138
+
+if.end138:                                        ; preds = %if.then135, %if.end133
+  %95 = load ptr, ptr %td, align 8
+  %td_photoshopData = getelementptr inbounds %struct.TIFFDirectory, ptr %95, i64 0, i32 64
+  %96 = load ptr, ptr %td_photoshopData, align 8
+  %tobool139.not = icmp eq ptr %96, null
+  br i1 %tobool139.not, label %if.end143, label %if.then140
+
+if.then140:                                       ; preds = %if.end138
+  %97 = load ptr, ptr %td, align 8
+  %td_photoshopData141 = getelementptr inbounds %struct.TIFFDirectory, ptr %97, i64 0, i32 64
+  %98 = load ptr, ptr %td_photoshopData141, align 8
+  call void @_TIFFfree(ptr noundef %98) #5
+  %td_photoshopData142 = getelementptr inbounds %struct.TIFFDirectory, ptr %97, i64 0, i32 64
+  store ptr null, ptr %td_photoshopData142, align 8
+  br label %if.end143
+
+if.end143:                                        ; preds = %if.then140, %if.end138
+  %99 = load ptr, ptr %td, align 8
+  %td_richtiffiptcData = getelementptr inbounds %struct.TIFFDirectory, ptr %99, i64 0, i32 66
+  %100 = load ptr, ptr %td_richtiffiptcData, align 8
+  %tobool144.not = icmp eq ptr %100, null
+  br i1 %tobool144.not, label %if.end148, label %if.then145
+
+if.then145:                                       ; preds = %if.end143
+  %101 = load ptr, ptr %td, align 8
+  %td_richtiffiptcData146 = getelementptr inbounds %struct.TIFFDirectory, ptr %101, i64 0, i32 66
+  %102 = load ptr, ptr %td_richtiffiptcData146, align 8
+  call void @_TIFFfree(ptr noundef %102) #5
+  %td_richtiffiptcData147 = getelementptr inbounds %struct.TIFFDirectory, ptr %101, i64 0, i32 66
+  store ptr null, ptr %td_richtiffiptcData147, align 8
+  br label %if.end148
+
+if.end148:                                        ; preds = %if.then145, %if.end143
+  %103 = load ptr, ptr %td, align 8
+  %td_stripoffset = getelementptr inbounds %struct.TIFFDirectory, ptr %103, i64 0, i32 44
+  %104 = load ptr, ptr %td_stripoffset, align 8
+  %tobool149.not = icmp eq ptr %104, null
+  br i1 %tobool149.not, label %if.end153, label %if.then150
+
+if.then150:                                       ; preds = %if.end148
+  %105 = load ptr, ptr %td, align 8
+  %td_stripoffset151 = getelementptr inbounds %struct.TIFFDirectory, ptr %105, i64 0, i32 44
+  %106 = load ptr, ptr %td_stripoffset151, align 8
+  call void @_TIFFfree(ptr noundef %106) #5
+  %td_stripoffset152 = getelementptr inbounds %struct.TIFFDirectory, ptr %105, i64 0, i32 44
+  store ptr null, ptr %td_stripoffset152, align 8
+  br label %if.end153
+
+if.end153:                                        ; preds = %if.then150, %if.end148
+  %107 = load ptr, ptr %td, align 8
+  %td_stripbytecount = getelementptr inbounds %struct.TIFFDirectory, ptr %107, i64 0, i32 45
+  %108 = load ptr, ptr %td_stripbytecount, align 8
+  %tobool154.not = icmp eq ptr %108, null
+  br i1 %tobool154.not, label %if.end158, label %if.then155
+
+if.then155:                                       ; preds = %if.end153
+  %109 = load ptr, ptr %td, align 8
+  %td_stripbytecount156 = getelementptr inbounds %struct.TIFFDirectory, ptr %109, i64 0, i32 45
+  %110 = load ptr, ptr %td_stripbytecount156, align 8
+  call void @_TIFFfree(ptr noundef %110) #5
+  %td_stripbytecount157 = getelementptr inbounds %struct.TIFFDirectory, ptr %109, i64 0, i32 45
+  store ptr null, ptr %td_stripbytecount157, align 8
+  br label %if.end158
+
+if.end158:                                        ; preds = %if.then155, %if.end153
+  %111 = load ptr, ptr %td, align 8
+  %td_textureformat = getelementptr inbounds %struct.TIFFDirectory, ptr %111, i64 0, i32 69
+  %112 = load ptr, ptr %td_textureformat, align 8
+  %tobool159.not = icmp eq ptr %112, null
+  br i1 %tobool159.not, label %if.end163, label %if.then160
+
+if.then160:                                       ; preds = %if.end158
+  %113 = load ptr, ptr %td, align 8
+  %td_textureformat161 = getelementptr inbounds %struct.TIFFDirectory, ptr %113, i64 0, i32 69
+  %114 = load ptr, ptr %td_textureformat161, align 8
+  call void @_TIFFfree(ptr noundef %114) #5
+  %td_textureformat162 = getelementptr inbounds %struct.TIFFDirectory, ptr %113, i64 0, i32 69
+  store ptr null, ptr %td_textureformat162, align 8
+  br label %if.end163
+
+if.end163:                                        ; preds = %if.then160, %if.end158
+  %115 = load ptr, ptr %td, align 8
+  %td_wrapmodes = getelementptr inbounds %struct.TIFFDirectory, ptr %115, i64 0, i32 70
+  %116 = load ptr, ptr %td_wrapmodes, align 8
+  %tobool164.not = icmp eq ptr %116, null
+  br i1 %tobool164.not, label %if.end168, label %if.then165
+
+if.then165:                                       ; preds = %if.end163
+  %117 = load ptr, ptr %td, align 8
+  %td_wrapmodes166 = getelementptr inbounds %struct.TIFFDirectory, ptr %117, i64 0, i32 70
+  %118 = load ptr, ptr %td_wrapmodes166, align 8
+  call void @_TIFFfree(ptr noundef %118) #5
+  %td_wrapmodes167 = getelementptr inbounds %struct.TIFFDirectory, ptr %117, i64 0, i32 70
+  store ptr null, ptr %td_wrapmodes167, align 8
+  br label %if.end168
+
+if.end168:                                        ; preds = %if.then165, %if.end163
+  %119 = load ptr, ptr %td, align 8
+  %td_matrixWorldToScreen = getelementptr inbounds %struct.TIFFDirectory, ptr %119, i64 0, i32 72
+  %120 = load ptr, ptr %td_matrixWorldToScreen, align 8
+  %tobool169.not = icmp eq ptr %120, null
+  br i1 %tobool169.not, label %if.end173, label %if.then170
+
+if.then170:                                       ; preds = %if.end168
+  %121 = load ptr, ptr %td, align 8
+  %td_matrixWorldToScreen171 = getelementptr inbounds %struct.TIFFDirectory, ptr %121, i64 0, i32 72
+  %122 = load ptr, ptr %td_matrixWorldToScreen171, align 8
+  call void @_TIFFfree(ptr noundef %122) #5
+  %td_matrixWorldToScreen172 = getelementptr inbounds %struct.TIFFDirectory, ptr %121, i64 0, i32 72
+  store ptr null, ptr %td_matrixWorldToScreen172, align 8
+  br label %if.end173
+
+if.end173:                                        ; preds = %if.then170, %if.end168
+  %123 = load ptr, ptr %td, align 8
+  %td_matrixWorldToCamera = getelementptr inbounds %struct.TIFFDirectory, ptr %123, i64 0, i32 73
+  %124 = load ptr, ptr %td_matrixWorldToCamera, align 8
+  %tobool174.not = icmp eq ptr %124, null
+  br i1 %tobool174.not, label %if.end178, label %if.then175
+
+if.then175:                                       ; preds = %if.end173
+  %125 = load ptr, ptr %td, align 8
+  %td_matrixWorldToCamera176 = getelementptr inbounds %struct.TIFFDirectory, ptr %125, i64 0, i32 73
+  %126 = load ptr, ptr %td_matrixWorldToCamera176, align 8
+  call void @_TIFFfree(ptr noundef %126) #5
+  %td_matrixWorldToCamera177 = getelementptr inbounds %struct.TIFFDirectory, ptr %125, i64 0, i32 73
+  store ptr null, ptr %td_matrixWorldToCamera177, align 8
+  br label %if.end178
+
+if.end178:                                        ; preds = %if.then175, %if.end173
+  ret void
+}
+
+; Function Attrs: nounwind ssp uwtable
+define ptr @TIFFSetTagExtender(ptr noundef %extender) #0 {
+entry:
+  %0 = load ptr, ptr @_TIFFextender, align 8
+  store ptr %extender, ptr @_TIFFextender, align 8
+  ret ptr %0
+}
+
+; Function Attrs: nounwind ssp uwtable
+define i32 @TIFFDefaultDirectory(ptr noundef %tif) #0 {
+entry:
+  %tif.addr = alloca ptr, align 8
+  %td = alloca ptr, align 8
+  store ptr %tif, ptr %tif.addr, align 8
+  %tif_dir = getelementptr inbounds %struct.tiff, ptr %tif, i64 0, i32 6
+  store ptr %tif_dir, ptr %td, align 8
+  call void @_TIFFSetupFieldInfo(ptr noundef %tif) #5
+  call void @_TIFFmemset(ptr noundef nonnull %tif_dir, i32 noundef 0, i64 noundef 520) #5
+  %td_fillorder = getelementptr inbounds %struct.tiff, ptr %tif, i64 0, i32 6, i32 13
+  store i16 1, ptr %td_fillorder, align 2
+  %td_bitspersample = getelementptr inbounds %struct.tiff, ptr %tif, i64 0, i32 6, i32 8
+  store i16 1, ptr %td_bitspersample, align 8
+  %0 = load ptr, ptr %td, align 8
+  %td_threshholding = getelementptr inbounds %struct.TIFFDirectory, ptr %0, i64 0, i32 12
+  store i16 1, ptr %td_threshholding, align 8
+  %td_orientation = getelementptr inbounds %struct.TIFFDirectory, ptr %0, i64 0, i32 14
+  store i16 1, ptr %td_orientation, align 4
+  %td_samplesperpixel = getelementptr inbounds %struct.TIFFDirectory, ptr %0, i64 0, i32 15
+  store i16 1, ptr %td_samplesperpixel, align 2
+  %1 = load ptr, ptr %td, align 8
+  %td_rowsperstrip = getelementptr inbounds %struct.TIFFDirectory, ptr %1, i64 0, i32 16
+  store i64 -1, ptr %td_rowsperstrip, align 8
+  %td_tilewidth = getelementptr inbounds %struct.TIFFDirectory, ptr %1, i64 0, i32 4
+  store i64 -1, ptr %td_tilewidth, align 8
+  %td_tilelength = getelementptr inbounds %struct.TIFFDirectory, ptr %1, i64 0, i32 5
+  store i64 -1, ptr %td_tilelength, align 8
+  %2 = load ptr, ptr %td, align 8
+  %td_tiledepth = getelementptr inbounds %struct.TIFFDirectory, ptr %2, i64 0, i32 6
+  store i64 1, ptr %td_tiledepth, align 8
+  %td_resolutionunit = getelementptr inbounds %struct.TIFFDirectory, ptr %2, i64 0, i32 23
+  store i16 2, ptr %td_resolutionunit, align 8
+  %td_sampleformat = getelementptr inbounds %struct.TIFFDirectory, ptr %2, i64 0, i32 9
+  store i16 4, ptr %td_sampleformat, align 2
+  %3 = load ptr, ptr %td, align 8
+  %td_imagedepth = getelementptr inbounds %struct.TIFFDirectory, ptr %3, i64 0, i32 3
+  store i64 1, ptr %td_imagedepth, align 8
+  %td_ycbcrsubsampling = getelementptr inbounds %struct.TIFFDirectory, ptr %3, i64 0, i32 49
+  store i16 2, ptr %td_ycbcrsubsampling, align 8
+  %arrayidx2 = getelementptr inbounds %struct.TIFFDirectory, ptr %3, i64 0, i32 49, i64 1
+  store i16 2, ptr %arrayidx2, align 2
+  %4 = load ptr, ptr %td, align 8
+  %td_ycbcrpositioning = getelementptr inbounds %struct.TIFFDirectory, ptr %4, i64 0, i32 50
+  store i16 1, ptr %td_ycbcrpositioning, align 4
+  %td_inkset = getelementptr inbounds %struct.TIFFDirectory, ptr %4, i64 0, i32 55
+  store i16 1, ptr %td_inkset, align 8
+  %td_ninks = getelementptr inbounds %struct.TIFFDirectory, ptr %4, i64 0, i32 56
+  store i16 4, ptr %td_ninks, align 2
+  %5 = load ptr, ptr %tif.addr, align 8
+  %tif_postdecode = getelementptr inbounds %struct.tiff, ptr %5, i64 0, i32 54
+  store ptr @_TIFFNoPostDecode, ptr %tif_postdecode, align 8
+  %tif_vsetfield = getelementptr inbounds %struct.tiff, ptr %5, i64 0, i32 57
+  store ptr @_TIFFVSetField, ptr %tif_vsetfield, align 8
+  %tif_vgetfield = getelementptr inbounds %struct.tiff, ptr %5, i64 0, i32 58
+  store ptr @_TIFFVGetField, ptr %tif_vgetfield, align 8
+  %6 = load ptr, ptr %tif.addr, align 8
+  %tif_printdir = getelementptr inbounds %struct.tiff, ptr %6, i64 0, i32 59
+  store ptr null, ptr %tif_printdir, align 8
+  %7 = load ptr, ptr @_TIFFextender, align 8
+  %tobool.not = icmp eq ptr %7, null
+  br i1 %tobool.not, label %if.end, label %if.then
+
+if.then:                                          ; preds = %entry
+  %8 = load ptr, ptr @_TIFFextender, align 8
+  %9 = load ptr, ptr %tif.addr, align 8
+  call void %8(ptr noundef %9) #5
+  br label %if.end
+
+if.end:                                           ; preds = %if.then, %entry
+  %10 = load ptr, ptr %tif.addr, align 8
+  %call = call i32 (ptr, i64, ...) @pc_inline_source_snapshot_public_repos_mibench_consumer_tiff_v3_5_4_libtiff_tif_dir_0(ptr noundef %10, i64 noundef 259, i32 noundef 1)
+  %tif_flags = getelementptr inbounds %struct.tiff, ptr %10, i64 0, i32 3
+  %11 = load i64, ptr %tif_flags, align 8
+  %and = and i64 %11, -9
+  store i64 %and, ptr %tif_flags, align 8
+  ret i32 1
+}
+
+declare void @_TIFFSetupFieldInfo(ptr noundef) #1
+
+declare void @_TIFFmemset(ptr noundef, i32 noundef, i64 noundef) #1
+
+declare void @_TIFFNoPostDecode(ptr noundef, ptr noundef, i64 noundef) #1
+
+; Function Attrs: nounwind ssp uwtable
+define internal i32 @_TIFFVSetField(ptr noundef %tif, i64 noundef %tag, ptr noundef %ap) #0 {
+entry:
+  %retval = alloca i32, align 4
+  %tif.addr = alloca ptr, align 8
+  %tag.addr = alloca i64, align 8
+  %ap.addr = alloca ptr, align 8
+  %td = alloca ptr, align 8
+  %status = alloca i32, align 4
+  %v32 = alloca i64, align 8
+  %i = alloca i32, align 4
+  %v = alloca i32, align 4
+  %d = alloca double, align 8
+  %s = alloca ptr, align 8
+  %sv = alloca i16, align 2
+  store ptr %tif, ptr %tif.addr, align 8
+  store i64 %tag, ptr %tag.addr, align 8
+  store ptr %ap, ptr %ap.addr, align 8
+  %tif_dir = getelementptr inbounds %struct.tiff, ptr %tif, i64 0, i32 6
+  store ptr %tif_dir, ptr %td, align 8
+  store i32 1, ptr %status, align 4
+  switch i64 %tag, label %sw.default368 [
+    i64 254, label %sw.bb
+    i64 256, label %sw.bb1
+    i64 257, label %sw.bb3
+    i64 258, label %sw.bb5
+    i64 259, label %sw.bb27
+    i64 262, label %sw.bb57
+    i64 263, label %sw.bb60
+    i64 266, label %sw.bb63
+    i64 269, label %sw.bb72
+    i64 315, label %sw.bb74
+    i64 306, label %sw.bb76
+    i64 316, label %sw.bb78
+    i64 270, label %sw.bb80
+    i64 271, label %sw.bb82
+    i64 272, label %sw.bb84
+    i64 305, label %sw.bb86
+    i64 274, label %sw.bb88
+    i64 277, label %sw.bb100
+    i64 278, label %sw.bb107
+    i64 280, label %sw.bb121
+    i64 281, label %sw.bb124
+    i64 340, label %sw.bb127
+    i64 341, label %sw.bb129
+    i64 282, label %sw.bb131
+    i64 283, label %sw.bb134
+    i64 284, label %sw.bb137
+    i64 285, label %sw.bb147
+    i64 286, label %sw.bb149
+    i64 287, label %sw.bb152
+    i64 296, label %sw.bb155
+    i64 297, label %sw.bb165
+    i64 321, label %sw.bb173
+    i64 320, label %sw.bb181
+    i64 338, label %sw.bb192
+    i64 32995, label %sw.bb197
+    i64 322, label %sw.bb206
+    i64 323, label %sw.bb219
+    i64 32998, label %sw.bb234
+    i64 32996, label %sw.bb240
+    i64 339, label %sw.bb247
+    i64 32997, label %sw.bb258
+    i64 37439, label %sw.bb260
+    i64 33300, label %sw.bb266
+    i64 33301, label %sw.bb268
+    i64 33302, label %sw.bb270
+    i64 33303, label %sw.bb272
+    i64 33304, label %sw.bb274
+    i64 33305, label %sw.bb277
+    i64 33306, label %sw.bb279
+    i64 330, label %sw.bb281
+    i64 529, label %sw.bb295
+    i64 531, label %sw.bb297
+    i64 530, label %sw.bb300
+    i64 318, label %sw.bb308
+    i64 319, label %sw.bb310
+    i64 301, label %sw.bb312
+    i64 532, label %sw.bb327
+    i64 332, label %sw.bb329
+    i64 336, label %sw.bb332
+    i64 333, label %sw.bb340
+    i64 334, label %sw.bb351
+    i64 337, label %sw.bb354
+    i64 34675, label %sw.bb356
+    i64 34377, label %sw.bb360
+    i64 33723, label %sw.bb364
+  ]
+
+sw.bb:                                            ; preds = %entry
+  %0 = va_arg ptr %ap.addr, i64
+  %1 = load ptr, ptr %td, align 8
+  %td_subfiletype = getelementptr inbounds %struct.TIFFDirectory, ptr %1, i64 0, i32 7
+  store i64 %0, ptr %td_subfiletype, align 8
+  br label %sw.epilog375
+
+sw.bb1:                                           ; preds = %entry
+  %2 = va_arg ptr %ap.addr, i64
+  %3 = load ptr, ptr %td, align 8
+  %td_imagewidth = getelementptr inbounds %struct.TIFFDirectory, ptr %3, i64 0, i32 1
+  store i64 %2, ptr %td_imagewidth, align 8
+  br label %sw.epilog375
+
+sw.bb3:                                           ; preds = %entry
+  %4 = va_arg ptr %ap.addr, i64
+  %5 = load ptr, ptr %td, align 8
+  %td_imagelength = getelementptr inbounds %struct.TIFFDirectory, ptr %5, i64 0, i32 2
+  store i64 %4, ptr %td_imagelength, align 8
+  br label %sw.epilog375
+
+sw.bb5:                                           ; preds = %entry
+  %6 = va_arg ptr %ap.addr, i32
+  %conv = trunc i32 %6 to i16
+  %7 = load ptr, ptr %td, align 8
+  %td_bitspersample = getelementptr inbounds %struct.TIFFDirectory, ptr %7, i64 0, i32 8
+  store i16 %conv, ptr %td_bitspersample, align 8
+  %8 = load ptr, ptr %tif.addr, align 8
+  %tif_flags = getelementptr inbounds %struct.tiff, ptr %8, i64 0, i32 3
+  %9 = load i64, ptr %tif_flags, align 8
+  %and = and i64 %9, 128
+  %tobool.not = icmp eq i64 %and, 0
+  br i1 %tobool.not, label %sw.epilog375, label %if.then
+
+if.then:                                          ; preds = %sw.bb5
+  %10 = load ptr, ptr %td, align 8
+  %td_bitspersample7 = getelementptr inbounds %struct.TIFFDirectory, ptr %10, i64 0, i32 8
+  %11 = load i16, ptr %td_bitspersample7, align 8
+  %cmp = icmp eq i16 %11, 16
+  br i1 %cmp, label %if.then10, label %if.else
+
+if.then10:                                        ; preds = %if.then
+  %12 = load ptr, ptr %tif.addr, align 8
+  %tif_postdecode = getelementptr inbounds %struct.tiff, ptr %12, i64 0, i32 54
+  store ptr @_TIFFSwab16BitData, ptr %tif_postdecode, align 8
+  br label %sw.epilog375
+
+if.else:                                          ; preds = %if.then
+  %13 = load ptr, ptr %td, align 8
+  %td_bitspersample11 = getelementptr inbounds %struct.TIFFDirectory, ptr %13, i64 0, i32 8
+  %14 = load i16, ptr %td_bitspersample11, align 8
+  %cmp13 = icmp eq i16 %14, 32
+  br i1 %cmp13, label %if.then15, label %if.else17
+
+if.then15:                                        ; preds = %if.else
+  %15 = load ptr, ptr %tif.addr, align 8
+  %tif_postdecode16 = getelementptr inbounds %struct.tiff, ptr %15, i64 0, i32 54
+  store ptr @_TIFFSwab32BitData, ptr %tif_postdecode16, align 8
+  br label %sw.epilog375
+
+if.else17:                                        ; preds = %if.else
+  %16 = load ptr, ptr %td, align 8
+  %td_bitspersample18 = getelementptr inbounds %struct.TIFFDirectory, ptr %16, i64 0, i32 8
+  %17 = load i16, ptr %td_bitspersample18, align 8
+  %cmp20 = icmp eq i16 %17, 64
+  br i1 %cmp20, label %if.then22, label %sw.epilog375
+
+if.then22:                                        ; preds = %if.else17
+  %18 = load ptr, ptr %tif.addr, align 8
+  %tif_postdecode23 = getelementptr inbounds %struct.tiff, ptr %18, i64 0, i32 54
+  store ptr @_TIFFSwab64BitData, ptr %tif_postdecode23, align 8
+  br label %sw.epilog375
+
+sw.bb27:                                          ; preds = %entry
+  %19 = va_arg ptr %ap.addr, i32
+  %and29 = and i32 %19, 65535
+  store i32 %and29, ptr %v, align 4
+  %20 = load ptr, ptr %tif.addr, align 8
+  %tif_dir30 = getelementptr inbounds %struct.tiff, ptr %20, i64 0, i32 6
+  %21 = load i64, ptr %tif_dir30, align 8
+  %and31 = and i64 %21, 128
+  %tobool32.not = icmp eq i64 %and31, 0
+  br i1 %tobool32.not, label %if.end41, label %if.then33
+
+if.then33:                                        ; preds = %sw.bb27
+  %22 = load ptr, ptr %td, align 8
+  %td_compression = getelementptr inbounds %struct.TIFFDirectory, ptr %22, i64 0, i32 10
+  %23 = load i16, ptr %td_compression, align 4
+  %conv34 = zext i16 %23 to i32
+  %24 = load i32, ptr %v, align 4
+  %cmp35 = icmp eq i32 %24, %conv34
+  br i1 %cmp35, label %sw.epilog375, label %if.end38
+
+if.end38:                                         ; preds = %if.then33
+  %25 = load ptr, ptr %tif.addr, align 8
+  %tif_cleanup = getelementptr inbounds %struct.tiff, ptr %25, i64 0, i32 34
+  %26 = load ptr, ptr %tif_cleanup, align 8
+  call void %26(ptr noundef %25) #5
+  %tif_flags39 = getelementptr inbounds %struct.tiff, ptr %25, i64 0, i32 3
+  %27 = load i64, ptr %tif_flags39, align 8
+  %and40 = and i64 %27, -33
+  store i64 %and40, ptr %tif_flags39, align 8
+  br label %if.end41
+
+if.end41:                                         ; preds = %if.end38, %sw.bb27
+  %28 = load ptr, ptr %tif.addr, align 8
+  %tif_mode = getelementptr inbounds %struct.tiff, ptr %28, i64 0, i32 2
+  %29 = load i32, ptr %tif_mode, align 4
+  %tobool42.not.not = icmp ne i32 %29, 0
+  %30 = load i32, ptr %v, align 4
+  %cmp46 = icmp eq i32 %30, 5
+  %or.cond27 = select i1 %tobool42.not.not, i1 %cmp46, i1 false
+  br i1 %or.cond27, label %if.then48, label %if.end50
+
+if.then48:                                        ; preds = %if.end41
+  %31 = load ptr, ptr %tif.addr, align 8
+  %32 = load ptr, ptr %31, align 8
+  call void (ptr, ptr, ...) @TIFFError(ptr noundef %32, ptr noundef nonnull @.str.8) #5
+  store i32 1, ptr %v, align 4
+  br label %if.end50
+
+if.end50:                                         ; preds = %if.then48, %if.end41
+  %33 = load ptr, ptr %tif.addr, align 8
+  %34 = load i32, ptr %v, align 4
+  %call = call i32 @TIFFSetCompressionScheme(ptr noundef %33, i32 noundef %34) #5
+  store i32 %call, ptr %status, align 4
+  %cmp51.not = icmp eq i32 %call, 0
+  br i1 %cmp51.not, label %sw.epilog375, label %if.then53
+
+if.then53:                                        ; preds = %if.end50
+  %35 = load i32, ptr %v, align 4
+  %conv54 = trunc i32 %35 to i16
+  %36 = load ptr, ptr %td, align 8
+  %td_compression55 = getelementptr inbounds %struct.TIFFDirectory, ptr %36, i64 0, i32 10
+  store i16 %conv54, ptr %td_compression55, align 4
+  br label %sw.epilog375
+
+sw.bb57:                                          ; preds = %entry
+  %37 = va_arg ptr %ap.addr, i32
+  %conv59 = trunc i32 %37 to i16
+  %38 = load ptr, ptr %td, align 8
+  %td_photometric = getelementptr inbounds %struct.TIFFDirectory, ptr %38, i64 0, i32 11
+  store i16 %conv59, ptr %td_photometric, align 2
+  br label %sw.epilog375
+
+sw.bb60:                                          ; preds = %entry
+  %39 = va_arg ptr %ap.addr, i32
+  %conv62 = trunc i32 %39 to i16
+  %40 = load ptr, ptr %td, align 8
+  %td_threshholding = getelementptr inbounds %struct.TIFFDirectory, ptr %40, i64 0, i32 12
+  store i16 %conv62, ptr %td_threshholding, align 8
+  br label %sw.epilog375
+
+sw.bb63:                                          ; preds = %entry
+  %41 = va_arg ptr %ap.addr, i32
+  store i32 %41, ptr %v, align 4
+  %cmp65.not = icmp eq i32 %41, 2
+  %42 = load i32, ptr %v, align 4
+  %cmp67.not = icmp eq i32 %42, 1
+  %or.cond = select i1 %cmp65.not, i1 true, i1 %cmp67.not
+  br i1 %or.cond, label %if.end70, label %badvalue
+
+if.end70:                                         ; preds = %sw.bb63
+  %43 = load i32, ptr %v, align 4
+  %conv71 = trunc i32 %43 to i16
+  %44 = load ptr, ptr %td, align 8
+  %td_fillorder = getelementptr inbounds %struct.TIFFDirectory, ptr %44, i64 0, i32 13
+  store i16 %conv71, ptr %td_fillorder, align 2
+  br label %sw.epilog375
+
+sw.bb72:                                          ; preds = %entry
+  %45 = load ptr, ptr %td, align 8
+  %td_documentname = getelementptr inbounds %struct.TIFFDirectory, ptr %45, i64 0, i32 33
+  %46 = va_arg ptr %ap.addr, ptr
+  call void @_TIFFsetString(ptr noundef nonnull %td_documentname, ptr noundef %46)
+  br label %sw.epilog375
+
+sw.bb74:                                          ; preds = %entry
+  %47 = load ptr, ptr %td, align 8
+  %td_artist = getelementptr inbounds %struct.TIFFDirectory, ptr %47, i64 0, i32 34
+  %48 = va_arg ptr %ap.addr, ptr
+  call void @_TIFFsetString(ptr noundef nonnull %td_artist, ptr noundef %48)
+  br label %sw.epilog375
+
+sw.bb76:                                          ; preds = %entry
+  %49 = load ptr, ptr %td, align 8
+  %td_datetime = getelementptr inbounds %struct.TIFFDirectory, ptr %49, i64 0, i32 35
+  %50 = va_arg ptr %ap.addr, ptr
+  call void @_TIFFsetString(ptr noundef nonnull %td_datetime, ptr noundef %50)
+  br label %sw.epilog375
+
+sw.bb78:                                          ; preds = %entry
+  %51 = load ptr, ptr %td, align 8
+  %td_hostcomputer = getelementptr inbounds %struct.TIFFDirectory, ptr %51, i64 0, i32 36
+  %52 = va_arg ptr %ap.addr, ptr
+  call void @_TIFFsetString(ptr noundef nonnull %td_hostcomputer, ptr noundef %52)
+  br label %sw.epilog375
+
+sw.bb80:                                          ; preds = %entry
+  %53 = load ptr, ptr %td, align 8
+  %td_imagedescription = getelementptr inbounds %struct.TIFFDirectory, ptr %53, i64 0, i32 37
+  %54 = va_arg ptr %ap.addr, ptr
+  call void @_TIFFsetString(ptr noundef nonnull %td_imagedescription, ptr noundef %54)
+  br label %sw.epilog375
+
+sw.bb82:                                          ; preds = %entry
+  %55 = load ptr, ptr %td, align 8
+  %td_make = getelementptr inbounds %struct.TIFFDirectory, ptr %55, i64 0, i32 38
+  %56 = va_arg ptr %ap.addr, ptr
+  call void @_TIFFsetString(ptr noundef nonnull %td_make, ptr noundef %56)
+  br label %sw.epilog375
+
+sw.bb84:                                          ; preds = %entry
+  %57 = load ptr, ptr %td, align 8
+  %td_model = getelementptr inbounds %struct.TIFFDirectory, ptr %57, i64 0, i32 39
+  %58 = va_arg ptr %ap.addr, ptr
+  call void @_TIFFsetString(ptr noundef nonnull %td_model, ptr noundef %58)
+  br label %sw.epilog375
+
+sw.bb86:                                          ; preds = %entry
+  %59 = load ptr, ptr %td, align 8
+  %td_software = getelementptr inbounds %struct.TIFFDirectory, ptr %59, i64 0, i32 40
+  %60 = va_arg ptr %ap.addr, ptr
+  call void @_TIFFsetString(ptr noundef nonnull %td_software, ptr noundef %60)
+  br label %sw.epilog375
+
+sw.bb88:                                          ; preds = %entry
+  %61 = va_arg ptr %ap.addr, i32
+  store i32 %61, ptr %v, align 4
+  %cmp90 = icmp slt i32 %61, 1
+  %62 = load i32, ptr %v, align 4
+  %cmp92 = icmp sgt i32 %62, 8
+  %or.cond23 = select i1 %cmp90, i1 true, i1 %cmp92
+  br i1 %or.cond23, label %if.then94, label %if.else97
+
+if.then94:                                        ; preds = %sw.bb88
+  %63 = load ptr, ptr %tif.addr, align 8
+  %64 = load ptr, ptr %63, align 8
+  %65 = load i32, ptr %v, align 4
+  %66 = load i64, ptr %tag.addr, align 8
+  %call96 = call ptr @_TIFFFieldWithTag(ptr noundef nonnull %63, i64 noundef %66) #5
+  %field_name = getelementptr inbounds %struct.TIFFFieldInfo, ptr %call96, i64 0, i32 7
+  %67 = load ptr, ptr %field_name, align 8
+  call void (ptr, ptr, ...) @TIFFWarning(ptr noundef %64, ptr noundef nonnull @.str.9, i32 noundef %65, ptr noundef %67) #5
+  br label %sw.epilog375
+
+if.else97:                                        ; preds = %sw.bb88
+  %68 = load i32, ptr %v, align 4
+  %conv98 = trunc i32 %68 to i16
+  %69 = load ptr, ptr %td, align 8
+  %td_orientation = getelementptr inbounds %struct.TIFFDirectory, ptr %69, i64 0, i32 14
+  store i16 %conv98, ptr %td_orientation, align 4
+  br label %sw.epilog375
+
+sw.bb100:                                         ; preds = %entry
+  %70 = va_arg ptr %ap.addr, i32
+  store i32 %70, ptr %v, align 4
+  %cmp102 = icmp eq i32 %70, 0
+  br i1 %cmp102, label %badvalue, label %if.end105
+
+if.end105:                                        ; preds = %sw.bb100
+  %71 = load i32, ptr %v, align 4
+  %conv106 = trunc i32 %71 to i16
+  %72 = load ptr, ptr %td, align 8
+  %td_samplesperpixel = getelementptr inbounds %struct.TIFFDirectory, ptr %72, i64 0, i32 15
+  store i16 %conv106, ptr %td_samplesperpixel, align 2
+  br label %sw.epilog375
+
+sw.bb107:                                         ; preds = %entry
+  %73 = va_arg ptr %ap.addr, i64
+  store i64 %73, ptr %v32, align 8
+  %cmp109 = icmp eq i64 %73, 0
+  br i1 %cmp109, label %badvalue32, label %if.end112
+
+if.end112:                                        ; preds = %sw.bb107
+  %74 = load i64, ptr %v32, align 8
+  %75 = load ptr, ptr %td, align 8
+  %td_rowsperstrip = getelementptr inbounds %struct.TIFFDirectory, ptr %75, i64 0, i32 16
+  store i64 %74, ptr %td_rowsperstrip, align 8
+  %76 = load ptr, ptr %tif.addr, align 8
+  %tif_dir113 = getelementptr inbounds %struct.tiff, ptr %76, i64 0, i32 6
+  %77 = load i64, ptr %tif_dir113, align 8
+  %and116 = and i64 %77, 4
+  %tobool117.not = icmp eq i64 %and116, 0
+  br i1 %tobool117.not, label %if.then118, label %sw.epilog375
+
+if.then118:                                       ; preds = %if.end112
+  %78 = load i64, ptr %v32, align 8
+  %79 = load ptr, ptr %td, align 8
+  %td_tilelength = getelementptr inbounds %struct.TIFFDirectory, ptr %79, i64 0, i32 5
+  store i64 %78, ptr %td_tilelength, align 8
+  %td_imagewidth119 = getelementptr inbounds %struct.TIFFDirectory, ptr %79, i64 0, i32 1
+  %80 = load i64, ptr %td_imagewidth119, align 8
+  %td_tilewidth = getelementptr inbounds %struct.TIFFDirectory, ptr %79, i64 0, i32 4
+  store i64 %80, ptr %td_tilewidth, align 8
+  br label %sw.epilog375
+
+sw.bb121:                                         ; preds = %entry
+  %81 = va_arg ptr %ap.addr, i32
+  %conv123 = trunc i32 %81 to i16
+  %82 = load ptr, ptr %td, align 8
+  %td_minsamplevalue = getelementptr inbounds %struct.TIFFDirectory, ptr %82, i64 0, i32 17
+  store i16 %conv123, ptr %td_minsamplevalue, align 8
+  br label %sw.epilog375
+
+sw.bb124:                                         ; preds = %entry
+  %83 = va_arg ptr %ap.addr, i32
+  %conv126 = trunc i32 %83 to i16
+  %84 = load ptr, ptr %td, align 8
+  %td_maxsamplevalue = getelementptr inbounds %struct.TIFFDirectory, ptr %84, i64 0, i32 18
+  store i16 %conv126, ptr %td_maxsamplevalue, align 2
+  br label %sw.epilog375
+
+sw.bb127:                                         ; preds = %entry
+  %85 = va_arg ptr %ap.addr, double
+  %86 = load ptr, ptr %td, align 8
+  %td_sminsamplevalue = getelementptr inbounds %struct.TIFFDirectory, ptr %86, i64 0, i32 19
+  store double %85, ptr %td_sminsamplevalue, align 8
+  br label %sw.epilog375
+
+sw.bb129:                                         ; preds = %entry
+  %87 = va_arg ptr %ap.addr, double
+  %88 = load ptr, ptr %td, align 8
+  %td_smaxsamplevalue = getelementptr inbounds %struct.TIFFDirectory, ptr %88, i64 0, i32 20
+  store double %87, ptr %td_smaxsamplevalue, align 8
+  br label %sw.epilog375
+
+sw.bb131:                                         ; preds = %entry
+  %89 = va_arg ptr %ap.addr, double
+  %conv133 = fptrunc double %89 to float
+  %90 = load ptr, ptr %td, align 8
+  %td_xresolution = getelementptr inbounds %struct.TIFFDirectory, ptr %90, i64 0, i32 21
+  store float %conv133, ptr %td_xresolution, align 8
+  br label %sw.epilog375
+
+sw.bb134:                                         ; preds = %entry
+  %91 = va_arg ptr %ap.addr, double
+  %conv136 = fptrunc double %91 to float
+  %92 = load ptr, ptr %td, align 8
+  %td_yresolution = getelementptr inbounds %struct.TIFFDirectory, ptr %92, i64 0, i32 22
+  store float %conv136, ptr %td_yresolution, align 4
+  br label %sw.epilog375
+
+sw.bb137:                                         ; preds = %entry
+  %93 = va_arg ptr %ap.addr, i32
+  store i32 %93, ptr %v, align 4
+  %cmp139.not = icmp eq i32 %93, 1
+  %94 = load i32, ptr %v, align 4
+  %cmp142.not = icmp eq i32 %94, 2
+  %or.cond24 = select i1 %cmp139.not, i1 true, i1 %cmp142.not
+  br i1 %or.cond24, label %if.end145, label %badvalue
+
+if.end145:                                        ; preds = %sw.bb137
+  %95 = load i32, ptr %v, align 4
+  %conv146 = trunc i32 %95 to i16
+  %96 = load ptr, ptr %td, align 8
+  %td_planarconfig = getelementptr inbounds %struct.TIFFDirectory, ptr %96, i64 0, i32 24
+  store i16 %conv146, ptr %td_planarconfig, align 2
+  br label %sw.epilog375
+
+sw.bb147:                                         ; preds = %entry
+  %97 = load ptr, ptr %td, align 8
+  %td_pagename = getelementptr inbounds %struct.TIFFDirectory, ptr %97, i64 0, i32 41
+  %98 = va_arg ptr %ap.addr, ptr
+  call void @_TIFFsetString(ptr noundef nonnull %td_pagename, ptr noundef %98)
+  br label %sw.epilog375
+
+sw.bb149:                                         ; preds = %entry
+  %99 = va_arg ptr %ap.addr, double
+  %conv151 = fptrunc double %99 to float
+  %100 = load ptr, ptr %td, align 8
+  %td_xposition = getelementptr inbounds %struct.TIFFDirectory, ptr %100, i64 0, i32 25
+  store float %conv151, ptr %td_xposition, align 4
+  br label %sw.epilog375
+
+sw.bb152:                                         ; preds = %entry
+  %101 = va_arg ptr %ap.addr, double
+  %conv154 = fptrunc double %101 to float
+  %102 = load ptr, ptr %td, align 8
+  %td_yposition = getelementptr inbounds %struct.TIFFDirectory, ptr %102, i64 0, i32 26
+  store float %conv154, ptr %td_yposition, align 8
+  br label %sw.epilog375
+
+sw.bb155:                                         ; preds = %entry
+  %103 = va_arg ptr %ap.addr, i32
+  store i32 %103, ptr %v, align 4
+  %cmp157 = icmp slt i32 %103, 1
+  %104 = load i32, ptr %v, align 4
+  %cmp160 = icmp sgt i32 %104, 3
+  %or.cond25 = select i1 %cmp157, i1 true, i1 %cmp160
+  br i1 %or.cond25, label %badvalue, label %if.end163
+
+if.end163:                                        ; preds = %sw.bb155
+  %105 = load i32, ptr %v, align 4
+  %conv164 = trunc i32 %105 to i16
+  %106 = load ptr, ptr %td, align 8
+  %td_resolutionunit = getelementptr inbounds %struct.TIFFDirectory, ptr %106, i64 0, i32 23
+  store i16 %conv164, ptr %td_resolutionunit, align 8
+  br label %sw.epilog375
+
+sw.bb165:                                         ; preds = %entry
+  %107 = va_arg ptr %ap.addr, i32
+  %conv167 = trunc i32 %107 to i16
+  %108 = load ptr, ptr %td, align 8
+  %td_pagenumber = getelementptr inbounds %struct.TIFFDirectory, ptr %108, i64 0, i32 27
+  store i16 %conv167, ptr %td_pagenumber, align 4
+  %109 = va_arg ptr %ap.addr, i32
+  %conv170 = trunc i32 %109 to i16
+  %arrayidx172 = getelementptr inbounds %struct.TIFFDirectory, ptr %108, i64 0, i32 27, i64 1
+  store i16 %conv170, ptr %arrayidx172, align 2
+  br label %sw.epilog375
+
+sw.bb173:                                         ; preds = %entry
+  %110 = va_arg ptr %ap.addr, i32
+  %conv175 = trunc i32 %110 to i16
+  %111 = load ptr, ptr %td, align 8
+  %td_halftonehints = getelementptr inbounds %struct.TIFFDirectory, ptr %111, i64 0, i32 29
+  store i16 %conv175, ptr %td_halftonehints, align 8
+  %112 = va_arg ptr %ap.addr, i32
+  %conv178 = trunc i32 %112 to i16
+  %arrayidx180 = getelementptr inbounds %struct.TIFFDirectory, ptr %111, i64 0, i32 29, i64 1
+  store i16 %conv178, ptr %arrayidx180, align 2
+  br label %sw.epilog375
+
+sw.bb181:                                         ; preds = %entry
+  %113 = load ptr, ptr %td, align 8
+  %td_bitspersample182 = getelementptr inbounds %struct.TIFFDirectory, ptr %113, i64 0, i32 8
+  %114 = load i16, ptr %td_bitspersample182, align 8
+  %sh_prom = zext i16 %114 to i64
+  %shl = shl i64 1, %sh_prom
+  store i64 %shl, ptr %v32, align 8
+  %td_colormap = getelementptr inbounds %struct.TIFFDirectory, ptr %113, i64 0, i32 28
+  %115 = va_arg ptr %ap.addr, ptr
+  call void @_TIFFsetShortArray(ptr noundef nonnull %td_colormap, ptr noundef %115, i64 noundef %shl)
+  %116 = load ptr, ptr %td, align 8
+  %arrayidx187 = getelementptr inbounds %struct.TIFFDirectory, ptr %116, i64 0, i32 28, i64 1
+  %117 = va_arg ptr %ap.addr, ptr
+  %118 = load i64, ptr %v32, align 8
+  call void @_TIFFsetShortArray(ptr noundef nonnull %arrayidx187, ptr noundef %117, i64 noundef %118)
+  %arrayidx190 = getelementptr inbounds %struct.TIFFDirectory, ptr %116, i64 0, i32 28, i64 2
+  %119 = va_arg ptr %ap.addr, ptr
+  call void @_TIFFsetShortArray(ptr noundef nonnull %arrayidx190, ptr noundef %119, i64 noundef %118)
+  br label %sw.epilog375
+
+sw.bb192:                                         ; preds = %entry
+  %120 = load ptr, ptr %td, align 8
+  %121 = load ptr, ptr %ap.addr, align 8
+  %call193 = call i32 @setExtraSamples(ptr noundef %120, ptr noundef %121, ptr noundef nonnull %v)
+  %tobool194.not = icmp eq i32 %call193, 0
+  br i1 %tobool194.not, label %badvalue, label %sw.epilog375
+
+sw.bb197:                                         ; preds = %entry
+  %122 = va_arg ptr %ap.addr, i32
+  %cmp199 = icmp ne i32 %122, 0
+  %conv201 = zext i1 %cmp199 to i16
+  %123 = load ptr, ptr %td, align 8
+  %td_extrasamples = getelementptr inbounds %struct.TIFFDirectory, ptr %123, i64 0, i32 30
+  store i16 %conv201, ptr %td_extrasamples, align 4
+  br i1 %cmp199, label %if.then204, label %sw.epilog375
+
+if.then204:                                       ; preds = %sw.bb197
+  store i16 1, ptr %sv, align 2
+  %124 = load ptr, ptr %td, align 8
+  %td_sampleinfo = getelementptr inbounds %struct.TIFFDirectory, ptr %124, i64 0, i32 31
+  call void @_TIFFsetByteArray(ptr noundef nonnull %td_sampleinfo, ptr noundef nonnull %sv, i64 noundef 2)
+  br label %sw.epilog375
+
+sw.bb206:                                         ; preds = %entry
+  %125 = va_arg ptr %ap.addr, i64
+  store i64 %125, ptr %v32, align 8
+  %rem = and i64 %125, 15
+  %tobool208.not = icmp eq i64 %rem, 0
+  br i1 %tobool208.not, label %if.end216, label %if.then209
+
+if.then209:                                       ; preds = %sw.bb206
+  %126 = load ptr, ptr %tif.addr, align 8
+  %tif_mode210 = getelementptr inbounds %struct.tiff, ptr %126, i64 0, i32 2
+  %127 = load i32, ptr %tif_mode210, align 4
+  %cmp211.not = icmp eq i32 %127, 0
+  br i1 %cmp211.not, label %if.end214, label %badvalue32
+
+if.end214:                                        ; preds = %if.then209
+  %128 = load ptr, ptr %tif.addr, align 8
+  %129 = load ptr, ptr %128, align 8
+  %130 = load i64, ptr %v32, align 8
+  call void (ptr, ptr, ...) @TIFFWarning(ptr noundef %129, ptr noundef nonnull @.str.10, i64 noundef %130) #5
+  br label %if.end216
+
+if.end216:                                        ; preds = %if.end214, %sw.bb206
+  %131 = load i64, ptr %v32, align 8
+  %132 = load ptr, ptr %td, align 8
+  %td_tilewidth217 = getelementptr inbounds %struct.TIFFDirectory, ptr %132, i64 0, i32 4
+  store i64 %131, ptr %td_tilewidth217, align 8
+  %133 = load ptr, ptr %tif.addr, align 8
+  %tif_flags218 = getelementptr inbounds %struct.tiff, ptr %133, i64 0, i32 3
+  %134 = load i64, ptr %tif_flags218, align 8
+  %or = or i64 %134, 1024
+  store i64 %or, ptr %tif_flags218, align 8
+  br label %sw.epilog375
+
+sw.bb219:                                         ; preds = %entry
+  %135 = va_arg ptr %ap.addr, i64
+  store i64 %135, ptr %v32, align 8
+  %rem221 = and i64 %135, 15
+  %tobool222.not = icmp eq i64 %rem221, 0
+  br i1 %tobool222.not, label %if.end230, label %if.then223
+
+if.then223:                                       ; preds = %sw.bb219
+  %136 = load ptr, ptr %tif.addr, align 8
+  %tif_mode224 = getelementptr inbounds %struct.tiff, ptr %136, i64 0, i32 2
+  %137 = load i32, ptr %tif_mode224, align 4
+  %cmp225.not = icmp eq i32 %137, 0
+  br i1 %cmp225.not, label %if.end228, label %badvalue32
+
+if.end228:                                        ; preds = %if.then223
+  %138 = load ptr, ptr %tif.addr, align 8
+  %139 = load ptr, ptr %138, align 8
+  %140 = load i64, ptr %v32, align 8
+  call void (ptr, ptr, ...) @TIFFWarning(ptr noundef %139, ptr noundef nonnull @.str.11, i64 noundef %140) #5
+  br label %if.end230
+
+if.end230:                                        ; preds = %if.end228, %sw.bb219
+  %141 = load i64, ptr %v32, align 8
+  %142 = load ptr, ptr %td, align 8
+  %td_tilelength231 = getelementptr inbounds %struct.TIFFDirectory, ptr %142, i64 0, i32 5
+  store i64 %141, ptr %td_tilelength231, align 8
+  %143 = load ptr, ptr %tif.addr, align 8
+  %tif_flags232 = getelementptr inbounds %struct.tiff, ptr %143, i64 0, i32 3
+  %144 = load i64, ptr %tif_flags232, align 8
+  %or233 = or i64 %144, 1024
+  store i64 %or233, ptr %tif_flags232, align 8
+  br label %sw.epilog375
+
+sw.bb234:                                         ; preds = %entry
+  %145 = va_arg ptr %ap.addr, i64
+  store i64 %145, ptr %v32, align 8
+  %cmp236 = icmp eq i64 %145, 0
+  br i1 %cmp236, label %badvalue32, label %if.end239
+
+if.end239:                                        ; preds = %sw.bb234
+  %146 = load i64, ptr %v32, align 8
+  %147 = load ptr, ptr %td, align 8
+  %td_tiledepth = getelementptr inbounds %struct.TIFFDirectory, ptr %147, i64 0, i32 6
+  store i64 %146, ptr %td_tiledepth, align 8
+  br label %sw.epilog375
+
+sw.bb240:                                         ; preds = %entry
+  %148 = va_arg ptr %ap.addr, i32
+  store i32 %148, ptr %v, align 4
+  switch i32 %148, label %badvalue [
+    i32 0, label %sw.bb242
+    i32 1, label %sw.bb243
+    i32 2, label %sw.bb244
+    i32 3, label %sw.bb245
+  ]
+
+sw.bb242:                                         ; preds = %sw.bb240
+  store i32 4, ptr %v, align 4
+  br label %sw.epilog
+
+sw.bb243:                                         ; preds = %sw.bb240
+  store i32 2, ptr %v, align 4
+  br label %sw.epilog
+
+sw.bb244:                                         ; preds = %sw.bb240
+  store i32 1, ptr %v, align 4
+  br label %sw.epilog
+
+sw.bb245:                                         ; preds = %sw.bb240
+  store i32 3, ptr %v, align 4
+  br label %sw.epilog
+
+sw.epilog:                                        ; preds = %sw.bb245, %sw.bb244, %sw.bb243, %sw.bb242
+  %149 = load i32, ptr %v, align 4
+  %conv246 = trunc i32 %149 to i16
+  %150 = load ptr, ptr %td, align 8
+  %td_sampleformat = getelementptr inbounds %struct.TIFFDirectory, ptr %150, i64 0, i32 9
+  store i16 %conv246, ptr %td_sampleformat, align 2
+  br label %sw.epilog375
+
+sw.bb247:                                         ; preds = %entry
+  %151 = va_arg ptr %ap.addr, i32
+  store i32 %151, ptr %v, align 4
+  %cmp249 = icmp slt i32 %151, 1
+  %152 = load i32, ptr %v, align 4
+  %cmp252 = icmp sgt i32 %152, 4
+  %or.cond26 = select i1 %cmp249, i1 true, i1 %cmp252
+  br i1 %or.cond26, label %badvalue, label %if.end255
+
+if.end255:                                        ; preds = %sw.bb247
+  %153 = load i32, ptr %v, align 4
+  %conv256 = trunc i32 %153 to i16
+  %154 = load ptr, ptr %td, align 8
+  %td_sampleformat257 = getelementptr inbounds %struct.TIFFDirectory, ptr %154, i64 0, i32 9
+  store i16 %conv256, ptr %td_sampleformat257, align 2
+  br label %sw.epilog375
+
+sw.bb258:                                         ; preds = %entry
+  %155 = va_arg ptr %ap.addr, i64
+  %156 = load ptr, ptr %td, align 8
+  %td_imagedepth = getelementptr inbounds %struct.TIFFDirectory, ptr %156, i64 0, i32 3
+  store i64 %155, ptr %td_imagedepth, align 8
+  br label %sw.epilog375
+
+sw.bb260:                                         ; preds = %entry
+  %157 = va_arg ptr %ap.addr, double
+  store double %157, ptr %d, align 8
+  %cmp262 = fcmp ugt double %157, 0.000000e+00
+  br i1 %cmp262, label %if.end265, label %badvaluedbl
+
+if.end265:                                        ; preds = %sw.bb260
+  %158 = load double, ptr %d, align 8
+  %159 = load ptr, ptr %td, align 8
+  %td_stonits = getelementptr inbounds %struct.TIFFDirectory, ptr %159, i64 0, i32 32
+  store double %158, ptr %td_stonits, align 8
+  br label %sw.epilog375
+
+sw.bb266:                                         ; preds = %entry
+  %160 = va_arg ptr %ap.addr, i64
+  %161 = load ptr, ptr %td, align 8
+  %td_imagefullwidth = getelementptr inbounds %struct.TIFFDirectory, ptr %161, i64 0, i32 67
+  store i64 %160, ptr %td_imagefullwidth, align 8
+  br label %sw.epilog375
+
+sw.bb268:                                         ; preds = %entry
+  %162 = va_arg ptr %ap.addr, i64
+  %163 = load ptr, ptr %td, align 8
+  %td_imagefulllength = getelementptr inbounds %struct.TIFFDirectory, ptr %163, i64 0, i32 68
+  store i64 %162, ptr %td_imagefulllength, align 8
+  br label %sw.epilog375
+
+sw.bb270:                                         ; preds = %entry
+  %164 = load ptr, ptr %td, align 8
+  %td_textureformat = getelementptr inbounds %struct.TIFFDirectory, ptr %164, i64 0, i32 69
+  %165 = va_arg ptr %ap.addr, ptr
+  call void @_TIFFsetString(ptr noundef nonnull %td_textureformat, ptr noundef %165)
+  br label %sw.epilog375
+
+sw.bb272:                                         ; preds = %entry
+  %166 = load ptr, ptr %td, align 8
+  %td_wrapmodes = getelementptr inbounds %struct.TIFFDirectory, ptr %166, i64 0, i32 70
+  %167 = va_arg ptr %ap.addr, ptr
+  call void @_TIFFsetString(ptr noundef nonnull %td_wrapmodes, ptr noundef %167)
+  br label %sw.epilog375
+
+sw.bb274:                                         ; preds = %entry
+  %168 = va_arg ptr %ap.addr, double
+  %conv276 = fptrunc double %168 to float
+  %169 = load ptr, ptr %td, align 8
+  %td_fovcot = getelementptr inbounds %struct.TIFFDirectory, ptr %169, i64 0, i32 71
+  store float %conv276, ptr %td_fovcot, align 8
+  br label %sw.epilog375
+
+sw.bb277:                                         ; preds = %entry
+  %170 = load ptr, ptr %td, align 8
+  %td_matrixWorldToScreen = getelementptr inbounds %struct.TIFFDirectory, ptr %170, i64 0, i32 72
+  %171 = va_arg ptr %ap.addr, ptr
+  call void @_TIFFsetByteArray(ptr noundef nonnull %td_matrixWorldToScreen, ptr noundef %171, i64 noundef 64)
+  br label %sw.epilog375
+
+sw.bb279:                                         ; preds = %entry
+  %172 = load ptr, ptr %td, align 8
+  %td_matrixWorldToCamera = getelementptr inbounds %struct.TIFFDirectory, ptr %172, i64 0, i32 73
+  %173 = va_arg ptr %ap.addr, ptr
+  call void @_TIFFsetByteArray(ptr noundef nonnull %td_matrixWorldToCamera, ptr noundef %173, i64 noundef 64)
+  br label %sw.epilog375
+
+sw.bb281:                                         ; preds = %entry
+  %174 = load ptr, ptr %tif.addr, align 8
+  %tif_flags282 = getelementptr inbounds %struct.tiff, ptr %174, i64 0, i32 3
+  %175 = load i64, ptr %tif_flags282, align 8
+  %and283 = and i64 %175, 8192
+  %cmp284 = icmp eq i64 %and283, 0
+  br i1 %cmp284, label %if.then286, label %if.else292
+
+if.then286:                                       ; preds = %sw.bb281
+  %176 = va_arg ptr %ap.addr, i32
+  %conv288 = trunc i32 %176 to i16
+  %177 = load ptr, ptr %td, align 8
+  %td_nsubifd = getelementptr inbounds %struct.TIFFDirectory, ptr %177, i64 0, i32 46
+  store i16 %conv288, ptr %td_nsubifd, align 8
+  %td_subifd = getelementptr inbounds %struct.TIFFDirectory, ptr %177, i64 0, i32 47
+  %178 = va_arg ptr %ap.addr, ptr
+  %td_nsubifd290 = getelementptr inbounds %struct.TIFFDirectory, ptr %177, i64 0, i32 46
+  %179 = load i16, ptr %td_nsubifd290, align 8
+  %conv291 = zext i16 %179 to i64
+  call void @_TIFFsetLongArray(ptr noundef nonnull %td_subifd, ptr noundef %178, i64 noundef %conv291)
+  br label %sw.epilog375
+
+if.else292:                                       ; preds = %sw.bb281
+  %180 = load ptr, ptr %tif.addr, align 8
+  %181 = load ptr, ptr %180, align 8
+  call void (ptr, ptr, ...) @TIFFError(ptr noundef %181, ptr noundef nonnull @.str.12) #5
+  store i32 0, ptr %status, align 4
+  br label %sw.epilog375
+
+sw.bb295:                                         ; preds = %entry
+  %182 = load ptr, ptr %td, align 8
+  %td_ycbcrcoeffs = getelementptr inbounds %struct.TIFFDirectory, ptr %182, i64 0, i32 48
+  %183 = va_arg ptr %ap.addr, ptr
+  call void @_TIFFsetByteArray(ptr noundef nonnull %td_ycbcrcoeffs, ptr noundef %183, i64 noundef 12)
+  br label %sw.epilog375
+
+sw.bb297:                                         ; preds = %entry
+  %184 = va_arg ptr %ap.addr, i32
+  %conv299 = trunc i32 %184 to i16
+  %185 = load ptr, ptr %td, align 8
+  %td_ycbcrpositioning = getelementptr inbounds %struct.TIFFDirectory, ptr %185, i64 0, i32 50
+  store i16 %conv299, ptr %td_ycbcrpositioning, align 4
+  br label %sw.epilog375
+
+sw.bb300:                                         ; preds = %entry
+  %186 = va_arg ptr %ap.addr, i32
+  %conv302 = trunc i32 %186 to i16
+  %187 = load ptr, ptr %td, align 8
+  %td_ycbcrsubsampling = getelementptr inbounds %struct.TIFFDirectory, ptr %187, i64 0, i32 49
+  store i16 %conv302, ptr %td_ycbcrsubsampling, align 8
+  %188 = va_arg ptr %ap.addr, i32
+  %conv305 = trunc i32 %188 to i16
+  %arrayidx307 = getelementptr inbounds %struct.TIFFDirectory, ptr %187, i64 0, i32 49, i64 1
+  store i16 %conv305, ptr %arrayidx307, align 2
+  br label %sw.epilog375
+
+sw.bb308:                                         ; preds = %entry
+  %189 = load ptr, ptr %td, align 8
+  %td_whitepoint = getelementptr inbounds %struct.TIFFDirectory, ptr %189, i64 0, i32 51
+  %190 = va_arg ptr %ap.addr, ptr
+  call void @_TIFFsetByteArray(ptr noundef nonnull %td_whitepoint, ptr noundef %190, i64 noundef 8)
+  br label %sw.epilog375
+
+sw.bb310:                                         ; preds = %entry
+  %191 = load ptr, ptr %td, align 8
+  %td_primarychromas = getelementptr inbounds %struct.TIFFDirectory, ptr %191, i64 0, i32 52
+  %192 = va_arg ptr %ap.addr, ptr
+  call void @_TIFFsetByteArray(ptr noundef nonnull %td_primarychromas, ptr noundef %192, i64 noundef 24)
+  br label %sw.epilog375
+
+sw.bb312:                                         ; preds = %entry
+  %193 = load ptr, ptr %td, align 8
+  %td_samplesperpixel313 = getelementptr inbounds %struct.TIFFDirectory, ptr %193, i64 0, i32 15
+  %194 = load i16, ptr %td_samplesperpixel313, align 2
+  %conv314 = zext i16 %194 to i32
+  %td_extrasamples315 = getelementptr inbounds %struct.TIFFDirectory, ptr %193, i64 0, i32 30
+  %195 = load i16, ptr %td_extrasamples315, align 4
+  %conv316 = zext i16 %195 to i32
+  %sub = sub nsw i32 %conv314, %conv316
+  %cmp317 = icmp sgt i32 %sub, 1
+  %cond = select i1 %cmp317, i32 3, i32 1
+  store i32 %cond, ptr %v, align 4
+  br label %for.cond
+
+for.cond:                                         ; preds = %for.body, %sw.bb312
+  %storemerge = phi i32 [ 0, %sw.bb312 ], [ %inc, %for.body ]
+  store i32 %storemerge, ptr %i, align 4
+  %196 = load i32, ptr %v, align 4
+  %cmp319 = icmp slt i32 %storemerge, %196
+  br i1 %cmp319, label %for.body, label %sw.epilog375
+
+for.body:                                         ; preds = %for.cond
+  %197 = load ptr, ptr %td, align 8
+  %198 = load i32, ptr %i, align 4
+  %idxprom = sext i32 %198 to i64
+  %arrayidx321 = getelementptr inbounds %struct.TIFFDirectory, ptr %197, i64 0, i32 54, i64 %idxprom
+  %199 = va_arg ptr %ap.addr, ptr
+  %td_bitspersample323 = getelementptr inbounds %struct.TIFFDirectory, ptr %197, i64 0, i32 8
+  %200 = load i16, ptr %td_bitspersample323, align 8
+  %sh_prom325 = zext i16 %200 to i64
+  %shl326 = shl i64 1, %sh_prom325
+  call void @_TIFFsetShortArray(ptr noundef nonnull %arrayidx321, ptr noundef %199, i64 noundef %shl326)
+  %201 = load i32, ptr %i, align 4
+  %inc = add nsw i32 %201, 1
+  br label %for.cond, !llvm.loop !6
+
+sw.bb327:                                         ; preds = %entry
+  %202 = load ptr, ptr %td, align 8
+  %td_refblackwhite = getelementptr inbounds %struct.TIFFDirectory, ptr %202, i64 0, i32 53
+  %203 = va_arg ptr %ap.addr, ptr
+  call void @_TIFFsetByteArray(ptr noundef nonnull %td_refblackwhite, ptr noundef %203, i64 noundef 24)
+  br label %sw.epilog375
+
+sw.bb329:                                         ; preds = %entry
+  %204 = va_arg ptr %ap.addr, i32
+  %conv331 = trunc i32 %204 to i16
+  %205 = load ptr, ptr %td, align 8
+  %td_inkset = getelementptr inbounds %struct.TIFFDirectory, ptr %205, i64 0, i32 55
+  store i16 %conv331, ptr %td_inkset, align 8
+  br label %sw.epilog375
+
+sw.bb332:                                         ; preds = %entry
+  %206 = va_arg ptr %ap.addr, i32
+  %conv334 = trunc i32 %206 to i16
+  %207 = load ptr, ptr %td, align 8
+  %td_dotrange = getelementptr inbounds %struct.TIFFDirectory, ptr %207, i64 0, i32 57
+  store i16 %conv334, ptr %td_dotrange, align 4
+  %208 = va_arg ptr %ap.addr, i32
+  %conv337 = trunc i32 %208 to i16
+  %arrayidx339 = getelementptr inbounds %struct.TIFFDirectory, ptr %207, i64 0, i32 57, i64 1
+  store i16 %conv337, ptr %arrayidx339, align 2
+  br label %sw.epilog375
+
+sw.bb340:                                         ; preds = %entry
+  %209 = va_arg ptr %ap.addr, i32
+  store i32 %209, ptr %i, align 4
+  %210 = va_arg ptr %ap.addr, ptr
+  store ptr %210, ptr %s, align 8
+  %211 = load ptr, ptr %tif.addr, align 8
+  %call343 = call i32 @checkInkNamesString(ptr noundef %211, i32 noundef %209, ptr noundef %210)
+  store i32 %call343, ptr %i, align 4
+  %cmp344 = icmp sgt i32 %call343, 0
+  %conv345 = zext i1 %cmp344 to i32
+  store i32 %conv345, ptr %status, align 4
+  %cmp346 = icmp sgt i32 %call343, 0
+  br i1 %cmp346, label %if.then348, label %sw.epilog375
+
+if.then348:                                       ; preds = %sw.bb340
+  %212 = load ptr, ptr %td, align 8
+  %td_inknames = getelementptr inbounds %struct.TIFFDirectory, ptr %212, i64 0, i32 59
+  %213 = load ptr, ptr %s, align 8
+  %214 = load i32, ptr %i, align 4
+  %conv349 = sext i32 %214 to i64
+  call void @_TIFFsetNString(ptr noundef nonnull %td_inknames, ptr noundef %213, i64 noundef %conv349)
+  %td_inknameslen = getelementptr inbounds %struct.TIFFDirectory, ptr %212, i64 0, i32 58
+  store i32 %214, ptr %td_inknameslen, align 8
+  br label %sw.epilog375
+
+sw.bb351:                                         ; preds = %entry
+  %215 = va_arg ptr %ap.addr, i32
+  %conv353 = trunc i32 %215 to i16
+  %216 = load ptr, ptr %td, align 8
+  %td_ninks = getelementptr inbounds %struct.TIFFDirectory, ptr %216, i64 0, i32 56
+  store i16 %conv353, ptr %td_ninks, align 2
+  br label %sw.epilog375
+
+sw.bb354:                                         ; preds = %entry
+  %217 = load ptr, ptr %td, align 8
+  %td_targetprinter = getelementptr inbounds %struct.TIFFDirectory, ptr %217, i64 0, i32 60
+  %218 = va_arg ptr %ap.addr, ptr
+  call void @_TIFFsetString(ptr noundef nonnull %td_targetprinter, ptr noundef %218)
+  br label %sw.epilog375
+
+sw.bb356:                                         ; preds = %entry
+  %219 = va_arg ptr %ap.addr, i64
+  %220 = load ptr, ptr %td, align 8
+  %td_profileLength = getelementptr inbounds %struct.TIFFDirectory, ptr %220, i64 0, i32 61
+  store i64 %219, ptr %td_profileLength, align 8
+  %td_profileData = getelementptr inbounds %struct.TIFFDirectory, ptr %220, i64 0, i32 62
+  %221 = va_arg ptr %ap.addr, ptr
+  %td_profileLength359 = getelementptr inbounds %struct.TIFFDirectory, ptr %220, i64 0, i32 61
+  %222 = load i64, ptr %td_profileLength359, align 8
+  call void @_TIFFsetByteArray(ptr noundef nonnull %td_profileData, ptr noundef %221, i64 noundef %222)
+  br label %sw.epilog375
+
+sw.bb360:                                         ; preds = %entry
+  %223 = va_arg ptr %ap.addr, i64
+  %224 = load ptr, ptr %td, align 8
+  %td_photoshopLength = getelementptr inbounds %struct.TIFFDirectory, ptr %224, i64 0, i32 63
+  store i64 %223, ptr %td_photoshopLength, align 8
+  %td_photoshopData = getelementptr inbounds %struct.TIFFDirectory, ptr %224, i64 0, i32 64
+  %225 = va_arg ptr %ap.addr, ptr
+  %td_photoshopLength363 = getelementptr inbounds %struct.TIFFDirectory, ptr %224, i64 0, i32 63
+  %226 = load i64, ptr %td_photoshopLength363, align 8
+  call void @_TIFFsetByteArray(ptr noundef nonnull %td_photoshopData, ptr noundef %225, i64 noundef %226)
+  br label %sw.epilog375
+
+sw.bb364:                                         ; preds = %entry
+  %227 = va_arg ptr %ap.addr, i64
+  %228 = load ptr, ptr %td, align 8
+  %td_richtiffiptcLength = getelementptr inbounds %struct.TIFFDirectory, ptr %228, i64 0, i32 65
+  store i64 %227, ptr %td_richtiffiptcLength, align 8
+  %td_richtiffiptcData = getelementptr inbounds %struct.TIFFDirectory, ptr %228, i64 0, i32 66
+  %229 = va_arg ptr %ap.addr, ptr
+  %td_richtiffiptcLength367 = getelementptr inbounds %struct.TIFFDirectory, ptr %228, i64 0, i32 65
+  %230 = load i64, ptr %td_richtiffiptcLength367, align 8
+  call void @_TIFFsetLongArray(ptr noundef nonnull %td_richtiffiptcData, ptr noundef %229, i64 noundef %230)
+  br label %sw.epilog375
+
+sw.default368:                                    ; preds = %entry
+  %231 = load ptr, ptr %tif.addr, align 8
+  %232 = load ptr, ptr %231, align 8
+  %233 = load i64, ptr %tag.addr, align 8
+  %cmp370 = icmp ugt i64 %233, 65535
+  %cond372 = select i1 %cmp370, ptr @.str.14, ptr @.str.6
+  %call373 = call ptr @_TIFFFieldWithTag(ptr noundef nonnull %231, i64 noundef %233) #5
+  %field_name374 = getelementptr inbounds %struct.TIFFFieldInfo, ptr %call373, i64 0, i32 7
+  %234 = load ptr, ptr %field_name374, align 8
+  call void (ptr, ptr, ...) @TIFFError(ptr noundef nonnull @.str.3, ptr noundef nonnull @.str.13, ptr noundef %232, ptr noundef nonnull %cond372, ptr noundef %234) #5
+  store i32 0, ptr %status, align 4
+  br label %sw.epilog375
+
+sw.epilog375:                                     ; preds = %sw.bb340, %if.then348, %for.cond, %if.then286, %if.else292, %sw.bb197, %if.then204, %sw.bb192, %if.end112, %if.then118, %if.then94, %if.else97, %if.end50, %if.then53, %if.then33, %sw.bb5, %if.then15, %if.then22, %if.else17, %if.then10, %sw.default368, %sw.bb364, %sw.bb360, %sw.bb356, %sw.bb354, %sw.bb351, %sw.bb332, %sw.bb329, %sw.bb327, %sw.bb310, %sw.bb308, %sw.bb300, %sw.bb297, %sw.bb295, %sw.bb279, %sw.bb277, %sw.bb274, %sw.bb272, %sw.bb270, %sw.bb268, %sw.bb266, %if.end265, %sw.bb258, %if.end255, %sw.epilog, %if.end239, %if.end230, %if.end216, %sw.bb181, %sw.bb173, %sw.bb165, %if.end163, %sw.bb152, %sw.bb149, %sw.bb147, %if.end145, %sw.bb134, %sw.bb131, %sw.bb129, %sw.bb127, %sw.bb124, %sw.bb121, %if.end105, %sw.bb86, %sw.bb84, %sw.bb82, %sw.bb80, %sw.bb78, %sw.bb76, %sw.bb74, %sw.bb72, %if.end70, %sw.bb60, %sw.bb57, %sw.bb3, %sw.bb1, %sw.bb
+  %235 = load i32, ptr %status, align 4
+  %tobool376.not = icmp eq i32 %235, 0
+  br i1 %tobool376.not, label %if.end393, label %if.then377
+
+if.then377:                                       ; preds = %sw.epilog375
+  %236 = load ptr, ptr %tif.addr, align 8
+  %237 = load i64, ptr %tag.addr, align 8
+  %call378 = call ptr @_TIFFFieldWithTag(ptr noundef %236, i64 noundef %237) #5
+  %field_bit = getelementptr inbounds %struct.TIFFFieldInfo, ptr %call378, i64 0, i32 4
+  %238 = load i16, ptr %field_bit, align 8
+  %239 = and i16 %238, 31
+  %sh_prom381 = zext i16 %239 to i64
+  %shl382 = shl i64 1, %sh_prom381
+  %240 = load ptr, ptr %tif.addr, align 8
+  %tif_dir383 = getelementptr inbounds %struct.tiff, ptr %240, i64 0, i32 6
+  %241 = load i64, ptr %tag.addr, align 8
+  %call385 = call ptr @_TIFFFieldWithTag(ptr noundef %240, i64 noundef %241) #5
+  %field_bit386 = getelementptr inbounds %struct.TIFFFieldInfo, ptr %call385, i64 0, i32 4
+  %242 = load i16, ptr %field_bit386, align 8
+  %243 = lshr i16 %242, 5
+  %idxprom388 = zext i16 %243 to i64
+  %arrayidx389 = getelementptr inbounds [3 x i64], ptr %tif_dir383, i64 0, i64 %idxprom388
+  %244 = load i64, ptr %arrayidx389, align 8
+  %or390 = or i64 %244, %shl382
+  store i64 %or390, ptr %arrayidx389, align 8
+  %245 = load ptr, ptr %tif.addr, align 8
+  %tif_flags391 = getelementptr inbounds %struct.tiff, ptr %245, i64 0, i32 3
+  %246 = load i64, ptr %tif_flags391, align 8
+  %or392 = or i64 %246, 8
+  store i64 %or392, ptr %tif_flags391, align 8
+  br label %if.end393
+
+if.end393:                                        ; preds = %if.then377, %sw.epilog375
+  call void @llvm.va_end(ptr %ap.addr)
+  %247 = load i32, ptr %status, align 4
+  store i32 %247, ptr %retval, align 4
+  br label %return
+
+badvalue:                                         ; preds = %sw.bb247, %sw.bb240, %sw.bb192, %sw.bb155, %sw.bb137, %sw.bb100, %sw.bb63
+  %248 = load ptr, ptr %tif.addr, align 8
+  %249 = load ptr, ptr %248, align 8
+  %250 = load i32, ptr %v, align 4
+  %251 = load i64, ptr %tag.addr, align 8
+  %call395 = call ptr @_TIFFFieldWithTag(ptr noundef nonnull %248, i64 noundef %251) #5
+  %field_name396 = getelementptr inbounds %struct.TIFFFieldInfo, ptr %call395, i64 0, i32 7
+  %252 = load ptr, ptr %field_name396, align 8
+  call void (ptr, ptr, ...) @TIFFError(ptr noundef %249, ptr noundef nonnull @.str.15, i32 noundef %250, ptr noundef %252) #5
+  call void @llvm.va_end(ptr %ap.addr)
+  store i32 0, ptr %retval, align 4
+  br label %return
+
+badvalue32:                                       ; preds = %sw.bb234, %if.then223, %if.then209, %sw.bb107
+  %253 = load ptr, ptr %tif.addr, align 8
+  %254 = load ptr, ptr %253, align 8
+  %255 = load i64, ptr %v32, align 8
+  %256 = load i64, ptr %tag.addr, align 8
+  %call398 = call ptr @_TIFFFieldWithTag(ptr noundef nonnull %253, i64 noundef %256) #5
+  %field_name399 = getelementptr inbounds %struct.TIFFFieldInfo, ptr %call398, i64 0, i32 7
+  %257 = load ptr, ptr %field_name399, align 8
+  call void (ptr, ptr, ...) @TIFFError(ptr noundef %254, ptr noundef nonnull @.str.16, i64 noundef %255, ptr noundef %257) #5
+  call void @llvm.va_end(ptr %ap.addr)
+  store i32 0, ptr %retval, align 4
+  br label %return
+
+badvaluedbl:                                      ; preds = %sw.bb260
+  %258 = load ptr, ptr %tif.addr, align 8
+  %259 = load ptr, ptr %258, align 8
+  %260 = load double, ptr %d, align 8
+  %261 = load i64, ptr %tag.addr, align 8
+  %call401 = call ptr @_TIFFFieldWithTag(ptr noundef nonnull %258, i64 noundef %261) #5
+  %field_name402 = getelementptr inbounds %struct.TIFFFieldInfo, ptr %call401, i64 0, i32 7
+  %262 = load ptr, ptr %field_name402, align 8
+  call void (ptr, ptr, ...) @TIFFError(ptr noundef %259, ptr noundef nonnull @.str.17, double noundef %260, ptr noundef %262) #5
+  call void @llvm.va_end(ptr %ap.addr)
+  store i32 0, ptr %retval, align 4
+  br label %return
+
+return:                                           ; preds = %badvaluedbl, %badvalue32, %badvalue, %if.end393
+  %263 = load i32, ptr %retval, align 4
+  ret i32 %263
+}
+
+; Function Attrs: nounwind ssp uwtable
+define internal i32 @_TIFFVGetField(ptr noundef %tif, i64 noundef %tag, ptr noundef %ap) #0 {
+entry:
+  %tif.addr = alloca ptr, align 8
+  %tag.addr = alloca i64, align 8
+  %ap.addr = alloca ptr, align 8
+  %td = alloca ptr, align 8
+  store ptr %tif, ptr %tif.addr, align 8
+  store i64 %tag, ptr %tag.addr, align 8
+  store ptr %ap, ptr %ap.addr, align 8
+  %tif_dir = getelementptr inbounds %struct.tiff, ptr %tif, i64 0, i32 6
+  store ptr %tif_dir, ptr %td, align 8
+  switch i64 %tag, label %sw.default [
+    i64 254, label %sw.bb
+    i64 256, label %sw.bb1
+    i64 257, label %sw.bb3
+    i64 258, label %sw.bb5
+    i64 259, label %sw.bb7
+    i64 262, label %sw.bb9
+    i64 263, label %sw.bb11
+    i64 266, label %sw.bb13
+    i64 269, label %sw.bb15
+    i64 315, label %sw.bb17
+    i64 306, label %sw.bb19
+    i64 316, label %sw.bb21
+    i64 270, label %sw.bb23
+    i64 271, label %sw.bb25
+    i64 272, label %sw.bb27
+    i64 305, label %sw.bb29
+    i64 274, label %sw.bb31
+    i64 277, label %sw.bb33
+    i64 278, label %sw.bb35
+    i64 280, label %sw.bb37
+    i64 281, label %sw.bb39
+    i64 340, label %sw.bb41
+    i64 341, label %sw.bb43
+    i64 282, label %sw.bb45
+    i64 283, label %sw.bb47
+    i64 284, label %sw.bb49
+    i64 286, label %sw.bb51
+    i64 287, label %sw.bb53
+    i64 285, label %sw.bb55
+    i64 296, label %sw.bb57
+    i64 297, label %sw.bb59
+    i64 321, label %sw.bb64
+    i64 320, label %sw.bb70
+    i64 273, label %sw.bb79
+    i64 324, label %sw.bb79
+    i64 279, label %sw.bb81
+    i64 325, label %sw.bb81
+    i64 32995, label %sw.bb83
+    i64 338, label %sw.bb91
+    i64 322, label %sw.bb96
+    i64 323, label %sw.bb98
+    i64 32998, label %sw.bb100
+    i64 32996, label %sw.bb102
+    i64 339, label %sw.bb112
+    i64 32997, label %sw.bb115
+    i64 37439, label %sw.bb117
+    i64 330, label %sw.bb119
+    i64 529, label %sw.bb122
+    i64 531, label %sw.bb124
+    i64 530, label %sw.bb126
+    i64 318, label %sw.bb132
+    i64 319, label %sw.bb134
+    i64 301, label %sw.bb136
+    i64 532, label %sw.bb151
+    i64 332, label %sw.bb153
+    i64 336, label %sw.bb155
+    i64 333, label %sw.bb161
+    i64 334, label %sw.bb163
+    i64 337, label %sw.bb165
+    i64 34675, label %sw.bb167
+    i64 34377, label %sw.bb170
+    i64 33723, label %sw.bb173
+    i64 33300, label %sw.bb176
+    i64 33301, label %sw.bb178
+    i64 33302, label %sw.bb180
+    i64 33303, label %sw.bb182
+    i64 33304, label %sw.bb184
+    i64 33305, label %sw.bb186
+    i64 33306, label %sw.bb188
+  ]
+
+sw.bb:                                            ; preds = %entry
+  %0 = load ptr, ptr %td, align 8
+  %td_subfiletype = getelementptr inbounds %struct.TIFFDirectory, ptr %0, i64 0, i32 7
+  %1 = load i64, ptr %td_subfiletype, align 8
+  %2 = va_arg ptr %ap.addr, ptr
+  store i64 %1, ptr %2, align 8
+  br label %sw.epilog192
+
+sw.bb1:                                           ; preds = %entry
+  %3 = load ptr, ptr %td, align 8
+  %td_imagewidth = getelementptr inbounds %struct.TIFFDirectory, ptr %3, i64 0, i32 1
+  %4 = load i64, ptr %td_imagewidth, align 8
+  %5 = va_arg ptr %ap.addr, ptr
+  store i64 %4, ptr %5, align 8
+  br label %sw.epilog192
+
+sw.bb3:                                           ; preds = %entry
+  %6 = load ptr, ptr %td, align 8
+  %td_imagelength = getelementptr inbounds %struct.TIFFDirectory, ptr %6, i64 0, i32 2
+  %7 = load i64, ptr %td_imagelength, align 8
+  %8 = va_arg ptr %ap.addr, ptr
+  store i64 %7, ptr %8, align 8
+  br label %sw.epilog192
+
+sw.bb5:                                           ; preds = %entry
+  %9 = load ptr, ptr %td, align 8
+  %td_bitspersample = getelementptr inbounds %struct.TIFFDirectory, ptr %9, i64 0, i32 8
+  %10 = load i16, ptr %td_bitspersample, align 8
+  %11 = va_arg ptr %ap.addr, ptr
+  store i16 %10, ptr %11, align 2
+  br label %sw.epilog192
+
+sw.bb7:                                           ; preds = %entry
+  %12 = load ptr, ptr %td, align 8
+  %td_compression = getelementptr inbounds %struct.TIFFDirectory, ptr %12, i64 0, i32 10
+  %13 = load i16, ptr %td_compression, align 4
+  %14 = va_arg ptr %ap.addr, ptr
+  store i16 %13, ptr %14, align 2
+  br label %sw.epilog192
+
+sw.bb9:                                           ; preds = %entry
+  %15 = load ptr, ptr %td, align 8
+  %td_photometric = getelementptr inbounds %struct.TIFFDirectory, ptr %15, i64 0, i32 11
+  %16 = load i16, ptr %td_photometric, align 2
+  %17 = va_arg ptr %ap.addr, ptr
+  store i16 %16, ptr %17, align 2
+  br label %sw.epilog192
+
+sw.bb11:                                          ; preds = %entry
+  %18 = load ptr, ptr %td, align 8
+  %td_threshholding = getelementptr inbounds %struct.TIFFDirectory, ptr %18, i64 0, i32 12
+  %19 = load i16, ptr %td_threshholding, align 8
+  %20 = va_arg ptr %ap.addr, ptr
+  store i16 %19, ptr %20, align 2
+  br label %sw.epilog192
+
+sw.bb13:                                          ; preds = %entry
+  %21 = load ptr, ptr %td, align 8
+  %td_fillorder = getelementptr inbounds %struct.TIFFDirectory, ptr %21, i64 0, i32 13
+  %22 = load i16, ptr %td_fillorder, align 2
+  %23 = va_arg ptr %ap.addr, ptr
+  store i16 %22, ptr %23, align 2
+  br label %sw.epilog192
+
+sw.bb15:                                          ; preds = %entry
+  %24 = load ptr, ptr %td, align 8
+  %td_documentname = getelementptr inbounds %struct.TIFFDirectory, ptr %24, i64 0, i32 33
+  %25 = load ptr, ptr %td_documentname, align 8
+  %26 = va_arg ptr %ap.addr, ptr
+  store ptr %25, ptr %26, align 8
+  br label %sw.epilog192
+
+sw.bb17:                                          ; preds = %entry
+  %27 = load ptr, ptr %td, align 8
+  %td_artist = getelementptr inbounds %struct.TIFFDirectory, ptr %27, i64 0, i32 34
+  %28 = load ptr, ptr %td_artist, align 8
+  %29 = va_arg ptr %ap.addr, ptr
+  store ptr %28, ptr %29, align 8
+  br label %sw.epilog192
+
+sw.bb19:                                          ; preds = %entry
+  %30 = load ptr, ptr %td, align 8
+  %td_datetime = getelementptr inbounds %struct.TIFFDirectory, ptr %30, i64 0, i32 35
+  %31 = load ptr, ptr %td_datetime, align 8
+  %32 = va_arg ptr %ap.addr, ptr
+  store ptr %31, ptr %32, align 8
+  br label %sw.epilog192
+
+sw.bb21:                                          ; preds = %entry
+  %33 = load ptr, ptr %td, align 8
+  %td_hostcomputer = getelementptr inbounds %struct.TIFFDirectory, ptr %33, i64 0, i32 36
+  %34 = load ptr, ptr %td_hostcomputer, align 8
+  %35 = va_arg ptr %ap.addr, ptr
+  store ptr %34, ptr %35, align 8
+  br label %sw.epilog192
+
+sw.bb23:                                          ; preds = %entry
+  %36 = load ptr, ptr %td, align 8
+  %td_imagedescription = getelementptr inbounds %struct.TIFFDirectory, ptr %36, i64 0, i32 37
+  %37 = load ptr, ptr %td_imagedescription, align 8
+  %38 = va_arg ptr %ap.addr, ptr
+  store ptr %37, ptr %38, align 8
+  br label %sw.epilog192
+
+sw.bb25:                                          ; preds = %entry
+  %39 = load ptr, ptr %td, align 8
+  %td_make = getelementptr inbounds %struct.TIFFDirectory, ptr %39, i64 0, i32 38
+  %40 = load ptr, ptr %td_make, align 8
+  %41 = va_arg ptr %ap.addr, ptr
+  store ptr %40, ptr %41, align 8
+  br label %sw.epilog192
+
+sw.bb27:                                          ; preds = %entry
+  %42 = load ptr, ptr %td, align 8
+  %td_model = getelementptr inbounds %struct.TIFFDirectory, ptr %42, i64 0, i32 39
+  %43 = load ptr, ptr %td_model, align 8
+  %44 = va_arg ptr %ap.addr, ptr
+  store ptr %43, ptr %44, align 8
+  br label %sw.epilog192
+
+sw.bb29:                                          ; preds = %entry
+  %45 = load ptr, ptr %td, align 8
+  %td_software = getelementptr inbounds %struct.TIFFDirectory, ptr %45, i64 0, i32 40
+  %46 = load ptr, ptr %td_software, align 8
+  %47 = va_arg ptr %ap.addr, ptr
+  store ptr %46, ptr %47, align 8
+  br label %sw.epilog192
+
+sw.bb31:                                          ; preds = %entry
+  %48 = load ptr, ptr %td, align 8
+  %td_orientation = getelementptr inbounds %struct.TIFFDirectory, ptr %48, i64 0, i32 14
+  %49 = load i16, ptr %td_orientation, align 4
+  %50 = va_arg ptr %ap.addr, ptr
+  store i16 %49, ptr %50, align 2
+  br label %sw.epilog192
+
+sw.bb33:                                          ; preds = %entry
+  %51 = load ptr, ptr %td, align 8
+  %td_samplesperpixel = getelementptr inbounds %struct.TIFFDirectory, ptr %51, i64 0, i32 15
+  %52 = load i16, ptr %td_samplesperpixel, align 2
+  %53 = va_arg ptr %ap.addr, ptr
+  store i16 %52, ptr %53, align 2
+  br label %sw.epilog192
+
+sw.bb35:                                          ; preds = %entry
+  %54 = load ptr, ptr %td, align 8
+  %td_rowsperstrip = getelementptr inbounds %struct.TIFFDirectory, ptr %54, i64 0, i32 16
+  %55 = load i64, ptr %td_rowsperstrip, align 8
+  %56 = va_arg ptr %ap.addr, ptr
+  store i64 %55, ptr %56, align 8
+  br label %sw.epilog192
+
+sw.bb37:                                          ; preds = %entry
+  %57 = load ptr, ptr %td, align 8
+  %td_minsamplevalue = getelementptr inbounds %struct.TIFFDirectory, ptr %57, i64 0, i32 17
+  %58 = load i16, ptr %td_minsamplevalue, align 8
+  %59 = va_arg ptr %ap.addr, ptr
+  store i16 %58, ptr %59, align 2
+  br label %sw.epilog192
+
+sw.bb39:                                          ; preds = %entry
+  %60 = load ptr, ptr %td, align 8
+  %td_maxsamplevalue = getelementptr inbounds %struct.TIFFDirectory, ptr %60, i64 0, i32 18
+  %61 = load i16, ptr %td_maxsamplevalue, align 2
+  %62 = va_arg ptr %ap.addr, ptr
+  store i16 %61, ptr %62, align 2
+  br label %sw.epilog192
+
+sw.bb41:                                          ; preds = %entry
+  %63 = load ptr, ptr %td, align 8
+  %td_sminsamplevalue = getelementptr inbounds %struct.TIFFDirectory, ptr %63, i64 0, i32 19
+  %64 = load double, ptr %td_sminsamplevalue, align 8
+  %65 = va_arg ptr %ap.addr, ptr
+  store double %64, ptr %65, align 8
+  br label %sw.epilog192
+
+sw.bb43:                                          ; preds = %entry
+  %66 = load ptr, ptr %td, align 8
+  %td_smaxsamplevalue = getelementptr inbounds %struct.TIFFDirectory, ptr %66, i64 0, i32 20
+  %67 = load double, ptr %td_smaxsamplevalue, align 8
+  %68 = va_arg ptr %ap.addr, ptr
+  store double %67, ptr %68, align 8
+  br label %sw.epilog192
+
+sw.bb45:                                          ; preds = %entry
+  %69 = load ptr, ptr %td, align 8
+  %td_xresolution = getelementptr inbounds %struct.TIFFDirectory, ptr %69, i64 0, i32 21
+  %70 = load float, ptr %td_xresolution, align 8
+  %71 = va_arg ptr %ap.addr, ptr
+  store float %70, ptr %71, align 4
+  br label %sw.epilog192
+
+sw.bb47:                                          ; preds = %entry
+  %72 = load ptr, ptr %td, align 8
+  %td_yresolution = getelementptr inbounds %struct.TIFFDirectory, ptr %72, i64 0, i32 22
+  %73 = load float, ptr %td_yresolution, align 4
+  %74 = va_arg ptr %ap.addr, ptr
+  store float %73, ptr %74, align 4
+  br label %sw.epilog192
+
+sw.bb49:                                          ; preds = %entry
+  %75 = load ptr, ptr %td, align 8
+  %td_planarconfig = getelementptr inbounds %struct.TIFFDirectory, ptr %75, i64 0, i32 24
+  %76 = load i16, ptr %td_planarconfig, align 2
+  %77 = va_arg ptr %ap.addr, ptr
+  store i16 %76, ptr %77, align 2
+  br label %sw.epilog192
+
+sw.bb51:                                          ; preds = %entry
+  %78 = load ptr, ptr %td, align 8
+  %td_xposition = getelementptr inbounds %struct.TIFFDirectory, ptr %78, i64 0, i32 25
+  %79 = load float, ptr %td_xposition, align 4
+  %80 = va_arg ptr %ap.addr, ptr
+  store float %79, ptr %80, align 4
+  br label %sw.epilog192
+
+sw.bb53:                                          ; preds = %entry
+  %81 = load ptr, ptr %td, align 8
+  %td_yposition = getelementptr inbounds %struct.TIFFDirectory, ptr %81, i64 0, i32 26
+  %82 = load float, ptr %td_yposition, align 8
+  %83 = va_arg ptr %ap.addr, ptr
+  store float %82, ptr %83, align 4
+  br label %sw.epilog192
+
+sw.bb55:                                          ; preds = %entry
+  %84 = load ptr, ptr %td, align 8
+  %td_pagename = getelementptr inbounds %struct.TIFFDirectory, ptr %84, i64 0, i32 41
+  %85 = load ptr, ptr %td_pagename, align 8
+  %86 = va_arg ptr %ap.addr, ptr
+  store ptr %85, ptr %86, align 8
+  br label %sw.epilog192
+
+sw.bb57:                                          ; preds = %entry
+  %87 = load ptr, ptr %td, align 8
+  %td_resolutionunit = getelementptr inbounds %struct.TIFFDirectory, ptr %87, i64 0, i32 23
+  %88 = load i16, ptr %td_resolutionunit, align 8
+  %89 = va_arg ptr %ap.addr, ptr
+  store i16 %88, ptr %89, align 2
+  br label %sw.epilog192
+
+sw.bb59:                                          ; preds = %entry
+  %90 = load ptr, ptr %td, align 8
+  %td_pagenumber = getelementptr inbounds %struct.TIFFDirectory, ptr %90, i64 0, i32 27
+  %91 = load i16, ptr %td_pagenumber, align 4
+  %92 = va_arg ptr %ap.addr, ptr
+  store i16 %91, ptr %92, align 2
+  %93 = load ptr, ptr %td, align 8
+  %arrayidx62 = getelementptr inbounds %struct.TIFFDirectory, ptr %93, i64 0, i32 27, i64 1
+  %94 = load i16, ptr %arrayidx62, align 2
+  %95 = va_arg ptr %ap.addr, ptr
+  store i16 %94, ptr %95, align 2
+  br label %sw.epilog192
+
+sw.bb64:                                          ; preds = %entry
+  %96 = load ptr, ptr %td, align 8
+  %td_halftonehints = getelementptr inbounds %struct.TIFFDirectory, ptr %96, i64 0, i32 29
+  %97 = load i16, ptr %td_halftonehints, align 8
+  %98 = va_arg ptr %ap.addr, ptr
+  store i16 %97, ptr %98, align 2
+  %99 = load ptr, ptr %td, align 8
+  %arrayidx68 = getelementptr inbounds %struct.TIFFDirectory, ptr %99, i64 0, i32 29, i64 1
+  %100 = load i16, ptr %arrayidx68, align 2
+  %101 = va_arg ptr %ap.addr, ptr
+  store i16 %100, ptr %101, align 2
+  br label %sw.epilog192
+
+sw.bb70:                                          ; preds = %entry
+  %102 = load ptr, ptr %td, align 8
+  %td_colormap = getelementptr inbounds %struct.TIFFDirectory, ptr %102, i64 0, i32 28
+  %103 = load ptr, ptr %td_colormap, align 8
+  %104 = va_arg ptr %ap.addr, ptr
+  store ptr %103, ptr %104, align 8
+  %105 = load ptr, ptr %td, align 8
+  %arrayidx74 = getelementptr inbounds %struct.TIFFDirectory, ptr %105, i64 0, i32 28, i64 1
+  %106 = load ptr, ptr %arrayidx74, align 8
+  %107 = va_arg ptr %ap.addr, ptr
+  store ptr %106, ptr %107, align 8
+  %108 = load ptr, ptr %td, align 8
+  %arrayidx77 = getelementptr inbounds %struct.TIFFDirectory, ptr %108, i64 0, i32 28, i64 2
+  %109 = load ptr, ptr %arrayidx77, align 8
+  %110 = va_arg ptr %ap.addr, ptr
+  store ptr %109, ptr %110, align 8
+  br label %sw.epilog192
+
+sw.bb79:                                          ; preds = %entry, %entry
+  %111 = load ptr, ptr %td, align 8
+  %td_stripoffset = getelementptr inbounds %struct.TIFFDirectory, ptr %111, i64 0, i32 44
+  %112 = load ptr, ptr %td_stripoffset, align 8
+  %113 = va_arg ptr %ap.addr, ptr
+  store ptr %112, ptr %113, align 8
+  br label %sw.epilog192
+
+sw.bb81:                                          ; preds = %entry, %entry
+  %114 = load ptr, ptr %td, align 8
+  %td_stripbytecount = getelementptr inbounds %struct.TIFFDirectory, ptr %114, i64 0, i32 45
+  %115 = load ptr, ptr %td_stripbytecount, align 8
+  %116 = va_arg ptr %ap.addr, ptr
+  store ptr %115, ptr %116, align 8
+  br label %sw.epilog192
+
+sw.bb83:                                          ; preds = %entry
+  %117 = load ptr, ptr %td, align 8
+  %td_extrasamples = getelementptr inbounds %struct.TIFFDirectory, ptr %117, i64 0, i32 30
+  %118 = load i16, ptr %td_extrasamples, align 4
+  %cmp = icmp eq i16 %118, 1
+  br i1 %cmp, label %land.rhs, label %land.end
+
+land.rhs:                                         ; preds = %sw.bb83
+  %119 = load ptr, ptr %td, align 8
+  %td_sampleinfo = getelementptr inbounds %struct.TIFFDirectory, ptr %119, i64 0, i32 31
+  %120 = load ptr, ptr %td_sampleinfo, align 8
+  %121 = load i16, ptr %120, align 2
+  %cmp87 = icmp eq i16 %121, 1
+  br label %land.end
+
+land.end:                                         ; preds = %land.rhs, %sw.bb83
+  %122 = phi i1 [ false, %sw.bb83 ], [ %cmp87, %land.rhs ]
+  %conv89 = zext i1 %122 to i16
+  %123 = va_arg ptr %ap.addr, ptr
+  store i16 %conv89, ptr %123, align 2
+  br label %sw.epilog192
+
+sw.bb91:                                          ; preds = %entry
+  %124 = load ptr, ptr %td, align 8
+  %td_extrasamples92 = getelementptr inbounds %struct.TIFFDirectory, ptr %124, i64 0, i32 30
+  %125 = load i16, ptr %td_extrasamples92, align 4
+  %126 = va_arg ptr %ap.addr, ptr
+  store i16 %125, ptr %126, align 2
+  %127 = load ptr, ptr %td, align 8
+  %td_sampleinfo94 = getelementptr inbounds %struct.TIFFDirectory, ptr %127, i64 0, i32 31
+  %128 = load ptr, ptr %td_sampleinfo94, align 8
+  %129 = va_arg ptr %ap.addr, ptr
+  store ptr %128, ptr %129, align 8
+  br label %sw.epilog192
+
+sw.bb96:                                          ; preds = %entry
+  %130 = load ptr, ptr %td, align 8
+  %td_tilewidth = getelementptr inbounds %struct.TIFFDirectory, ptr %130, i64 0, i32 4
+  %131 = load i64, ptr %td_tilewidth, align 8
+  %132 = va_arg ptr %ap.addr, ptr
+  store i64 %131, ptr %132, align 8
+  br label %sw.epilog192
+
+sw.bb98:                                          ; preds = %entry
+  %133 = load ptr, ptr %td, align 8
+  %td_tilelength = getelementptr inbounds %struct.TIFFDirectory, ptr %133, i64 0, i32 5
+  %134 = load i64, ptr %td_tilelength, align 8
+  %135 = va_arg ptr %ap.addr, ptr
+  store i64 %134, ptr %135, align 8
+  br label %sw.epilog192
+
+sw.bb100:                                         ; preds = %entry
+  %136 = load ptr, ptr %td, align 8
+  %td_tiledepth = getelementptr inbounds %struct.TIFFDirectory, ptr %136, i64 0, i32 6
+  %137 = load i64, ptr %td_tiledepth, align 8
+  %138 = va_arg ptr %ap.addr, ptr
+  store i64 %137, ptr %138, align 8
+  br label %sw.epilog192
+
+sw.bb102:                                         ; preds = %entry
+  %139 = load ptr, ptr %td, align 8
+  %td_sampleformat = getelementptr inbounds %struct.TIFFDirectory, ptr %139, i64 0, i32 9
+  %140 = load i16, ptr %td_sampleformat, align 2
+  switch i16 %140, label %sw.epilog192 [
+    i16 1, label %sw.bb104
+    i16 2, label %sw.bb106
+    i16 3, label %sw.bb108
+    i16 4, label %sw.bb110
+  ]
+
+sw.bb104:                                         ; preds = %sw.bb102
+  %141 = va_arg ptr %ap.addr, ptr
+  store i16 2, ptr %141, align 2
+  br label %sw.epilog192
+
+sw.bb106:                                         ; preds = %sw.bb102
+  %142 = va_arg ptr %ap.addr, ptr
+  store i16 1, ptr %142, align 2
+  br label %sw.epilog192
+
+sw.bb108:                                         ; preds = %sw.bb102
+  %143 = va_arg ptr %ap.addr, ptr
+  store i16 3, ptr %143, align 2
+  br label %sw.epilog192
+
+sw.bb110:                                         ; preds = %sw.bb102
+  %144 = va_arg ptr %ap.addr, ptr
+  store i16 0, ptr %144, align 2
+  br label %sw.epilog192
+
+sw.bb112:                                         ; preds = %entry
+  %145 = load ptr, ptr %td, align 8
+  %td_sampleformat113 = getelementptr inbounds %struct.TIFFDirectory, ptr %145, i64 0, i32 9
+  %146 = load i16, ptr %td_sampleformat113, align 2
+  %147 = va_arg ptr %ap.addr, ptr
+  store i16 %146, ptr %147, align 2
+  br label %sw.epilog192
+
+sw.bb115:                                         ; preds = %entry
+  %148 = load ptr, ptr %td, align 8
+  %td_imagedepth = getelementptr inbounds %struct.TIFFDirectory, ptr %148, i64 0, i32 3
+  %149 = load i64, ptr %td_imagedepth, align 8
+  %150 = va_arg ptr %ap.addr, ptr
+  store i64 %149, ptr %150, align 8
+  br label %sw.epilog192
+
+sw.bb117:                                         ; preds = %entry
+  %151 = load ptr, ptr %td, align 8
+  %td_stonits = getelementptr inbounds %struct.TIFFDirectory, ptr %151, i64 0, i32 32
+  %152 = load double, ptr %td_stonits, align 8
+  %153 = va_arg ptr %ap.addr, ptr
+  store double %152, ptr %153, align 8
+  br label %sw.epilog192
+
+sw.bb119:                                         ; preds = %entry
+  %154 = load ptr, ptr %td, align 8
+  %td_nsubifd = getelementptr inbounds %struct.TIFFDirectory, ptr %154, i64 0, i32 46
+  %155 = load i16, ptr %td_nsubifd, align 8
+  %156 = va_arg ptr %ap.addr, ptr
+  store i16 %155, ptr %156, align 2
+  %157 = load ptr, ptr %td, align 8
+  %td_subifd = getelementptr inbounds %struct.TIFFDirectory, ptr %157, i64 0, i32 47
+  %158 = load ptr, ptr %td_subifd, align 8
+  %159 = va_arg ptr %ap.addr, ptr
+  store ptr %158, ptr %159, align 8
+  br label %sw.epilog192
+
+sw.bb122:                                         ; preds = %entry
+  %160 = load ptr, ptr %td, align 8
+  %td_ycbcrcoeffs = getelementptr inbounds %struct.TIFFDirectory, ptr %160, i64 0, i32 48
+  %161 = load ptr, ptr %td_ycbcrcoeffs, align 8
+  %162 = va_arg ptr %ap.addr, ptr
+  store ptr %161, ptr %162, align 8
+  br label %sw.epilog192
+
+sw.bb124:                                         ; preds = %entry
+  %163 = load ptr, ptr %td, align 8
+  %td_ycbcrpositioning = getelementptr inbounds %struct.TIFFDirectory, ptr %163, i64 0, i32 50
+  %164 = load i16, ptr %td_ycbcrpositioning, align 4
+  %165 = va_arg ptr %ap.addr, ptr
+  store i16 %164, ptr %165, align 2
+  br label %sw.epilog192
+
+sw.bb126:                                         ; preds = %entry
+  %166 = load ptr, ptr %td, align 8
+  %td_ycbcrsubsampling = getelementptr inbounds %struct.TIFFDirectory, ptr %166, i64 0, i32 49
+  %167 = load i16, ptr %td_ycbcrsubsampling, align 8
+  %168 = va_arg ptr %ap.addr, ptr
+  store i16 %167, ptr %168, align 2
+  %169 = load ptr, ptr %td, align 8
+  %arrayidx130 = getelementptr inbounds %struct.TIFFDirectory, ptr %169, i64 0, i32 49, i64 1
+  %170 = load i16, ptr %arrayidx130, align 2
+  %171 = va_arg ptr %ap.addr, ptr
+  store i16 %170, ptr %171, align 2
+  br label %sw.epilog192
+
+sw.bb132:                                         ; preds = %entry
+  %172 = load ptr, ptr %td, align 8
+  %td_whitepoint = getelementptr inbounds %struct.TIFFDirectory, ptr %172, i64 0, i32 51
+  %173 = load ptr, ptr %td_whitepoint, align 8
+  %174 = va_arg ptr %ap.addr, ptr
+  store ptr %173, ptr %174, align 8
+  br label %sw.epilog192
+
+sw.bb134:                                         ; preds = %entry
+  %175 = load ptr, ptr %td, align 8
+  %td_primarychromas = getelementptr inbounds %struct.TIFFDirectory, ptr %175, i64 0, i32 52
+  %176 = load ptr, ptr %td_primarychromas, align 8
+  %177 = va_arg ptr %ap.addr, ptr
+  store ptr %176, ptr %177, align 8
+  br label %sw.epilog192
+
+sw.bb136:                                         ; preds = %entry
+  %178 = load ptr, ptr %td, align 8
+  %td_transferfunction = getelementptr inbounds %struct.TIFFDirectory, ptr %178, i64 0, i32 54
+  %179 = load ptr, ptr %td_transferfunction, align 8
+  %180 = va_arg ptr %ap.addr, ptr
+  store ptr %179, ptr %180, align 8
+  %181 = load ptr, ptr %td, align 8
+  %td_samplesperpixel139 = getelementptr inbounds %struct.TIFFDirectory, ptr %181, i64 0, i32 15
+  %182 = load i16, ptr %td_samplesperpixel139, align 2
+  %conv140 = zext i16 %182 to i32
+  %td_extrasamples141 = getelementptr inbounds %struct.TIFFDirectory, ptr %181, i64 0, i32 30
+  %183 = load i16, ptr %td_extrasamples141, align 4
+  %conv142 = zext i16 %183 to i32
+  %sub = sub nsw i32 %conv140, %conv142
+  %cmp143 = icmp sgt i32 %sub, 1
+  br i1 %cmp143, label %if.then, label %sw.epilog192
+
+if.then:                                          ; preds = %sw.bb136
+  %184 = load ptr, ptr %td, align 8
+  %arrayidx146 = getelementptr inbounds %struct.TIFFDirectory, ptr %184, i64 0, i32 54, i64 1
+  %185 = load ptr, ptr %arrayidx146, align 8
+  %186 = va_arg ptr %ap.addr, ptr
+  store ptr %185, ptr %186, align 8
+  %187 = load ptr, ptr %td, align 8
+  %arrayidx149 = getelementptr inbounds %struct.TIFFDirectory, ptr %187, i64 0, i32 54, i64 2
+  %188 = load ptr, ptr %arrayidx149, align 8
+  %189 = va_arg ptr %ap.addr, ptr
+  store ptr %188, ptr %189, align 8
+  br label %sw.epilog192
+
+sw.bb151:                                         ; preds = %entry
+  %190 = load ptr, ptr %td, align 8
+  %td_refblackwhite = getelementptr inbounds %struct.TIFFDirectory, ptr %190, i64 0, i32 53
+  %191 = load ptr, ptr %td_refblackwhite, align 8
+  %192 = va_arg ptr %ap.addr, ptr
+  store ptr %191, ptr %192, align 8
+  br label %sw.epilog192
+
+sw.bb153:                                         ; preds = %entry
+  %193 = load ptr, ptr %td, align 8
+  %td_inkset = getelementptr inbounds %struct.TIFFDirectory, ptr %193, i64 0, i32 55
+  %194 = load i16, ptr %td_inkset, align 8
+  %195 = va_arg ptr %ap.addr, ptr
+  store i16 %194, ptr %195, align 2
+  br label %sw.epilog192
+
+sw.bb155:                                         ; preds = %entry
+  %196 = load ptr, ptr %td, align 8
+  %td_dotrange = getelementptr inbounds %struct.TIFFDirectory, ptr %196, i64 0, i32 57
+  %197 = load i16, ptr %td_dotrange, align 4
+  %198 = va_arg ptr %ap.addr, ptr
+  store i16 %197, ptr %198, align 2
+  %199 = load ptr, ptr %td, align 8
+  %arrayidx159 = getelementptr inbounds %struct.TIFFDirectory, ptr %199, i64 0, i32 57, i64 1
+  %200 = load i16, ptr %arrayidx159, align 2
+  %201 = va_arg ptr %ap.addr, ptr
+  store i16 %200, ptr %201, align 2
+  br label %sw.epilog192
+
+sw.bb161:                                         ; preds = %entry
+  %202 = load ptr, ptr %td, align 8
+  %td_inknames = getelementptr inbounds %struct.TIFFDirectory, ptr %202, i64 0, i32 59
+  %203 = load ptr, ptr %td_inknames, align 8
+  %204 = va_arg ptr %ap.addr, ptr
+  store ptr %203, ptr %204, align 8
+  br label %sw.epilog192
+
+sw.bb163:                                         ; preds = %entry
+  %205 = load ptr, ptr %td, align 8
+  %td_ninks = getelementptr inbounds %struct.TIFFDirectory, ptr %205, i64 0, i32 56
+  %206 = load i16, ptr %td_ninks, align 2
+  %207 = va_arg ptr %ap.addr, ptr
+  store i16 %206, ptr %207, align 2
+  br label %sw.epilog192
+
+sw.bb165:                                         ; preds = %entry
+  %208 = load ptr, ptr %td, align 8
+  %td_targetprinter = getelementptr inbounds %struct.TIFFDirectory, ptr %208, i64 0, i32 60
+  %209 = load ptr, ptr %td_targetprinter, align 8
+  %210 = va_arg ptr %ap.addr, ptr
+  store ptr %209, ptr %210, align 8
+  br label %sw.epilog192
+
+sw.bb167:                                         ; preds = %entry
+  %211 = load ptr, ptr %td, align 8
+  %td_profileLength = getelementptr inbounds %struct.TIFFDirectory, ptr %211, i64 0, i32 61
+  %212 = load i64, ptr %td_profileLength, align 8
+  %213 = va_arg ptr %ap.addr, ptr
+  store i64 %212, ptr %213, align 8
+  %214 = load ptr, ptr %td, align 8
+  %td_profileData = getelementptr inbounds %struct.TIFFDirectory, ptr %214, i64 0, i32 62
+  %215 = load ptr, ptr %td_profileData, align 8
+  %216 = va_arg ptr %ap.addr, ptr
+  store ptr %215, ptr %216, align 8
+  br label %sw.epilog192
+
+sw.bb170:                                         ; preds = %entry
+  %217 = load ptr, ptr %td, align 8
+  %td_photoshopLength = getelementptr inbounds %struct.TIFFDirectory, ptr %217, i64 0, i32 63
+  %218 = load i64, ptr %td_photoshopLength, align 8
+  %219 = va_arg ptr %ap.addr, ptr
+  store i64 %218, ptr %219, align 8
+  %220 = load ptr, ptr %td, align 8
+  %td_photoshopData = getelementptr inbounds %struct.TIFFDirectory, ptr %220, i64 0, i32 64
+  %221 = load ptr, ptr %td_photoshopData, align 8
+  %222 = va_arg ptr %ap.addr, ptr
+  store ptr %221, ptr %222, align 8
+  br label %sw.epilog192
+
+sw.bb173:                                         ; preds = %entry
+  %223 = load ptr, ptr %td, align 8
+  %td_richtiffiptcLength = getelementptr inbounds %struct.TIFFDirectory, ptr %223, i64 0, i32 65
+  %224 = load i64, ptr %td_richtiffiptcLength, align 8
+  %225 = va_arg ptr %ap.addr, ptr
+  store i64 %224, ptr %225, align 8
+  %226 = load ptr, ptr %td, align 8
+  %td_richtiffiptcData = getelementptr inbounds %struct.TIFFDirectory, ptr %226, i64 0, i32 66
+  %227 = load ptr, ptr %td_richtiffiptcData, align 8
+  %228 = va_arg ptr %ap.addr, ptr
+  store ptr %227, ptr %228, align 8
+  br label %sw.epilog192
+
+sw.bb176:                                         ; preds = %entry
+  %229 = load ptr, ptr %td, align 8
+  %td_imagefullwidth = getelementptr inbounds %struct.TIFFDirectory, ptr %229, i64 0, i32 67
+  %230 = load i64, ptr %td_imagefullwidth, align 8
+  %231 = va_arg ptr %ap.addr, ptr
+  store i64 %230, ptr %231, align 8
+  br label %sw.epilog192
+
+sw.bb178:                                         ; preds = %entry
+  %232 = load ptr, ptr %td, align 8
+  %td_imagefulllength = getelementptr inbounds %struct.TIFFDirectory, ptr %232, i64 0, i32 68
+  %233 = load i64, ptr %td_imagefulllength, align 8
+  %234 = va_arg ptr %ap.addr, ptr
+  store i64 %233, ptr %234, align 8
+  br label %sw.epilog192
+
+sw.bb180:                                         ; preds = %entry
+  %235 = load ptr, ptr %td, align 8
+  %td_textureformat = getelementptr inbounds %struct.TIFFDirectory, ptr %235, i64 0, i32 69
+  %236 = load ptr, ptr %td_textureformat, align 8
+  %237 = va_arg ptr %ap.addr, ptr
+  store ptr %236, ptr %237, align 8
+  br label %sw.epilog192
+
+sw.bb182:                                         ; preds = %entry
+  %238 = load ptr, ptr %td, align 8
+  %td_wrapmodes = getelementptr inbounds %struct.TIFFDirectory, ptr %238, i64 0, i32 70
+  %239 = load ptr, ptr %td_wrapmodes, align 8
+  %240 = va_arg ptr %ap.addr, ptr
+  store ptr %239, ptr %240, align 8
+  br label %sw.epilog192
+
+sw.bb184:                                         ; preds = %entry
+  %241 = load ptr, ptr %td, align 8
+  %td_fovcot = getelementptr inbounds %struct.TIFFDirectory, ptr %241, i64 0, i32 71
+  %242 = load float, ptr %td_fovcot, align 8
+  %243 = va_arg ptr %ap.addr, ptr
+  store float %242, ptr %243, align 4
+  br label %sw.epilog192
+
+sw.bb186:                                         ; preds = %entry
+  %244 = load ptr, ptr %td, align 8
+  %td_matrixWorldToScreen = getelementptr inbounds %struct.TIFFDirectory, ptr %244, i64 0, i32 72
+  %245 = load ptr, ptr %td_matrixWorldToScreen, align 8
+  %246 = va_arg ptr %ap.addr, ptr
+  store ptr %245, ptr %246, align 8
+  br label %sw.epilog192
+
+sw.bb188:                                         ; preds = %entry
+  %247 = load ptr, ptr %td, align 8
+  %td_matrixWorldToCamera = getelementptr inbounds %struct.TIFFDirectory, ptr %247, i64 0, i32 73
+  %248 = load ptr, ptr %td_matrixWorldToCamera, align 8
+  %249 = va_arg ptr %ap.addr, ptr
+  store ptr %248, ptr %249, align 8
+  br label %sw.epilog192
+
+sw.default:                                       ; preds = %entry
+  %250 = load ptr, ptr %tif.addr, align 8
+  %251 = load ptr, ptr %250, align 8
+  %252 = load i64, ptr %tag.addr, align 8
+  %cmp190 = icmp ugt i64 %252, 65535
+  %cond = select i1 %cmp190, ptr @.str.5, ptr @.str.6
+  %call = call ptr @_TIFFFieldWithTag(ptr noundef nonnull %250, i64 noundef %252) #5
+  %field_name = getelementptr inbounds %struct.TIFFFieldInfo, ptr %call, i64 0, i32 7
+  %253 = load ptr, ptr %field_name, align 8
+  call void (ptr, ptr, ...) @TIFFError(ptr noundef nonnull @.str.19, ptr noundef nonnull @.str.13, ptr noundef %251, ptr noundef nonnull %cond, ptr noundef %253) #5
+  br label %sw.epilog192
+
+sw.epilog192:                                     ; preds = %sw.bb136, %if.then, %sw.bb102, %sw.bb104, %sw.bb106, %sw.bb108, %sw.bb110, %sw.default, %sw.bb188, %sw.bb186, %sw.bb184, %sw.bb182, %sw.bb180, %sw.bb178, %sw.bb176, %sw.bb173, %sw.bb170, %sw.bb167, %sw.bb165, %sw.bb163, %sw.bb161, %sw.bb155, %sw.bb153, %sw.bb151, %sw.bb134, %sw.bb132, %sw.bb126, %sw.bb124, %sw.bb122, %sw.bb119, %sw.bb117, %sw.bb115, %sw.bb112, %sw.bb100, %sw.bb98, %sw.bb96, %sw.bb91, %land.end, %sw.bb81, %sw.bb79, %sw.bb70, %sw.bb64, %sw.bb59, %sw.bb57, %sw.bb55, %sw.bb53, %sw.bb51, %sw.bb49, %sw.bb47, %sw.bb45, %sw.bb43, %sw.bb41, %sw.bb39, %sw.bb37, %sw.bb35, %sw.bb33, %sw.bb31, %sw.bb29, %sw.bb27, %sw.bb25, %sw.bb23, %sw.bb21, %sw.bb19, %sw.bb17, %sw.bb15, %sw.bb13, %sw.bb11, %sw.bb9, %sw.bb7, %sw.bb5, %sw.bb3, %sw.bb1, %sw.bb
+  ret i32 1
+}
+
+; Function Attrs: nounwind ssp uwtable
+define zeroext i16 @TIFFNumberOfDirectories(ptr noundef %tif) #0 {
+entry:
+  %tif.addr = alloca ptr, align 8
+  %nextdir = alloca i64, align 8
+  %n = alloca i16, align 2
+  store ptr %tif, ptr %tif.addr, align 8
+  %tiff_diroff = getelementptr inbounds %struct.tiff, ptr %tif, i64 0, i32 7, i32 2
+  %0 = load i64, ptr %tiff_diroff, align 8
+  store i64 %0, ptr %nextdir, align 8
+  br label %while.cond
+
+while.cond:                                       ; preds = %while.body, %entry
+  %storemerge = phi i16 [ 0, %entry ], [ %inc, %while.body ]
+  store i16 %storemerge, ptr %n, align 2
+  %1 = load i64, ptr %nextdir, align 8
+  %cmp.not = icmp eq i64 %1, 0
+  br i1 %cmp.not, label %while.end, label %land.rhs
+
+land.rhs:                                         ; preds = %while.cond
+  %2 = load ptr, ptr %tif.addr, align 8
+  %call = call i32 @TIFFAdvanceDirectory(ptr noundef %2, ptr noundef nonnull %nextdir, ptr noundef null)
+  %tobool = icmp ne i32 %call, 0
+  br i1 %tobool, label %while.body, label %while.end
+
+while.body:                                       ; preds = %land.rhs
+  %3 = load i16, ptr %n, align 2
+  %inc = add i16 %3, 1
+  br label %while.cond, !llvm.loop !8
+
+while.end:                                        ; preds = %while.cond, %land.rhs
+  %4 = load i16, ptr %n, align 2
+  ret i16 %4
+}
+
+; Function Attrs: nounwind ssp uwtable
+define internal i32 @TIFFAdvanceDirectory(ptr noundef %tif, ptr noundef %nextdir, ptr noundef %off) #0 {
+entry:
+  %retval = alloca i32, align 4
+  %tif.addr = alloca ptr, align 8
+  %nextdir.addr = alloca ptr, align 8
+  %off.addr = alloca ptr, align 8
+  %dircount = alloca i16, align 2
+  %poff = alloca i64, align 8
+  store ptr %tif, ptr %tif.addr, align 8
+  store ptr %nextdir, ptr %nextdir.addr, align 8
+  store ptr %off, ptr %off.addr, align 8
+  %tif_flags = getelementptr inbounds %struct.tiff, ptr %tif, i64 0, i32 3
+  %0 = load i64, ptr %tif_flags, align 8
+  %and = and i64 %0, 2048
+  %cmp.not = icmp eq i64 %and, 0
+  br i1 %cmp.not, label %if.else, label %if.then
+
+if.then:                                          ; preds = %entry
+  %1 = load ptr, ptr %nextdir.addr, align 8
+  %2 = load i64, ptr %1, align 8
+  store i64 %2, ptr %poff, align 8
+  %add = add i64 %2, 2
+  %3 = load ptr, ptr %tif.addr, align 8
+  %tif_size = getelementptr inbounds %struct.tiff, ptr %3, i64 0, i32 45
+  %4 = load i64, ptr %tif_size, align 8
+  %cmp1 = icmp sgt i64 %add, %4
+  br i1 %cmp1, label %if.then2, label %if.end
+
+if.then2:                                         ; preds = %if.then
+  %5 = load ptr, ptr %tif.addr, align 8
+  %6 = load ptr, ptr %5, align 8
+  call void (ptr, ptr, ...) @TIFFError(ptr noundef nonnull @TIFFAdvanceDirectory.module, ptr noundef nonnull @.str.20, ptr noundef %6) #5
+  store i32 0, ptr %retval, align 4
+  br label %return
+
+if.end:                                           ; preds = %if.then
+  %7 = load ptr, ptr %tif.addr, align 8
+  %tif_base = getelementptr inbounds %struct.tiff, ptr %7, i64 0, i32 44
+  %8 = load ptr, ptr %tif_base, align 8
+  %9 = load i64, ptr %poff, align 8
+  %add.ptr = getelementptr inbounds i8, ptr %8, i64 %9
+  call void @_TIFFmemcpy(ptr noundef nonnull %dircount, ptr noundef %add.ptr, i64 noundef 2) #5
+  %tif_flags3 = getelementptr inbounds %struct.tiff, ptr %7, i64 0, i32 3
+  %10 = load i64, ptr %tif_flags3, align 8
+  %and4 = and i64 %10, 128
+  %tobool.not = icmp eq i64 %and4, 0
+  br i1 %tobool.not, label %if.end6, label %if.then5
+
+if.then5:                                         ; preds = %if.end
+  call void @TIFFSwabShort(ptr noundef nonnull %dircount) #5
+  br label %if.end6
+
+if.end6:                                          ; preds = %if.then5, %if.end
+  %11 = load i16, ptr %dircount, align 2
+  %conv = zext i16 %11 to i64
+  %mul = mul nuw nsw i64 %conv, 24
+  %add7 = or i64 %mul, 2
+  %12 = load i64, ptr %poff, align 8
+  %add8 = add i64 %12, %add7
+  store i64 %add8, ptr %poff, align 8
+  %13 = load ptr, ptr %off.addr, align 8
+  %cmp9.not = icmp eq ptr %13, null
+  br i1 %cmp9.not, label %if.end12, label %if.then11
+
+if.then11:                                        ; preds = %if.end6
+  %14 = load i64, ptr %poff, align 8
+  %15 = load ptr, ptr %off.addr, align 8
+  store i64 %14, ptr %15, align 8
+  br label %if.end12
+
+if.end12:                                         ; preds = %if.then11, %if.end6
+  %16 = load i64, ptr %poff, align 8
+  %add13 = add i64 %16, 8
+  %17 = load ptr, ptr %tif.addr, align 8
+  %tif_size14 = getelementptr inbounds %struct.tiff, ptr %17, i64 0, i32 45
+  %18 = load i64, ptr %tif_size14, align 8
+  %cmp15 = icmp sgt i64 %add13, %18
+  br i1 %cmp15, label %if.then17, label %if.end19
+
+if.then17:                                        ; preds = %if.end12
+  %19 = load ptr, ptr %tif.addr, align 8
+  %20 = load ptr, ptr %19, align 8
+  call void (ptr, ptr, ...) @TIFFError(ptr noundef nonnull @TIFFAdvanceDirectory.module, ptr noundef nonnull @.str.21, ptr noundef %20) #5
+  store i32 0, ptr %retval, align 4
+  br label %return
+
+if.end19:                                         ; preds = %if.end12
+  %21 = load ptr, ptr %nextdir.addr, align 8
+  %22 = load ptr, ptr %tif.addr, align 8
+  %tif_base20 = getelementptr inbounds %struct.tiff, ptr %22, i64 0, i32 44
+  %23 = load ptr, ptr %tif_base20, align 8
+  %24 = load i64, ptr %poff, align 8
+  %add.ptr21 = getelementptr inbounds i8, ptr %23, i64 %24
+  call void @_TIFFmemcpy(ptr noundef %21, ptr noundef %add.ptr21, i64 noundef 8) #5
+  %tif_flags22 = getelementptr inbounds %struct.tiff, ptr %22, i64 0, i32 3
+  %25 = load i64, ptr %tif_flags22, align 8
+  %and23 = and i64 %25, 128
+  %tobool24.not = icmp eq i64 %and23, 0
+  br i1 %tobool24.not, label %if.end26, label %if.then25
+
+if.then25:                                        ; preds = %if.end19
+  %26 = load ptr, ptr %nextdir.addr, align 8
+  call void @TIFFSwabLong(ptr noundef %26) #5
+  br label %if.end26
+
+if.end26:                                         ; preds = %if.then25, %if.end19
+  store i32 1, ptr %retval, align 4
+  br label %return
+
+if.else:                                          ; preds = %entry
+  %27 = load ptr, ptr %tif.addr, align 8
+  %tif_seekproc = getelementptr inbounds %struct.tiff, ptr %27, i64 0, i32 51
+  %28 = load ptr, ptr %tif_seekproc, align 8
+  %tif_clientdata = getelementptr inbounds %struct.tiff, ptr %27, i64 0, i32 48
+  %29 = load ptr, ptr %tif_clientdata, align 8
+  %30 = load ptr, ptr %nextdir.addr, align 8
+  %31 = load i64, ptr %30, align 8
+  %call = call i64 %28(ptr noundef %29, i64 noundef %31, i32 noundef 0) #5
+  %32 = load i64, ptr %30, align 8
+  %cmp27 = icmp eq i64 %call, %32
+  br i1 %cmp27, label %lor.lhs.false, label %if.then33
+
+lor.lhs.false:                                    ; preds = %if.else
+  %33 = load ptr, ptr %tif.addr, align 8
+  %tif_readproc = getelementptr inbounds %struct.tiff, ptr %33, i64 0, i32 49
+  %34 = load ptr, ptr %tif_readproc, align 8
+  %tif_clientdata29 = getelementptr inbounds %struct.tiff, ptr %33, i64 0, i32 48
+  %35 = load ptr, ptr %tif_clientdata29, align 8
+  %call30 = call i64 %34(ptr noundef %35, ptr noundef nonnull %dircount, i64 noundef 2) #5
+  %cmp31 = icmp eq i64 %call30, 2
+  br i1 %cmp31, label %if.end35, label %if.then33
+
+if.then33:                                        ; preds = %lor.lhs.false, %if.else
+  %36 = load ptr, ptr %tif.addr, align 8
+  %37 = load ptr, ptr %36, align 8
+  call void (ptr, ptr, ...) @TIFFError(ptr noundef nonnull @TIFFAdvanceDirectory.module, ptr noundef nonnull @.str.20, ptr noundef %37) #5
+  store i32 0, ptr %retval, align 4
+  br label %return
+
+if.end35:                                         ; preds = %lor.lhs.false
+  %38 = load ptr, ptr %tif.addr, align 8
+  %tif_flags36 = getelementptr inbounds %struct.tiff, ptr %38, i64 0, i32 3
+  %39 = load i64, ptr %tif_flags36, align 8
+  %and37 = and i64 %39, 128
+  %tobool38.not = icmp eq i64 %and37, 0
+  br i1 %tobool38.not, label %if.end40, label %if.then39
+
+if.then39:                                        ; preds = %if.end35
+  call void @TIFFSwabShort(ptr noundef nonnull %dircount) #5
+  br label %if.end40
+
+if.end40:                                         ; preds = %if.then39, %if.end35
+  %40 = load ptr, ptr %off.addr, align 8
+  %cmp41.not = icmp eq ptr %40, null
+  br i1 %cmp41.not, label %if.else49, label %if.then43
+
+if.then43:                                        ; preds = %if.end40
+  %41 = load ptr, ptr %tif.addr, align 8
+  %tif_seekproc44 = getelementptr inbounds %struct.tiff, ptr %41, i64 0, i32 51
+  %42 = load ptr, ptr %tif_seekproc44, align 8
+  %tif_clientdata45 = getelementptr inbounds %struct.tiff, ptr %41, i64 0, i32 48
+  %43 = load ptr, ptr %tif_clientdata45, align 8
+  %44 = load i16, ptr %dircount, align 2
+  %conv46 = zext i16 %44 to i64
+  %mul47 = mul nuw nsw i64 %conv46, 24
+  %call48 = call i64 %42(ptr noundef %43, i64 noundef %mul47, i32 noundef 1) #5
+  %45 = load ptr, ptr %off.addr, align 8
+  store i64 %call48, ptr %45, align 8
+  br label %if.end55
+
+if.else49:                                        ; preds = %if.end40
+  %46 = load ptr, ptr %tif.addr, align 8
+  %tif_seekproc50 = getelementptr inbounds %struct.tiff, ptr %46, i64 0, i32 51
+  %47 = load ptr, ptr %tif_seekproc50, align 8
+  %tif_clientdata51 = getelementptr inbounds %struct.tiff, ptr %46, i64 0, i32 48
+  %48 = load ptr, ptr %tif_clientdata51, align 8
+  %49 = load i16, ptr %dircount, align 2
+  %conv52 = zext i16 %49 to i64
+  %mul53 = mul nuw nsw i64 %conv52, 24
+  %call54 = call i64 %47(ptr noundef %48, i64 noundef %mul53, i32 noundef 1) #5
+  br label %if.end55
+
+if.end55:                                         ; preds = %if.else49, %if.then43
+  %50 = load ptr, ptr %tif.addr, align 8
+  %tif_readproc56 = getelementptr inbounds %struct.tiff, ptr %50, i64 0, i32 49
+  %51 = load ptr, ptr %tif_readproc56, align 8
+  %tif_clientdata57 = getelementptr inbounds %struct.tiff, ptr %50, i64 0, i32 48
+  %52 = load ptr, ptr %tif_clientdata57, align 8
+  %53 = load ptr, ptr %nextdir.addr, align 8
+  %call58 = call i64 %51(ptr noundef %52, ptr noundef %53, i64 noundef 8) #5
+  %cmp59 = icmp eq i64 %call58, 8
+  br i1 %cmp59, label %if.end63, label %if.then61
+
+if.then61:                                        ; preds = %if.end55
+  %54 = load ptr, ptr %tif.addr, align 8
+  %55 = load ptr, ptr %54, align 8
+  call void (ptr, ptr, ...) @TIFFError(ptr noundef nonnull @TIFFAdvanceDirectory.module, ptr noundef nonnull @.str.21, ptr noundef %55) #5
+  store i32 0, ptr %retval, align 4
+  br label %return
+
+if.end63:                                         ; preds = %if.end55
+  %56 = load ptr, ptr %tif.addr, align 8
+  %tif_flags64 = getelementptr inbounds %struct.tiff, ptr %56, i64 0, i32 3
+  %57 = load i64, ptr %tif_flags64, align 8
+  %and65 = and i64 %57, 128
+  %tobool66.not = icmp eq i64 %and65, 0
+  br i1 %tobool66.not, label %if.end68, label %if.then67
+
+if.then67:                                        ; preds = %if.end63
+  %58 = load ptr, ptr %nextdir.addr, align 8
+  call void @TIFFSwabLong(ptr noundef %58) #5
+  br label %if.end68
+
+if.end68:                                         ; preds = %if.then67, %if.end63
+  store i32 1, ptr %retval, align 4
+  br label %return
+
+return:                                           ; preds = %if.end68, %if.then61, %if.then33, %if.end26, %if.then17, %if.then2
+  %59 = load i32, ptr %retval, align 4
+  ret i32 %59
+}
+
+; Function Attrs: nounwind ssp uwtable
+define i32 @TIFFSetDirectory(ptr noundef %tif, i16 noundef zeroext %dirn) #0 {
+entry:
+  %tif.addr = alloca ptr, align 8
+  %dirn.addr = alloca i16, align 2
+  %nextdir = alloca i64, align 8
+  %n = alloca i16, align 2
+  store ptr %tif, ptr %tif.addr, align 8
+  store i16 %dirn, ptr %dirn.addr, align 2
+  %tiff_diroff = getelementptr inbounds %struct.tiff, ptr %tif, i64 0, i32 7, i32 2
+  %0 = load i64, ptr %tiff_diroff, align 8
+  store i64 %0, ptr %nextdir, align 8
+  br label %for.cond
+
+for.cond:                                         ; preds = %for.inc, %entry
+  %storemerge = phi i16 [ %dirn, %entry ], [ %dec, %for.inc ]
+  store i16 %storemerge, ptr %n, align 2
+  %cmp.not = icmp eq i16 %storemerge, 0
+  %1 = load i64, ptr %nextdir, align 8
+  %cmp2 = icmp ne i64 %1, 0
+  %2 = select i1 %cmp.not, i1 false, i1 %cmp2
+  br i1 %2, label %for.body, label %for.end
+
+for.body:                                         ; preds = %for.cond
+  %3 = load ptr, ptr %tif.addr, align 8
+  %call = call i32 @TIFFAdvanceDirectory(ptr noundef %3, ptr noundef nonnull %nextdir, ptr noundef null)
+  %tobool.not = icmp eq i32 %call, 0
+  br i1 %tobool.not, label %return, label %for.inc
+
+for.inc:                                          ; preds = %for.body
+  %4 = load i16, ptr %n, align 2
+  %dec = add i16 %4, -1
+  br label %for.cond, !llvm.loop !9
+
+for.end:                                          ; preds = %for.cond
+  %5 = load i64, ptr %nextdir, align 8
+  %6 = load ptr, ptr %tif.addr, align 8
+  %tif_nextdiroff = getelementptr inbounds %struct.tiff, ptr %6, i64 0, i32 5
+  store i64 %5, ptr %tif_nextdiroff, align 8
+  %7 = load i16, ptr %dirn.addr, align 2
+  %8 = load i16, ptr %n, align 2
+  %9 = xor i16 %8, -1
+  %sub6 = add i16 %7, %9
+  %10 = load ptr, ptr %tif.addr, align 8
+  %tif_curdir = getelementptr inbounds %struct.tiff, ptr %10, i64 0, i32 12
+  store i16 %sub6, ptr %tif_curdir, align 8
+  %call8 = call i32 @TIFFReadDirectory(ptr noundef %10) #5
+  br label %return
+
+return:                                           ; preds = %for.body, %for.end
+  %storemerge1 = phi i32 [ %call8, %for.end ], [ 0, %for.body ]
+  ret i32 %storemerge1
+}
+
+declare i32 @TIFFReadDirectory(ptr noundef) #1
+
+; Function Attrs: nounwind ssp uwtable
+define i32 @TIFFSetSubDirectory(ptr noundef %tif, i64 noundef %diroff) #0 {
+entry:
+  %tif_nextdiroff = getelementptr inbounds %struct.tiff, ptr %tif, i64 0, i32 5
+  store i64 %diroff, ptr %tif_nextdiroff, align 8
+  %call = call i32 @TIFFReadDirectory(ptr noundef %tif) #5
+  ret i32 %call
+}
+
+; Function Attrs: nounwind ssp uwtable
+define i64 @TIFFCurrentDirOffset(ptr noundef %tif) #0 {
+entry:
+  %tif_diroff = getelementptr inbounds %struct.tiff, ptr %tif, i64 0, i32 4
+  %0 = load i64, ptr %tif_diroff, align 8
+  ret i64 %0
+}
+
+; Function Attrs: nounwind ssp uwtable
+define i32 @TIFFLastDirectory(ptr noundef %tif) #0 {
+entry:
+  %tif_nextdiroff = getelementptr inbounds %struct.tiff, ptr %tif, i64 0, i32 5
+  %0 = load i64, ptr %tif_nextdiroff, align 8
+  %cmp = icmp eq i64 %0, 0
+  %conv = zext i1 %cmp to i32
+  ret i32 %conv
+}
+
+; Function Attrs: nounwind ssp uwtable
+define i32 @TIFFUnlinkDirectory(ptr noundef %tif, i16 noundef zeroext %dirn) #0 {
+entry:
+  %retval = alloca i32, align 4
+  %tif.addr = alloca ptr, align 8
+  %dirn.addr = alloca i16, align 2
+  %nextdir = alloca i64, align 8
+  %off = alloca i64, align 8
+  %n = alloca i16, align 2
+  store ptr %tif, ptr %tif.addr, align 8
+  store i16 %dirn, ptr %dirn.addr, align 2
+  %tif_mode = getelementptr inbounds %struct.tiff, ptr %tif, i64 0, i32 2
+  %0 = load i32, ptr %tif_mode, align 4
+  %cmp = icmp eq i32 %0, 0
+  br i1 %cmp, label %if.then, label %if.end
+
+if.then:                                          ; preds = %entry
+  call void (ptr, ptr, ...) @TIFFError(ptr noundef nonnull @TIFFUnlinkDirectory.module, ptr noundef nonnull @.str) #5
+  store i32 0, ptr %retval, align 4
+  br label %return
+
+if.end:                                           ; preds = %entry
+  %1 = load ptr, ptr %tif.addr, align 8
+  %tiff_diroff = getelementptr inbounds %struct.tiff, ptr %1, i64 0, i32 7, i32 2
+  %2 = load i64, ptr %tiff_diroff, align 8
+  store i64 %2, ptr %nextdir, align 8
+  store i64 4, ptr %off, align 8
+  %3 = load i16, ptr %dirn.addr, align 2
+  br label %for.cond
+
+for.cond:                                         ; preds = %for.inc, %if.end
+  %storemerge.in = phi i16 [ %3, %if.end ], [ %7, %for.inc ]
+  %storemerge = add i16 %storemerge.in, -1
+  store i16 %storemerge, ptr %n, align 2
+  %cmp3.not = icmp eq i16 %storemerge, 0
+  br i1 %cmp3.not, label %for.end, label %for.body
+
+for.body:                                         ; preds = %for.cond
+  %4 = load i64, ptr %nextdir, align 8
+  %cmp5 = icmp eq i64 %4, 0
+  br i1 %cmp5, label %if.then7, label %if.end9
+
+if.then7:                                         ; preds = %for.body
+  %5 = load i16, ptr %dirn.addr, align 2
+  %conv8 = zext i16 %5 to i32
+  call void (ptr, ptr, ...) @TIFFError(ptr noundef nonnull @TIFFUnlinkDirectory.module, ptr noundef nonnull @.str.1, i32 noundef %conv8) #5
+  store i32 0, ptr %retval, align 4
+  br label %return
+
+if.end9:                                          ; preds = %for.body
+  %6 = load ptr, ptr %tif.addr, align 8
+  %call = call i32 @TIFFAdvanceDirectory(ptr noundef %6, ptr noundef nonnull %nextdir, ptr noundef nonnull %off)
+  %tobool.not = icmp eq i32 %call, 0
+  br i1 %tobool.not, label %if.then10, label %for.inc
+
+if.then10:                                        ; preds = %if.end9
+  store i32 0, ptr %retval, align 4
+  br label %return
+
+for.inc:                                          ; preds = %if.end9
+  %7 = load i16, ptr %n, align 2
+  br label %for.cond, !llvm.loop !10
+
+for.end:                                          ; preds = %for.cond
+  %8 = load ptr, ptr %tif.addr, align 8
+  %call12 = call i32 @TIFFAdvanceDirectory(ptr noundef %8, ptr noundef nonnull %nextdir, ptr noundef null)
+  %tobool13.not = icmp eq i32 %call12, 0
+  br i1 %tobool13.not, label %if.then14, label %if.end15
+
+if.then14:                                        ; preds = %for.end
+  store i32 0, ptr %retval, align 4
+  br label %return
+
+if.end15:                                         ; preds = %for.end
+  %9 = load ptr, ptr %tif.addr, align 8
+  %tif_seekproc = getelementptr inbounds %struct.tiff, ptr %9, i64 0, i32 51
+  %10 = load ptr, ptr %tif_seekproc, align 8
+  %tif_clientdata = getelementptr inbounds %struct.tiff, ptr %9, i64 0, i32 48
+  %11 = load ptr, ptr %tif_clientdata, align 8
+  %12 = load i64, ptr %off, align 8
+  %call16 = call i64 %10(ptr noundef %11, i64 noundef %12, i32 noundef 0) #5
+  %13 = load ptr, ptr %tif.addr, align 8
+  %tif_flags = getelementptr inbounds %struct.tiff, ptr %13, i64 0, i32 3
+  %14 = load i64, ptr %tif_flags, align 8
+  %and = and i64 %14, 128
+  %tobool17.not = icmp eq i64 %and, 0
+  br i1 %tobool17.not, label %if.end19, label %if.then18
+
+if.then18:                                        ; preds = %if.end15
+  call void @TIFFSwabLong(ptr noundef nonnull %nextdir) #5
+  br label %if.end19
+
+if.end19:                                         ; preds = %if.then18, %if.end15
+  %15 = load ptr, ptr %tif.addr, align 8
+  %tif_writeproc = getelementptr inbounds %struct.tiff, ptr %15, i64 0, i32 50
+  %16 = load ptr, ptr %tif_writeproc, align 8
+  %tif_clientdata20 = getelementptr inbounds %struct.tiff, ptr %15, i64 0, i32 48
+  %17 = load ptr, ptr %tif_clientdata20, align 8
+  %call21 = call i64 %16(ptr noundef %17, ptr noundef nonnull %nextdir, i64 noundef 8) #5
+  %cmp22 = icmp eq i64 %call21, 8
+  br i1 %cmp22, label %if.end25, label %if.then24
+
+if.then24:                                        ; preds = %if.end19
+  call void (ptr, ptr, ...) @TIFFError(ptr noundef nonnull @TIFFUnlinkDirectory.module, ptr noundef nonnull @.str.2) #5
+  store i32 0, ptr %retval, align 4
+  br label %return
+
+if.end25:                                         ; preds = %if.end19
+  %18 = load ptr, ptr %tif.addr, align 8
+  %tif_cleanup = getelementptr inbounds %struct.tiff, ptr %18, i64 0, i32 34
+  %19 = load ptr, ptr %tif_cleanup, align 8
+  call void %19(ptr noundef %18) #5
+  %tif_flags26 = getelementptr inbounds %struct.tiff, ptr %18, i64 0, i32 3
+  %20 = load i64, ptr %tif_flags26, align 8
+  %and27 = and i64 %20, 512
+  %tobool28.not = icmp eq i64 %and27, 0
+  br i1 %tobool28.not, label %if.end33, label %land.lhs.true
+
+land.lhs.true:                                    ; preds = %if.end25
+  %21 = load ptr, ptr %tif.addr, align 8
+  %tif_rawdata = getelementptr inbounds %struct.tiff, ptr %21, i64 0, i32 40
+  %22 = load ptr, ptr %tif_rawdata, align 8
+  %tobool29.not = icmp eq ptr %22, null
+  br i1 %tobool29.not, label %if.end33, label %if.then30
+
+if.then30:                                        ; preds = %land.lhs.true
+  %23 = load ptr, ptr %tif.addr, align 8
+  %tif_rawdata31 = getelementptr inbounds %struct.tiff, ptr %23, i64 0, i32 40
+  %24 = load ptr, ptr %tif_rawdata31, align 8
+  call void @_TIFFfree(ptr noundef %24) #5
+  %tif_rawdata32 = getelementptr inbounds %struct.tiff, ptr %23, i64 0, i32 40
+  store ptr null, ptr %tif_rawdata32, align 8
+  %tif_rawcc = getelementptr inbounds %struct.tiff, ptr %23, i64 0, i32 43
+  store i64 0, ptr %tif_rawcc, align 8
+  br label %if.end33
+
+if.end33:                                         ; preds = %if.then30, %land.lhs.true, %if.end25
+  %25 = load ptr, ptr %tif.addr, align 8
+  %tif_flags34 = getelementptr inbounds %struct.tiff, ptr %25, i64 0, i32 3
+  %26 = load i64, ptr %tif_flags34, align 8
+  %and35 = and i64 %26, -4177
+  store i64 %and35, ptr %tif_flags34, align 8
+  call void @TIFFFreeDirectory(ptr noundef %25)
+  %call36 = call i32 @TIFFDefaultDirectory(ptr noundef %25)
+  %27 = load ptr, ptr %tif.addr, align 8
+  %tif_diroff = getelementptr inbounds %struct.tiff, ptr %27, i64 0, i32 4
+  store i64 0, ptr %tif_diroff, align 8
+  %tif_nextdiroff = getelementptr inbounds %struct.tiff, ptr %27, i64 0, i32 5
+  store i64 0, ptr %tif_nextdiroff, align 8
+  %tif_curoff = getelementptr inbounds %struct.tiff, ptr %27, i64 0, i32 14
+  store i64 0, ptr %tif_curoff, align 8
+  %28 = load ptr, ptr %tif.addr, align 8
+  %tif_row = getelementptr inbounds %struct.tiff, ptr %28, i64 0, i32 11
+  store i64 -1, ptr %tif_row, align 8
+  %tif_curstrip = getelementptr inbounds %struct.tiff, ptr %28, i64 0, i32 13
+  store i64 -1, ptr %tif_curstrip, align 8
+  store i32 1, ptr %retval, align 4
+  br label %return
+
+return:                                           ; preds = %if.end33, %if.then24, %if.then14, %if.then10, %if.then7, %if.then
+  %29 = load i32, ptr %retval, align 4
+  ret i32 %29
+}
+
+declare void @TIFFError(ptr noundef, ptr noundef, ...) #1
+
+declare void @TIFFSwabLong(ptr noundef) #1
+
+; Function Attrs: nounwind ssp uwtable
+define i32 @TIFFReassignTagToIgnore(i32 noundef %task, i32 noundef %TIFFtagID) #0 {
+entry:
+  %retval = alloca i32, align 4
+  %TIFFtagID.addr = alloca i32, align 4
+  %i = alloca i32, align 4
+  %j = alloca i32, align 4
+  store i32 %TIFFtagID, ptr %TIFFtagID.addr, align 4
+  switch i32 %task, label %sw.epilog [
+    i32 0, label %sw.bb
+    i32 1, label %for.cond9
+    i32 2, label %sw.bb20
+  ]
+
+sw.bb:                                            ; preds = %entry
+  %0 = load i32, ptr @TIFFReassignTagToIgnore.tagcount, align 4
+  %cmp = icmp slt i32 %0, 94
+  br i1 %cmp, label %for.cond, label %sw.epilog
+
+for.cond:                                         ; preds = %sw.bb, %for.inc
+  %storemerge1 = phi i32 [ %inc, %for.inc ], [ 0, %sw.bb ]
+  store i32 %storemerge1, ptr %j, align 4
+  %1 = load i32, ptr @TIFFReassignTagToIgnore.tagcount, align 4
+  %cmp1 = icmp slt i32 %storemerge1, %1
+  br i1 %cmp1, label %for.body, label %for.end
+
+for.body:                                         ; preds = %for.cond
+  %2 = load i32, ptr %j, align 4
+  %idxprom = sext i32 %2 to i64
+  %arrayidx = getelementptr inbounds [95 x i32], ptr @TIFFReassignTagToIgnore.TIFFignoretags, i64 0, i64 %idxprom
+  %3 = load i32, ptr %arrayidx, align 4
+  %4 = load i32, ptr %TIFFtagID.addr, align 4
+  %cmp2 = icmp eq i32 %3, %4
+  br i1 %cmp2, label %if.then3, label %for.inc
+
+if.then3:                                         ; preds = %for.body
+  store i32 1, ptr %retval, align 4
+  br label %return
+
+for.inc:                                          ; preds = %for.body
+  %5 = load i32, ptr %j, align 4
+  %inc = add nsw i32 %5, 1
+  br label %for.cond, !llvm.loop !11
+
+for.end:                                          ; preds = %for.cond
+  %6 = load i32, ptr %TIFFtagID.addr, align 4
+  %7 = load i32, ptr @TIFFReassignTagToIgnore.tagcount, align 4
+  %inc4 = add nsw i32 %7, 1
+  store i32 %inc4, ptr @TIFFReassignTagToIgnore.tagcount, align 4
+  %idxprom5 = sext i32 %7 to i64
+  %arrayidx6 = getelementptr inbounds [95 x i32], ptr @TIFFReassignTagToIgnore.TIFFignoretags, i64 0, i64 %idxprom5
+  store i32 %6, ptr %arrayidx6, align 4
+  store i32 1, ptr %retval, align 4
+  br label %return
+
+for.cond9:                                        ; preds = %entry, %for.inc17
+  %storemerge = phi i32 [ %inc18, %for.inc17 ], [ 0, %entry ]
+  store i32 %storemerge, ptr %i, align 4
+  %8 = load i32, ptr @TIFFReassignTagToIgnore.tagcount, align 4
+  %cmp10 = icmp slt i32 %storemerge, %8
+  br i1 %cmp10, label %for.body11, label %sw.epilog
+
+for.body11:                                       ; preds = %for.cond9
+  %9 = load i32, ptr %i, align 4
+  %idxprom12 = sext i32 %9 to i64
+  %arrayidx13 = getelementptr inbounds [95 x i32], ptr @TIFFReassignTagToIgnore.TIFFignoretags, i64 0, i64 %idxprom12
+  %10 = load i32, ptr %arrayidx13, align 4
+  %11 = load i32, ptr %TIFFtagID.addr, align 4
+  %cmp14 = icmp eq i32 %10, %11
+  br i1 %cmp14, label %if.then15, label %for.inc17
+
+if.then15:                                        ; preds = %for.body11
+  store i32 1, ptr %retval, align 4
+  br label %return
+
+for.inc17:                                        ; preds = %for.body11
+  %12 = load i32, ptr %i, align 4
+  %inc18 = add nsw i32 %12, 1
+  br label %for.cond9, !llvm.loop !12
+
+sw.bb20:                                          ; preds = %entry
+  store i32 0, ptr @TIFFReassignTagToIgnore.tagcount, align 4
+  store i32 1, ptr %retval, align 4
+  br label %return
+
+sw.epilog:                                        ; preds = %entry, %for.cond9, %sw.bb
+  store i32 0, ptr %retval, align 4
+  br label %return
+
+return:                                           ; preds = %sw.epilog, %sw.bb20, %if.then15, %for.end, %if.then3
+  %13 = load i32, ptr %retval, align 4
+  ret i32 %13
+}
+
+declare void @_TIFFSwab16BitData(ptr noundef, ptr noundef, i64 noundef) #1
+
+declare void @_TIFFSwab32BitData(ptr noundef, ptr noundef, i64 noundef) #1
+
+declare void @_TIFFSwab64BitData(ptr noundef, ptr noundef, i64 noundef) #1
+
+declare i32 @TIFFSetCompressionScheme(ptr noundef, i32 noundef) #1
+
+declare void @TIFFWarning(ptr noundef, ptr noundef, ...) #1
+
+declare ptr @_TIFFFieldWithTag(ptr noundef, i64 noundef) #1
+
+; Function Attrs: nounwind ssp uwtable
+define internal i32 @setExtraSamples(ptr noundef %td, ptr noundef %ap, ptr noundef %v) #0 {
+entry:
+  %retval = alloca i32, align 4
+  %td.addr = alloca ptr, align 8
+  %ap.addr = alloca ptr, align 8
+  %v.addr = alloca ptr, align 8
+  %va = alloca ptr, align 8
+  %i = alloca i32, align 4
+  store ptr %td, ptr %td.addr, align 8
+  store ptr %ap, ptr %ap.addr, align 8
+  store ptr %v, ptr %v.addr, align 8
+  %0 = va_arg ptr %ap.addr, i32
+  store i32 %0, ptr %v, align 4
+  %conv1 = and i32 %0, 65535
+  %td_samplesperpixel = getelementptr inbounds %struct.TIFFDirectory, ptr %td, i64 0, i32 15
+  %1 = load i16, ptr %td_samplesperpixel, align 2
+  %conv2 = zext i16 %1 to i32
+  %cmp = icmp ugt i32 %conv1, %conv2
+  br i1 %cmp, label %if.then, label %if.end
+
+if.then:                                          ; preds = %entry
+  store i32 0, ptr %retval, align 4
+  br label %return
+
+if.end:                                           ; preds = %entry
+  %2 = va_arg ptr %ap.addr, ptr
+  store ptr %2, ptr %va, align 8
+  %3 = load ptr, ptr %v.addr, align 8
+  %4 = load i32, ptr %3, align 4
+  %cmp5 = icmp sgt i32 %4, 0
+  %5 = load ptr, ptr %va, align 8
+  %cmp7 = icmp eq ptr %5, null
+  %or.cond = select i1 %cmp5, i1 %cmp7, i1 false
+  br i1 %or.cond, label %if.then9, label %for.cond
+
+if.then9:                                         ; preds = %if.end
+  store i32 0, ptr %retval, align 4
+  br label %return
+
+for.cond:                                         ; preds = %if.end, %for.inc
+  %storemerge = phi i32 [ %inc, %for.inc ], [ 0, %if.end ]
+  store i32 %storemerge, ptr %i, align 4
+  %6 = load ptr, ptr %v.addr, align 8
+  %7 = load i32, ptr %6, align 4
+  %cmp11 = icmp slt i32 %storemerge, %7
+  br i1 %cmp11, label %for.body, label %for.end
+
+for.body:                                         ; preds = %for.cond
+  %8 = load ptr, ptr %va, align 8
+  %9 = load i32, ptr %i, align 4
+  %idxprom = sext i32 %9 to i64
+  %arrayidx = getelementptr inbounds i16, ptr %8, i64 %idxprom
+  %10 = load i16, ptr %arrayidx, align 2
+  %cmp14 = icmp ugt i16 %10, 2
+  br i1 %cmp14, label %if.then16, label %for.inc
+
+if.then16:                                        ; preds = %for.body
+  store i32 0, ptr %retval, align 4
+  br label %return
+
+for.inc:                                          ; preds = %for.body
+  %11 = load i32, ptr %i, align 4
+  %inc = add nsw i32 %11, 1
+  br label %for.cond, !llvm.loop !13
+
+for.end:                                          ; preds = %for.cond
+  %12 = load ptr, ptr %v.addr, align 8
+  %13 = load i32, ptr %12, align 4
+  %conv18 = trunc i32 %13 to i16
+  %14 = load ptr, ptr %td.addr, align 8
+  %td_extrasamples = getelementptr inbounds %struct.TIFFDirectory, ptr %14, i64 0, i32 30
+  store i16 %conv18, ptr %td_extrasamples, align 4
+  %td_sampleinfo = getelementptr inbounds %struct.TIFFDirectory, ptr %14, i64 0, i32 31
+  %15 = load ptr, ptr %va, align 8
+  %conv18.mask = and i32 %13, 65535
+  %conv20 = zext i32 %conv18.mask to i64
+  call void @_TIFFsetShortArray(ptr noundef nonnull %td_sampleinfo, ptr noundef %15, i64 noundef %conv20)
+  store i32 1, ptr %retval, align 4
+  br label %return
+
+return:                                           ; preds = %for.end, %if.then16, %if.then9, %if.then
+  %16 = load i32, ptr %retval, align 4
+  ret i32 %16
+}
+
+; Function Attrs: nounwind ssp uwtable
+define internal i32 @checkInkNamesString(ptr noundef %tif, i32 noundef %slen, ptr noundef %s) #0 {
+entry:
+  %tif.addr = alloca ptr, align 8
+  %slen.addr = alloca i32, align 4
+  %s.addr = alloca ptr, align 8
+  %td = alloca ptr, align 8
+  %i = alloca i32, align 4
+  %ep = alloca ptr, align 8
+  %cp = alloca ptr, align 8
+  store ptr %tif, ptr %tif.addr, align 8
+  store i32 %slen, ptr %slen.addr, align 4
+  store ptr %s, ptr %s.addr, align 8
+  %tif_dir = getelementptr inbounds %struct.tiff, ptr %tif, i64 0, i32 6
+  store ptr %tif_dir, ptr %td, align 8
+  %td_samplesperpixel = getelementptr inbounds %struct.tiff, ptr %tif, i64 0, i32 6, i32 15
+  %0 = load i16, ptr %td_samplesperpixel, align 2
+  %conv = zext i16 %0 to i32
+  store i32 %conv, ptr %i, align 4
+  %1 = load i32, ptr %slen.addr, align 4
+  %cmp = icmp sgt i32 %1, 0
+  br i1 %cmp, label %if.then, label %bad
+
+if.then:                                          ; preds = %entry
+  %2 = load ptr, ptr %s.addr, align 8
+  %3 = load i32, ptr %slen.addr, align 4
+  %idx.ext = sext i32 %3 to i64
+  %add.ptr = getelementptr inbounds i8, ptr %2, i64 %idx.ext
+  store ptr %add.ptr, ptr %ep, align 8
+  store ptr %2, ptr %cp, align 8
+  br label %for.cond
+
+for.cond:                                         ; preds = %for.end, %if.then
+  %4 = load i32, ptr %i, align 4
+  %cmp2 = icmp sgt i32 %4, 0
+  br i1 %cmp2, label %for.cond4, label %for.end14
+
+for.cond4:                                        ; preds = %for.cond, %for.inc
+  %5 = load ptr, ptr %cp, align 8
+  %6 = load i8, ptr %5, align 1
+  %cmp6.not = icmp eq i8 %6, 0
+  br i1 %cmp6.not, label %for.end, label %for.body8
+
+for.body8:                                        ; preds = %for.cond4
+  %7 = load ptr, ptr %cp, align 8
+  %8 = load ptr, ptr %ep, align 8
+  %cmp9.not = icmp ult ptr %7, %8
+  br i1 %cmp9.not, label %for.inc, label %bad
+
+for.inc:                                          ; preds = %for.body8
+  %9 = load ptr, ptr %cp, align 8
+  %incdec.ptr = getelementptr inbounds i8, ptr %9, i64 1
+  store ptr %incdec.ptr, ptr %cp, align 8
+  br label %for.cond4, !llvm.loop !14
+
+for.end:                                          ; preds = %for.cond4
+  %10 = load ptr, ptr %cp, align 8
+  %incdec.ptr12 = getelementptr inbounds i8, ptr %10, i64 1
+  store ptr %incdec.ptr12, ptr %cp, align 8
+  %11 = load i32, ptr %i, align 4
+  %dec = add nsw i32 %11, -1
+  store i32 %dec, ptr %i, align 4
+  br label %for.cond, !llvm.loop !15
+
+for.end14:                                        ; preds = %for.cond
+  %12 = load ptr, ptr %cp, align 8
+  %13 = load ptr, ptr %s.addr, align 8
+  %sub.ptr.lhs.cast = ptrtoint ptr %12 to i64
+  %sub.ptr.rhs.cast = ptrtoint ptr %13 to i64
+  %sub.ptr.sub = sub i64 %sub.ptr.lhs.cast, %sub.ptr.rhs.cast
+  %conv15 = trunc i64 %sub.ptr.sub to i32
+  br label %return
+
+bad:                                              ; preds = %entry, %for.body8
+  %14 = load ptr, ptr %tif.addr, align 8
+  %15 = load ptr, ptr %14, align 8
+  %16 = load ptr, ptr %td, align 8
+  %td_samplesperpixel17 = getelementptr inbounds %struct.TIFFDirectory, ptr %16, i64 0, i32 15
+  %17 = load i16, ptr %td_samplesperpixel17, align 2
+  %conv18 = zext i16 %17 to i32
+  %conv20 = zext i16 %17 to i32
+  %18 = load i32, ptr %i, align 4
+  %sub = sub nsw i32 %conv20, %18
+  call void (ptr, ptr, ...) @TIFFError(ptr noundef nonnull @.str.3, ptr noundef nonnull @.str.18, ptr noundef %15, i32 noundef %conv18, i32 noundef %sub) #5
+  br label %return
+
+return:                                           ; preds = %bad, %for.end14
+  %storemerge = phi i32 [ 0, %bad ], [ %conv15, %for.end14 ]
+  ret i32 %storemerge
+}
+
+declare void @TIFFSwabShort(ptr noundef) #1
+
+; Function Attrs: alwaysinline nounwind ssp uwtable
+define i32 @pc_inline_source_snapshot_public_repos_mibench_consumer_tiff_v3_5_4_libtiff_tif_dir_0(ptr noundef %tif, i64 noundef %tag, ...) #3 {
+entry:
+  %ap = alloca ptr, align 8
+  call void @llvm.va_start(ptr nonnull %ap)
+  %0 = load ptr, ptr %ap, align 8
+  %call = call i32 @TIFFVSetField(ptr noundef %tif, i64 noundef %tag, ptr noundef %0)
+  call void @llvm.va_end(ptr %ap)
+  ret i32 %call
+}
+
+; Function Attrs: alwaysinline nounwind ssp uwtable
+define void @pc_inline_source_snapshot_public_repos_mibench_consumer_tiff_v3_5_4_libtiff_tif_dir_1(ptr noundef %wpp, ptr noundef %wp, i64 noundef %n) #3 {
+entry:
+  %mul = shl i64 %n, 1
+  call void @_TIFFsetByteArray(ptr noundef %wpp, ptr noundef %wp, i64 noundef %mul)
+  ret void
+}
+
+; Function Attrs: alwaysinline nounwind ssp uwtable
+define void @pc_inline_source_snapshot_public_repos_mibench_consumer_tiff_v3_5_4_libtiff_tif_dir_2(ptr noundef %fpp, ptr noundef %fp, i64 noundef %n) #3 {
+entry:
+  %mul = shl i64 %n, 2
+  call void @_TIFFsetByteArray(ptr noundef %fpp, ptr noundef %fp, i64 noundef %mul)
+  ret void
+}
+
+; Function Attrs: alwaysinline nounwind ssp uwtable
+define void @pc_inline_source_snapshot_public_repos_mibench_consumer_tiff_v3_5_4_libtiff_tif_dir_3(ptr noundef %fpp, ptr noundef %fp, i64 noundef %n) #3 {
+entry:
+  %mul = shl i64 %n, 2
+  call void @_TIFFsetByteArray(ptr noundef %fpp, ptr noundef %fp, i64 noundef %mul)
+  ret void
+}
+
+; Function Attrs: alwaysinline nounwind ssp uwtable
+define void @pc_inline_source_snapshot_public_repos_mibench_consumer_tiff_v3_5_4_libtiff_tif_dir_4(ptr noundef %fpp, ptr noundef %fp, i64 noundef %n) #3 {
+entry:
+  %mul = shl i64 %n, 2
+  call void @_TIFFsetByteArray(ptr noundef %fpp, ptr noundef %fp, i64 noundef %mul)
+  ret void
+}
+
+; Function Attrs: alwaysinline nounwind ssp uwtable
+define void @pc_inline_source_snapshot_public_repos_mibench_consumer_tiff_v3_5_4_libtiff_tif_dir_5(ptr noundef %fpp, ptr noundef %fp, i64 noundef %n) #3 {
+entry:
+  %mul = shl i64 %n, 2
+  call void @_TIFFsetByteArray(ptr noundef %fpp, ptr noundef %fp, i64 noundef %mul)
+  ret void
+}
+
+; Function Attrs: alwaysinline nounwind ssp uwtable
+define void @pc_inline_source_snapshot_public_repos_mibench_consumer_tiff_v3_5_4_libtiff_tif_dir_6(ptr noundef %fpp, ptr noundef %fp, i64 noundef %n) #3 {
+entry:
+  %mul = shl i64 %n, 2
+  call void @_TIFFsetByteArray(ptr noundef %fpp, ptr noundef %fp, i64 noundef %mul)
+  ret void
+}
+
+; Function Attrs: alwaysinline nounwind ssp uwtable
+define void @pc_inline_source_snapshot_public_repos_mibench_consumer_tiff_v3_5_4_libtiff_tif_dir_7(ptr noundef %fpp, ptr noundef %fp, i64 noundef %n) #3 {
+entry:
+  %mul = shl i64 %n, 2
+  call void @_TIFFsetByteArray(ptr noundef %fpp, ptr noundef %fp, i64 noundef %mul)
+  ret void
+}
+
+; Function Attrs: argmemonly nocallback nofree nosync nounwind willreturn
+declare void @llvm.lifetime.start.p0(i64 immarg, ptr nocapture) #4
+
+; Function Attrs: argmemonly nocallback nofree nosync nounwind willreturn
+declare void @llvm.lifetime.end.p0(i64 immarg, ptr nocapture) #4
+
+attributes #0 = { nounwind ssp uwtable "frame-pointer"="non-leaf" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="apple-m1" "target-features"="+aes,+crc,+crypto,+dotprod,+fp-armv8,+fp16fml,+fullfp16,+lse,+neon,+ras,+rcpc,+rdm,+sha2,+sha3,+sm4,+v8.5a,+zcm,+zcz" }
+attributes #1 = { "frame-pointer"="non-leaf" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="apple-m1" "target-features"="+aes,+crc,+crypto,+dotprod,+fp-armv8,+fp16fml,+fullfp16,+lse,+neon,+ras,+rcpc,+rdm,+sha2,+sha3,+sm4,+v8.5a,+zcm,+zcz" }
+attributes #2 = { nocallback nofree nosync nounwind willreturn }
+attributes #3 = { alwaysinline nounwind ssp uwtable "frame-pointer"="non-leaf" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="apple-m1" "target-features"="+aes,+crc,+crypto,+dotprod,+fp-armv8,+fp16fml,+fullfp16,+lse,+neon,+ras,+rcpc,+rdm,+sha2,+sha3,+sm4,+v8.5a,+zcm,+zcz" }
+attributes #4 = { argmemonly nocallback nofree nosync nounwind willreturn }
+attributes #5 = { nounwind }
+
+!llvm.module.flags = !{!0, !1, !2, !3, !4}
+!llvm.ident = !{!5}
+
+!0 = !{i32 2, !"SDK Version", [2 x i32] [i32 26, i32 2]}
+!1 = !{i32 1, !"wchar_size", i32 4}
+!2 = !{i32 7, !"PIC Level", i32 2}
+!3 = !{i32 7, !"uwtable", i32 2}
+!4 = !{i32 7, !"frame-pointer", i32 1}
+!5 = !{!"Homebrew clang version 15.0.7"}
+!6 = distinct !{!6, !7}
+!7 = !{!"llvm.loop.mustprogress"}
+!8 = distinct !{!8, !7}
+!9 = distinct !{!9, !7}
+!10 = distinct !{!10, !7}
+!11 = distinct !{!11, !7}
+!12 = distinct !{!12, !7}
+!13 = distinct !{!13, !7}
+!14 = distinct !{!14, !7}
+!15 = distinct !{!15, !7}

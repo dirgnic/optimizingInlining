@@ -1,0 +1,829 @@
+{
+  "candidate_sources": 102,
+  "compiled": 101,
+  "failed": 1,
+  "callsites": 1893,
+  "modules_with_calls": 101,
+  "labels": {
+    "0": 1807,
+    "1": 86
+  },
+  "teacher_counts": {
+    "never_inline": 80,
+    "greedy_ir_size": 6,
+    "single_caller": 7,
+    "cost_budget": 2,
+    "small_callee": 4,
+    "loop_averse": 2
+  },
+  "top": [
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/rtp.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_rtp.ll",
+      "teacher": "loop_averse",
+      "reduction_pct": 2.5735294117647056,
+      "inline_labels": 6,
+      "callsites": 6
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-bzip2/bzip2.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_bzip2.ll",
+      "teacher": "greedy_ir_size",
+      "reduction_pct": 1.9622641509433962,
+      "inline_labels": 6,
+      "callsites": 164
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/network/patricia/patricia_test.c",
+      "module": "source_snapshot_public_repos_mibench_network_patricia_patricia_test.ll",
+      "teacher": "small_callee",
+      "reduction_pct": 1.0869565217391304,
+      "inline_labels": 1,
+      "callsites": 1
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/intl/loadmsgcat.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_intl_loadmsgcat.ll",
+      "teacher": "loop_averse",
+      "reduction_pct": 0.8733624454148471,
+      "inline_labels": 6,
+      "callsites": 6
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcmarker.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcmarker.ll",
+      "teacher": "single_caller",
+      "reduction_pct": 0.7272727272727273,
+      "inline_labels": 2,
+      "callsites": 85
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jcmarker.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jcmarker.ll",
+      "teacher": "single_caller",
+      "reduction_pct": 0.7272727272727273,
+      "inline_labels": 2,
+      "callsites": 85
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jcmarker.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jcmarker.ll",
+      "teacher": "single_caller",
+      "reduction_pct": 0.7272727272727273,
+      "inline_labels": 2,
+      "callsites": 85
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/rdjpgcom.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdjpgcom.ll",
+      "teacher": "greedy_ir_size",
+      "reduction_pct": 0.6593406593406593,
+      "inline_labels": 1,
+      "callsites": 25
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jmemname.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jmemname.ll",
+      "teacher": "single_caller",
+      "reduction_pct": 0.5847953216374269,
+      "inline_labels": 1,
+      "callsites": 1
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/wrjpgcom.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_wrjpgcom.ll",
+      "teacher": "greedy_ir_size",
+      "reduction_pct": 0.33003300330033003,
+      "inline_labels": 1,
+      "callsites": 32
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-bzip2/bzlib.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_bzlib.ll",
+      "teacher": "greedy_ir_size",
+      "reduction_pct": 0.22,
+      "inline_labels": 2,
+      "callsites": 62
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jquant1.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jquant1.ll",
+      "teacher": "single_caller",
+      "reduction_pct": 0.1903553299492386,
+      "inline_labels": 1,
+      "callsites": 11
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jquant1.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jquant1.ll",
+      "teacher": "single_caller",
+      "reduction_pct": 0.1903553299492386,
+      "inline_labels": 1,
+      "callsites": 11
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jquant1.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jquant1.ll",
+      "teacher": "single_caller",
+      "reduction_pct": 0.1903553299492386,
+      "inline_labels": 1,
+      "callsites": 11
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/picojpeg/libpicojpeg.c",
+      "module": "source_snapshot_public_repos_embench-iot_src_picojpeg_libpicojpeg.ll",
+      "teacher": "small_callee",
+      "reduction_pct": 0.1365374112506827,
+      "inline_labels": 45,
+      "callsites": 216
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/wrgif.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_wrgif.ll",
+      "teacher": "cost_budget",
+      "reduction_pct": 0.1199040767386091,
+      "inline_labels": 2,
+      "callsites": 25
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/wrgif.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_wrgif.ll",
+      "teacher": "cost_budget",
+      "reduction_pct": 0.1199040767386091,
+      "inline_labels": 2,
+      "callsites": 25
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdmarker.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdmarker.ll",
+      "teacher": "greedy_ir_size",
+      "reduction_pct": 0.05196154845414394,
+      "inline_labels": 1,
+      "callsites": 16
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdmarker.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdmarker.ll",
+      "teacher": "greedy_ir_size",
+      "reduction_pct": 0.05196154845414394,
+      "inline_labels": 1,
+      "callsites": 16
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/trees.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_trees.ll",
+      "teacher": "small_callee",
+      "reduction_pct": 0.051059484299208584,
+      "inline_labels": 1,
+      "callsites": 27
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/libz/trees.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_libz_trees.ll",
+      "teacher": "small_callee",
+      "reduction_pct": 0.05091649694501018,
+      "inline_labels": 1,
+      "callsites": 27
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-automotive-bitcount/bitcnt_4.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-automotive-bitcount_bitcnt_4.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 2
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-automotive-qsort1/qsort.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-automotive-qsort1_qsort.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 5
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-automotive-susan/susan.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-automotive-susan_susan.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 29
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-bzip2/blocksort.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_blocksort.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 11
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-bzip2/compress.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_compress.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 93
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-bzip2/decompress.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_decompress.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 1
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/cjpeg.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_cjpeg.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 26
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jccoefct.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jccoefct.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jchuff.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jchuff.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 20
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcmaster.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcmaster.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 8
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcparam.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcparam.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 34
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcphuff.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcphuff.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 35
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcprepct.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcprepct.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcsample.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcsample.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 6
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jctrans.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jctrans.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdapimin.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdapimin.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 2
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdapistd.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdapistd.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 2
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdatasrc.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdatasrc.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 1
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdcoefct.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdcoefct.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdcolor.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdcolor.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 2
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdhuff.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdhuff.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 14
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdinput.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdinput.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdmainct.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdmainct.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdmaster.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdmaster.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 5
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdmerge.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdmerge.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 1
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdphuff.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdphuff.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdtrans.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdtrans.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 1
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jmemmgr.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jmemmgr.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 17
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jquant2.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jquant2.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 14
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/rdbmp.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_rdbmp.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 9
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/rdgif.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_rdgif.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 22
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/rdppm.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_rdppm.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 9
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/rdswitch.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_rdswitch.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 12
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/rdtarga.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_rdtarga.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 7
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/djpeg.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_djpeg.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 19
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jccoefct.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jccoefct.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jchuff.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jchuff.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 20
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jcmaster.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jcmaster.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 8
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jcparam.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jcparam.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 34
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jcphuff.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jcphuff.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 35
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/qrduino/qrencode.c",
+      "module": "source_snapshot_public_repos_embench-iot_src_qrduino_qrencode.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 24
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/automotive/bitcount/bitcnt_4.c",
+      "module": "source_snapshot_public_repos_mibench_automotive_bitcount_bitcnt_4.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 2
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/ansi2knr.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_ansi2knr.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 18
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/cjpeg.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_cjpeg.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 26
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/ckconfig.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_ckconfig.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 2
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/djpeg.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_djpeg.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 19
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jccoefct.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jccoefct.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jchuff.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jchuff.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 20
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jcmaster.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jcmaster.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 8
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jcparam.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jcparam.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 34
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jcphuff.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jcphuff.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 35
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jcprepct.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jcprepct.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jcsample.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jcsample.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 6
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jctrans.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jctrans.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdapimin.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdapimin.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 2
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdapistd.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdapistd.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 2
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdatasrc.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdatasrc.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 1
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdcoefct.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdcoefct.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdcolor.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdcolor.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 2
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdhuff.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdhuff.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 14
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdinput.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdinput.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdmainct.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdmainct.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdmaster.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdmaster.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 5
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdmerge.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdmerge.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 1
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdphuff.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdphuff.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdtrans.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdtrans.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 1
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jmemmgr.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jmemmgr.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 17
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jpegtran.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jpegtran.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 12
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jquant2.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jquant2.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 14
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/rdbmp.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdbmp.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 9
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/rdcolmap.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdcolmap.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 16
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/rdgif.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdgif.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 22
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/rdppm.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdppm.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 9
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/rdswitch.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdswitch.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 12
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/rdtarga.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdtarga.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 7
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/wrbmp.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_wrbmp.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/wrtarga.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_wrtarga.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 3
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/VbrTag.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_VbrTag.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 8
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/fft.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_fft.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 2
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/formatBitstream.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_formatBitstream.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 35
+    }
+  ]
+}

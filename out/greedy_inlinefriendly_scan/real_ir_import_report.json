@@ -1,0 +1,9 @@
+{
+  "enabled": false,
+  "roots": [],
+  "criteria": {},
+  "imported": [],
+  "skipped": [],
+  "failed": [],
+  "note": "Set THESIS_IMPORT_REAL_IR=1 to import local real LLVM IR datasets."
+}

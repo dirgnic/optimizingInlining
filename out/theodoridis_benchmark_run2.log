@@ -1,0 +1,33 @@
+native rewrite: student_decision_tree
+native rewrite: student_knn
+native rewrite: student_logistic_regression
+native rewrite: student_random_forest
+native rewrite: student_small_mlp
+native rewrite: teacher_aggressive_speed
+native rewrite: teacher_balanced_score
+native rewrite: teacher_bandit_ucb_proxy
+native rewrite: teacher_benefit_cost_ratio
+native rewrite: teacher_constant_argument
+native rewrite: teacher_cost_budget
+native rewrite: teacher_growth_budget
+native rewrite: teacher_hot_leaf
+native rewrite: teacher_llvm_like_size
+native rewrite: teacher_loop_averse
+native rewrite: teacher_ml_linear_score
+native rewrite: teacher_never_inline
+native rewrite: teacher_rl_value_proxy
+native rewrite: teacher_single_caller
+native rewrite: teacher_small_callee
+summary
+-------
+compiled sources: 157
+imported IR:      49
+failed sources:   1
+callsites:        9762
+best student:     small_mlp
+rewritten IR:     ./out/ir_rewrite_students.json
+native baselines: ./out/native_baselines.json
+rewritten native: ./out/rewritten_native_sizes.json
+paper summary:    ./paper/model_paper.md
+trace:            ./out/callgraph_trace.md
+visuals:          ./out/visual_index.md

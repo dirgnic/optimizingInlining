@@ -1,0 +1,2300 @@
+{
+  "compiled": [
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/picojpeg/libpicojpeg.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_picojpeg_libpicojpeg.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/qrduino/qrencode.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_qrduino_qrencode.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/xgboost/xgboost.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_xgboost_xgboost.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-automotive-bitcount/bitarray.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-automotive-bitcount_bitarray.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-automotive-bitcount/bitcnt_1.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-automotive-bitcount_bitcnt_1.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-automotive-bitcount/bitcnt_2.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-automotive-bitcount_bitcnt_2.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-automotive-bitcount/bitcnt_3.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-automotive-bitcount_bitcnt_3.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-automotive-bitcount/bitcnt_4.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-automotive-bitcount_bitcnt_4.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-automotive-bitcount/bitcnts.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-automotive-bitcount_bitcnts.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-automotive-bitcount/bitfiles.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-automotive-bitcount_bitfiles.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-automotive-bitcount/bitstrng.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-automotive-bitcount_bitstrng.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-automotive-bitcount/bstr_i.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-automotive-bitcount_bstr_i.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-automotive-qsort1/ctuning-rtl.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-automotive-qsort1_ctuning-rtl.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-automotive-qsort1/qsort.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-automotive-qsort1_qsort.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-automotive-qsort1/qsort_large.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-automotive-qsort1_qsort_large.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-automotive-susan/susan.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-automotive-susan_susan.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-bzip2/blocksort.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_blocksort.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-bzip2/bzip2.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_bzip2.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-bzip2/bzlib.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_bzlib.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-bzip2/compress.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_compress.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-bzip2/crctable.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_crctable.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-bzip2/ctuning-rtl.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_ctuning-rtl.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-bzip2/decompress.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_decompress.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-bzip2/huffman.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_huffman.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-bzip2/randtable.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_randtable.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/cdjpeg.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_cdjpeg.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/cjpeg.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_cjpeg.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/ctuning-rtl.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_ctuning-rtl.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcapimin.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcapimin.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcapistd.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcapistd.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jccoefct.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jccoefct.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jccolor.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jccolor.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcdctmgr.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcdctmgr.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jchuff.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jchuff.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcinit.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcinit.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcmainct.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcmainct.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcmarker.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcmarker.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcmaster.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcmaster.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcomapi.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcomapi.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcparam.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcparam.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcphuff.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcphuff.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcprepct.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcprepct.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcsample.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcsample.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jctrans.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jctrans.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdapimin.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdapimin.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdapistd.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdapistd.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdatadst.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdatadst.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdatasrc.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdatasrc.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdcoefct.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdcoefct.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdcolor.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdcolor.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jddctmgr.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jddctmgr.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdhuff.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdhuff.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdinput.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdinput.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdmainct.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdmainct.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdmarker.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdmarker.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdmaster.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdmaster.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdmerge.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdmerge.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdphuff.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdphuff.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdpostct.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdpostct.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdsample.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdsample.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdtrans.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdtrans.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jerror.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jerror.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jfdctflt.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jfdctflt.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jfdctfst.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jfdctfst.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jfdctint.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jfdctint.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jidctflt.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jidctflt.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jidctfst.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jidctfst.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jidctint.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jidctint.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jidctred.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jidctred.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jmemansi.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jmemansi.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jmemmgr.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jmemmgr.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jquant1.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jquant1.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jquant2.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jquant2.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jutils.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jutils.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/rdbmp.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_rdbmp.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/rdgif.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_rdgif.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/rdppm.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_rdppm.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/rdrle.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_rdrle.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/rdswitch.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_rdswitch.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/rdtarga.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_rdtarga.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/cdjpeg.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_cdjpeg.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/ctuning-rtl.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_ctuning-rtl.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/djpeg.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_djpeg.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jcapimin.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jcapimin.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jcapistd.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jcapistd.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jccoefct.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jccoefct.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jccolor.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jccolor.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jcdctmgr.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jcdctmgr.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jchuff.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jchuff.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jcinit.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jcinit.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jcmainct.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jcmainct.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jcmarker.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jcmarker.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jcmaster.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jcmaster.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jcomapi.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jcomapi.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jcparam.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jcparam.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jcphuff.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jcphuff.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jcprepct.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jcprepct.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jcsample.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jcsample.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jctrans.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jctrans.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jdapimin.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jdapimin.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jdapistd.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jdapistd.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jdatadst.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jdatadst.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jdatasrc.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jdatasrc.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jdcoefct.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jdcoefct.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jdcolor.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jdcolor.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jddctmgr.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jddctmgr.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jdhuff.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jdhuff.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jdinput.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jdinput.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jdmainct.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jdmainct.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jdmarker.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jdmarker.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jdmaster.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jdmaster.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jdmerge.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jdmerge.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jdphuff.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jdphuff.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jdpostct.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jdpostct.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jdsample.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jdsample.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jdtrans.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jdtrans.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jerror.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jerror.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jfdctflt.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jfdctflt.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jfdctfst.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jfdctfst.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jfdctint.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jfdctint.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jidctflt.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jidctflt.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jidctfst.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jidctfst.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jidctint.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jidctint.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jidctred.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jidctred.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jmemansi.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jmemansi.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jmemmgr.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jmemmgr.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jquant1.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jquant1.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jquant2.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jquant2.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jutils.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jutils.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/rdcolmap.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_rdcolmap.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/wrbmp.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_wrbmp.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/wrgif.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_wrgif.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/wrppm.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_wrppm.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/wrrle.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_wrrle.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/wrtarga.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_wrtarga.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/VbrTag.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_VbrTag.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/amiga_mpega.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_amiga_mpega.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/brhist.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_brhist.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/common.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_common.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/ctuning-rtl.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_ctuning-rtl.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/dct64_i386.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_dct64_i386.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/decode_i386.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_decode_i386.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/fft.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_fft.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/formatBitstream.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_formatBitstream.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/get_audio.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_get_audio.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/gpkplotting.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_gpkplotting.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/gtkanal.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_gtkanal.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/id3tag.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_id3tag.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/ieeefloat.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_ieeefloat.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/interface.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_interface.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/l3bitstream.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_l3bitstream.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/lame.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_lame.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/layer3.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_layer3.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/main.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_main.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/mainmpglib.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_mainmpglib.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/newmdct.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_newmdct.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/parse.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_parse.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/portableio.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_portableio.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/psymodel.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_psymodel.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/quantize-pvt.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_quantize-pvt.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/quantize.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_quantize.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/reservoir.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_reservoir.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/tabinit.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_tabinit.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/tables.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_tables.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/takehiro.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_takehiro.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/timestatus.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_timestatus.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/util.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_util.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/vbrquantize.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_vbrquantize.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/version.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_version.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/adler32.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_adler32.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/bit.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_bit.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/compat.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_compat.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/compress.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_compress.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/crc.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_crc.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/crc32.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_crc32.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/debug.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_debug.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/deflate.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_deflate.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/field.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_field.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/file.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_file.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/frame.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_frame.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/frametype.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_frametype.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/genre.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_genre.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/getopt.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_getopt.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/getopt1.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_getopt1.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/huffman.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_huffman.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/inffast.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_inffast.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/inflate.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_inflate.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/inftrees.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_inftrees.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/latin1.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_latin1.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/parse.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_parse.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/render.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_render.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/stream.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_stream.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/tag.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_tag.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/timer.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_timer.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/trees.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_trees.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/ucs4.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_ucs4.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/uncompr.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_uncompr.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/utf16.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_utf16.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/utf8.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_utf8.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/util.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_util.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/version3.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_version3.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/zutil.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_zutil.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/ctuning-rtl.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_ctuning-rtl.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/getopt.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_getopt.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_aux.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_aux.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_close.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_close.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_codec.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_codec.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_compress.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_compress.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_dir.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_dir.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_dirinfo.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_dirinfo.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_dirread.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_dirread.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_dirwrite.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_dirwrite.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_dumpmode.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_dumpmode.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_error.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_error.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_fax3.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_fax3.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_fax3sm.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_fax3sm.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_flush.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_flush.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_getimage.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_getimage.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_jpeg.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_jpeg.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_luv.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_luv.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_lzw.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_lzw.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_next.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_next.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_open.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_open.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_packbits.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_packbits.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_pixarlog.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_pixarlog.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_predict.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_predict.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_print.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_print.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_read.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_read.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_strip.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_strip.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_swab.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_swab.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_thunder.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_thunder.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_tile.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_tile.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_unix.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_unix.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_version.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_version.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_warning.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_warning.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_write.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_write.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_zip.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_zip.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tiff2bw.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tiff2bw.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/ctuning-rtl.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_ctuning-rtl.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/getopt.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_getopt.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_aux.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_aux.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_close.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_close.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_codec.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_codec.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_compress.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_compress.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_dir.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_dir.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_dirinfo.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_dirinfo.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_dirread.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_dirread.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_dirwrite.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_dirwrite.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_dumpmode.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_dumpmode.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_error.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_error.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_fax3.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_fax3.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_fax3sm.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_fax3sm.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_flush.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_flush.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_getimage.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_getimage.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_jpeg.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_jpeg.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_luv.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_luv.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_lzw.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_lzw.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_next.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_next.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_open.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_open.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_packbits.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_packbits.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_pixarlog.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_pixarlog.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_predict.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_predict.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_print.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_print.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_read.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_read.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_strip.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_strip.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_swab.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_swab.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_thunder.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_thunder.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_tile.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_tile.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_unix.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_unix.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_version.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_version.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_warning.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_warning.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_write.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_write.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_zip.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_zip.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tiff2rgba.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tiff2rgba.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2median/ctuning-rtl.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2median_ctuning-rtl.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2median/getopt.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2median_getopt.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2median/tif_aux.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2median_tif_aux.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2median/tif_close.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2median_tif_close.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2median/tif_codec.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2median_tif_codec.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2median/tif_compress.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2median_tif_compress.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2median/tif_dir.c",
+      "ir": "out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2median_tif_dir.ll"
+    }
+  ],
+  "imported_ir": [],
+  "skipped_ir": [],
+  "failed": [
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/datamining/correlation/correlation.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/datamining/correlation/correlation.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_datamining_correlation_correlation.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/datamining/correlation/correlation.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/datamining/covariance/covariance.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/datamining/covariance/covariance.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_datamining_covariance_covariance.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/datamining/covariance/covariance.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/linear-algebra/blas/gemm/gemm.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/linear-algebra/blas/gemm/gemm.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_linear-algebra_blas_gemm_gemm.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/linear-algebra/blas/gemm/gemm.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/linear-algebra/blas/gemver/gemver.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/linear-algebra/blas/gemver/gemver.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_linear-algebra_blas_gemver_gemver.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/linear-algebra/blas/gemver/gemver.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/linear-algebra/blas/gesummv/gesummv.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/linear-algebra/blas/gesummv/gesummv.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_linear-algebra_blas_gesummv_gesummv.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/linear-algebra/blas/gesummv/gesummv.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/linear-algebra/blas/symm/symm.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/linear-algebra/blas/symm/symm.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_linear-algebra_blas_symm_symm.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/linear-algebra/blas/symm/symm.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/linear-algebra/blas/syr2k/syr2k.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/linear-algebra/blas/syr2k/syr2k.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_linear-algebra_blas_syr2k_syr2k.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/linear-algebra/blas/syr2k/syr2k.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/linear-algebra/blas/syrk/syrk.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/linear-algebra/blas/syrk/syrk.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_linear-algebra_blas_syrk_syrk.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/linear-algebra/blas/syrk/syrk.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/linear-algebra/blas/trmm/trmm.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/linear-algebra/blas/trmm/trmm.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_linear-algebra_blas_trmm_trmm.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/linear-algebra/blas/trmm/trmm.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/linear-algebra/kernels/2mm/2mm.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/linear-algebra/kernels/2mm/2mm.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_linear-algebra_kernels_2mm_2mm.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/linear-algebra/kernels/2mm/2mm.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/linear-algebra/kernels/3mm/3mm.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/linear-algebra/kernels/3mm/3mm.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_linear-algebra_kernels_3mm_3mm.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/linear-algebra/kernels/3mm/3mm.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/linear-algebra/kernels/atax/atax.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/linear-algebra/kernels/atax/atax.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_linear-algebra_kernels_atax_atax.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/linear-algebra/kernels/atax/atax.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/linear-algebra/kernels/bicg/bicg.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/linear-algebra/kernels/bicg/bicg.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_linear-algebra_kernels_bicg_bicg.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/linear-algebra/kernels/bicg/bicg.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/linear-algebra/kernels/doitgen/doitgen.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/linear-algebra/kernels/doitgen/doitgen.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_linear-algebra_kernels_doitgen_doitgen.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/linear-algebra/kernels/doitgen/doitgen.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/linear-algebra/kernels/mvt/mvt.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/linear-algebra/kernels/mvt/mvt.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_linear-algebra_kernels_mvt_mvt.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/linear-algebra/kernels/mvt/mvt.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/linear-algebra/solvers/cholesky/cholesky.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/linear-algebra/solvers/cholesky/cholesky.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_linear-algebra_solvers_cholesky_cholesky.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/linear-algebra/solvers/cholesky/cholesky.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/linear-algebra/solvers/durbin/durbin.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/linear-algebra/solvers/durbin/durbin.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_linear-algebra_solvers_durbin_durbin.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/linear-algebra/solvers/durbin/durbin.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/linear-algebra/solvers/gramschmidt/gramschmidt.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/linear-algebra/solvers/gramschmidt/gramschmidt.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_linear-algebra_solvers_gramschmidt_gramschmidt.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/linear-algebra/solvers/gramschmidt/gramschmidt.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/linear-algebra/solvers/lu/lu.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/linear-algebra/solvers/lu/lu.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_linear-algebra_solvers_lu_lu.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/linear-algebra/solvers/lu/lu.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/linear-algebra/solvers/ludcmp/ludcmp.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/linear-algebra/solvers/ludcmp/ludcmp.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_linear-algebra_solvers_ludcmp_ludcmp.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/linear-algebra/solvers/ludcmp/ludcmp.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/linear-algebra/solvers/trisolv/trisolv.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/linear-algebra/solvers/trisolv/trisolv.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_linear-algebra_solvers_trisolv_trisolv.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/linear-algebra/solvers/trisolv/trisolv.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/medley/deriche/deriche.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/medley/deriche/deriche.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_medley_deriche_deriche.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/medley/deriche/deriche.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/medley/floyd-warshall/floyd-warshall.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/medley/floyd-warshall/floyd-warshall.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_medley_floyd-warshall_floyd-warshall.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/medley/floyd-warshall/floyd-warshall.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/medley/nussinov/Nussinov.orig.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/medley/nussinov/Nussinov.orig.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_medley_nussinov_Nussinov.orig.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/medley/nussinov/Nussinov.orig.c:133:11: error: use of undeclared identifier 'MAX_SIZE'\nbase  seq[MAX_SIZE];\n          ^\n./source_snapshot/public_repos/PolyBenchC/medley/nussinov/Nussinov.orig.c:134:17: error: use of undeclared identifier 'MAX_SIZE'\nscore   N_array[MAX_SIZE][MAX_SIZE];\n                ^\n./source_snapshot/public_repos/PolyBenchC/medley/nussinov/Nussinov.orig.c:134:27: error: use of undeclared identifier 'MAX_SIZE'\nscore   N_array[MAX_SIZE][MAX_SIZE];\n                          ^\n./source_snapshot/public_repos/PolyBenchC/medley/nussinov/Nussinov.orig.c:223:13: error: use of undeclared identifier 'MAX_SIZE'\n        if (size > MAX_SIZE) {\n                   ^\n./source_snapshot/public_repos/PolyBenchC/medley/nussinov/Nussinov.orig.c:224:50: error: use of undeclared identifier 'MAX_SIZE'\n                fprintf(stderr, \"size (%d) < MAX_SIZE (%d)\\n\", MAX_SIZE, size);\n                                                               ^\n5 errors generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/medley/nussinov/nussinov.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/medley/nussinov/nussinov.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_medley_nussinov_nussinov.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/medley/nussinov/nussinov.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/stencils/adi/adi.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/stencils/adi/adi.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_stencils_adi_adi.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/stencils/adi/adi.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/stencils/fdtd-2d/fdtd-2d.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/stencils/fdtd-2d/fdtd-2d.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_stencils_fdtd-2d_fdtd-2d.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/stencils/fdtd-2d/fdtd-2d.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/stencils/heat-3d/heat-3d.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/stencils/heat-3d/heat-3d.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_stencils_heat-3d_heat-3d.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/stencils/heat-3d/heat-3d.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/stencils/jacobi-1d/jacobi-1d.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/stencils/jacobi-1d/jacobi-1d.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_stencils_jacobi-1d_jacobi-1d.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/stencils/jacobi-1d/jacobi-1d.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/stencils/jacobi-2d/jacobi-2d.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/stencils/jacobi-2d/jacobi-2d.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_stencils_jacobi-2d_jacobi-2d.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/stencils/jacobi-2d/jacobi-2d.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/PolyBenchC/stencils/seidel-2d/seidel-2d.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/PolyBenchC/stencils/seidel-2d/seidel-2d.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_PolyBenchC_stencils_seidel-2d_seidel-2d.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/PolyBenchC/stencils/seidel-2d/seidel-2d.c:18:10: fatal error: 'polybench.h' file not found\n#include <polybench.h>\n         ^~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/aha-mont64/mont64.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/embench-iot/src/aha-mont64/mont64.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_aha-mont64_mont64.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/embench-iot/src/aha-mont64/mont64.c:17:10: fatal error: 'support.h' file not found\n#include \"support.h\"\n         ^~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/crc32/crc_32.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/embench-iot/src/crc32/crc_32.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_crc32_crc_32.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/embench-iot/src/crc32/crc_32.c:19:10: fatal error: 'support.h' file not found\n#include \"support.h\"\n         ^~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/depthconv/depthconv.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/embench-iot/src/depthconv/depthconv.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_depthconv_depthconv.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/embench-iot/src/depthconv/depthconv.c:663:45: error: use of undeclared identifier 'GLOBAL_SCALE_FACTOR'\n  return benchmark_body(LOCAL_SCALE_FACTOR, GLOBAL_SCALE_FACTOR);\n                                            ^\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/edn/libedn.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/embench-iot/src/edn/libedn.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_edn_libedn.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/embench-iot/src/edn/libedn.c:36:10: fatal error: 'support.h' file not found\n#include \"support.h\"\n         ^~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/huffbench/libhuffbench.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/embench-iot/src/huffbench/libhuffbench.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_huffbench_libhuffbench.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/embench-iot/src/huffbench/libhuffbench.c:51:10: fatal error: 'support.h' file not found\n#include \"support.h\"\n         ^~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/matmult-int/matmult-int.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/embench-iot/src/matmult-int/matmult-int.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_matmult-int_matmult-int.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/embench-iot/src/matmult-int/matmult-int.c:37:10: fatal error: 'support.h' file not found\n#include \"support.h\"\n         ^~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/md5sum/md5.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/embench-iot/src/md5sum/md5.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_md5sum_md5.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/embench-iot/src/md5sum/md5.c:16:10: fatal error: 'support.h' file not found\n#include \"support.h\"\n         ^~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/nettle-aes/nettle-aes.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/embench-iot/src/nettle-aes/nettle-aes.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_nettle-aes_nettle-aes.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/embench-iot/src/nettle-aes/nettle-aes.c:14:10: fatal error: 'support.h' file not found\n#include \"support.h\"\n         ^~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/nettle-sha256/nettle-sha256.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/embench-iot/src/nettle-sha256/nettle-sha256.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_nettle-sha256_nettle-sha256.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/embench-iot/src/nettle-sha256/nettle-sha256.c:19:10: fatal error: 'support.h' file not found\n#include \"support.h\"\n         ^~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/nsichneu/libnsichneu.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/embench-iot/src/nsichneu/libnsichneu.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_nsichneu_libnsichneu.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/embench-iot/src/nsichneu/libnsichneu.c:37:10: fatal error: 'support.h' file not found\n#include \"support.h\"\n         ^~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/picojpeg/picojpeg_test.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/embench-iot/src/picojpeg/picojpeg_test.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_picojpeg_picojpeg_test.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/embench-iot/src/picojpeg/picojpeg_test.c:14:10: fatal error: 'support.h' file not found\n#include \"support.h\"\n         ^~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/qrduino/qrframe.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/embench-iot/src/qrduino/qrframe.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_qrduino_qrframe.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/embench-iot/src/qrduino/qrframe.c:21:10: fatal error: 'beebsc.h' file not found\n#include \"beebsc.h\"\n         ^~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/qrduino/qrtest.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/embench-iot/src/qrduino/qrtest.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_qrduino_qrtest.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/embench-iot/src/qrduino/qrtest.c:16:10: fatal error: 'support.h' file not found\n#include \"support.h\"\n         ^~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/sglib-combined/combined.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/embench-iot/src/sglib-combined/combined.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_sglib-combined_combined.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/embench-iot/src/sglib-combined/combined.c:15:10: fatal error: 'support.h' file not found\n#include \"support.h\"\n         ^~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/slre/libslre.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/embench-iot/src/slre/libslre.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_slre_libslre.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/embench-iot/src/slre/libslre.c:17:10: fatal error: 'support.h' file not found\n#include \"support.h\"\n         ^~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/statemate/libstatemate.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/embench-iot/src/statemate/libstatemate.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_statemate_libstatemate.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/embench-iot/src/statemate/libstatemate.c:45:10: fatal error: 'support.h' file not found\n#include \"support.h\"\n         ^~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/tarfind/tarfind.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/embench-iot/src/tarfind/tarfind.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_tarfind_tarfind.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/embench-iot/src/tarfind/tarfind.c:14:10: fatal error: 'support.h' file not found\n#include \"support.h\"\n         ^~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/ud/libud.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/embench-iot/src/ud/libud.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_ud_libud.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/embench-iot/src/ud/libud.c:89:10: fatal error: 'support.h' file not found\n#include \"support.h\"\n         ^~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/wikisort/libwikisort.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/embench-iot/src/wikisort/libwikisort.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_wikisort_libwikisort.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/embench-iot/src/wikisort/libwikisort.c:18:10: fatal error: 'support.h' file not found\n#include \"support.h\"\n         ^~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/xgboost/testbench.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/embench-iot/src/xgboost/testbench.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_xgboost_testbench.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/embench-iot/src/xgboost/testbench.c:28:45: error: use of undeclared identifier 'GLOBAL_SCALE_FACTOR'\n  return benchmark_body(LOCAL_SCALE_FACTOR, GLOBAL_SCALE_FACTOR);\n                                            ^\n./source_snapshot/public_repos/embench-iot/src/xgboost/testbench.c:60:56: error: use of undeclared identifier 'GLOBAL_SCALE_FACTOR'\n    return r >= SAMPLES_IN_FILE * (LOCAL_SCALE_FACTOR, GLOBAL_SCALE_FACTOR / 12);\n                                                       ^\n2 errors generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_audio.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio.c:30:\nIn file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio.h:25:\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/mad.h:465:4: error: \"no FPM selected\"\n#  error \"no FPM selected\"\n   ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio.c:95:12: error: use of undeclared identifier 'AUDIO_DEFAULT'\n    return AUDIO_DEFAULT;\n           ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio.c:120:12: error: use of undeclared identifier 'AUDIO_DEFAULT'\n    return AUDIO_DEFAULT;\n           ^\n3 errors generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_aiff.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_aiff.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_audio_aiff.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_aiff.c:31:\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/mad.h:465:4: error: \"no FPM selected\"\n#  error \"no FPM selected\"\n   ^\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_cdda.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_cdda.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_audio_cdda.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_cdda.c:35:\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/mad.h:465:4: error: \"no FPM selected\"\n#  error \"no FPM selected\"\n   ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_cdda.c:96:3: warning: call to undeclared library function 'abort' with type 'void (void) __attribute__((noreturn))'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]\n  assert(play->samples[1]);\n  ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/global.h:62:37: note: expanded from macro 'assert'\n#   define assert(x)    do { if (!(x)) abort(); } while (0)\n                                       ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_cdda.c:96:3: note: include the header <stdlib.h> or explicitly provide a declaration for 'abort'\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/global.h:62:37: note: expanded from macro 'assert'\n#   define assert(x)    do { if (!(x)) abort(); } while (0)\n                                       ^\n1 warning and 1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_esd.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_esd.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_audio_esd.ll"
+      ],
+      "stderr": ")\n                         ^\nIn file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_esd.c:28:\n/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/unistd.h:475:6: error: expected ')'\nint      isatty(int);\n         ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/global.h:51:26: note: expanded from macro 'isatty'\n#  define isatty(x)     ((x) == STDIN_FILENO)\n                             ^\n/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/unistd.h:475:6: note: to match this '('\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/global.h:51:21: note: expanded from macro 'isatty'\n#  define isatty(x)     ((x) == STDIN_FILENO)\n                        ^\nIn file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_esd.c:28:\n/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/unistd.h:477:8: error: conflicting types for 'lseek'\noff_t    lseek(int, off_t, int);\n         ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/global.h:47:13: note: previous declaration is here\nsigned long lseek(int, signed long, int);\n            ^\nIn file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_esd.c:32:\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/mad.h:465:4: error: \"no FPM selected\"\n#  error \"no FPM selected\"\n   ^\n5 errors generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_null.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_null.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_audio_null.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_null.c:28:\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/mad.h:465:4: error: \"no FPM selected\"\n#  error \"no FPM selected\"\n   ^\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_oss.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_oss.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_audio_oss.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_oss.c:44:\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/mad.h:465:4: error: \"no FPM selected\"\n#  error \"no FPM selected\"\n   ^\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_raw.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_raw.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_audio_raw.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_raw.c:31:\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/mad.h:465:4: error: \"no FPM selected\"\n#  error \"no FPM selected\"\n   ^\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_snd.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_snd.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_audio_snd.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_snd.c:31:\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/mad.h:465:4: error: \"no FPM selected\"\n#  error \"no FPM selected\"\n   ^\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_wave.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_wave.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_audio_wave.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/audio_wave.c:31:\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/mad.h:465:4: error: \"no FPM selected\"\n#  error \"no FPM selected\"\n   ^\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/decoder.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/decoder.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_decoder.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/decoder.c:51:\nIn file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/frame2.h:25:\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/fixed.h:424:4: error: \"no FPM selected\"\n#  error \"no FPM selected\"\n   ^\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/equalizer.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/equalizer.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_equalizer.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/equalizer.c:28:\nIn file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/equalizer.h:25:\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/mad.h:465:4: error: \"no FPM selected\"\n#  error \"no FPM selected\"\n   ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/equalizer.c:68:4: warning: call to undeclared function 'MAD_F_MLX'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]\n          mad_f_mul(frame->sbsample[ch][s][sb], bandfactor);\n          ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/mad.h:474:8: note: expanded from macro 'mad_f_mul'\n       MAD_F_MLX(__hi, __lo, (x), (y));  \\\n       ^\n1 warning and 1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/filter.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/filter.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_filter.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/filter.c:31:\nIn file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/filter.h:29:\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/mad.h:465:4: error: \"no FPM selected\"\n#  error \"no FPM selected\"\n   ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/filter.c:196:6: warning: call to undeclared function 'MAD_F_MLX'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]\n            mad_f_mul(frame->sbsample[ch][s][sb], scalefactor);\n            ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/mad.h:474:8: note: expanded from macro 'mad_f_mul'\n       MAD_F_MLX(__hi, __lo, (x), (y));  \\\n       ^\n1 warning and 1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/fixed.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/fixed.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_fixed.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/fixed.c:28:\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/fixed.h:424:4: error: \"no FPM selected\"\n#  error \"no FPM selected\"\n   ^\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/frame2.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/frame2.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_frame2.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/frame2.c:32:\nIn file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/frame2.h:25:\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/fixed.h:424:4: error: \"no FPM selected\"\n#  error \"no FPM selected\"\n   ^\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/layer12.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/layer12.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_layer12.ll"
+      ],
+      "stderr": "/cbench-consumer-mad/fixed.h:433:8: note: expanded from macro 'mad_f_mul'\n       MAD_F_MLX(__hi, __lo, (x), (y));  \\\n       ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/layer12.c:313:17: warning: call to undeclared function 'MAD_F_MLX'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]\n    output[s] = mad_f_mul(requantized + quantclass->D, quantclass->C);\n                ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/fixed.h:433:8: note: expanded from macro 'mad_f_mul'\n       MAD_F_MLX(__hi, __lo, (x), (y));  \\\n       ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/layer12.c:456:8: warning: call to undeclared function 'MAD_F_MLX'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]\n              mad_f_mul(samples[s], sf_table[scalefactor[ch][sb][gr / 4]]);\n              ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/fixed.h:433:8: note: expanded from macro 'mad_f_mul'\n       MAD_F_MLX(__hi, __lo, (x), (y));  \\\n       ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/layer12.c:475:8: warning: call to undeclared function 'MAD_F_MLX'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]\n              mad_f_mul(samples[s], sf_table[scalefactor[ch][sb][gr / 4]]);\n              ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/fixed.h:433:8: note: expanded from macro 'mad_f_mul'\n       MAD_F_MLX(__hi, __lo, (x), (y));  \\\n       ^\n6 warnings and 1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/layer3.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/layer3.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_layer3.ll"
+      ],
+      "stderr": "nta/modele/thesis/source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/fixed.h:439:44: note: expanded from macro 'MAD_F_ML0'\n#  define MAD_F_ML0(hi, lo, x, y)       ((lo)  = mad_f_mul((x), (y)))\n                                                 ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/fixed.h:433:8: note: expanded from macro 'mad_f_mul'\n       MAD_F_MLX(__hi, __lo, (x), (y));  \\\n       ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/layer3.c:2015:5: warning: call to undeclared function 'MAD_F_MLX'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]\n    MAD_F_MLA(hi, lo, yptr[24 + 0], wptr[0]);\n    ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/fixed.h:440:44: note: expanded from macro 'MAD_F_MLA'\n#  define MAD_F_MLA(hi, lo, x, y)       ((lo) += mad_f_mul((x), (y)))\n                                                 ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/fixed.h:433:8: note: expanded from macro 'mad_f_mul'\n       MAD_F_MLX(__hi, __lo, (x), (y));  \\\n       ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/layer3.c:2019:17: warning: call to undeclared function 'MAD_F_MLX'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]\n    z[i + 24] = mad_f_mul(yptr[24 + 6], wptr[6]);\n                ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/fixed.h:433:8: note: expanded from macro 'mad_f_mul'\n       MAD_F_MLX(__hi, __lo, (x), (y));  \\\n       ^\n224 warnings and 1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/madplay.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/madplay.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_madplay.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/madplay.c:49:\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/mad.h:465:4: error: \"no FPM selected\"\n#  error \"no FPM selected\"\n   ^\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/player.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/player.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_player.ll"
+      ],
+      "stderr": "alue of unsigned type 'unsigned int' has no effect [-Wabsolute-value]\n    if (abs(output->speed_out - output->speed_in) <\n        ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/player.c:875:9: note: remove the call to 'abs' since unsigned values cannot be negative\n    if (abs(output->speed_out - output->speed_in) <\n        ^~~\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/player.c:996:27: error: use of undeclared identifier 'errno'\n      while (len == -1 && errno == EINTR);\n                          ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/player.c:996:36: error: use of undeclared identifier 'EINTR'\n      while (len == -1 && errno == EINTR);\n                                   ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/player.c:1213:26: warning: call to undeclared function 'open'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]\n    player->input.fd   = open(player->input.path, O_RDONLY | O_BINARY);\n                         ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/player.c:1213:51: error: use of undeclared identifier 'O_RDONLY'\n    player->input.fd   = open(player->input.path, O_RDONLY | O_BINARY);\n                                                  ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/player.c:1229:10: warning: call to undeclared function 'dup'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]\n    fd = dup(player->input.fd);\n         ^\n7 warnings and 9 errors generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/resample.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/resample.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_resample.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/resample.c:30:\nIn file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/resample.h:25:\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/mad.h:465:4: error: \"no FPM selected\"\n#  error \"no FPM selected\"\n   ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/resample.c:198:16: warning: call to undeclared function 'MAD_F_MLX'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]\n        state->last + mad_f_mul(*old - state->last, state->step) : state->last;\n                      ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/mad.h:474:8: note: expanded from macro 'mad_f_mul'\n       MAD_F_MLX(__hi, __lo, (x), (y));  \\\n       ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/resample.c:213:14: warning: call to undeclared function 'MAD_F_MLX'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]\n      *old + mad_f_mul(old[1] - old[0], state->step) : *old;\n             ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/mad.h:474:8: note: expanded from macro 'mad_f_mul'\n       MAD_F_MLX(__hi, __lo, (x), (y));  \\\n       ^\n2 warnings and 1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/synth.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/synth.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_synth.ll"
+      ],
+      "stderr": "], ptr[ 4]);\n      ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/synth.c:531:29: note: expanded from macro 'MLA'\n#  define MLA(hi, lo, x, y)     MAD_F_MLA((hi), (lo), (x), (y))\n                                ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/fixed.h:440:44: note: expanded from macro 'MAD_F_MLA'\n#  define MAD_F_MLA(hi, lo, x, y)       ((lo) += mad_f_mul((x), (y)))\n                                                 ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/fixed.h:433:8: note: expanded from macro 'mad_f_mul'\n       MAD_F_MLX(__hi, __lo, (x), (y));  \\\n       ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/synth.c:818:7: warning: call to undeclared function 'MAD_F_MLX'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]\n      MLA(hi, lo, (*fo)[7], ptr[ 2]);\n      ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/synth.c:531:29: note: expanded from macro 'MLA'\n#  define MLA(hi, lo, x, y)     MAD_F_MLA((hi), (lo), (x), (y))\n                                ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/fixed.h:440:44: note: expanded from macro 'MAD_F_MLA'\n#  define MAD_F_MLA(hi, lo, x, y)       ((lo) += mad_f_mul((x), (y)))\n                                                 ^\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/fixed.h:433:8: note: expanded from macro 'mad_f_mul'\n       MAD_F_MLX(__hi, __lo, (x), (y));  \\\n       ^\n192 warnings and 1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/version.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/version.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_version.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/version.c:31:\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/mad.h:465:4: error: \"no FPM selected\"\n#  error \"no FPM selected\"\n   ^\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/xing.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/xing.c",
+        "-o",
+        "./out/inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_xing.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/xing.c:28:\nIn file included from ./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/xing.h:25:\n./source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/mad.h:465:4: error: \"no FPM selected\"\n#  error \"no FPM selected\"\n   ^\n1 error generated.\n"
+    }
+  ]
+}

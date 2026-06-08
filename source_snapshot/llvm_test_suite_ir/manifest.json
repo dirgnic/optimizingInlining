@@ -1,0 +1,20 @@
+{
+  "source": "llvm-test-suite",
+  "upstream": "https://github.com/llvm/llvm-test-suite.git",
+  "subset": [
+    "SingleSource/Benchmarks/Misc/whetstone.c",
+    "SingleSource/Benchmarks/Misc/mandel.c",
+    "SingleSource/Benchmarks/Misc/pi.c",
+    "SingleSource/Benchmarks/Misc/matmul_f64_4x4.c",
+    "SingleSource/Benchmarks/Misc/revertBits.c",
+    "SingleSource/Benchmarks/Misc/evalloop.c",
+    "SingleSource/Benchmarks/Misc/lowercase.c",
+    "SingleSource/Benchmarks/Misc/ffbench.c",
+    "SingleSource/Benchmarks/Misc/himenobmtxpa.c",
+    "SingleSource/Benchmarks/Misc/fp-convert.c",
+    "SingleSource/Benchmarks/Misc/salsa20.c",
+    "SingleSource/Benchmarks/Misc/richards_benchmark.c"
+  ],
+  "compile_flags": "clang -std=c11 -S -emit-llvm -O0 -fno-inline -fno-discard-value-names",
+  "purpose": "Optional LLVM test-suite IR sample for thesis import experiments"
+}

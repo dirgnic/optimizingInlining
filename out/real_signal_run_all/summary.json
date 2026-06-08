@@ -1,0 +1,320 @@
+{
+  "metric": "actual_rewritten_ir_instruction_count",
+  "note": "Separate real-source signal run. Main thesis artifacts are not overwritten.",
+  "selection_rule": "real-source modules only, sorted by selected-teacher IR reduction relative to never_inline",
+  "all": {
+    "module_count": 80,
+    "never_inline_total_ir": 280331,
+    "never_inline_average_ir": 3504.1375,
+    "selected_teacher_total_ir": 276912,
+    "selected_teacher_average_ir": 3461.4,
+    "selected_teacher_reduction_pct": 1.2196296520898433,
+    "best_student": "deep_forest",
+    "students": {
+      "logistic_regression": {
+        "total_ir": 286505,
+        "average_ir": 3581.3125,
+        "reduction_vs_never_inline_pct": -2.2023964527647726,
+        "gap_vs_selected_teacher": 119.91249999999991
+      },
+      "decision_tree": {
+        "total_ir": 280511,
+        "average_ir": 3506.3875,
+        "reduction_vs_never_inline_pct": -0.06420980911850634,
+        "gap_vs_selected_teacher": 44.98749999999973
+      },
+      "knn": {
+        "total_ir": 301929,
+        "average_ir": 3774.1125,
+        "reduction_vs_never_inline_pct": -7.704463651897233,
+        "gap_vs_selected_teacher": 312.7125000000001
+      },
+      "random_forest": {
+        "total_ir": 279906,
+        "average_ir": 3498.825,
+        "reduction_vs_never_inline_pct": 0.15160649375202886,
+        "gap_vs_selected_teacher": 37.42499999999973
+      },
+      "deep_forest": {
+        "total_ir": 277293,
+        "average_ir": 3466.1625,
+        "reduction_vs_never_inline_pct": 1.0837188894556766,
+        "gap_vs_selected_teacher": 4.762499999999818
+      },
+      "conservative_forest": {
+        "total_ir": 277558,
+        "average_ir": 3469.475,
+        "reduction_vs_never_inline_pct": 0.9891877815867645,
+        "gap_vs_selected_teacher": 8.074999999999818
+      },
+      "small_mlp": {
+        "total_ir": 281101,
+        "average_ir": 3513.7625,
+        "reduction_vs_never_inline_pct": -0.27467529456249934,
+        "gap_vs_selected_teacher": 52.36249999999973
+      }
+    }
+  },
+  "train": {
+    "module_count": 67,
+    "never_inline_total_ir": 242793,
+    "never_inline_average_ir": 3623.776119402985,
+    "selected_teacher_total_ir": 239494,
+    "selected_teacher_average_ir": 3574.5373134328356,
+    "selected_teacher_reduction_pct": 1.3587706400102162,
+    "best_student": "deep_forest",
+    "students": {
+      "logistic_regression": {
+        "total_ir": 246309,
+        "average_ir": 3676.2537313432836,
+        "reduction_vs_never_inline_pct": -1.448147187110011,
+        "gap_vs_selected_teacher": 101.71641791044794
+      },
+      "decision_tree": {
+        "total_ir": 242949,
+        "average_ir": 3626.10447761194,
+        "reduction_vs_never_inline_pct": -0.06425226427450619,
+        "gap_vs_selected_teacher": 51.567164179104566
+      },
+      "knn": {
+        "total_ir": 264151,
+        "average_ir": 3942.5522388059703,
+        "reduction_vs_never_inline_pct": -8.796793976762107,
+        "gap_vs_selected_teacher": 368.0149253731347
+      },
+      "random_forest": {
+        "total_ir": 242437,
+        "average_ir": 3618.4626865671644,
+        "reduction_vs_never_inline_pct": 0.1466269620623234,
+        "gap_vs_selected_teacher": 43.925373134328765
+      },
+      "deep_forest": {
+        "total_ir": 239828,
+        "average_ir": 3579.5223880597014,
+        "reduction_vs_never_inline_pct": 1.2212048947045422,
+        "gap_vs_selected_teacher": 4.985074626865753
+      },
+      "conservative_forest": {
+        "total_ir": 240047,
+        "average_ir": 3582.791044776119,
+        "reduction_vs_never_inline_pct": 1.1310046006268737,
+        "gap_vs_selected_teacher": 8.253731343283562
+      },
+      "small_mlp": {
+        "total_ir": 242263,
+        "average_ir": 3615.865671641791,
+        "reduction_vs_never_inline_pct": 0.2182929491377438,
+        "gap_vs_selected_teacher": 41.32835820895525
+      }
+    }
+  },
+  "test": {
+    "module_count": 13,
+    "never_inline_total_ir": 37538,
+    "never_inline_average_ir": 2887.5384615384614,
+    "selected_teacher_total_ir": 37418,
+    "selected_teacher_average_ir": 2878.3076923076924,
+    "selected_teacher_reduction_pct": 0.31967606159091516,
+    "best_student": "deep_forest",
+    "students": {
+      "logistic_regression": {
+        "total_ir": 40196,
+        "average_ir": 3092.0,
+        "reduction_vs_never_inline_pct": -7.080824764238909,
+        "gap_vs_selected_teacher": 213.69230769230762
+      },
+      "decision_tree": {
+        "total_ir": 37562,
+        "average_ir": 2889.3846153846152,
+        "reduction_vs_never_inline_pct": -0.06393521231818303,
+        "gap_vs_selected_teacher": 11.076923076922867
+      },
+      "knn": {
+        "total_ir": 37778,
+        "average_ir": 2906.0,
+        "reduction_vs_never_inline_pct": -0.6393521231818461,
+        "gap_vs_selected_teacher": 27.692307692307622
+      },
+      "random_forest": {
+        "total_ir": 37469,
+        "average_ir": 2882.230769230769,
+        "reduction_vs_never_inline_pct": 0.18381373541478213,
+        "gap_vs_selected_teacher": 3.923076923076678
+      },
+      "deep_forest": {
+        "total_ir": 37465,
+        "average_ir": 2881.923076923077,
+        "reduction_vs_never_inline_pct": 0.19446960413446618,
+        "gap_vs_selected_teacher": 3.6153846153847553
+      },
+      "conservative_forest": {
+        "total_ir": 37511,
+        "average_ir": 2885.4615384615386,
+        "reduction_vs_never_inline_pct": 0.07192711385795,
+        "gap_vs_selected_teacher": 7.153846153846189
+      },
+      "small_mlp": {
+        "total_ir": 38838,
+        "average_ir": 2987.5384615384614,
+        "reduction_vs_never_inline_pct": -3.4631573339016466,
+        "gap_vs_selected_teacher": 109.23076923076906
+      }
+    }
+  },
+  "split": {
+    "train_modules": [
+      "source_snapshot_DCMTK_config_tests_cxx11.ll",
+      "source_snapshot_DCMTK_config_tests_cxx14.ll",
+      "source_snapshot_DCMTK_config_tests_cxx17.ll",
+      "source_snapshot_DCMTK_config_tests_vector.ll",
+      "source_snapshot_public_repos_cJSON_cJSON.ll",
+      "source_snapshot_public_repos_cJSON_tests_cjson_add.ll",
+      "source_snapshot_public_repos_cJSON_tests_json_patch_tests.ll",
+      "source_snapshot_public_repos_cJSON_tests_minify_tests.ll",
+      "source_snapshot_public_repos_cJSON_tests_misc_tests.ll",
+      "source_snapshot_public_repos_cJSON_tests_misc_utils_tests.ll",
+      "source_snapshot_public_repos_cJSON_tests_parse_array.ll",
+      "source_snapshot_public_repos_cJSON_tests_parse_examples.ll",
+      "source_snapshot_public_repos_cJSON_tests_parse_hex4.ll",
+      "source_snapshot_public_repos_cJSON_tests_parse_number.ll",
+      "source_snapshot_public_repos_cJSON_tests_parse_string.ll",
+      "source_snapshot_public_repos_cJSON_tests_parse_value.ll",
+      "source_snapshot_public_repos_cJSON_tests_parse_with_opts.ll",
+      "source_snapshot_public_repos_cJSON_tests_print_array.ll",
+      "source_snapshot_public_repos_cJSON_tests_print_number.ll",
+      "source_snapshot_public_repos_cJSON_tests_print_string.ll",
+      "source_snapshot_public_repos_cJSON_tests_print_value.ll",
+      "source_snapshot_public_repos_cJSON_tests_readme_examples.ll",
+      "source_snapshot_public_repos_cJSON_tests_unity_src_unity.ll",
+      "source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_bzip2.ll",
+      "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcmarker.ll",
+      "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdmarker.ll",
+      "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jquant1.ll",
+      "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jcmarker.ll",
+      "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_wrgif.ll",
+      "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_trees.ll",
+      "source_snapshot_public_repos_ctuning-programs_program_cbench-telecom-gsm_toast.ll",
+      "source_snapshot_public_repos_embench-iot_src_picojpeg_libpicojpeg.ll",
+      "source_snapshot_public_repos_inih_cpp_INIReader.ll",
+      "source_snapshot_public_repos_inih_examples_INIReaderExampleErrors.ll",
+      "source_snapshot_public_repos_log.c_src_log.ll",
+      "source_snapshot_public_repos_lz4_lib_lz4.ll",
+      "source_snapshot_public_repos_lz4_lib_lz4frame.ll",
+      "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jcmarker.ll",
+      "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdmarker.ll",
+      "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jmemname.ll",
+      "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jquant1.ll",
+      "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_wrjpgcom.ll",
+      "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_rtp.ll",
+      "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_intl_loadmsgcat.ll",
+      "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_libz_trees.ll",
+      "source_snapshot_public_repos_mibench_network_patricia_patricia_test.ll",
+      "source_snapshot_public_repos_parson_parson.ll",
+      "source_snapshot_public_repos_sqlite_ext_misc_fileio.ll",
+      "source_snapshot_public_repos_sqlite_ext_misc_fossildelta.ll",
+      "source_snapshot_public_repos_sqlite_ext_misc_percentile.ll",
+      "source_snapshot_public_repos_tiny-AES-c_test.ll",
+      "source_snapshot_public_repos_tinyexpr_repl.ll",
+      "source_snapshot_public_repos_tracy_examples_ToyPathTracer_Source_Test.ll",
+      "source_snapshot_public_repos_tracy_examples_ToyPathTracer_Source_enkiTS_TaskScheduler.ll",
+      "source_snapshot_public_repos_tracy_examples_ToyPathTracer_Source_enkiTS_TaskScheduler_c.ll",
+      "source_snapshot_public_repos_tracy_profiler_src_ResolvService.ll",
+      "source_snapshot_public_repos_tracy_public_common_TracySocket.ll",
+      "source_snapshot_public_repos_tracy_public_libbacktrace_alloc.ll",
+      "source_snapshot_public_repos_tracy_public_libbacktrace_macho.ll",
+      "source_snapshot_public_repos_tracy_server_TracyPrint.ll",
+      "source_snapshot_public_repos_tracy_update_src_OfflineSymbolResolverAddr2Line.ll",
+      "source_snapshot_public_repos_zlib_contrib_iostream3_test.ll",
+      "source_snapshot_public_repos_zlib_contrib_minizip_minizip.ll",
+      "source_snapshot_public_repos_zlib_contrib_minizip_zip.ll",
+      "source_snapshot_public_repos_zlib_examples_enough.ll",
+      "source_snapshot_public_repos_zlib_examples_gzjoin.ll",
+      "source_snapshot_public_repos_zlib_trees.ll"
+    ],
+    "test_modules": [
+      "source_snapshot_public_repos_cJSON_tests_compare_tests.ll",
+      "source_snapshot_public_repos_cJSON_tests_old_utils_tests.ll",
+      "source_snapshot_public_repos_cJSON_tests_parse_object.ll",
+      "source_snapshot_public_repos_cJSON_tests_print_object.ll",
+      "source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_bzlib.ll",
+      "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jquant1.ll",
+      "source_snapshot_public_repos_inih_examples_INIReaderExample.ll",
+      "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdjpgcom.ll",
+      "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_wrgif.ll",
+      "source_snapshot_public_repos_sqlite_ext_misc_basexx.ll",
+      "source_snapshot_public_repos_tracy_server_TracyTaskDispatch.ll",
+      "source_snapshot_public_repos_zlib_contrib_iostream3_zfstream.ll",
+      "source_snapshot_public_repos_zlib_contrib_minizip_miniunz.ll"
+    ],
+    "train_samples": 8013,
+    "test_samples": 1155,
+    "strategy": "deterministic stratified module split by source kind and selected teacher",
+    "groups": {
+      "dcmtk::greedy_ir_size": {
+        "modules": 2,
+        "train_modules": 2,
+        "test_modules": 0
+      },
+      "dcmtk::single_caller": {
+        "modules": 1,
+        "train_modules": 1,
+        "test_modules": 0
+      },
+      "dcmtk::small_callee": {
+        "modules": 1,
+        "train_modules": 1,
+        "test_modules": 0
+      },
+      "public_repo::balanced_score": {
+        "modules": 1,
+        "train_modules": 1,
+        "test_modules": 0
+      },
+      "public_repo::constant_argument": {
+        "modules": 1,
+        "train_modules": 1,
+        "test_modules": 0
+      },
+      "public_repo::cost_budget": {
+        "modules": 6,
+        "train_modules": 5,
+        "test_modules": 1
+      },
+      "public_repo::greedy_ir_size": {
+        "modules": 36,
+        "train_modules": 29,
+        "test_modules": 7
+      },
+      "public_repo::hot_leaf": {
+        "modules": 1,
+        "train_modules": 1,
+        "test_modules": 0
+      },
+      "public_repo::llvm_like_size": {
+        "modules": 1,
+        "train_modules": 1,
+        "test_modules": 0
+      },
+      "public_repo::loop_averse": {
+        "modules": 2,
+        "train_modules": 2,
+        "test_modules": 0
+      },
+      "public_repo::single_caller": {
+        "modules": 12,
+        "train_modules": 10,
+        "test_modules": 2
+      },
+      "public_repo::small_callee": {
+        "modules": 16,
+        "train_modules": 13,
+        "test_modules": 3
+      }
+    }
+  },
+  "paths": {
+    "dataset": "out/real_signal_run_all/bc_dataset.json",
+    "student_results": "out/real_signal_run_all/student_results.json",
+    "student_rewrites": "out/real_signal_run_all/ir_rewrite_students.json"
+  }
+}

@@ -1,0 +1,565 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{mlgoperf}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=62fa25f7f5fb8fca4c9b28a62beea8d4}{%
+           family={Ashouri},
+           familyi={A\bibinitperiod},
+           given={Amir\bibnamedelima H.},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=55147aca200b51d181877ee3cad43c57}{%
+           family={Elhoushi},
+           familyi={E\bibinitperiod},
+           given={Mostafa},
+           giveni={M\bibinitperiod}}}%
+        {{hash=97d4d6c611a5493ee2757f7d44754426}{%
+           family={Hua},
+           familyi={H\bibinitperiod},
+           given={Yuzhe},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=8fde8559617f603b3e2b3cf30cb48e9b}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xiang},
+           giveni={X\bibinitperiod}}}%
+        {{hash=0f019cafaecd9abe843bf958bcb39698}{%
+           family={Manzoor},
+           familyi={M\bibinitperiod},
+           given={Muhammad\bibnamedelima Asif},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=b05477d3fb03cbac9c42f3781e68acb6}{%
+           family={Chan},
+           familyi={C\bibinitperiod},
+           given={Bryan},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8c836e1d132b0add131d0a73d04d6f57}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Yaoqing},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{32963bee8efae68e1c9e04cbcc939d19}
+      \strng{fullhash}{2f3986a436fce5aa05b8e1e71c77be3a}
+      \strng{fullhashraw}{2f3986a436fce5aa05b8e1e71c77be3a}
+      \strng{bibnamehash}{2f3986a436fce5aa05b8e1e71c77be3a}
+      \strng{authorbibnamehash}{2f3986a436fce5aa05b8e1e71c77be3a}
+      \strng{authornamehash}{32963bee8efae68e1c9e04cbcc939d19}
+      \strng{authorfullhash}{2f3986a436fce5aa05b8e1e71c77be3a}
+      \strng{authorfullhashraw}{2f3986a436fce5aa05b8e1e71c77be3a}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2207.08389}
+      \field{title}{MLGOPerf: An ML Guided Inliner to Optimize Performance}
+      \field{year}{2022}
+    \endentry
+    \entry{cavazos2005automatic}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=4a47988fda6346b6e82c7c5dea303b8f}{%
+           family={Cavazos},
+           familyi={C\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=120b4f52309277bdd788047c6ec0181c}{%
+           family={O'Boyle},
+           familyi={O\bibinitperiod},
+           given={Michael\bibnamedelimb F.\bibnamedelimi P.},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{682888aa11cca3ce4360cc7e8575d3a1}
+      \strng{fullhash}{682888aa11cca3ce4360cc7e8575d3a1}
+      \strng{fullhashraw}{682888aa11cca3ce4360cc7e8575d3a1}
+      \strng{bibnamehash}{682888aa11cca3ce4360cc7e8575d3a1}
+      \strng{authorbibnamehash}{682888aa11cca3ce4360cc7e8575d3a1}
+      \strng{authornamehash}{682888aa11cca3ce4360cc7e8575d3a1}
+      \strng{authorfullhash}{682888aa11cca3ce4360cc7e8575d3a1}
+      \strng{authorfullhashraw}{682888aa11cca3ce4360cc7e8575d3a1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the International Conference on High Performance Computing, Networking, Storage and Analysis}
+      \field{title}{Automatic Tuning of Inlining Heuristics}
+      \field{year}{2005}
+    \endentry
+    \entry{milepostgcc}{article}{}{}
+      \name{author}{17}{}{%
+        {{hash=f2c55a2e90945c0056f7290ad7d6810a}{%
+           family={Fursin},
+           familyi={F\bibinitperiod},
+           given={Grigori},
+           giveni={G\bibinitperiod}}}%
+        {{hash=8f584b79384e09e40aee7fadcaeb7033}{%
+           family={Kashnikov},
+           familyi={K\bibinitperiod},
+           given={Yuriy},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=1835e07bdce5114d007e3c8b58dee36a}{%
+           family={Memon},
+           familyi={M\bibinitperiod},
+           given={Abdul\bibnamedelima Wahid},
+           giveni={A\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=591e2860c9cbf91a083307a335c38192}{%
+           family={Chamski},
+           familyi={C\bibinitperiod},
+           given={Zbigniew},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=d9ff79867ff8e573205244b2b0f8e531}{%
+           family={Temam},
+           familyi={T\bibinitperiod},
+           given={Olivier},
+           giveni={O\bibinitperiod}}}%
+        {{hash=b5cec61fdde848c4019cea7ce4c25b3c}{%
+           family={Namolaru},
+           familyi={N\bibinitperiod},
+           given={Mircea},
+           giveni={M\bibinitperiod}}}%
+        {{hash=22e2b23396384cacee5b21fa30c9d02b}{%
+           family={Yom-Tov},
+           familyi={Y\bibinithyphendelim T\bibinitperiod},
+           given={Elad},
+           giveni={E\bibinitperiod}}}%
+        {{hash=d7aea334da9213c27463879649666931}{%
+           family={Mendelson},
+           familyi={M\bibinitperiod},
+           given={Bilha},
+           giveni={B\bibinitperiod}}}%
+        {{hash=713ceffa3894032a8661411a104831b8}{%
+           family={Zaks},
+           familyi={Z\bibinitperiod},
+           given={Ayal},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bb1a0aec02ef547585d4ff73cdec1b6c}{%
+           family={Courtois},
+           familyi={C\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=22071506dc44e3c3a78dd843981ada2a}{%
+           family={Bodin},
+           familyi={B\bibinitperiod},
+           given={Francois},
+           giveni={F\bibinitperiod}}}%
+        {{hash=5d7b059d0187ac021784855f3cfac0fe}{%
+           family={Barnard},
+           familyi={B\bibinitperiod},
+           given={Phil},
+           giveni={P\bibinitperiod}}}%
+        {{hash=a25daf0f8f03d1204a8305b7f967df63}{%
+           family={Ashton},
+           familyi={A\bibinitperiod},
+           given={Elton},
+           giveni={E\bibinitperiod}}}%
+        {{hash=b3693e385a8cb39b4590352db6b65b8b}{%
+           family={Bonilla},
+           familyi={B\bibinitperiod},
+           given={Edwin},
+           giveni={E\bibinitperiod}}}%
+        {{hash=b3b894ac9e0fe70e1f52cdd1ce4f11cf}{%
+           family={Thomson},
+           familyi={T\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d34fdfcbfcb5412397b946351370db22}{%
+           family={Williams},
+           familyi={W\bibinitperiod},
+           given={Christopher\bibnamedelimb K.\bibnamedelimi I.},
+           giveni={C\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=120b4f52309277bdd788047c6ec0181c}{%
+           family={O'Boyle},
+           familyi={O\bibinitperiod},
+           given={Michael\bibnamedelimb F.\bibnamedelimi P.},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{007b18e86c2f98f9bc98b4b7355dd724}
+      \strng{fullhash}{98814a26b225eec6c497f8860b25b06b}
+      \strng{fullhashraw}{98814a26b225eec6c497f8860b25b06b}
+      \strng{bibnamehash}{98814a26b225eec6c497f8860b25b06b}
+      \strng{authorbibnamehash}{98814a26b225eec6c497f8860b25b06b}
+      \strng{authornamehash}{007b18e86c2f98f9bc98b4b7355dd724}
+      \strng{authorfullhash}{98814a26b225eec6c497f8860b25b06b}
+      \strng{authorfullhashraw}{98814a26b225eec6c497f8860b25b06b}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Parallel Programming}
+      \field{number}{3}
+      \field{title}{MILEPOST GCC: Machine Learning Enabled Self-tuning Compiler}
+      \field{volume}{39}
+      \field{year}{2011}
+      \field{pages}{296\bibrangedash 327}
+      \range{pages}{32}
+      \verb{doi}
+      \verb 10.1007/s10766-010-0161-2
+      \endverb
+    \endentry
+    \entry{godbolt2025inlining}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=0d91e4db65f9e93599da70622b40b509}{%
+           family={Godbolt},
+           familyi={G\bibinitperiod},
+           given={Matt},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{0d91e4db65f9e93599da70622b40b509}
+      \strng{fullhash}{0d91e4db65f9e93599da70622b40b509}
+      \strng{fullhashraw}{0d91e4db65f9e93599da70622b40b509}
+      \strng{bibnamehash}{0d91e4db65f9e93599da70622b40b509}
+      \strng{authorbibnamehash}{0d91e4db65f9e93599da70622b40b509}
+      \strng{authornamehash}{0d91e4db65f9e93599da70622b40b509}
+      \strng{authorfullhash}{0d91e4db65f9e93599da70622b40b509}
+      \strng{authorfullhashraw}{0d91e4db65f9e93599da70622b40b509}
+      \field{extraname}{1}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Inlining - the Ultimate Optimisation}
+      \field{urlday}{27}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://xania.org/202512/17-inlining-the-ultimate-optimisation
+      \endverb
+      \verb{url}
+      \verb https://xania.org/202512/17-inlining-the-ultimate-optimisation
+      \endverb
+    \endentry
+    \entry{godbolt2019optimizations}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=0d91e4db65f9e93599da70622b40b509}{%
+           family={Godbolt},
+           familyi={G\bibinitperiod},
+           given={Matt},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{0d91e4db65f9e93599da70622b40b509}
+      \strng{fullhash}{0d91e4db65f9e93599da70622b40b509}
+      \strng{fullhashraw}{0d91e4db65f9e93599da70622b40b509}
+      \strng{bibnamehash}{0d91e4db65f9e93599da70622b40b509}
+      \strng{authorbibnamehash}{0d91e4db65f9e93599da70622b40b509}
+      \strng{authornamehash}{0d91e4db65f9e93599da70622b40b509}
+      \strng{authorfullhash}{0d91e4db65f9e93599da70622b40b509}
+      \strng{authorfullhashraw}{0d91e4db65f9e93599da70622b40b509}
+      \field{extraname}{2}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM Queue}
+      \field{title}{Optimizations in C++ Compilers}
+      \field{urlday}{27}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://queue.acm.org/detail.cfm?id=3372264
+      \endverb
+      \verb{url}
+      \verb https://queue.acm.org/detail.cfm?id=3372264
+      \endverb
+    \endentry
+    \entry{llvmlangref}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=8e794f3113c883242c2533ada58d710d}{%
+           family={{LLVM Project}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{8e794f3113c883242c2533ada58d710d}
+      \strng{fullhash}{8e794f3113c883242c2533ada58d710d}
+      \strng{fullhashraw}{8e794f3113c883242c2533ada58d710d}
+      \strng{bibnamehash}{8e794f3113c883242c2533ada58d710d}
+      \strng{authorbibnamehash}{8e794f3113c883242c2533ada58d710d}
+      \strng{authornamehash}{8e794f3113c883242c2533ada58d710d}
+      \strng{authorfullhash}{8e794f3113c883242c2533ada58d710d}
+      \strng{authorfullhashraw}{8e794f3113c883242c2533ada58d710d}
+      \field{extraname}{1}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{LLVM Language Reference Manual}
+      \field{urlday}{28}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://llvm.org/docs/LangRef.html
+      \endverb
+      \verb{url}
+      \verb https://llvm.org/docs/LangRef.html
+      \endverb
+    \endentry
+    \entry{llvmpasses}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=8e794f3113c883242c2533ada58d710d}{%
+           family={{LLVM Project}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{8e794f3113c883242c2533ada58d710d}
+      \strng{fullhash}{8e794f3113c883242c2533ada58d710d}
+      \strng{fullhashraw}{8e794f3113c883242c2533ada58d710d}
+      \strng{bibnamehash}{8e794f3113c883242c2533ada58d710d}
+      \strng{authorbibnamehash}{8e794f3113c883242c2533ada58d710d}
+      \strng{authornamehash}{8e794f3113c883242c2533ada58d710d}
+      \strng{authorfullhash}{8e794f3113c883242c2533ada58d710d}
+      \strng{authorfullhashraw}{8e794f3113c883242c2533ada58d710d}
+      \field{extraname}{2}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{LLVM Passes}
+      \field{urlday}{28}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://llvm.org/docs/Passes.html
+      \endverb
+      \verb{url}
+      \verb https://llvm.org/docs/Passes.html
+      \endverb
+    \endentry
+    \entry{llvmtestsuite}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=8e794f3113c883242c2533ada58d710d}{%
+           family={{LLVM Project}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{8e794f3113c883242c2533ada58d710d}
+      \strng{fullhash}{8e794f3113c883242c2533ada58d710d}
+      \strng{fullhashraw}{8e794f3113c883242c2533ada58d710d}
+      \strng{bibnamehash}{8e794f3113c883242c2533ada58d710d}
+      \strng{authorbibnamehash}{8e794f3113c883242c2533ada58d710d}
+      \strng{authornamehash}{8e794f3113c883242c2533ada58d710d}
+      \strng{authorfullhash}{8e794f3113c883242c2533ada58d710d}
+      \strng{authorfullhashraw}{8e794f3113c883242c2533ada58d710d}
+      \field{extraname}{3}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{LLVM Test Suite Guide}
+      \field{urlday}{27}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://llvm.org/docs/TestSuiteGuide.html
+      \endverb
+      \verb{url}
+      \verb https://llvm.org/docs/TestSuiteGuide.html
+      \endverb
+    \endentry
+    \entry{llvmmlgo}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=8e794f3113c883242c2533ada58d710d}{%
+           family={{LLVM Project}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{8e794f3113c883242c2533ada58d710d}
+      \strng{fullhash}{8e794f3113c883242c2533ada58d710d}
+      \strng{fullhashraw}{8e794f3113c883242c2533ada58d710d}
+      \strng{bibnamehash}{8e794f3113c883242c2533ada58d710d}
+      \strng{authorbibnamehash}{8e794f3113c883242c2533ada58d710d}
+      \strng{authornamehash}{8e794f3113c883242c2533ada58d710d}
+      \strng{authorfullhash}{8e794f3113c883242c2533ada58d710d}
+      \strng{authorfullhashraw}{8e794f3113c883242c2533ada58d710d}
+      \field{extraname}{4}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Machine Learning Guided Optimization}
+      \field{urlday}{28}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://llvm.org/docs/MLGO.html
+      \endverb
+      \verb{url}
+      \verb https://llvm.org/docs/MLGO.html
+      \endverb
+    \endentry
+    \entry{bcmax}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=39b4da484b61cfc4ee483fa16ff0ee28}{%
+           family={Marinov},
+           familyi={M\bibinitperiod},
+           given={Teodor\bibnamedelima V.},
+           giveni={T\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=fbc92e6ef1054bf5beee95529f5aaedc}{%
+           family={Agarwal},
+           familyi={A\bibinitperiod},
+           given={Alekh},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9d20ae9d752a2b2e4a0f8c4b14772747}{%
+           family={Trofin},
+           familyi={T\bibinitperiod},
+           given={Mircea},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{852e79032c23fd14163da67e52c7e538}
+      \strng{fullhash}{852e79032c23fd14163da67e52c7e538}
+      \strng{fullhashraw}{852e79032c23fd14163da67e52c7e538}
+      \strng{bibnamehash}{852e79032c23fd14163da67e52c7e538}
+      \strng{authorbibnamehash}{852e79032c23fd14163da67e52c7e538}
+      \strng{authornamehash}{852e79032c23fd14163da67e52c7e538}
+      \strng{authorfullhash}{852e79032c23fd14163da67e52c7e538}
+      \strng{authorfullhashraw}{852e79032c23fd14163da67e52c7e538}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2403.19462}
+      \field{title}{Offline Imitation Learning from Multiple Baselines with Applications to Compiler Optimization}
+      \field{year}{2024}
+    \endentry
+    \entry{dcmtk}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=cdc3820dd38ca20097dcd2c8bd25e122}{%
+           family={{OFFIS e.V.}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{cdc3820dd38ca20097dcd2c8bd25e122}
+      \strng{fullhash}{cdc3820dd38ca20097dcd2c8bd25e122}
+      \strng{fullhashraw}{cdc3820dd38ca20097dcd2c8bd25e122}
+      \strng{bibnamehash}{cdc3820dd38ca20097dcd2c8bd25e122}
+      \strng{authorbibnamehash}{cdc3820dd38ca20097dcd2c8bd25e122}
+      \strng{authornamehash}{cdc3820dd38ca20097dcd2c8bd25e122}
+      \strng{authorfullhash}{cdc3820dd38ca20097dcd2c8bd25e122}
+      \strng{authorfullhashraw}{cdc3820dd38ca20097dcd2c8bd25e122}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{DCMTK: DICOM Toolkit}
+      \field{urlday}{13}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/DCMTK/dcmtk
+      \endverb
+      \verb{url}
+      \verb https://github.com/DCMTK/dcmtk
+      \endverb
+    \endentry
+    \entry{theodoridis2022optimal}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=34d05d66c27d203b766409c1541d044b}{%
+           family={Theodoridis},
+           familyi={T\bibinitperiod},
+           given={Theodoros},
+           giveni={T\bibinitperiod}}}%
+        {{hash=8d5b5e98a55e4f5262f328dd602a741d}{%
+           family={Grosser},
+           familyi={G\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+        {{hash=3995a0c731177d2aa23cbb3a6126be27}{%
+           family={Su},
+           familyi={S\bibinitperiod},
+           given={Zhendong},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{5c226d0da6af4a8c7c977d39c6fb45c2}
+      \strng{fullhash}{5c226d0da6af4a8c7c977d39c6fb45c2}
+      \strng{fullhashraw}{5c226d0da6af4a8c7c977d39c6fb45c2}
+      \strng{bibnamehash}{5c226d0da6af4a8c7c977d39c6fb45c2}
+      \strng{authorbibnamehash}{5c226d0da6af4a8c7c977d39c6fb45c2}
+      \strng{authornamehash}{5c226d0da6af4a8c7c977d39c6fb45c2}
+      \strng{authorfullhash}{5c226d0da6af4a8c7c977d39c6fb45c2}
+      \strng{authorfullhashraw}{5c226d0da6af4a8c7c977d39c6fb45c2}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 27th ACM International Conference on Architectural Support for Programming Languages and Operating Systems}
+      \field{series}{ASPLOS '22}
+      \field{title}{Understanding and Exploiting Optimal Function Inlining}
+      \field{year}{2022}
+      \field{pages}{977\bibrangedash 989}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1145/3503222.3507744
+      \endverb
+    \endentry
+    \entry{mlgo}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=9d20ae9d752a2b2e4a0f8c4b14772747}{%
+           family={Trofin},
+           familyi={T\bibinitperiod},
+           given={Mircea},
+           giveni={M\bibinitperiod}}}%
+        {{hash=76f55ca261965fc4d519b5f859435a0b}{%
+           family={Qian},
+           familyi={Q\bibinitperiod},
+           given={Yundi},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=a79c0c4b084471b2c8e0e9a38b4cb2b7}{%
+           family={Brevdo},
+           familyi={B\bibinitperiod},
+           given={Eugene},
+           giveni={E\bibinitperiod}}}%
+        {{hash=81d13adf51117354c12f13029c37e418}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Zinan},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=3790fd4d63272e6ab60c1356f8e70d94}{%
+           family={Choromanski},
+           familyi={C\bibinitperiod},
+           given={Krzysztof},
+           giveni={K\bibinitperiod}}}%
+        {{hash=affc307c3680a405b56c476992a3a04a}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{174059b98faa210833b4ec8649ab6fee}
+      \strng{fullhash}{2212594c1bcef147c77cd8b68e4dbe54}
+      \strng{fullhashraw}{2212594c1bcef147c77cd8b68e4dbe54}
+      \strng{bibnamehash}{2212594c1bcef147c77cd8b68e4dbe54}
+      \strng{authorbibnamehash}{2212594c1bcef147c77cd8b68e4dbe54}
+      \strng{authornamehash}{174059b98faa210833b4ec8649ab6fee}
+      \strng{authorfullhash}{2212594c1bcef147c77cd8b68e4dbe54}
+      \strng{authorfullhashraw}{2212594c1bcef147c77cd8b68e4dbe54}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2101.04808}
+      \field{title}{MLGO: A Machine Learning Guided Compiler Optimizations Framework}
+      \field{year}{2021}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,698 @@
+{
+  "compiled": 433,
+  "failed": 155,
+  "features": 5497,
+  "modules": 170,
+  "public_candidates_with_calls": 96,
+  "public_non_never": 14,
+  "public_with_inline_labels": 14,
+  "teacher_counts": {
+    "cost_budget": 2,
+    "single_caller": 13,
+    "small_callee": 30,
+    "loop_averse": 13,
+    "never_inline": 100,
+    "constant_argument": 2,
+    "llvm_like_size": 2,
+    "aggressive_speed": 5,
+    "benefit_cost_ratio": 2,
+    "balanced_score": 1
+  },
+  "label_counts": {
+    "1": 454,
+    "0": 5043
+  },
+  "selected_count": 75,
+  "selected_family_count": {
+    "tracy": 5,
+    "zlib": 3,
+    "inih": 2,
+    "cJSON": 1,
+    "public": 2,
+    "SQLite": 1
+  },
+  "selected_inline_labels": 116,
+  "selected_callsites": 4210,
+  "selected_teacher_counts": {
+    "balanced_score": 1,
+    "llvm_like_size": 1,
+    "single_caller": 5,
+    "small_callee": 6,
+    "cost_budget": 1,
+    "never_inline": 61
+  },
+  "top_selected": [
+    {
+      "source": "source_snapshot/public_repos/tracy/profiler/src/ResolvService.cpp",
+      "module": "source_snapshot_public_repos_tracy_profiler_src_ResolvService.ll",
+      "teacher": "balanced_score",
+      "callsites": 54,
+      "inline_labels": 46,
+      "group": "tracy"
+    },
+    {
+      "source": "source_snapshot/public_repos/tracy/examples/ToyPathTracer/Source/enkiTS/TaskScheduler.cpp",
+      "module": "source_snapshot_public_repos_tracy_examples_ToyPathTracer_Source_enkiTS_TaskScheduler.ll",
+      "teacher": "llvm_like_size",
+      "callsites": 53,
+      "inline_labels": 26,
+      "group": "tracy"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/contrib/iostream3/test.cc",
+      "module": "source_snapshot_public_repos_zlib_contrib_iostream3_test.ll",
+      "teacher": "single_caller",
+      "callsites": 15,
+      "inline_labels": 7,
+      "group": "zlib"
+    },
+    {
+      "source": "source_snapshot/public_repos/inih/examples/INIReaderExampleErrors.cpp",
+      "module": "source_snapshot_public_repos_inih_examples_INIReaderExampleErrors.ll",
+      "teacher": "small_callee",
+      "callsites": 7,
+      "inline_labels": 7,
+      "group": "inih"
+    },
+    {
+      "source": "source_snapshot/public_repos/tracy/update/src/OfflineSymbolResolverAddr2Line.cpp",
+      "module": "source_snapshot_public_repos_tracy_update_src_OfflineSymbolResolverAddr2Line.ll",
+      "teacher": "single_caller",
+      "callsites": 10,
+      "inline_labels": 6,
+      "group": "tracy"
+    },
+    {
+      "source": "source_snapshot/public_repos/tracy/examples/ToyPathTracer/Source/enkiTS/TaskScheduler_c.cpp",
+      "module": "source_snapshot_public_repos_tracy_examples_ToyPathTracer_Source_enkiTS_TaskScheduler_c.ll",
+      "teacher": "single_caller",
+      "callsites": 6,
+      "inline_labels": 6,
+      "group": "tracy"
+    },
+    {
+      "source": "source_snapshot/public_repos/tracy/examples/ToyPathTracer/Source/Test.cpp",
+      "module": "source_snapshot_public_repos_tracy_examples_ToyPathTracer_Source_Test.ll",
+      "teacher": "small_callee",
+      "callsites": 39,
+      "inline_labels": 5,
+      "group": "tracy"
+    },
+    {
+      "source": "source_snapshot/public_repos/inih/examples/INIReaderExample.cpp",
+      "module": "source_snapshot_public_repos_inih_examples_INIReaderExample.ll",
+      "teacher": "small_callee",
+      "callsites": 3,
+      "inline_labels": 3,
+      "group": "inih"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/unity/src/unity.c",
+      "module": "source_snapshot_public_repos_cJSON_tests_unity_src_unity.ll",
+      "teacher": "cost_budget",
+      "callsites": 188,
+      "inline_labels": 2,
+      "group": "cJSON"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/examples/enough.c",
+      "module": "source_snapshot_public_repos_zlib_examples_enough.ll",
+      "teacher": "single_caller",
+      "callsites": 19,
+      "inline_labels": 2,
+      "group": "zlib"
+    },
+    {
+      "source": "source_snapshot/public_repos/libexpat/expat/tests/benchmark/benchmark.c",
+      "module": "source_snapshot_public_repos_libexpat_expat_tests_benchmark_benchmark.ll",
+      "teacher": "small_callee",
+      "callsites": 2,
+      "inline_labels": 2,
+      "group": "public"
+    },
+    {
+      "source": "source_snapshot/public_repos/libexpat/expat/tests/chardata.c",
+      "module": "source_snapshot_public_repos_libexpat_expat_tests_chardata.ll",
+      "teacher": "small_callee",
+      "callsites": 2,
+      "inline_labels": 2,
+      "group": "public"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/examples/gzjoin.c",
+      "module": "source_snapshot_public_repos_zlib_examples_gzjoin.ll",
+      "teacher": "single_caller",
+      "callsites": 50,
+      "inline_labels": 1,
+      "group": "zlib"
+    },
+    {
+      "source": "source_snapshot/public_repos/sqlite/ext/misc/basexx.c",
+      "module": "source_snapshot_public_repos_sqlite_ext_misc_basexx.ll",
+      "teacher": "small_callee",
+      "callsites": 12,
+      "inline_labels": 1,
+      "group": "SQLite"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/readme_examples.c",
+      "module": "source_snapshot_public_repos_cJSON_tests_readme_examples.ll",
+      "teacher": "never_inline",
+      "callsites": 227,
+      "inline_labels": 0,
+      "group": "cJSON"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/parse_object.c",
+      "module": "source_snapshot_public_repos_cJSON_tests_parse_object.ll",
+      "teacher": "never_inline",
+      "callsites": 224,
+      "inline_labels": 0,
+      "group": "cJSON"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/parse_examples.c",
+      "module": "source_snapshot_public_repos_cJSON_tests_parse_examples.ll",
+      "teacher": "never_inline",
+      "callsites": 218,
+      "inline_labels": 0,
+      "group": "cJSON"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/parse_number.c",
+      "module": "source_snapshot_public_repos_cJSON_tests_parse_number.ll",
+      "teacher": "never_inline",
+      "callsites": 217,
+      "inline_labels": 0,
+      "group": "cJSON"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/parse_array.c",
+      "module": "source_snapshot_public_repos_cJSON_tests_parse_array.ll",
+      "teacher": "never_inline",
+      "callsites": 213,
+      "inline_labels": 0,
+      "group": "cJSON"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/parse_string.c",
+      "module": "source_snapshot_public_repos_cJSON_tests_parse_string.ll",
+      "teacher": "never_inline",
+      "callsites": 212,
+      "inline_labels": 0,
+      "group": "cJSON"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/parse_with_opts.c",
+      "module": "source_snapshot_public_repos_cJSON_tests_parse_with_opts.ll",
+      "teacher": "never_inline",
+      "callsites": 212,
+      "inline_labels": 0,
+      "group": "cJSON"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/print_number.c",
+      "module": "source_snapshot_public_repos_cJSON_tests_print_number.ll",
+      "teacher": "never_inline",
+      "callsites": 209,
+      "inline_labels": 0,
+      "group": "cJSON"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/parse_hex4.c",
+      "module": "source_snapshot_public_repos_cJSON_tests_parse_hex4.ll",
+      "teacher": "never_inline",
+      "callsites": 207,
+      "inline_labels": 0,
+      "group": "cJSON"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/parse_value.c",
+      "module": "source_snapshot_public_repos_cJSON_tests_parse_value.ll",
+      "teacher": "never_inline",
+      "callsites": 207,
+      "inline_labels": 0,
+      "group": "cJSON"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/print_array.c",
+      "module": "source_snapshot_public_repos_cJSON_tests_print_array.ll",
+      "teacher": "never_inline",
+      "callsites": 200,
+      "inline_labels": 0,
+      "group": "cJSON"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/print_object.c",
+      "module": "source_snapshot_public_repos_cJSON_tests_print_object.ll",
+      "teacher": "never_inline",
+      "callsites": 200,
+      "inline_labels": 0,
+      "group": "cJSON"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/print_value.c",
+      "module": "source_snapshot_public_repos_cJSON_tests_print_value.ll",
+      "teacher": "never_inline",
+      "callsites": 200,
+      "inline_labels": 0,
+      "group": "cJSON"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/minify_tests.c",
+      "module": "source_snapshot_public_repos_cJSON_tests_minify_tests.ll",
+      "teacher": "never_inline",
+      "callsites": 197,
+      "inline_labels": 0,
+      "group": "cJSON"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/print_string.c",
+      "module": "source_snapshot_public_repos_cJSON_tests_print_string.ll",
+      "teacher": "never_inline",
+      "callsites": 194,
+      "inline_labels": 0,
+      "group": "cJSON"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/tests/misc_utils_tests.c",
+      "module": "source_snapshot_public_repos_cJSON_tests_misc_utils_tests.ll",
+      "teacher": "never_inline",
+      "callsites": 193,
+      "inline_labels": 0,
+      "group": "cJSON"
+    },
+    {
+      "source": "source_snapshot/public_repos/tracy/profiler/src/ConnectionHistory.cpp",
+      "module": "source_snapshot_public_repos_tracy_profiler_src_ConnectionHistory.ll",
+      "teacher": "never_inline",
+      "callsites": 76,
+      "inline_labels": 0,
+      "group": "tracy"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/examples/gzappend.c",
+      "module": "source_snapshot_public_repos_zlib_examples_gzappend.ll",
+      "teacher": "never_inline",
+      "callsites": 52,
+      "inline_labels": 0,
+      "group": "zlib"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/examples/gzlog.c",
+      "module": "source_snapshot_public_repos_zlib_examples_gzlog.ll",
+      "teacher": "never_inline",
+      "callsites": 46,
+      "inline_labels": 0,
+      "group": "zlib"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/examples/gun.c",
+      "module": "source_snapshot_public_repos_zlib_examples_gun.ll",
+      "teacher": "never_inline",
+      "callsites": 39,
+      "inline_labels": 0,
+      "group": "zlib"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/test/minigzip.c",
+      "module": "source_snapshot_public_repos_zlib_test_minigzip.ll",
+      "teacher": "never_inline",
+      "callsites": 22,
+      "inline_labels": 0,
+      "group": "zlib"
+    },
+    {
+      "source": "source_snapshot/public_repos/inih/tests/unittest.c",
+      "module": "source_snapshot_public_repos_inih_tests_unittest.ll",
+      "teacher": "never_inline",
+      "callsites": 13,
+      "inline_labels": 0,
+      "group": "inih"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/examples/fitblk.c",
+      "module": "source_snapshot_public_repos_zlib_examples_fitblk.ll",
+      "teacher": "never_inline",
+      "callsites": 13,
+      "inline_labels": 0,
+      "group": "zlib"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/latin1.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_latin1.ll",
+      "teacher": "never_inline",
+      "callsites": 11,
+      "inline_labels": 0,
+      "group": "cBench/ctuning"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-telecom-gsm/toast_audio.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-telecom-gsm_toast_audio.ll",
+      "teacher": "never_inline",
+      "callsites": 10,
+      "inline_labels": 0,
+      "group": "cBench/ctuning"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/examples/gznorm.c",
+      "module": "source_snapshot_public_repos_zlib_examples_gznorm.ll",
+      "teacher": "never_inline",
+      "callsites": 10,
+      "inline_labels": 0,
+      "group": "zlib"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/test/example.c",
+      "module": "source_snapshot_public_repos_zlib_test_example.ll",
+      "teacher": "never_inline",
+      "callsites": 10,
+      "inline_labels": 0,
+      "group": "zlib"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-security-sha/sha.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-security-sha_sha.ll",
+      "teacher": "never_inline",
+      "callsites": 9,
+      "inline_labels": 0,
+      "group": "cBench/ctuning"
+    },
+    {
+      "source": "source_snapshot/public_repos/tracy/examples/ToyPathTracer/Source/Maths.cpp",
+      "module": "source_snapshot_public_repos_tracy_examples_ToyPathTracer_Source_Maths.ll",
+      "teacher": "never_inline",
+      "callsites": 9,
+      "inline_labels": 0,
+      "group": "tracy"
+    },
+    {
+      "source": "source_snapshot/public_repos/libexpat/expat/examples/element_declarations.c",
+      "module": "source_snapshot_public_repos_libexpat_expat_examples_element_declarations.ll",
+      "teacher": "never_inline",
+      "callsites": 8,
+      "inline_labels": 0,
+      "group": "public"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/ucs4.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_ucs4.ll",
+      "teacher": "never_inline",
+      "callsites": 7,
+      "inline_labels": 0,
+      "group": "cBench/ctuning"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-network-dijkstra/dijkstra_large.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-network-dijkstra_dijkstra_large.ll",
+      "teacher": "never_inline",
+      "callsites": 7,
+      "inline_labels": 0,
+      "group": "cBench/ctuning"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/id3tag.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_id3tag.ll",
+      "teacher": "never_inline",
+      "callsites": 6,
+      "inline_labels": 0,
+      "group": "cBench/ctuning"
+    },
+    {
+      "source": "source_snapshot/public_repos/inih/tests/unittest_string.c",
+      "module": "source_snapshot_public_repos_inih_tests_unittest_string.ll",
+      "teacher": "never_inline",
+      "callsites": 6,
+      "inline_labels": 0,
+      "group": "inih"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-automotive-qsort1/qsort.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-automotive-qsort1_qsort.ll",
+      "teacher": "never_inline",
+      "callsites": 5,
+      "inline_labels": 0,
+      "group": "cBench/ctuning"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/timestatus.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_timestatus.ll",
+      "teacher": "never_inline",
+      "callsites": 4,
+      "inline_labels": 0,
+      "group": "cBench/ctuning"
+    },
+    {
+      "source": "source_snapshot/public_repos/libexpat/expat/tests/memcheck.c",
+      "module": "source_snapshot_public_repos_libexpat_expat_tests_memcheck.ll",
+      "teacher": "never_inline",
+      "callsites": 4,
+      "inline_labels": 0,
+      "group": "public"
+    },
+    {
+      "source": "source_snapshot/public_repos/libexpat/expat/tests/structdata.c",
+      "module": "source_snapshot_public_repos_libexpat_expat_tests_structdata.ll",
+      "teacher": "never_inline",
+      "callsites": 4,
+      "inline_labels": 0,
+      "group": "public"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/compress.c",
+      "module": "source_snapshot_public_repos_zlib_compress.ll",
+      "teacher": "never_inline",
+      "callsites": 4,
+      "inline_labels": 0,
+      "group": "zlib"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/examples/zpipe.c",
+      "module": "source_snapshot_public_repos_zlib_examples_zpipe.ll",
+      "teacher": "never_inline",
+      "callsites": 4,
+      "inline_labels": 0,
+      "group": "zlib"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_strip.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_strip.ll",
+      "teacher": "never_inline",
+      "callsites": 3,
+      "inline_labels": 0,
+      "group": "cBench/ctuning"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2dither/tif_strip.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2dither_tif_strip.ll",
+      "teacher": "never_inline",
+      "callsites": 3,
+      "inline_labels": 0,
+      "group": "cBench/ctuning"
+    },
+    {
+      "source": "source_snapshot/public_repos/sqlite/ext/misc/rot13.c",
+      "module": "source_snapshot_public_repos_sqlite_ext_misc_rot13.ll",
+      "teacher": "never_inline",
+      "callsites": 3,
+      "inline_labels": 0,
+      "group": "SQLite"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/adler32.c",
+      "module": "source_snapshot_public_repos_zlib_adler32.ll",
+      "teacher": "never_inline",
+      "callsites": 3,
+      "inline_labels": 0,
+      "group": "zlib"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/uncompr.c",
+      "module": "source_snapshot_public_repos_zlib_uncompr.ll",
+      "teacher": "never_inline",
+      "callsites": 3,
+      "inline_labels": 0,
+      "group": "zlib"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-automotive-bitcount/bitcnt_4.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-automotive-bitcount_bitcnt_4.ll",
+      "teacher": "never_inline",
+      "callsites": 2,
+      "inline_labels": 0,
+      "group": "cBench/ctuning"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-lame/version.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-lame_version.ll",
+      "teacher": "never_inline",
+      "callsites": 2,
+      "inline_labels": 0,
+      "group": "cBench/ctuning"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-office-stringsearch2/fgg_search.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-office-stringsearch2_fgg_search.ll",
+      "teacher": "never_inline",
+      "callsites": 2,
+      "inline_labels": 0,
+      "group": "cBench/ctuning"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-telecom-gsm/add.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-telecom-gsm_add.ll",
+      "teacher": "never_inline",
+      "callsites": 2,
+      "inline_labels": 0,
+      "group": "cBench/ctuning"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/shared-bzip2-1.0.5/unzcrash.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_shared-bzip2-1.0.5_unzcrash.ll",
+      "teacher": "never_inline",
+      "callsites": 2,
+      "inline_labels": 0,
+      "group": "cBench/ctuning"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/shared-bzip2-1.0.6/unzcrash.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_shared-bzip2-1.0.6_unzcrash.ll",
+      "teacher": "never_inline",
+      "callsites": 2,
+      "inline_labels": 0,
+      "group": "cBench/ctuning"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/shared-matmul-c2/matmul.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_shared-matmul-c2_matmul.ll",
+      "teacher": "never_inline",
+      "callsites": 2,
+      "inline_labels": 0,
+      "group": "cBench/ctuning"
+    },
+    {
+      "source": "source_snapshot/public_repos/tracy/profiler/src/WindowPosition.cpp",
+      "module": "source_snapshot_public_repos_tracy_profiler_src_WindowPosition.ll",
+      "teacher": "never_inline",
+      "callsites": 2,
+      "inline_labels": 0,
+      "group": "tracy"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/contrib/puff/pufftest.c",
+      "module": "source_snapshot_public_repos_zlib_contrib_puff_pufftest.ll",
+      "teacher": "never_inline",
+      "callsites": 2,
+      "inline_labels": 0,
+      "group": "zlib"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/examples/zran.c",
+      "module": "source_snapshot_public_repos_zlib_examples_zran.ll",
+      "teacher": "never_inline",
+      "callsites": 2,
+      "inline_labels": 0,
+      "group": "zlib"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdtrans.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdtrans.ll",
+      "teacher": "never_inline",
+      "callsites": 1,
+      "inline_labels": 0,
+      "group": "cBench/ctuning"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jdtrans.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jdtrans.ll",
+      "teacher": "never_inline",
+      "callsites": 1,
+      "inline_labels": 0,
+      "group": "cBench/ctuning"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/compress.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_compress.ll",
+      "teacher": "never_inline",
+      "callsites": 1,
+      "inline_labels": 0,
+      "group": "cBench/ctuning"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_flush.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_flush.ll",
+      "teacher": "never_inline",
+      "callsites": 1,
+      "inline_labels": 0,
+      "group": "cBench/ctuning"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_thunder.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_thunder.ll",
+      "teacher": "never_inline",
+      "callsites": 1,
+      "inline_labels": 0,
+      "group": "cBench/ctuning"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-tiff2bw/tif_unix.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-tiff2bw_tif_unix.ll",
+      "teacher": "never_inline",
+      "callsites": 1,
+      "inline_labels": 0,
+      "group": "cBench/ctuning"
+    }
+  ],
+  "failed_sources": [
+    "source_snapshot/DCMTK/config/tests/lfs64.cc",
+    "source_snapshot/public_repos/tracy/capture/src/capture.cpp",
+    "source_snapshot/public_repos/tracy/examples/OpenCLVectorAdd/OpenCLVectorAdd.cpp",
+    "source_snapshot/public_repos/tracy/examples/ToyPathTracer/Windows/TestWin.cpp",
+    "source_snapshot/public_repos/tracy/examples/fibers.cpp",
+    "source_snapshot/public_repos/tracy/profiler/src/Filters.cpp",
+    "source_snapshot/public_repos/tracy/profiler/src/Fonts.cpp",
+    "source_snapshot/public_repos/tracy/profiler/src/HttpRequest.cpp",
+    "source_snapshot/public_repos/tracy/profiler/src/ImGuiContext.cpp",
+    "source_snapshot/public_repos/tracy/profiler/src/profiler/TracyAchievements.cpp",
+    "source_snapshot/public_repos/tracy/profiler/src/profiler/TracyBadVersion.cpp",
+    "source_snapshot/public_repos/tracy/profiler/src/profiler/TracyColor.cpp",
+    "source_snapshot/public_repos/tracy/profiler/src/profiler/TracyEmbed.cpp",
+    "source_snapshot/public_repos/tracy/profiler/src/profiler/TracyFileselector.cpp",
+    "source_snapshot/public_repos/tracy/profiler/src/profiler/TracyFilesystem.cpp",
+    "source_snapshot/public_repos/tracy/profiler/src/profiler/TracyLlmEmbeddings.cpp",
+    "source_snapshot/public_repos/tracy/profiler/src/profiler/TracyManualData.cpp",
+    "source_snapshot/public_repos/tracy/profiler/src/profiler/TracyMouse.cpp",
+    "source_snapshot/public_repos/tracy/profiler/src/profiler/TracyProtoHistory.cpp",
+    "source_snapshot/public_repos/tracy/profiler/src/profiler/TracySourceContents.cpp",
+    "source_snapshot/public_repos/tracy/profiler/src/profiler/TracyTexture.cpp",
+    "source_snapshot/public_repos/tracy/profiler/src/profiler/TracyTimelineController.cpp",
+    "source_snapshot/public_repos/tracy/profiler/src/profiler/TracyTimelineItem.cpp",
+    "source_snapshot/public_repos/tracy/profiler/src/profiler/TracyView_Annotations.cpp",
+    "source_snapshot/public_repos/tracy/profiler/src/profiler/TracyView_Navigation.cpp",
+    "source_snapshot/public_repos/zlib/contrib/iostream/test.cpp",
+    "source_snapshot/public_repos/zlib/contrib/iostream/zfstream.cpp",
+    "source_snapshot/public_repos/zlib/contrib/iostream2/zstream_test.cpp",
+    "source_snapshot/public_repos/cJSON/tests/unity/examples/example_1/test/TestProductionCode.c",
+    "source_snapshot/public_repos/cJSON/tests/unity/examples/example_1/test/TestProductionCode2.c",
+    "source_snapshot/public_repos/cJSON/tests/unity/examples/example_1/test/test_runners/TestProductionCode2_Runner.c",
+    "source_snapshot/public_repos/cJSON/tests/unity/examples/example_1/test/test_runners/TestProductionCode_Runner.c",
+    "source_snapshot/public_repos/cJSON/tests/unity/examples/example_2/test/TestProductionCode.c",
+    "source_snapshot/public_repos/cJSON/tests/unity/examples/example_2/test/TestProductionCode2.c",
+    "source_snapshot/public_repos/cJSON/tests/unity/examples/example_2/test/test_runners/TestProductionCode2_Runner.c",
+    "source_snapshot/public_repos/cJSON/tests/unity/examples/example_2/test/test_runners/TestProductionCode_Runner.c",
+    "source_snapshot/public_repos/cJSON/tests/unity/examples/example_2/test/test_runners/all_tests.c",
+    "source_snapshot/public_repos/cJSON/tests/unity/examples/example_3/helper/UnityHelper.c",
+    "source_snapshot/public_repos/cJSON/tests/unity/examples/example_3/test/TestProductionCode.c",
+    "source_snapshot/public_repos/cJSON/tests/unity/examples/example_3/test/TestProductionCode2.c",
+    "source_snapshot/public_repos/cJSON/tests/unity/extras/fixture/src/unity_fixture.c",
+    "source_snapshot/public_repos/cJSON/tests/unity/extras/fixture/test/main/AllTests.c",
+    "source_snapshot/public_repos/cJSON/tests/unity/extras/fixture/test/template_fixture_tests.c",
+    "source_snapshot/public_repos/cJSON/tests/unity/extras/fixture/test/unity_fixture_Test.c",
+    "source_snapshot/public_repos/cJSON/tests/unity/extras/fixture/test/unity_fixture_TestRunner.c",
+    "source_snapshot/public_repos/cJSON/tests/unity/extras/fixture/test/unity_output_Spy.c",
+    "source_snapshot/public_repos/cJSON/tests/unity/test/expectdata/testsample_cmd.c",
+    "source_snapshot/public_repos/cJSON/tests/unity/test/expectdata/testsample_def.c",
+    "source_snapshot/public_repos/cJSON/tests/unity/test/expectdata/testsample_head1.c",
+    "source_snapshot/public_repos/cJSON/tests/unity/test/expectdata/testsample_mock_cmd.c"
+  ]
+}

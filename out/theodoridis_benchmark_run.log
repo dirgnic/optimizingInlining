@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "./scripts/run.py", line 87, in <module>
+    main()
+  File "./scripts/run.py", line 83, in main
+    all_pipeline()
+  File "./scripts/run.py", line 26, in all_pipeline
+    teacher_rewrite = rewrite_teacher_policies(rows)
+  File "./scripts/rewrite.py", line 283, in rewrite_teacher_policies
+    item = rewrite_module(module, f"teacher_{teacher}", inline_rows)
+  File "./scripts/rewrite.py", line 250, in rewrite_module
+    "before_instruction_count": total_instructions(source),
+  File "./scripts/rewrite.py", line 131, in total_instructions
+    return sum(instruction_count(fn) for fn in parse_functions(path).values())
+  File "./scripts/ir.py", line 33, in parse_functions
+    return parse_functions_from_lines(path.read_text(encoding="utf-8", errors="ignore").splitlines(), path.name)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 1256, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 1242, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 1110, in _opener
+    return self._accessor.open(self, flags, mode)
+FileNotFoundError: [Errno 2] No such file or directory: './out/ir/real_0028_compile_0028_compile_c_train0.parquet_4938_222fe328_c68c09a3.ll'

@@ -1,0 +1,3470 @@
+[
+  {
+    "step": 1,
+    "module": "source_snapshot_DCMTK_config_tests_cxx11.ll",
+    "caller": "_ZN5cxx1119test_type_deduction4testEii",
+    "callee": "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+    "call_line": "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)",
+    "selected_teacher": "greedy_ir_size",
+    "probability_inline": 0.2,
+    "action": "no-inline",
+    "feature_snapshot": {
+      "caller_basic_block_count": 4.0,
+      "caller_conditionally_executed_blocks": 3.0,
+      "caller_users": 0.0,
+      "callee_basic_block_count": 1.0,
+      "callee_conditionally_executed_blocks": 0.0,
+      "callee_users": 1.0,
+      "callsite_height": 0.0,
+      "cost_estimate": 6.5,
+      "number_constant_params": 0.0,
+      "edge_count": 17.0,
+      "node_count": 27.0,
+      "caller_instruction_count": 34.0,
+      "callee_instruction_count": 8.0,
+      "caller_call_count": 1.0,
+      "callee_call_count": 0.0,
+      "is_recursive": 0.0
+    },
+    "edges_before": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_after": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_before_count": 17,
+    "edges_after_count": 17
+  },
+  {
+    "step": 2,
+    "module": "source_snapshot_DCMTK_config_tests_cxx11.ll",
+    "caller": "_ZN5cxx1112test_lambdas5test1Ev",
+    "callee": "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+    "call_line": "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)",
+    "selected_teacher": "greedy_ir_size",
+    "probability_inline": 0.2,
+    "action": "no-inline",
+    "feature_snapshot": {
+      "caller_basic_block_count": 1.0,
+      "caller_conditionally_executed_blocks": 0.0,
+      "caller_users": 0.0,
+      "callee_basic_block_count": 1.0,
+      "callee_conditionally_executed_blocks": 0.0,
+      "callee_users": 2.0,
+      "callsite_height": 0.0,
+      "cost_estimate": 5.5,
+      "number_constant_params": 0.0,
+      "edge_count": 17.0,
+      "node_count": 27.0,
+      "caller_instruction_count": 5.0,
+      "callee_instruction_count": 4.0,
+      "caller_call_count": 2.0,
+      "callee_call_count": 0.0,
+      "is_recursive": 0.0
+    },
+    "edges_before": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_after": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_before_count": 17,
+    "edges_after_count": 17
+  },
+  {
+    "step": 3,
+    "module": "source_snapshot_DCMTK_config_tests_cxx11.ll",
+    "caller": "_ZN5cxx1112test_lambdas5test1Ev",
+    "callee": "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+    "call_line": "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)",
+    "selected_teacher": "greedy_ir_size",
+    "probability_inline": 0.2,
+    "action": "no-inline",
+    "feature_snapshot": {
+      "caller_basic_block_count": 1.0,
+      "caller_conditionally_executed_blocks": 0.0,
+      "caller_users": 0.0,
+      "callee_basic_block_count": 1.0,
+      "callee_conditionally_executed_blocks": 0.0,
+      "callee_users": 2.0,
+      "callsite_height": 0.0,
+      "cost_estimate": 5.5,
+      "number_constant_params": 0.0,
+      "edge_count": 17.0,
+      "node_count": 27.0,
+      "caller_instruction_count": 5.0,
+      "callee_instruction_count": 4.0,
+      "caller_call_count": 2.0,
+      "callee_call_count": 0.0,
+      "is_recursive": 0.0
+    },
+    "edges_before": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_after": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_before_count": 17,
+    "edges_after_count": 17
+  },
+  {
+    "step": 4,
+    "module": "source_snapshot_DCMTK_config_tests_cxx11.ll",
+    "caller": "_ZN5cxx1112test_lambdas5test2Ev",
+    "callee": "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+    "call_line": "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)",
+    "selected_teacher": "greedy_ir_size",
+    "probability_inline": 0.2,
+    "action": "no-inline",
+    "feature_snapshot": {
+      "caller_basic_block_count": 1.0,
+      "caller_conditionally_executed_blocks": 0.0,
+      "caller_users": 0.0,
+      "callee_basic_block_count": 1.0,
+      "callee_conditionally_executed_blocks": 0.0,
+      "callee_users": 1.0,
+      "callsite_height": 0.0,
+      "cost_estimate": 5.5,
+      "number_constant_params": 2.0,
+      "edge_count": 17.0,
+      "node_count": 27.0,
+      "caller_instruction_count": 43.0,
+      "callee_instruction_count": 11.0,
+      "caller_call_count": 5.0,
+      "callee_call_count": 0.0,
+      "is_recursive": 0.0
+    },
+    "edges_before": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_after": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_before_count": 17,
+    "edges_after_count": 17
+  },
+  {
+    "step": 5,
+    "module": "source_snapshot_DCMTK_config_tests_cxx11.ll",
+    "caller": "_ZN5cxx1112test_lambdas5test2Ev",
+    "callee": "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+    "call_line": "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)",
+    "selected_teacher": "greedy_ir_size",
+    "probability_inline": 0.2,
+    "action": "no-inline",
+    "feature_snapshot": {
+      "caller_basic_block_count": 1.0,
+      "caller_conditionally_executed_blocks": 0.0,
+      "caller_users": 0.0,
+      "callee_basic_block_count": 1.0,
+      "callee_conditionally_executed_blocks": 0.0,
+      "callee_users": 1.0,
+      "callsite_height": 0.0,
+      "cost_estimate": 2.5,
+      "number_constant_params": 0.0,
+      "edge_count": 17.0,
+      "node_count": 27.0,
+      "caller_instruction_count": 43.0,
+      "callee_instruction_count": 4.0,
+      "caller_call_count": 5.0,
+      "callee_call_count": 0.0,
+      "is_recursive": 0.0
+    },
+    "edges_before": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_after": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_before_count": 17,
+    "edges_after_count": 17
+  },
+  {
+    "step": 6,
+    "module": "source_snapshot_DCMTK_config_tests_cxx11.ll",
+    "caller": "_ZN5cxx1112test_lambdas5test2Ev",
+    "callee": "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+    "call_line": "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)",
+    "selected_teacher": "greedy_ir_size",
+    "probability_inline": 0.2,
+    "action": "no-inline",
+    "feature_snapshot": {
+      "caller_basic_block_count": 1.0,
+      "caller_conditionally_executed_blocks": 0.0,
+      "caller_users": 0.0,
+      "callee_basic_block_count": 1.0,
+      "callee_conditionally_executed_blocks": 0.0,
+      "callee_users": 1.0,
+      "callsite_height": 0.0,
+      "cost_estimate": 7.5,
+      "number_constant_params": 0.0,
+      "edge_count": 17.0,
+      "node_count": 27.0,
+      "caller_instruction_count": 43.0,
+      "callee_instruction_count": 9.0,
+      "caller_call_count": 5.0,
+      "callee_call_count": 0.0,
+      "is_recursive": 0.0
+    },
+    "edges_before": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_after": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_before_count": 17,
+    "edges_after_count": 17
+  },
+  {
+    "step": 7,
+    "module": "source_snapshot_DCMTK_config_tests_cxx11.ll",
+    "caller": "_ZN5cxx1112test_lambdas5test2Ev",
+    "callee": "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+    "call_line": "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)",
+    "selected_teacher": "greedy_ir_size",
+    "probability_inline": 0.2,
+    "action": "no-inline",
+    "feature_snapshot": {
+      "caller_basic_block_count": 1.0,
+      "caller_conditionally_executed_blocks": 0.0,
+      "caller_users": 0.0,
+      "callee_basic_block_count": 1.0,
+      "callee_conditionally_executed_blocks": 0.0,
+      "callee_users": 1.0,
+      "callsite_height": 0.0,
+      "cost_estimate": 5.5,
+      "number_constant_params": 0.0,
+      "edge_count": 17.0,
+      "node_count": 27.0,
+      "caller_instruction_count": 43.0,
+      "callee_instruction_count": 7.0,
+      "caller_call_count": 5.0,
+      "callee_call_count": 0.0,
+      "is_recursive": 0.0
+    },
+    "edges_before": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_after": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_before_count": 17,
+    "edges_after_count": 17
+  },
+  {
+    "step": 8,
+    "module": "source_snapshot_DCMTK_config_tests_cxx11.ll",
+    "caller": "_ZN5cxx1112test_lambdas5test2Ev",
+    "callee": "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+    "call_line": "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)",
+    "selected_teacher": "greedy_ir_size",
+    "probability_inline": 0.2,
+    "action": "no-inline",
+    "feature_snapshot": {
+      "caller_basic_block_count": 1.0,
+      "caller_conditionally_executed_blocks": 0.0,
+      "caller_users": 0.0,
+      "callee_basic_block_count": 5.0,
+      "callee_conditionally_executed_blocks": 4.0,
+      "callee_users": 1.0,
+      "callsite_height": 0.0,
+      "cost_estimate": 42.5,
+      "number_constant_params": 1.0,
+      "edge_count": 17.0,
+      "node_count": 27.0,
+      "caller_instruction_count": 43.0,
+      "callee_instruction_count": 38.0,
+      "caller_call_count": 5.0,
+      "callee_call_count": 1.0,
+      "is_recursive": 0.0
+    },
+    "edges_before": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_after": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_before_count": 17,
+    "edges_after_count": 17
+  },
+  {
+    "step": 9,
+    "module": "source_snapshot_DCMTK_config_tests_cxx11.ll",
+    "caller": "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+    "callee": "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+    "call_line": "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)",
+    "selected_teacher": "greedy_ir_size",
+    "probability_inline": 0.2,
+    "action": "no-inline",
+    "feature_snapshot": {
+      "caller_basic_block_count": 5.0,
+      "caller_conditionally_executed_blocks": 4.0,
+      "caller_users": 1.0,
+      "callee_basic_block_count": 1.0,
+      "callee_conditionally_executed_blocks": 0.0,
+      "callee_users": 1.0,
+      "callsite_height": 1.0,
+      "cost_estimate": 5.5,
+      "number_constant_params": 0.0,
+      "edge_count": 17.0,
+      "node_count": 27.0,
+      "caller_instruction_count": 38.0,
+      "callee_instruction_count": 7.0,
+      "caller_call_count": 1.0,
+      "callee_call_count": 0.0,
+      "is_recursive": 0.0
+    },
+    "edges_before": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_after": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_before_count": 17,
+    "edges_after_count": 17
+  },
+  {
+    "step": 10,
+    "module": "source_snapshot_DCMTK_config_tests_cxx11.ll",
+    "caller": "_ZN5cxx1112test_lambdas5test3Ev",
+    "callee": "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+    "call_line": "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)",
+    "selected_teacher": "greedy_ir_size",
+    "probability_inline": 0.2,
+    "action": "no-inline",
+    "feature_snapshot": {
+      "caller_basic_block_count": 1.0,
+      "caller_conditionally_executed_blocks": 0.0,
+      "caller_users": 0.0,
+      "callee_basic_block_count": 1.0,
+      "callee_conditionally_executed_blocks": 0.0,
+      "callee_users": 1.0,
+      "callsite_height": 0.0,
+      "cost_estimate": 6.5,
+      "number_constant_params": 0.0,
+      "edge_count": 17.0,
+      "node_count": 27.0,
+      "caller_instruction_count": 15.0,
+      "callee_instruction_count": 6.0,
+      "caller_call_count": 3.0,
+      "callee_call_count": 1.0,
+      "is_recursive": 0.0
+    },
+    "edges_before": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_after": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_before_count": 17,
+    "edges_after_count": 17
+  },
+  {
+    "step": 11,
+    "module": "source_snapshot_DCMTK_config_tests_cxx11.ll",
+    "caller": "_ZN5cxx1112test_lambdas5test3Ev",
+    "callee": "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+    "call_line": "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)",
+    "selected_teacher": "greedy_ir_size",
+    "probability_inline": 0.2,
+    "action": "no-inline",
+    "feature_snapshot": {
+      "caller_basic_block_count": 1.0,
+      "caller_conditionally_executed_blocks": 0.0,
+      "caller_users": 0.0,
+      "callee_basic_block_count": 1.0,
+      "callee_conditionally_executed_blocks": 0.0,
+      "callee_users": 1.0,
+      "callsite_height": 0.0,
+      "cost_estimate": 8.5,
+      "number_constant_params": 0.0,
+      "edge_count": 17.0,
+      "node_count": 27.0,
+      "caller_instruction_count": 15.0,
+      "callee_instruction_count": 10.0,
+      "caller_call_count": 3.0,
+      "callee_call_count": 0.0,
+      "is_recursive": 0.0
+    },
+    "edges_before": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_after": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_before_count": 17,
+    "edges_after_count": 17
+  },
+  {
+    "step": 12,
+    "module": "source_snapshot_DCMTK_config_tests_cxx11.ll",
+    "caller": "_ZN5cxx1112test_lambdas5test3Ev",
+    "callee": "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+    "call_line": "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)",
+    "selected_teacher": "greedy_ir_size",
+    "probability_inline": 0.2,
+    "action": "no-inline",
+    "feature_snapshot": {
+      "caller_basic_block_count": 1.0,
+      "caller_conditionally_executed_blocks": 0.0,
+      "caller_users": 0.0,
+      "callee_basic_block_count": 1.0,
+      "callee_conditionally_executed_blocks": 0.0,
+      "callee_users": 1.0,
+      "callsite_height": 0.0,
+      "cost_estimate": 14.5,
+      "number_constant_params": 0.0,
+      "edge_count": 17.0,
+      "node_count": 27.0,
+      "caller_instruction_count": 15.0,
+      "callee_instruction_count": 10.0,
+      "caller_call_count": 3.0,
+      "callee_call_count": 3.0,
+      "is_recursive": 0.0
+    },
+    "edges_before": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_after": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_before_count": 17,
+    "edges_after_count": 17
+  },
+  {
+    "step": 13,
+    "module": "source_snapshot_DCMTK_config_tests_cxx11.ll",
+    "caller": "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+    "callee": "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+    "call_line": "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)",
+    "selected_teacher": "greedy_ir_size",
+    "probability_inline": 0.2,
+    "action": "no-inline",
+    "feature_snapshot": {
+      "caller_basic_block_count": 1.0,
+      "caller_conditionally_executed_blocks": 0.0,
+      "caller_users": 1.0,
+      "callee_basic_block_count": 1.0,
+      "callee_conditionally_executed_blocks": 0.0,
+      "callee_users": 2.0,
+      "callsite_height": 1.0,
+      "cost_estimate": 5.5,
+      "number_constant_params": 0.0,
+      "edge_count": 17.0,
+      "node_count": 27.0,
+      "caller_instruction_count": 6.0,
+      "callee_instruction_count": 4.0,
+      "caller_call_count": 1.0,
+      "callee_call_count": 0.0,
+      "is_recursive": 0.0
+    },
+    "edges_before": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_after": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_before_count": 17,
+    "edges_after_count": 17
+  },
+  {
+    "step": 14,
+    "module": "source_snapshot_DCMTK_config_tests_cxx11.ll",
+    "caller": "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+    "callee": "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+    "call_line": "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)",
+    "selected_teacher": "greedy_ir_size",
+    "probability_inline": 0.2,
+    "action": "no-inline",
+    "feature_snapshot": {
+      "caller_basic_block_count": 1.0,
+      "caller_conditionally_executed_blocks": 0.0,
+      "caller_users": 1.0,
+      "callee_basic_block_count": 1.0,
+      "callee_conditionally_executed_blocks": 0.0,
+      "callee_users": 2.0,
+      "callsite_height": 1.0,
+      "cost_estimate": 5.5,
+      "number_constant_params": 0.0,
+      "edge_count": 17.0,
+      "node_count": 27.0,
+      "caller_instruction_count": 10.0,
+      "callee_instruction_count": 4.0,
+      "caller_call_count": 3.0,
+      "callee_call_count": 0.0,
+      "is_recursive": 0.0
+    },
+    "edges_before": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_after": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_before_count": 17,
+    "edges_after_count": 17
+  },
+  {
+    "step": 15,
+    "module": "source_snapshot_DCMTK_config_tests_cxx11.ll",
+    "caller": "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+    "callee": "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+    "call_line": "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)",
+    "selected_teacher": "greedy_ir_size",
+    "probability_inline": 0.2,
+    "action": "no-inline",
+    "feature_snapshot": {
+      "caller_basic_block_count": 1.0,
+      "caller_conditionally_executed_blocks": 0.0,
+      "caller_users": 1.0,
+      "callee_basic_block_count": 1.0,
+      "callee_conditionally_executed_blocks": 0.0,
+      "callee_users": 2.0,
+      "callsite_height": 1.0,
+      "cost_estimate": 8.5,
+      "number_constant_params": 0.0,
+      "edge_count": 17.0,
+      "node_count": 27.0,
+      "caller_instruction_count": 10.0,
+      "callee_instruction_count": 7.0,
+      "caller_call_count": 3.0,
+      "callee_call_count": 0.0,
+      "is_recursive": 0.0
+    },
+    "edges_before": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_after": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_before_count": 17,
+    "edges_after_count": 17
+  },
+  {
+    "step": 16,
+    "module": "source_snapshot_DCMTK_config_tests_cxx11.ll",
+    "caller": "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+    "callee": "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+    "call_line": "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)",
+    "selected_teacher": "greedy_ir_size",
+    "probability_inline": 0.2,
+    "action": "no-inline",
+    "feature_snapshot": {
+      "caller_basic_block_count": 1.0,
+      "caller_conditionally_executed_blocks": 0.0,
+      "caller_users": 1.0,
+      "callee_basic_block_count": 1.0,
+      "callee_conditionally_executed_blocks": 0.0,
+      "callee_users": 2.0,
+      "callsite_height": 1.0,
+      "cost_estimate": 8.5,
+      "number_constant_params": 0.0,
+      "edge_count": 17.0,
+      "node_count": 27.0,
+      "caller_instruction_count": 10.0,
+      "callee_instruction_count": 7.0,
+      "caller_call_count": 3.0,
+      "callee_call_count": 0.0,
+      "is_recursive": 0.0
+    },
+    "edges_before": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_after": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_before_count": 17,
+    "edges_after_count": 17
+  },
+  {
+    "step": 17,
+    "module": "source_snapshot_DCMTK_config_tests_cxx11.ll",
+    "caller": "_ZN5cxx1126test_template_alias_sfinae4testEv",
+    "callee": "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+    "call_line": "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)",
+    "selected_teacher": "greedy_ir_size",
+    "probability_inline": 0.2,
+    "action": "no-inline",
+    "feature_snapshot": {
+      "caller_basic_block_count": 1.0,
+      "caller_conditionally_executed_blocks": 0.0,
+      "caller_users": 0.0,
+      "callee_basic_block_count": 1.0,
+      "callee_conditionally_executed_blocks": 0.0,
+      "callee_users": 1.0,
+      "callsite_height": 0.0,
+      "cost_estimate": -2.5,
+      "number_constant_params": 1.0,
+      "edge_count": 17.0,
+      "node_count": 27.0,
+      "caller_instruction_count": 2.0,
+      "callee_instruction_count": 1.0,
+      "caller_call_count": 1.0,
+      "callee_call_count": 0.0,
+      "is_recursive": 0.0
+    },
+    "edges_before": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_after": [
+      [
+        "_ZN5cxx1119test_type_deduction4testEii",
+        "_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_",
+        "%call = call noundef i32 @_ZN5cxx1119test_type_deduction3addIiiEEDTplfp_fp0_ET_T0_(i32 noundef %8, i32 noundef %9)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test1Ev",
+        "\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"",
+        "call void @\"_ZZN5cxx1112test_lambdas5test1EvENK3$_0clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %lambda2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_1clEii\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp, i32 noundef 1, i32 noundef 2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_2clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %ref.tmp1)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"",
+        "%call4 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_3clEv\"(ptr noundef nonnull align 4 dereferenceable(8) %ref.tmp3)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"",
+        "%call6 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvENK3$_4clEv\"(ptr noundef nonnull align 8 dereferenceable(8) %ref.tmp5)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test2Ev",
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "%call8 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"(ptr noundef nonnull align 8 dereferenceable(16) %ref.tmp7, i32 noundef 0)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test2EvEN3$_5clEi\"",
+        "\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"",
+        "%call = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test2EvEN3$_5clEiENKUliE_clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %identity, i32 noundef %add2)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher1st)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"",
+        "%call2 = call i16 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7\"(ptr noundef nonnull align 1 dereferenceable(1) %higher2nd)"
+      ],
+      [
+        "_ZN5cxx1112test_lambdas5test3Ev",
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "%call4 = call noundef i32 @\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"(ptr noundef nonnull align 1 dereferenceable(2) %ref.tmp)"
+      ],
+      [
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_6clEZNS0_5test3EvE3$_7\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %f)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"",
+        "%call = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_7clEv\"(ptr noundef nonnull align 1 dereferenceable(1) %1)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call2 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %0, i32 noundef %call)"
+      ],
+      [
+        "\"_ZZZN5cxx1112test_lambdas5test3EvENK3$_8clEZNS0_5test3EvE3$_7ENKUlZNS0_5test3EvE3$_9E_clES3_\"",
+        "\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"",
+        "%call3 = call noundef i32 @\"_ZZN5cxx1112test_lambdas5test3EvENK3$_9clEi\"(ptr noundef nonnull align 1 dereferenceable(1) %f2, i32 noundef %call2)"
+      ],
+      [
+        "_ZN5cxx1126test_template_alias_sfinae4testEv",
+        "_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz",
+        "call void (...) @_ZN5cxx1126test_template_alias_sfinae4funcINS0_3fooEEEvz(i32 noundef 0)"
+      ]
+    ],
+    "edges_before_count": 17,
+    "edges_after_count": 17
+  }
+]

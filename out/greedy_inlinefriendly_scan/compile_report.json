@@ -1,0 +1,428 @@
+{
+  "compiled": [
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-bzip2/bzip2.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_bzip2.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcmarker.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcmarker.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jcmarker.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jcmarker.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-bzip2/bzlib.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_bzlib.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jquant1.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jquant1.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jquant1.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jquant1.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/picojpeg/libpicojpeg.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_picojpeg_libpicojpeg.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/wrgif.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_wrgif.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-mad/trees.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-mad_trees.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-automotive-bitcount/bitcnt_4.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-automotive-bitcount_bitcnt_4.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-automotive-qsort1/qsort.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-automotive-qsort1_qsort.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-automotive-susan/susan.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-automotive-susan_susan.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-bzip2/blocksort.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_blocksort.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-bzip2/compress.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_compress.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-bzip2/decompress.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_decompress.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/cjpeg.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_cjpeg.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jccoefct.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jccoefct.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jchuff.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jchuff.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcmaster.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcmaster.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcparam.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcparam.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcphuff.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcphuff.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcprepct.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcprepct.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jcsample.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jcsample.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jctrans.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jctrans.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdapimin.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdapimin.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdapistd.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdapistd.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdatasrc.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdatasrc.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdcoefct.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdcoefct.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdcolor.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdcolor.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdhuff.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdhuff.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdinput.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdinput.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdmainct.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdmainct.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdmarker.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdmarker.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdmaster.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdmaster.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdmerge.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdmerge.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdphuff.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdphuff.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jdtrans.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jdtrans.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jmemmgr.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jmemmgr.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/jquant2.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_jquant2.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/rdbmp.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_rdbmp.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/rdgif.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_rdgif.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/rdppm.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_rdppm.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/rdswitch.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_rdswitch.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-c/rdtarga.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-c_rdtarga.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/djpeg.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_djpeg.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jccoefct.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jccoefct.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jchuff.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jchuff.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jcmaster.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jcmaster.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jcparam.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jcparam.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-consumer-jpeg-d/jcphuff.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-consumer-jpeg-d_jcphuff.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/rtp.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_lame_lame3.70_rtp.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/network/patricia/patricia_test.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_network_patricia_patricia_test.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/intl/loadmsgcat.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_intl_loadmsgcat.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jcmarker.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jcmarker.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jmemname.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jmemname.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jquant1.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jquant1.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/wrjpgcom.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_wrjpgcom.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/wrgif.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_wrgif.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/libz/trees.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_libz_trees.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/automotive/bitcount/bitcnt_4.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_automotive_bitcount_bitcnt_4.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/ansi2knr.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_ansi2knr.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/cjpeg.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_cjpeg.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/ckconfig.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_ckconfig.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/djpeg.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_djpeg.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jccoefct.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jccoefct.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jchuff.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jchuff.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jcmaster.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jcmaster.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jcparam.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jcparam.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jcphuff.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jcphuff.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jcprepct.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jcprepct.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jcsample.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jcsample.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jctrans.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jctrans.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdapimin.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdapimin.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdapistd.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdapistd.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdatasrc.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdatasrc.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdcoefct.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdcoefct.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdcolor.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdcolor.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdhuff.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdhuff.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdinput.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdinput.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdmainct.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdmainct.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdmarker.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdmarker.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdmaster.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdmaster.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdmerge.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdmerge.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdphuff.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdphuff.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdtrans.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdtrans.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jmemmgr.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jmemmgr.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jpegtran.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jpegtran.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jquant2.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jquant2.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/rdbmp.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdbmp.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/rdcolmap.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdcolmap.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/rdgif.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdgif.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/rdjpgcom.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdjpgcom.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/rdppm.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdppm.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/rdswitch.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdswitch.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/rdtarga.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdtarga.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/wrbmp.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_wrbmp.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/wrtarga.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_wrtarga.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/VbrTag.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_lame_lame3.70_VbrTag.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/fft.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_lame_lame3.70_fft.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/formatBitstream.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_mibench_consumer_lame_lame3.70_formatBitstream.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/qrduino/qrencode.c",
+      "ir": "out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_qrduino_qrencode.ll"
+    }
+  ],
+  "imported_ir": [],
+  "skipped_ir": [],
+  "failed": [
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/wikisort/libwikisort.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/embench-iot/src/wikisort/libwikisort.c",
+        "-o",
+        "./out/greedy_inlinefriendly_scan/ir/source_snapshot_public_repos_embench-iot_src_wikisort_libwikisort.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/embench-iot/src/wikisort/libwikisort.c:18:10: fatal error: 'support.h' file not found\n#include \"support.h\"\n         ^~~~~~~~~~~\n1 error generated.\n"
+    }
+  ]
+}

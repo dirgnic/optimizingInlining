@@ -1,0 +1,331 @@
+{
+  "candidate_count": 30,
+  "compiled": 25,
+  "failed": 5,
+  "callsites": 9136,
+  "modules_with_calls": 24,
+  "top": [
+    {
+      "source": "source_snapshot/public_repos/lz4/lib/lz4.c",
+      "module": "source_snapshot_public_repos_lz4_lib_lz4.ll",
+      "teacher": "small_callee",
+      "never_ir": 59756,
+      "best_ir": 57093,
+      "reduction_pct": 4.456456255438784,
+      "inline_labels": 1312,
+      "callsites": 1598
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/rtp.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_rtp.ll",
+      "teacher": "loop_averse",
+      "never_ir": 272,
+      "best_ir": 265,
+      "reduction_pct": 2.5735294117647056,
+      "inline_labels": 6,
+      "callsites": 6
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/network/patricia/patricia_test.c",
+      "module": "source_snapshot_public_repos_mibench_network_patricia_patricia_test.ll",
+      "teacher": "small_callee",
+      "never_ir": 184,
+      "best_ir": 182,
+      "reduction_pct": 1.0869565217391304,
+      "inline_labels": 1,
+      "callsites": 1
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/intl/loadmsgcat.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_intl_loadmsgcat.ll",
+      "teacher": "loop_averse",
+      "never_ir": 229,
+      "best_ir": 227,
+      "reduction_pct": 0.8733624454148471,
+      "inline_labels": 6,
+      "callsites": 6
+    },
+    {
+      "source": "source_snapshot/public_repos/lz4/lib/lz4frame.c",
+      "module": "source_snapshot_public_repos_lz4_lib_lz4frame.ll",
+      "teacher": "greedy_ir_size",
+      "never_ir": 4456,
+      "best_ir": 4420,
+      "reduction_pct": 0.807899461400359,
+      "inline_labels": 35,
+      "callsites": 153
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jcmarker.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jcmarker.ll",
+      "teacher": "single_caller",
+      "never_ir": 825,
+      "best_ir": 819,
+      "reduction_pct": 0.7272727272727273,
+      "inline_labels": 2,
+      "callsites": 85
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/rdjpgcom.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdjpgcom.ll",
+      "teacher": "greedy_ir_size",
+      "never_ir": 455,
+      "best_ir": 452,
+      "reduction_pct": 0.6593406593406593,
+      "inline_labels": 1,
+      "callsites": 25
+    },
+    {
+      "source": "source_snapshot/public_repos/sqlite/ext/misc/percentile.c",
+      "module": "source_snapshot_public_repos_sqlite_ext_misc_percentile.ll",
+      "teacher": "cost_budget",
+      "never_ir": 892,
+      "best_ir": 889,
+      "reduction_pct": 0.336322869955157,
+      "inline_labels": 2,
+      "callsites": 15
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/wrjpgcom.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_wrjpgcom.ll",
+      "teacher": "greedy_ir_size",
+      "never_ir": 606,
+      "best_ir": 604,
+      "reduction_pct": 0.33003300330033003,
+      "inline_labels": 1,
+      "callsites": 32
+    },
+    {
+      "source": "source_snapshot/public_repos/sqlite/ext/misc/basexx.c",
+      "module": "source_snapshot_public_repos_sqlite_ext_misc_basexx.ll",
+      "teacher": "small_callee",
+      "never_ir": 1077,
+      "best_ir": 1075,
+      "reduction_pct": 0.18570102135561745,
+      "inline_labels": 1,
+      "callsites": 12
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/cJSON.c",
+      "module": "source_snapshot_public_repos_cJSON_cJSON.ll",
+      "teacher": "greedy_ir_size",
+      "never_ir": 5180,
+      "best_ir": 5172,
+      "reduction_pct": 0.15444015444015444,
+      "inline_labels": 6,
+      "callsites": 188
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/picojpeg/libpicojpeg.c",
+      "module": "source_snapshot_public_repos_embench-iot_src_picojpeg_libpicojpeg.ll",
+      "teacher": "small_callee",
+      "never_ir": 3662,
+      "best_ir": 3657,
+      "reduction_pct": 0.1365374112506827,
+      "inline_labels": 45,
+      "callsites": 216
+    },
+    {
+      "source": "source_snapshot/public_repos/sqlite/ext/misc/fileio.c",
+      "module": "source_snapshot_public_repos_sqlite_ext_misc_fileio.ll",
+      "teacher": "hot_leaf",
+      "never_ir": 1595,
+      "best_ir": 1593,
+      "reduction_pct": 0.12539184952978058,
+      "inline_labels": 2,
+      "callsites": 22
+    },
+    {
+      "source": "source_snapshot/public_repos/sqlite/ext/misc/fossildelta.c",
+      "module": "source_snapshot_public_repos_sqlite_ext_misc_fossildelta.ll",
+      "teacher": "single_caller",
+      "never_ir": 1751,
+      "best_ir": 1749,
+      "reduction_pct": 0.1142204454597373,
+      "inline_labels": 1,
+      "callsites": 29
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/trees.c",
+      "module": "source_snapshot_public_repos_zlib_trees.ll",
+      "teacher": "small_callee",
+      "never_ir": 3763,
+      "best_ir": 3761,
+      "reduction_pct": 0.05314908317831517,
+      "inline_labels": 1,
+      "callsites": 26
+    },
+    {
+      "source": "source_snapshot/public_repos/parson/parson.c",
+      "module": "source_snapshot_public_repos_parson_parson.ll",
+      "teacher": "cost_budget",
+      "never_ir": 6761,
+      "best_ir": 6759,
+      "reduction_pct": 0.029581422866439874,
+      "inline_labels": 1,
+      "callsites": 365
+    },
+    {
+      "source": "source_snapshot/public_repos/sqlite/test/speedtest1.c",
+      "module": "source_snapshot_public_repos_sqlite_test_speedtest1.ll",
+      "teacher": "greedy_ir_size",
+      "never_ir": 4286,
+      "best_ir": 4285,
+      "reduction_pct": 0.02333177788147457,
+      "inline_labels": 1,
+      "callsites": 537
+    },
+    {
+      "source": "source_snapshot/public_repos/llvm-test-suite/MultiSource/Applications/sqlite3/sqlite3.c",
+      "module": "source_snapshot_public_repos_llvm-test-suite_MultiSource_Applications_sqlite3_sqlite3.ll",
+      "teacher": "greedy_ir_size",
+      "never_ir": 92337,
+      "best_ir": 92331,
+      "reduction_pct": 0.006497936905032651,
+      "inline_labels": 3,
+      "callsites": 5624
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/cJSON_Utils.c",
+      "module": "source_snapshot_public_repos_cJSON_cJSON_Utils.ll",
+      "teacher": "never_inline",
+      "never_ir": 2302,
+      "best_ir": 2302,
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 77
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-bzip2/blocksort.c",
+      "module": "source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_blocksort.ll",
+      "teacher": "never_inline",
+      "never_ir": 3651,
+      "best_ir": 3651,
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 11
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/adler32.c",
+      "module": "source_snapshot_public_repos_zlib_adler32.ll",
+      "teacher": "never_inline",
+      "never_ir": 555,
+      "best_ir": 555,
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 3
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/crc32.c",
+      "module": "source_snapshot_public_repos_zlib_crc32.ll",
+      "teacher": "never_inline",
+      "never_ir": 335,
+      "best_ir": 335,
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 13
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/deflate.c",
+      "module": "source_snapshot_public_repos_zlib_deflate.ll",
+      "teacher": "never_inline",
+      "never_ir": 6829,
+      "best_ir": 6829,
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 67
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/inflate.c",
+      "module": "source_snapshot_public_repos_zlib_inflate.ll",
+      "teacher": "never_inline",
+      "never_ir": 4295,
+      "best_ir": 4295,
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 25
+    }
+  ],
+  "failed_sources": [
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/crc32/crc_32.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/embench-iot/src/crc32/crc_32.c",
+        "-o",
+        "./out/real_reduction_probe/ir/source_snapshot_public_repos_embench-iot_src_crc32_crc_32.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/embench-iot/src/crc32/crc_32.c:19:10: fatal error: 'support.h' file not found\n#include \"support.h\"\n         ^~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/coremark/core_list_join.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/coremark/core_list_join.c",
+        "-o",
+        "./out/real_reduction_probe/ir/source_snapshot_public_repos_coremark_core_list_join.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/coremark/core_list_join.c:19:\n./source_snapshot/public_repos/coremark/coremark.h:38:10: fatal error: 'core_portme.h' file not found\n#include \"core_portme.h\"\n         ^~~~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/coremark/core_matrix.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/coremark/core_matrix.c",
+        "-o",
+        "./out/real_reduction_probe/ir/source_snapshot_public_repos_coremark_core_matrix.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/coremark/core_matrix.c:19:\n./source_snapshot/public_repos/coremark/coremark.h:38:10: fatal error: 'core_portme.h' file not found\n#include \"core_portme.h\"\n         ^~~~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/coremark/core_state.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/coremark/core_state.c",
+        "-o",
+        "./out/real_reduction_probe/ir/source_snapshot_public_repos_coremark_core_state.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/coremark/core_state.c:19:\n./source_snapshot/public_repos/coremark/coremark.h:38:10: fatal error: 'core_portme.h' file not found\n#include \"core_portme.h\"\n         ^~~~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/coremark/core_util.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/coremark/core_util.c",
+        "-o",
+        "./out/real_reduction_probe/ir/source_snapshot_public_repos_coremark_core_util.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/coremark/core_util.c:19:\n./source_snapshot/public_repos/coremark/coremark.h:38:10: fatal error: 'core_portme.h' file not found\n#include \"core_portme.h\"\n         ^~~~~~~~~~~~~~~\n1 error generated.\n"
+    }
+  ]
+}

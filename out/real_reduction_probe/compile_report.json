@@ -1,0 +1,188 @@
+{
+  "compiled": [
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/rtp.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_mibench_consumer_lame_lame3.70_rtp.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/network/patricia/patricia_test.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_mibench_network_patricia_patricia_test.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/intl/loadmsgcat.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_intl_loadmsgcat.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jcmarker.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jcmarker.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/rdjpgcom.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdjpgcom.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/wrjpgcom.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_wrjpgcom.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/picojpeg/libpicojpeg.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_embench-iot_src_picojpeg_libpicojpeg.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/sqlite/ext/misc/basexx.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_sqlite_ext_misc_basexx.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/sqlite/ext/misc/fossildelta.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_sqlite_ext_misc_fossildelta.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/sqlite/ext/misc/percentile.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_sqlite_ext_misc_percentile.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/sqlite/ext/misc/fileio.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_sqlite_ext_misc_fileio.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/sqlite/test/speedtest1.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_sqlite_test_speedtest1.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/llvm-test-suite/MultiSource/Applications/sqlite3/sqlite3.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_llvm-test-suite_MultiSource_Applications_sqlite3_sqlite3.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/cJSON.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_cJSON_cJSON.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/cJSON/cJSON_Utils.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_cJSON_cJSON_Utils.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/parson/parson.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_parson_parson.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/adler32.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_zlib_adler32.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/crc32.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_zlib_crc32.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/deflate.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_zlib_deflate.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/inflate.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_zlib_inflate.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/trees.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_zlib_trees.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/zlib/zutil.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_zlib_zutil.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/lz4/lib/lz4.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_lz4_lib_lz4.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/lz4/lib/lz4frame.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_lz4_lib_lz4frame.ll"
+    },
+    {
+      "source": "source_snapshot/public_repos/ctuning-programs/program/cbench-bzip2/blocksort.c",
+      "ir": "out/real_reduction_probe/ir/source_snapshot_public_repos_ctuning-programs_program_cbench-bzip2_blocksort.ll"
+    }
+  ],
+  "imported_ir": [],
+  "skipped_ir": [],
+  "failed": [
+    {
+      "source": "source_snapshot/public_repos/embench-iot/src/crc32/crc_32.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/embench-iot/src/crc32/crc_32.c",
+        "-o",
+        "./out/real_reduction_probe/ir/source_snapshot_public_repos_embench-iot_src_crc32_crc_32.ll"
+      ],
+      "stderr": "./source_snapshot/public_repos/embench-iot/src/crc32/crc_32.c:19:10: fatal error: 'support.h' file not found\n#include \"support.h\"\n         ^~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/coremark/core_list_join.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/coremark/core_list_join.c",
+        "-o",
+        "./out/real_reduction_probe/ir/source_snapshot_public_repos_coremark_core_list_join.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/coremark/core_list_join.c:19:\n./source_snapshot/public_repos/coremark/coremark.h:38:10: fatal error: 'core_portme.h' file not found\n#include \"core_portme.h\"\n         ^~~~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/coremark/core_matrix.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/coremark/core_matrix.c",
+        "-o",
+        "./out/real_reduction_probe/ir/source_snapshot_public_repos_coremark_core_matrix.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/coremark/core_matrix.c:19:\n./source_snapshot/public_repos/coremark/coremark.h:38:10: fatal error: 'core_portme.h' file not found\n#include \"core_portme.h\"\n         ^~~~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/coremark/core_state.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/coremark/core_state.c",
+        "-o",
+        "./out/real_reduction_probe/ir/source_snapshot_public_repos_coremark_core_state.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/coremark/core_state.c:19:\n./source_snapshot/public_repos/coremark/coremark.h:38:10: fatal error: 'core_portme.h' file not found\n#include \"core_portme.h\"\n         ^~~~~~~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "source_snapshot/public_repos/coremark/core_util.c",
+      "command": [
+        "/opt/homebrew/bin/clang",
+        "-std=c11",
+        "-S",
+        "-emit-llvm",
+        "-O0",
+        "-fno-inline",
+        "-fno-discard-value-names",
+        "./source_snapshot/public_repos/coremark/core_util.c",
+        "-o",
+        "./out/real_reduction_probe/ir/source_snapshot_public_repos_coremark_core_util.ll"
+      ],
+      "stderr": "In file included from ./source_snapshot/public_repos/coremark/core_util.c:19:\n./source_snapshot/public_repos/coremark/coremark.h:38:10: fatal error: 'core_portme.h' file not found\n#include \"core_portme.h\"\n         ^~~~~~~~~~~~~~~\n1 error generated.\n"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+\begin{abstractpage}
+\begin{abstract}{english}
+The research area of compiler optimization continues to be relevant in
+computer science because software is expected to stay compact and efficient
+across different hardware environments while still meeting increasing
+performance requirements. Even though compile-time inlining is a fundamental
+optimization, choosing which call sites should be inlined remains difficult.
+One local choice can change the following call graph and therefore the
+optimization opportunities that later passes can still use. As a result,
+inlining can either decrease or increase the size of the generated intermediate
+representation and of the final binary.
+
+In this work, the inlining problem is framed as an offline policy-learning
+problem. For the implementation, C and C++ source files are collected from a
+small DCMTK snapshot and from a varied public-source supplement, while
+deterministic synthetic modules are added to extend the dataset with
+controlled inlining cases. The files pass through the Clang frontend with the
+inlining option turned off, in order to generate LLVM IR modules. Information
+extracted from individual call sites is translated into feature vectors that
+contain caller, callee, call-site, and call-graph information.
+
+Multiple heuristics with a teacher role are used. Each module passes through
+this heuristic set in order to determine which one minimizes rewritten IR size
+best for that module. The selected heuristic's call-site choices become the
+dataset for a supervised learning strategy, in which student models learn to
+imitate teacher trajectories through behavior cloning. The students'
+predictions are then integrated back into LLVM IR through call-site-level
+rewrites. The reported run
+compiles 163 C/C++ sources, evaluates 150 LLVM modules with local call sites,
+and extracts 10394 call-site samples. On the held-out split, the
+selected-teacher reference reduces rewritten LLVM IR instruction count by
+1.10\% relative to never-inline, while the best held-out student reaches a
+0.61\% reduction. These results do not outperform LLVM's production
+\texttt{-Oz} pipeline, but they give insight into the possibility of treating
+compile-time inlining decisions as machine-learning policy problems, not only
+as fixed classical heuristics.
+\end{abstract}
+\end{abstractpage}
+
+\begin{abstractpage}
+\begin{abstract}{romanian}
+Optimizarea compilatoarelor rămâne o ramură de cercetare importantă în
+informatică, deoarece tehnologia evoluează într-o direcție în care aplicațiile
+trebuie să fie compacte, rapide și eficiente pe platforme hardware diferite,
+ținând în același timp pasul cu cerințele de performanță ale industriei. Deși
+decizia de inlining la compilare reprezintă o optimizare fundamentală, alegerea
+call site-urilor care trebuie înlocuite prin inlining rămâne complicată,
+deoarece o decizie locală poate schimba graful de apeluri viitor, precum și
+posibilitățile de optimizare pe care compilatorul le mai poate folosi ulterior.
+Aceasta poate duce la creșterea sau scăderea dimensiunii reprezentării
+intermediare generate și a dimensiunii binarului final.
+
+În această lucrare, problema inlining-ului este formulată într-o manieră de
+învățare offline. Pentru implementare, fișiere C și C++ sunt colectate dintr-un
+snapshot DCMTK, din surse generate sintetic și dintr-un supliment variat de
+surse publice selectate după compilare și filtrare după relevanța pentru
+inlining. Fișierele trec prin frontend-ul Clang, cu inlining-ul dezactivat,
+pentru a obține module LLVM IR. Informațiile extrase la nivel de call site sunt
+transformate în vectori de trăsături care includ informații despre caller,
+callee, call site și graful de apeluri.
+
+Sunt folosite multiple euristici cu rol de profesor. Fiecare modul este evaluat
+de fiecare astfel de euristică, cu scopul de a determina care dintre ele
+minimizează cel mai bine dimensiunea LLVM IR rescrisă pentru modulul respectiv.
+Alegerile euristicii selectate la nivel de call site devin un set de antrenare
+pentru o strategie de învățare supervizată, în care modelele student învață să
+imite traiectoriile profesorilor prin behavior cloning. Predicțiile studenților
+sunt ulterior integrate înapoi în LLVM IR prin rescrieri la nivel de call site.
+Rularea raportată compilează 163 de surse C/C++, evaluează 150 de module LLVM
+cu call site-uri locale și extrage 10394 de exemple la nivel de call site. Pe
+split-ul held-out, referința selected-teacher reduce numărul de instrucțiuni
+LLVM IR rescrise cu 1.10\% față de never-inline, iar cel mai bun student ajunge
+la o reducere de 0.61\%. Rezultatele nu depășesc pipeline-ul de producție LLVM
+\texttt{-Oz}, dar demonstrează un workflow reproductibil de învățare offline
+pentru experimente cu politici de inlining la nivel de call site.
+\end{abstract}
+\end{abstractpage}

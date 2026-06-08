@@ -1,0 +1,25 @@
+{
+  "compiled": [
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_000.cc",
+      "ir": "out/demo/ir/generated_000.ll",
+      "command": "/opt/homebrew/bin/clang++ -std=c++17 -S -emit-llvm -O0 -fno-inline -fno-discard-value-names ./source_snapshot/DCMTK/generated_inlining/generated_000.cc -o ./out/demo/ir/generated_000.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_001.cc",
+      "ir": "out/demo/ir/generated_001.ll",
+      "command": "/opt/homebrew/bin/clang++ -std=c++17 -S -emit-llvm -O0 -fno-inline -fno-discard-value-names ./source_snapshot/DCMTK/generated_inlining/generated_001.cc -o ./out/demo/ir/generated_001.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_002.cc",
+      "ir": "out/demo/ir/generated_002.ll",
+      "command": "/opt/homebrew/bin/clang++ -std=c++17 -S -emit-llvm -O0 -fno-inline -fno-discard-value-names ./source_snapshot/DCMTK/generated_inlining/generated_002.cc -o ./out/demo/ir/generated_002.ll"
+    },
+    {
+      "source": "source_snapshot/DCMTK/generated_inlining/generated_003.cc",
+      "ir": "out/demo/ir/generated_003.ll",
+      "command": "/opt/homebrew/bin/clang++ -std=c++17 -S -emit-llvm -O0 -fno-inline -fno-discard-value-names ./source_snapshot/DCMTK/generated_inlining/generated_003.cc -o ./out/demo/ir/generated_003.ll"
+    }
+  ],
+  "failed": []
+}

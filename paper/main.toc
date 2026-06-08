@@ -1,0 +1,32 @@
+\xpg@aux {}{english}
+\xpg@aux {}{english}
+\xpg@aux {}{english}
+\xpg@aux {}{romanian}
+\xpg@aux {}{english}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Research Questions and Contributions}{3}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Compiler Background}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Compilation Pipeline}{4}{section.2.1}%
+\contentsline {section}{\numberline {2.2}LLVM and LLVM IR}{5}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Static and Dynamic Measurements}{5}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Function Inlining}{6}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Cases Where Inlining Helps}{6}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Cases Where Inlining Hurts}{7}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Problem Formulation}{8}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Related Work}{10}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Classical and Empirical Views of Inlining}{10}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Autotuning and Pre-MLGO Compiler Learning}{10}{section.5.2}%
+\contentsline {section}{\numberline {5.3}MLGO}{11}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Offline Imitation Learning and BC-Max}{12}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Positioning Against Prior Work}{12}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Methodology}{14}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Dataset Summary}{16}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Teacher Policies}{17}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Implementation}{18}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Repository Structure and Execution}{18}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Rewrite Algorithm}{20}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Evaluation}{21}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Limitations}{24}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Conclusions}{25}{chapter.10}%
+\contentsline {chapter}{\numberline {A}Additional Diagnostics}{26}{appendix.A}%
+\contentsline {chapter}{Bibliography}{27}{appendix*.2}%

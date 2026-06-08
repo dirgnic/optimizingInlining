@@ -1,0 +1,820 @@
+{
+  "candidate_sources": 450,
+  "compiled": 218,
+  "failed": 232,
+  "callsites": 1660,
+  "modules_with_calls": 117,
+  "labels": {
+    "0": 1638,
+    "1": 22
+  },
+  "teacher_counts": {
+    "never_inline": 108,
+    "single_caller": 3,
+    "cost_budget": 2,
+    "loop_averse": 2,
+    "small_callee": 2
+  },
+  "top": [
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/rtp.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_rtp.ll",
+      "teacher": "loop_averse",
+      "reduction_pct": 2.5735294117647056,
+      "inline_labels": 6,
+      "callsites": 6
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/network/patricia/patricia_test.c",
+      "module": "source_snapshot_public_repos_mibench_network_patricia_patricia_test.ll",
+      "teacher": "small_callee",
+      "reduction_pct": 1.0869565217391304,
+      "inline_labels": 1,
+      "callsites": 1
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/intl/loadmsgcat.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_intl_loadmsgcat.ll",
+      "teacher": "loop_averse",
+      "reduction_pct": 0.8733624454148471,
+      "inline_labels": 6,
+      "callsites": 6
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jcmarker.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jcmarker.ll",
+      "teacher": "single_caller",
+      "reduction_pct": 0.7272727272727273,
+      "inline_labels": 2,
+      "callsites": 85
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jmemname.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jmemname.ll",
+      "teacher": "single_caller",
+      "reduction_pct": 0.5847953216374269,
+      "inline_labels": 1,
+      "callsites": 1
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jquant1.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jquant1.ll",
+      "teacher": "single_caller",
+      "reduction_pct": 0.1903553299492386,
+      "inline_labels": 1,
+      "callsites": 11
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/wrjpgcom.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_wrjpgcom.ll",
+      "teacher": "cost_budget",
+      "reduction_pct": 0.16501650165016502,
+      "inline_labels": 2,
+      "callsites": 32
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/wrgif.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_wrgif.ll",
+      "teacher": "cost_budget",
+      "reduction_pct": 0.1199040767386091,
+      "inline_labels": 2,
+      "callsites": 25
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/libz/trees.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_libz_trees.ll",
+      "teacher": "small_callee",
+      "reduction_pct": 0.05091649694501018,
+      "inline_labels": 1,
+      "callsites": 27
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/automotive/bitcount/bitcnt_4.c",
+      "module": "source_snapshot_public_repos_mibench_automotive_bitcount_bitcnt_4.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 2
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/ansi2knr.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_ansi2knr.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 18
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/cjpeg.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_cjpeg.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 26
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/ckconfig.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_ckconfig.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 2
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/djpeg.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_djpeg.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 19
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jccoefct.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jccoefct.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jchuff.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jchuff.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 20
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jcmaster.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jcmaster.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 8
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jcparam.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jcparam.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 34
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jcphuff.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jcphuff.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 35
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jcprepct.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jcprepct.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jcsample.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jcsample.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 6
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jctrans.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jctrans.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdapimin.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdapimin.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 2
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdapistd.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdapistd.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 2
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdatasrc.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdatasrc.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 1
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdcoefct.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdcoefct.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdcolor.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdcolor.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 2
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdhuff.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdhuff.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 14
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdinput.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdinput.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdmainct.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdmainct.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdmarker.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdmarker.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 16
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdmaster.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdmaster.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 5
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdmerge.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdmerge.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 1
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdphuff.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdphuff.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jdtrans.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jdtrans.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 1
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jmemmgr.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jmemmgr.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 17
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jpegtran.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jpegtran.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 12
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/jquant2.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_jquant2.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 14
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/rdbmp.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdbmp.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 9
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/rdcolmap.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdcolmap.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 16
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/rdgif.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdgif.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 22
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/rdjpgcom.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdjpgcom.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 25
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/rdppm.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdppm.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 9
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/rdswitch.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdswitch.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 12
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/rdtarga.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_rdtarga.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 7
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/wrbmp.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_wrbmp.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/jpeg/jpeg-6a/wrtarga.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_jpeg_jpeg-6a_wrtarga.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 3
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/VbrTag.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_VbrTag.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 8
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/fft.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_fft.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 2
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/formatBitstream.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_formatBitstream.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 35
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/id3tag.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_id3tag.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 6
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/l3bitstream.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_l3bitstream.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 59
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/lame.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_lame.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 8
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/mp3rtp.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_mp3rtp.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 7
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/newmdct.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_newmdct.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 5
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/portableio.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_portableio.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 22
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/psymodel.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_psymodel.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 1
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/quantize-pvt.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_quantize-pvt.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 3
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/quantize.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_quantize.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 14
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/takehiro.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_takehiro.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 22
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/timestatus.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_timestatus.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 4
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/util.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_util.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 3
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/vbrquantize.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_vbrquantize.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 8
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/lame/lame3.70/version.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_lame_lame3.70_version.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 2
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/getopt.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_getopt.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 7
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/libid3tag/compat.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_libid3tag_compat.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 1
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/libid3tag/field.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_libid3tag_field.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 15
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/libid3tag/file.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_libid3tag_file.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 16
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/libid3tag/frame.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_libid3tag_frame.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 17
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/libid3tag/frametype.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_libid3tag_frametype.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 1
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/libid3tag/latin1.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_libid3tag_latin1.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 11
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/libid3tag/tag.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_libid3tag_tag.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 32
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/libid3tag/ucs4.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_libid3tag_ucs4.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 7
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/libid3tag/utf16.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_libid3tag_utf16.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 11
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/libid3tag/utf8.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_libid3tag_utf8.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 14
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/libmad/bit.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_libmad_bit.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 5
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/libmad/timer.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_libmad_timer.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 19
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/libz/compress.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_libz_compress.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 1
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/libz/deflate.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_libz_deflate.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 28
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/libz/gzio.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_libz_gzio.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 40
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/libz/infblock.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_libz_infblock.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 2
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/libz/inflate.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_libz_inflate.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 5
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/mad/mad-0.14.2b/libz/inftrees.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_mad_mad-0.14.2b_libz_inftrees.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 3
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/tiff-v3.5.4/contrib/addtiffo/rawblockedimage.cpp",
+      "module": "source_snapshot_public_repos_mibench_consumer_tiff-v3.5.4_contrib_addtiffo_rawblockedimage.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 8
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/tiff-v3.5.4/contrib/mac-mpw/mactrans.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_tiff-v3.5.4_contrib_mac-mpw_mactrans.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 2
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/tiff-v3.5.4/libtiff/mkg3states.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_tiff-v3.5.4_libtiff_mkg3states.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 18
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/tiff-v3.5.4/libtiff/mkspans.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_tiff-v3.5.4_libtiff_mkspans.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 2
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/tiff-v3.5.4/libtiff/mkversion.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_tiff-v3.5.4_libtiff_mkversion.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 5
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/tiff-v3.5.4/libtiff/tif_aux.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_tiff-v3.5.4_libtiff_tif_aux.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 3
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/tiff-v3.5.4/libtiff/tif_compress.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_tiff-v3.5.4_libtiff_tif_compress.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 10
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/tiff-v3.5.4/libtiff/tif_dir.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_tiff-v3.5.4_libtiff_tif_dir.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 47
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/tiff-v3.5.4/libtiff/tif_dirinfo.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_tiff-v3.5.4_libtiff_tif_dirinfo.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 2
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/tiff-v3.5.4/libtiff/tif_dirread.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_tiff-v3.5.4_libtiff_tif_dirread.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 81
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/tiff-v3.5.4/libtiff/tif_dirwrite.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_tiff-v3.5.4_libtiff_tif_dirwrite.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 52
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/tiff-v3.5.4/libtiff/tif_fax3.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_tiff-v3.5.4_libtiff_tif_fax3.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 68
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/tiff-v3.5.4/libtiff/tif_flush.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_tiff-v3.5.4_libtiff_tif_flush.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 1
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/tiff-v3.5.4/libtiff/tif_getimage.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_tiff-v3.5.4_libtiff_tif_getimage.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 26
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/tiff-v3.5.4/libtiff/tif_luv.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_tiff-v3.5.4_libtiff_tif_luv.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 25
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/tiff-v3.5.4/libtiff/tif_lzw.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_tiff-v3.5.4_libtiff_tif_lzw.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 2
+    },
+    {
+      "source": "source_snapshot/public_repos/mibench/consumer/tiff-v3.5.4/libtiff/tif_open.c",
+      "module": "source_snapshot_public_repos_mibench_consumer_tiff-v3.5.4_libtiff_tif_open.ll",
+      "teacher": "never_inline",
+      "reduction_pct": 0.0,
+      "inline_labels": 0,
+      "callsites": 3
+    }
+  ]
+}

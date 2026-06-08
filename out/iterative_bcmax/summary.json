@@ -1,0 +1,175 @@
+{
+  "rounds": [
+    {
+      "iteration": 0,
+      "candidate_policy_count": 16,
+      "test_module_count": 26,
+      "never_inline_average_ir": 1569.2307692307693,
+      "selected_policy_average_ir": 1552.0384615384614,
+      "selected_policy_reduction_pct": 1.0955882352941277,
+      "best_student": "deep_forest",
+      "best_student_average_ir": 1559.6153846153845,
+      "best_student_reduction_pct": 0.6127450980392246,
+      "students": {
+        "logistic_regression": {
+          "average_ir": 1569.6923076923076,
+          "ir_reduction_vs_never_inline_pct": -0.02941176470587455,
+          "gap_vs_selected_teacher": 17.65384615384619,
+          "test_match": 0.9010830324909748
+        },
+        "decision_tree": {
+          "average_ir": 1565.5,
+          "ir_reduction_vs_never_inline_pct": 0.23774509803921903,
+          "gap_vs_selected_teacher": 13.461538461538566,
+          "test_match": 0.9436823104693141
+        },
+        "knn": {
+          "average_ir": 1588.076923076923,
+          "ir_reduction_vs_never_inline_pct": -1.2009803921568605,
+          "gap_vs_selected_teacher": 36.03846153846166,
+          "test_match": 0.9140794223826715
+        },
+        "random_forest": {
+          "average_ir": 1562.4615384615386,
+          "ir_reduction_vs_never_inline_pct": 0.43137254901960453,
+          "gap_vs_selected_teacher": 10.423076923077133,
+          "test_match": 0.9523465703971119
+        },
+        "deep_forest": {
+          "average_ir": 1559.6153846153845,
+          "ir_reduction_vs_never_inline_pct": 0.6127450980392246,
+          "gap_vs_selected_teacher": 7.576923076923094,
+          "test_match": 0.9552346570397112
+        },
+        "conservative_forest": {
+          "average_ir": 1562.6923076923076,
+          "ir_reduction_vs_never_inline_pct": 0.41666666666667446,
+          "gap_vs_selected_teacher": 10.653846153846189,
+          "test_match": 0.9465703971119134
+        },
+        "small_mlp": {
+          "average_ir": 1607.3461538461538,
+          "ir_reduction_vs_never_inline_pct": -2.4289215686274455,
+          "gap_vs_selected_teacher": 55.30769230769238,
+          "test_match": 0.9306859205776173
+        }
+      }
+    },
+    {
+      "iteration": 1,
+      "candidate_policy_count": 17,
+      "test_module_count": 26,
+      "never_inline_average_ir": 1569.2307692307693,
+      "selected_policy_average_ir": 1552.0384615384614,
+      "selected_policy_reduction_pct": 1.0955882352941277,
+      "best_student": "deep_forest",
+      "best_student_average_ir": 1559.6153846153845,
+      "best_student_reduction_pct": 0.6127450980392246,
+      "students": {
+        "logistic_regression": {
+          "average_ir": 1569.8461538461538,
+          "ir_reduction_vs_never_inline_pct": -0.03921568627450423,
+          "gap_vs_selected_teacher": 17.807692307692378,
+          "test_match": 0.9032490974729241
+        },
+        "decision_tree": {
+          "average_ir": 1668.423076923077,
+          "ir_reduction_vs_never_inline_pct": -6.321078431372544,
+          "gap_vs_selected_teacher": 116.38461538461547,
+          "test_match": 0.9314079422382672
+        },
+        "knn": {
+          "average_ir": 1586.6538461538462,
+          "ir_reduction_vs_never_inline_pct": -1.1102941176470575,
+          "gap_vs_selected_teacher": 34.615384615384755,
+          "test_match": 0.9184115523465703
+        },
+        "random_forest": {
+          "average_ir": 1562.4615384615386,
+          "ir_reduction_vs_never_inline_pct": 0.43137254901960453,
+          "gap_vs_selected_teacher": 10.423076923077133,
+          "test_match": 0.9523465703971119
+        },
+        "deep_forest": {
+          "average_ir": 1559.6153846153845,
+          "ir_reduction_vs_never_inline_pct": 0.6127450980392246,
+          "gap_vs_selected_teacher": 7.576923076923094,
+          "test_match": 0.9552346570397112
+        },
+        "conservative_forest": {
+          "average_ir": 1562.6923076923076,
+          "ir_reduction_vs_never_inline_pct": 0.41666666666667446,
+          "gap_vs_selected_teacher": 10.653846153846189,
+          "test_match": 0.9465703971119134
+        },
+        "small_mlp": {
+          "average_ir": 1592.576923076923,
+          "ir_reduction_vs_never_inline_pct": -1.4877450980392135,
+          "gap_vs_selected_teacher": 40.53846153846166,
+          "test_match": 0.9523465703971119
+        }
+      }
+    },
+    {
+      "iteration": 2,
+      "candidate_policy_count": 18,
+      "test_module_count": 26,
+      "never_inline_average_ir": 1569.2307692307693,
+      "selected_policy_average_ir": 1552.0384615384614,
+      "selected_policy_reduction_pct": 1.0955882352941277,
+      "best_student": "deep_forest",
+      "best_student_average_ir": 1559.6153846153845,
+      "best_student_reduction_pct": 0.6127450980392246,
+      "students": {
+        "logistic_regression": {
+          "average_ir": 1569.6153846153845,
+          "ir_reduction_vs_never_inline_pct": -0.02450980392155971,
+          "gap_vs_selected_teacher": 17.576923076923094,
+          "test_match": 0.903971119133574
+        },
+        "decision_tree": {
+          "average_ir": 1668.423076923077,
+          "ir_reduction_vs_never_inline_pct": -6.321078431372544,
+          "gap_vs_selected_teacher": 116.38461538461547,
+          "test_match": 0.9314079422382672
+        },
+        "knn": {
+          "average_ir": 1586.6538461538462,
+          "ir_reduction_vs_never_inline_pct": -1.1102941176470575,
+          "gap_vs_selected_teacher": 34.615384615384755,
+          "test_match": 0.9184115523465703
+        },
+        "random_forest": {
+          "average_ir": 1562.4615384615386,
+          "ir_reduction_vs_never_inline_pct": 0.43137254901960453,
+          "gap_vs_selected_teacher": 10.423076923077133,
+          "test_match": 0.9523465703971119
+        },
+        "deep_forest": {
+          "average_ir": 1559.6153846153845,
+          "ir_reduction_vs_never_inline_pct": 0.6127450980392246,
+          "gap_vs_selected_teacher": 7.576923076923094,
+          "test_match": 0.9552346570397112
+        },
+        "conservative_forest": {
+          "average_ir": 1562.6923076923076,
+          "ir_reduction_vs_never_inline_pct": 0.41666666666667446,
+          "gap_vs_selected_teacher": 10.653846153846189,
+          "test_match": 0.9465703971119134
+        },
+        "small_mlp": {
+          "average_ir": 1606.1153846153845,
+          "ir_reduction_vs_never_inline_pct": -2.3504901960784226,
+          "gap_vs_selected_teacher": 54.076923076923094,
+          "test_match": 0.9393501805054152
+        }
+      }
+    }
+  ],
+  "added_student_policies": [
+    "iter0_deep_forest",
+    "iter1_deep_forest",
+    "iter2_deep_forest"
+  ],
+  "note": "Each round adds the previous round's best held-out student as a candidate policy, rebuilds selected labels from measured rewritten IR, and retrains on the fixed module split."
+}
