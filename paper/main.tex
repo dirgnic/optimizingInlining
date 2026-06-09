@@ -122,33 +122,32 @@
 
 \chapter{Introduction}
 
-Optimizing at compile time remains a current research topic, since compilers
-must keep large builds deterministic enough while still producing compact, fast,
-cross-platform code. As a result, many optimization decisions are still made
-through heuristics: generalized rules that estimate whether a transformation is
-worth applying. This thesis studies inlining as one concrete case where a local
-decision can affect later passes, target behavior, and code size, so the best
-choice is too situational to be captured well by one simple rule
+The problem of choosing when to optimize during compilation remains difficult
+because compilers try to keep outputs predictable across platforms while also
+minimizing code size. This has led to a preference for predetermined rules
+called heuristics, which estimate when an optimization is useful. This thesis
+studies inlining as one case where normal heuristics can be too rigid: the
+usefulness of one choice depends on the call graph, code size, and the
+optimizations that can follow
 \cite{godbolt2019optimizations,theodoridis2022optimal}.
 
-Inlining represents a high-impact example of this problem. By substituting a
-call site with the instructions corresponding to the called function, it can
-remove call overhead and expose constant propagation, devirtualization,
-dead-code elimination, and other later optimizations. Nonetheless, inlining can
-also duplicate code and grow the final binary when the copied body is not useful
-enough. Production compilers therefore use cost models and thresholds to
-balance optimization opportunity against generated-code growth
+Inlining is a representative example of this compiler problem. Through
+substituting a call site with the instructions corresponding to the called
+function, it can remove call overhead and expose devirtualization, constant
+propagation, dead-code elimination, and other simplifications. Although useful
+in many cases, inlining can also expand code unnecessarily. Production compilers
+therefore use thresholds and cost models to balance code growth against the
+optimization opportunities revealed by inlining
 \cite{godbolt2019optimizations,theodoridis2022optimal,mlgo}.
 
-The purpose of this thesis is to analyze a smaller ML-guided alternative to
-those manual baselines and to investigate whether a teacher-student model can
-give useful results from static features and scenario-specialized teachers. The
-implemented prototype evaluates several heuristics with a teacher role per
-module, selects the best teacher trajectory under a rewritten-IR size objective,
-and trains student policies to imitate the selected inline/no-inline decisions.
-The setup follows the broad MLGO idea that compiler decisions can be driven by
-features from the current context, while using offline imitation learning
-instead of online reinforcement learning
+The proposed method starts from several deterministic heuristics called teacher
+policies. Student models are trained on them in order to test whether they can
+learn useful inlining rules from static call-site features. The pipeline records
+the inline/no-inline choices of all teachers, evaluates them per module, chooses
+the teacher whose rewrites give the smallest IR size, and uses that teacher's
+choices as labels. The idea of feature vectors follows MLGO, while this
+prototype uses offline imitation learning instead of MLGO-style online
+reinforcement learning
 \cite{milepostgcc,mlgo,llvmmlgo,bcmax}.
 
 Function inlining is a useful case study because it requires both local and
@@ -157,10 +156,9 @@ the call with the instructions of the called function, or to keep the function
 call unchanged. At global level, this choice can change the program
 representation: the caller can grow, the callee can become removable, the future
 call graph can change, and later optimization opportunities may also change.
-The prototype reproduces this setting in a
-smaller environment: heuristics with a teacher role create inline/no-inline
-trajectories, the best teacher per module is chosen by rewritten LLVM IR size,
-and student classifiers learn the selected labels.
+The prototype reproduces this setting at a smaller scale: a set of teachers is
+run on every module, the teacher with the largest reduction in rewritten IR size
+is chosen for that module, and binary classifiers learn the selected labels.
 
 For evaluation, LLVM IR is modified using LLVM's \texttt{opt} tool. The number
 of rewritten LLVM IR instructions becomes the primary metric used to assess the
@@ -182,7 +180,7 @@ ID & Research question & Thesis contribution \\
 \hline
 RQ1 & Can inlining be framed as offline imitation learning from heuristics with
 a teacher role? &
-Formalizes inlining as a binary call-site policy problem with teacher-role
+Formalizes inlining as a binary call-site policy problem with teacher
 heuristics, selected trajectories, and behavior cloning. \\
 \hline
 RQ2 & Can BC-Max-style selection produce call-site labels under a code-size
@@ -522,7 +520,7 @@ Let
   h^\star(P_j)=
   \arg\min_{h_i \in \mathcal{H}} \mathrm{Size}_{IR}(P_j,h_i)
 \]
-be the set of heuristics with a teacher role and the selected teacher for
+be the set of teacher heuristics and the selected teacher for
 module \(P_j\). Each heuristic \(h_i\) maps call-site-level information to
 inline/no-inline choices.
 
@@ -625,8 +623,8 @@ baselines \cite{bcmax}. In the inlining setting, let
 \[
   \mathcal{H} = \{h_0, h_1, \ldots, h_n\}
 \]
-be the set of heuristics with a teacher role, where \(P_i\) is one module and
-\(\mathrm{Size}_{IR}(P_i, h)\) is the rewritten LLVM IR instruction count
+be the set of teacher heuristics, where \(P_i\) is one module and
+\(\mathrm{Size}_{IR}(P_i, h)\) is the rewritten IR instruction count
 obtained when teacher \(h\) is applied to \(P_i\).
 
 For each module, the best teacher is the one with the smallest rewritten IR
@@ -872,13 +870,15 @@ signal \\
 }
 \caption{Dataset accounting. Filtering is applied before student training and
 keeps source-level modules with local call sites relevant to the rewritten-IR
-objective.}
+objective. Public-source provenance, licenses, and selected-file metadata are
+kept in the repository manifests and source snapshot files.}
 \label{tab:dataset-accounting}
 \end{table}
 
-\section{Teacher-Role Heuristics}
+\section{Teacher Heuristics}
 
-The local set of teacher-role heuristics is intentionally simple and
+In this thesis, a teacher heuristic means a deterministic policy used to produce
+labels for student training. The local teacher set is intentionally simple and
 inspectable. The teachers use deterministic rules starting from the same
 call-site-level feature vector. Let \(s\) be callee size, \(u\) callee users,
 \(b\) branch count, \(k\) constant arguments, and \(r\) a recursion flag. Most
@@ -891,8 +891,8 @@ rules use the following general shape:
 The exact thresholds are fixed in \texttt{teach.py}; the table gives the
 readable form of each rule. The exception is \texttt{greedy\_ir\_size}, whose
 labels are produced by measured rewrites in \texttt{rewrite.py}. Therefore,
-most teacher-role heuristics are cheap proxy policies, while the greedy
-heuristic is slower because it actually tests candidate rewrites.
+most teachers are cheap proxy policies, while the greedy heuristic is slower
+because it actually tests candidate rewrites.
 
 \begin{table}[H]
 \centering
@@ -1094,7 +1094,7 @@ Student model & Role in the experiment \\
 The student models do not discover useful inlining decisions by recompiling
 programs or exploring random actions during training. They receive the same
 static call-site feature vectors and learn, through behavior cloning, to
-minimize disagreement with the selected teacher-role heuristic for each module.
+minimize disagreement with the selected teacher for each module.
 Their quality therefore depends on both parts of the setup: whether the teacher
 set contains useful trajectories and whether the chosen model family can
 generalize those trajectories to held-out modules. This is why the table uses
@@ -1115,13 +1115,15 @@ from 26 modules for held-out testing. Teacher-label match measures agreement
 with selected-teacher labels; the actual code-size effect is measured only
 after predicted rewrites are applied.
 
-In the teacher-evaluation and selection stage, every teacher-role heuristic is
-run on each module in order to determine which one produces the smallest
-rewritten LLVM IR. Across all 150 modules, average rewritten IR falls from
-1985.39 instructions for never-inline to 1952.39 for the selected-teacher
-reference, which means a 1.66\% reduction. On the held-out split, the
-corresponding reduction is 1.10\%: 1569.23 average IR instructions for
-never-inline versus 1552.04 for the selected-teacher reference.
+In the teacher-evaluation and selection stage, every teacher is run on each
+module in order to determine which one produces the smallest rewritten IR. On
+held-out modules, this selected teacher is an oracle-style reference because it
+is chosen after measuring all candidate teachers on those modules; it is not a
+single deployable policy. Across all 150 modules, average rewritten IR falls
+from 1985.39 instructions for never-inline to 1952.39 for this reference, a
+1.66\% reduction. On the held-out split, the corresponding reduction is 1.10\%:
+1569.23 average IR instructions for never-inline versus 1552.04 for the
+selected teacher.
 
 \begin{table}[H]
 \centering
@@ -1145,6 +1147,9 @@ Model & \shortstack{Teacher-label\\match} & \shortstack{Held-out\\Avg. IR} &
 \texttt{conservative\_forest} & 0.947 & 1562.69 & 0.42\% & 10.65 \\
 \hline
 \texttt{small\_mlp} & 0.931 & 1607.35 & -2.43\% & 55.31 \\
+\hline
+\multicolumn{5}{|l|}{\footnotesize \texttt{deep\_forest} per-module:
+median 0.17\%, min -0.52\%, max 21.76\%, 18 improved, 7 same, 1 worse.} \\
 \hline
 \end{tabular}%
 }
@@ -1248,14 +1253,11 @@ leave little profitable local inlining margin and because features are not
 recomputed after each accepted rewrite.
 
 Table~\ref{tab:llvm-oz-comparison} frames the learned policies as prototype
-results rather than production replacements. On held-out rewritten objects,
-\texttt{deep\_forest} reduces average \texttt{.text} from 5755.23 to 5705.23
-bytes, but LLVM \texttt{-Oz} remains the much stronger native-size baseline.
-
-A three-round BC-Max-style check also fed the previous best student back into
-the candidate pool. The selected-policy reference stayed at 1.10\% held-out IR
-reduction, and the best student stayed \texttt{deep\_forest} at 0.61\%, so the
-small policy pool plateaued.
+results. On held-out rewritten objects, \texttt{deep\_forest} reduces average
+\texttt{.text} from 5755.23 to 5705.23 bytes, but LLVM \texttt{-Oz} remains the
+stronger native-size baseline. A three-round BC-Max-style check fed the previous
+best student back into the candidate pool, but the held-out result plateaued:
+the reference stayed at 1.10\% and \texttt{deep\_forest} stayed at 0.61\%.
 
 % =========================================================
 % CHAPTER 9
@@ -1305,14 +1307,14 @@ small policy pool plateaued.
 The purpose of this thesis was to study how compiler inlining can be optimized
 using offline methods for learning policies, and to implement a reproducible
 end-to-end pipeline that works with LLVM IR. The reported run compiles 163 C/C++
-sources, evaluates 150 modules with local call sites, evaluates 16 teacher-role
+sources, evaluates 150 modules with local call sites, runs 16 teacher
 heuristics, trains 7 students, and applies learned decisions back to LLVM IR
-through a call-site-level rewrite.
+through call-site-level rewrites.
 
 The main held-out result is measured on a source-level mix of DCMTK, generated
 modules, and 76 public C/C++ source files. On the 26 held-out modules, the
-selected-teacher reference reduces average rewritten LLVM IR instruction count
-from 1569.23 to 1552.04, a 1.10\% reduction relative to the never-inline
+selected-teacher reference reduces average rewritten IR instruction count from
+1569.23 to 1552.04, a 1.10\% reduction relative to the never-inline
 teacher. When it comes to students, the best held-out model by IR size is
 \texttt{deep\_forest}, which reaches 1559.62 instructions on average, a 0.61\%
 reduction. On the full artifact set, \texttt{conservative\_forest} reaches

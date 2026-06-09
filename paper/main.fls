@@ -1,4 +1,4 @@
-PWD ./paper
+PWD /Users/ingridcorobana/Desktop/optimizingInlining/paper
 INPUT /usr/local/texlive/2025/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-var/web2c/xetex/xelatex.fmt
@@ -440,17 +440,12 @@ INPUT ../out/real_signal_run_all/summary_plot.pdf
 INPUT ../out/real_signal_run_all/summary_plot.pdf
 INPUT ../out/figures/selected_teacher_distribution.pdf
 INPUT ../out/figures/selected_teacher_distribution.pdf
-INPUT ../out/figures/selected_teacher_distribution.pdf
-INPUT ../out/figures/source_group_ir_reduction.pdf
 INPUT ../out/figures/source_group_ir_reduction.pdf
 INPUT ../out/figures/source_group_ir_reduction.pdf
 INPUT ../out/figures/student_teacher_match.pdf
 INPUT ../out/figures/student_teacher_match.pdf
-INPUT ../out/figures/student_teacher_match.pdf
 INPUT ../out/figures/student_ir_reduction.pdf
 INPUT ../out/figures/student_ir_reduction.pdf
-INPUT ../out/figures/student_ir_reduction.pdf
-INPUT ../out/figures/student_inline_decisions.pdf
 INPUT ../out/figures/student_inline_decisions.pdf
 INPUT ../out/figures/student_inline_decisions.pdf
 INPUT main.aux

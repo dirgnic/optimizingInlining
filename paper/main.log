@@ -1,6 +1,6 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.10.1)  7 JUN 2026 20:11
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.10.1)  10 JUN 2026 00:59
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
@@ -564,7 +564,7 @@ Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
-Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+Package shellesc Info: Restricted shell escape enabled on input line 77.
 )
 \c@minted@FancyVerbLineTemp=\count451
 \@float@every@listing=\toks29
@@ -1378,38 +1378,36 @@ Chapter 1.
 ]
 
 [2]
-
-[3]
 Chapter 2.
 
 
-[4
+[3
 
 ]
 
-[5]
+[4]
 Chapter 3.
 \pydata@fh@_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted=\write8
 \openout8 = `_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted'.
 
-runsystem(latexminted config  --timestamp 20260607201110 FAD58DE7366495DB4650CF
-EFAC2FCD61)...executed.
+runsystem(latexminted config  --timestamp 20260610005909 FAD58DE7366495DB4650CF
+EFAC2FCD61)...executed safely (allowed).
 
 (./_FAD58DE7366495DB4650CFEFAC2FCD61.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20260607201110 FAD58DE7366495DB4
-650CFEFAC2FCD61)...executed.
+runsystem(latexminted cleanconfig  --timestamp 20260610005909 FAD58DE7366495DB4
+650CFEFAC2FCD61)...executed safely (allowed).
 
 
 (./_minted/default.style.minted)
 (./_minted/6BA3AA7766D31BD6F6ADBE482C3F5610.highlight.minted
-LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2.
 )
 (./_minted/8F0FF8EF6FBD1AC1F264F6A51821535E.highlight.minted)
 (./_minted/9B67549281E8BB0F4A0BD8A9643F6144.highlight.minted)
 (./_minted/570683D81ACF07C578C524AA1DC8121C.highlight.minted)
 
-[6
+[5
 
 ] (./_minted/D1763E402A84D1358DB9D6C093526474.highlight.minted)
 (./_minted/C78A4F94F1F341F161C36BEBC03D46AF.highlight.minted)
@@ -1418,297 +1416,127 @@ LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
 (./_minted/9C3060937830F83024B4DBB5D02FBF60.highlight.minted)
 (./_minted/4795E4DBAAB69D8703B63EDFE492693A.highlight.minted)
 
-[7]
+[6]
 Chapter 4.
 
 
-[8
+[7
 
 ]
 
-[9]
+[8]
 Chapter 5.
 
 
-[10
+[9
 
 ]
 
+[10]
+
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 752--753
-[]|\TU/TimesNewRoman(0)/m/n/10.95 Cavazos and
- []
-
-
-Underfull \hbox (badness 4819) in paragraph at lines 753--754
-[]|\TU/TimesNewRoman(0)/m/n/10.95 empirical tuning of
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 754--755
-[]|\TU/TimesNewRoman(0)/m/n/10.95 benchmark perfor-
- []
-
-
-Underfull \hbox (badness 1237) in paragraph at lines 755--756
-\TU/TimesNewRoman(0)/m/n/10.95 ing choices can be opti-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 757--758
-[]|\TU/TimesNewRoman(0)/m/n/10.95 MILEPOST
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 758--759
-[]|\TU/TimesNewRoman(0)/m/n/10.95 program-feature-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 758--759
-\TU/TimesNewRoman(0)/m/n/10.95 based optimization
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 759--760
-[]|\TU/TimesNewRoman(0)/m/n/10.95 empirical bench-
- []
-
-
-Underfull \hbox (badness 1077) in paragraph at lines 764--765
-[]|\TU/TimesNewRoman(0)/m/n/10.95 code size and per-
- []
-
-
-Underfull \hbox (badness 3260) in paragraph at lines 764--765
-\TU/TimesNewRoman(0)/m/n/10.95 formance on large
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 765--766
-[]|\TU/TimesNewRoman(0)/m/n/10.95 main learned-heuristic
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 768--769
-[]|\TU/TimesNewRoman(0)/m/n/10.95 offline imitation
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 770--771
-[]|\TU/TimesNewRoman(0)/m/n/10.95 closest template for
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 770--771
-\TU/TimesNewRoman(0)/m/n/10.95 teacher selection and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 772--773
-[]|\TU/TimesNewRoman(0)/m/n/10.95 Theodoridis et
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 773--774
-[]|\TU/TimesNewRoman(0)/m/n/10.95 autotuned search
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 773--774
-\TU/TimesNewRoman(0)/m/n/10.95 for high-reduction
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 773--774
-\TU/TimesNewRoman(0)/m/n/10.95 inlining-for-size
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 778--779
-[]|\TU/TimesNewRoman(0)/m/n/10.95 BC-Max-style su-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 778--779
-\TU/TimesNewRoman(0)/m/n/10.95 pervised pipeline
- []
-
-
-Underfull \hbox (badness 6825) in paragraph at lines 778--779
-\TU/TimesNewRoman(0)/m/n/10.95 over static call-site
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 780--781
-[]|\TU/TimesNewRoman(0)/m/n/10.95 inspectable offline
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 780--781
-\TU/TimesNewRoman(0)/m/n/10.95 pipeline for call-site-
- []
-
-
-
-[12]
-
-[13]
 Chapter 6.
 
 
-[14
+[12
 
 ]
-Underfull \hbox (badness 1097) in paragraph at lines 856--857
-\TU/TimesNewRoman(0)/m/n/10 ditional blocks, users, IR instructions,
- []
-
-
-Underfull \hbox (badness 4531) in paragraph at lines 857--860
-[]|\TU/TimesNewRoman(0)/m/n/10 size and branching of the
- []
-
-
-Underfull \hbox (badness 4279) in paragraph at lines 857--860
-\TU/TimesNewRoman(0)/m/n/10 lined body; large or call-
- []
-
-
-Underfull \hbox (badness 1097) in paragraph at lines 861--862
-\TU/TimesNewRoman(0)/m/n/10 ditional blocks, users, IR instructions,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 866--867
-[]|\TU/lmtt/m/n/10 callsite_height\TU/TimesNewRoman(0)/m/n/10 , \TU/lmtt/m/n/10
- cost_estimate\TU/TimesNewRoman(0)/m/n/10 ,
- []
-
-
-Underfull \hbox (badness 1478) in paragraph at lines 867--870
-[]|\TU/TimesNewRoman(0)/m/n/10 local decision context: ap-
- []
-
-
-Underfull \hbox (badness 1783) in paragraph at lines 871--874
-[]|\TU/TimesNewRoman(0)/m/n/10 rough module-level density,
- []
-
-
-Underfull \hbox (badness 7558) in paragraph at lines 871--874
-\TU/TimesNewRoman(0)/m/n/10 used to distinguish sparse
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 875--877
-[]|\TU/TimesNewRoman(0)/m/n/10 marks recursive expansion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 875--877
-\TU/TimesNewRoman(0)/m/n/10 patterns, where repeated
- []
-
-
-
-[15]
-Underfull \hbox (badness 6691) in paragraph at lines 901--902
+Underfull \hbox (badness 6691) in paragraph at lines 799--800
 []|\TU/TimesNewRoman(0)/m/n/10.95 DCMTK, generated,
  []
 
 
-Underfull \hbox (badness 1325) in paragraph at lines 917--918
+Underfull \hbox (badness 1325) in paragraph at lines 815--816
 []|\TU/TimesNewRoman(0)/m/n/10.95 rewritten IR instruc-
  []
 
 
-Underfull \hbox (badness 7740) in paragraph at lines 972--974
+
+[13]
+Underfull \hbox (badness 7740) in paragraph at lines 863--865
 []|\TU/TimesNewRoman(0)/m/n/10 controlled inlining and no-
  []
 
 
 
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 1019--1019
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 915--915
 []|\TU/lmtt/m/n/10 cost_budget\TU/TimesNewRoman(0)/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1025--1026
+Underfull \hbox (badness 10000) in paragraph at lines 921--922
 []|\TU/lmtt/m/n/10 balanced_score\TU/TimesNewRoman(0)/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1025--1026
+Underfull \hbox (badness 10000) in paragraph at lines 921--922
 \TU/lmtt/m/n/10 llvm_like_size\TU/TimesNewRoman(0)/m/n/10 ,
  []
 
 
 
-[17]
+[15]
 Chapter 7.
 
-Underfull \hbox (badness 2409) in paragraph at lines 1109--1111
-[]|\TU/TimesNewRoman(0)/m/n/10.95 coordinates the full command \TU/lmtt/m/n/10.
-95 cd thesis \TU/TimesNewRoman(0)/m/n/10.95 followed by
+Underfull \hbox (badness 10000) in paragraph at lines 1003--1006
+\TU/lmtt/m/n/10.95 all \TU/TimesNewRoman(0)/m/n/10.95 and the short demo comman
+d \TU/lmtt/m/n/10.95 python3
  []
 
 
-Underfull \hbox (badness 2012) in paragraph at lines 1112--1114
+Underfull \hbox (badness 2012) in paragraph at lines 1007--1009
 []|\TU/TimesNewRoman(0)/m/n/10.95 generates the deterministic synthetic modules
 , compiles
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1118--1118
+Underfull \hbox (badness 10000) in paragraph at lines 1013--1013
 []|\TU/lmtt/m/n/10.95 teach.py \TU/TimesNewRoman(0)/m/n/10.95 and
  []
 
 
-Underfull \hbox (badness 1642) in paragraph at lines 1122--1124
+Underfull \hbox (badness 1642) in paragraph at lines 1017--1019
 []|\TU/TimesNewRoman(0)/m/n/10.95 converts the selected teacher actions into th
 e behavior-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1132--1132
+Underfull \hbox (badness 10000) in paragraph at lines 1027--1027
 []|\TU/lmtt/m/n/10.95 graph.py\TU/TimesNewRoman(0)/m/n/10.95 , \TU/lmtt/m/n/10.
 95 paper.py\TU/TimesNewRoman(0)/m/n/10.95 ,
  []
 
 
 
-[18
+[16
 
 ]
 
-[19]
+[17]
 
-[20]
+[18]
 Chapter 8.
 
 
-[21
+[19
 
 ]
 File: ../out/real_signal_run_all/summary_plot.pdf Graphic file (type pdf)
 <use ../out/real_signal_run_all/summary_plot.pdf>
 
 
-[22]
-
-[23]
+[20]
 Chapter 9.
 
 
-[24
+[21
 
 ]
 Chapter 10.
 
 
-[25
+[22
 
 ]
 Appendix A.
@@ -1720,21 +1548,24 @@ File: ../out/figures/student_teacher_match.pdf Graphic file (type pdf)
 <use ../out/figures/student_teacher_match.pdf>
 File: ../out/figures/student_ir_reduction.pdf Graphic file (type pdf)
 <use ../out/figures/student_ir_reduction.pdf>
+
+
+[23
+
+]
 File: ../out/figures/student_inline_decisions.pdf Graphic file (type pdf)
 <use ../out/figures/student_inline_decisions.pdf>
 
 
-[26
-
-]
-Underfull \hbox (badness 2799) in paragraph at lines 1516--1516
+[24]
+Underfull \hbox (badness 2799) in paragraph at lines 1392--1392
 \TU/TimesNewRoman(0)/m/n/12 tiple Baselines with Applications to Compiler Optim
 ization.” In: \TU/TimesNewRoman(0)/m/it/12 arXiv preprint
  []
 
 
 
-[27
+[25
 
 ] (./main.aux (./0-title.aux) (./0-abstract.aux))
  ***********
@@ -1742,18 +1573,18 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 08E9AE8732EEA6FDED5B6DEA724F081C;4277.
+(rerunfilecheck)             Checksum: 029EF9A70C0A985525F9F131B3878045;4287.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37819 strings out of 473832
- 806613 string characters out of 5729481
- 1803762 words of memory out of 5000000
- 60290 multiletter control sequences out of 15000+600000
+ 37831 strings out of 473832
+ 806990 string characters out of 5729481
+ 1803917 words of memory out of 5000000
+ 60302 multiletter control sequences out of 15000+600000
  564513 words of font info for 94 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 82i,16n,93p,693b,5609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 82i,14n,93p,693b,5609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (31 pages, 613668 bytes).
+Output written on main.xdv (29 pages, 532324 bytes).
