@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.10.1)  10 JUN 2026 01:12
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.10.1)  10 JUN 2026 01:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1390,11 +1390,11 @@ Chapter 3.
 \pydata@fh@_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted=\write8
 \openout8 = `_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted'.
 
-runsystem(latexminted config  --timestamp 20260610011239 FAD58DE7366495DB4650CF
+runsystem(latexminted config  --timestamp 20260610012426 FAD58DE7366495DB4650CF
 EFAC2FCD61)...executed safely (allowed).
 
 (./_FAD58DE7366495DB4650CFEFAC2FCD61.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20260610011239 FAD58DE7366495DB4
+runsystem(latexminted cleanconfig  --timestamp 20260610012426 FAD58DE7366495DB4
 650CFEFAC2FCD61)...executed safely (allowed).
 
 
@@ -1431,7 +1431,7 @@ Chapter 5.
 [9
 
 ]
-Underfull \hbox (badness 1168) in paragraph at lines 650--654
+Underfull \hbox (badness 1168) in paragraph at lines 649--653
 \TU/TimesNewRoman(0)/m/n/12 represent the collection of heuristic teachers, and
  let $\OML/cmm/m/it/12 P[]$ \TU/TimesNewRoman(0)/m/n/12 be a module with corres
 ponding
@@ -1588,4 +1588,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  82i,14n,93p,693b,5609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (29 pages, 573076 bytes).
+Output written on main.xdv (29 pages, 573796 bytes).

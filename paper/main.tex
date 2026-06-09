@@ -231,10 +231,10 @@ missing full LLVM inliner integration. \\
 
 The goal of compilation is to obtain a representation of code that can be
 executed on a machine. The intermediate representation, LLVM IR, and its
-corresponding instruction count are analyzed in this thesis because they are
-affected by inlining choices while still being more general than machine code.
-LLVM IR is generated before backend-dependent decisions, so a simplified
-LLVM-based pipeline is:
+corresponding instruction count are analyzed in this paper since they are
+affected by inlining choices while being more general than machine code,
+because LLVM IR is generated before backend-dependent decisions. A simple
+version of an LLVM compilation pipeline is:
 
 \begin{figure}[H]
 \centering
@@ -283,12 +283,11 @@ than source code.
 \section{LLVM and LLVM IR}
 
 LLVM is a project for compiler infrastructure that includes optimization and
-backend tools, as well as libraries. LLVM IR is one part of the project,
+backend tools, as well as libraries. LLVM IR is just one part of the project,
 corresponding to LLVM's implementation of an intermediate representation
 \cite{llvmlangref,llvmpasses}. It has an abstract version of register allocation
-called virtual registers, which get allocated at the backend stage, and it also
-contains operations per variable type, memory-level operations, branches, and
-calls.
+called virtual registers, which get allocated at the backend stage, and also
+operations per variable type, memory-level operations, branches, and calls.
 
 \section{Static and Dynamic Measurements}
 
@@ -603,9 +602,9 @@ The idea of empirical search, as well as learning approaches, preceded MLGO.
 MILEPOST GCC, for instance, constructs vectors of features in order to make the
 optimization process more adaptive \cite{milepostgcc}. This was helpful in the
 methodological sense for the thesis, since the concept of feature vectors was
-reproduced, and it showed that empirical data can be used for training
-policies, even though its focus was general compiler optimization, not inlining
-in particular.
+reproduced, and it demonstrated that empirical data can be used for the training
+of policies, even though its focus was general compiler optimization, not
+inlining in particular.
 
 The issue of having fixed predetermined parameters in the inlining rules was
 tackled by Cavazos and O'Boyle. They showed useful results by using empirically
@@ -615,7 +614,7 @@ scope, since they tried to perfect ways of tuning policies automatically, while
 here the policy is trained on other policies. The technical difference is
 therefore that autotuning tries to find more appropriate parameters for
 heuristics, while behavior cloning attempts to train a function starting from
-vectors of features at call-site level.
+vectors of features at the call-site level.
 
 The focus on code size, specifically LLVM IR, in this thesis has been
 intentional. It is an easy-to-calculate, objective metric. Object size, also
@@ -666,10 +665,11 @@ Here, the learning is done in a supervised way, from the labels of the union of
 the selected teachers, rather than by means of exploration and recompiling.
 
 What teachers label individual call sites is context-dependent and sometimes
-does not generalize. Different teachers may assign different labels to similar
-call sites in different modules, leading to disagreements in the set used for
-training the behavior-cloning students. This is why the actual rewrite impact is
-the real measure of success, not only how well students agree with teachers.
+does not generalize. Two different teachers might assign different labels to
+similar call sites in different modules, leading to disagreements in the set used
+for training the behavior-cloning students. This is why the actual rewrite impact
+is the real measure of success, not only how well the students agree with
+teachers.
 
 \section{Positioning Against Prior Work}
 
@@ -755,13 +755,13 @@ representative inline and no-inline scenarios. Extending the transferability of
 the generated set remains future work.
 
 Files from public sources are filtered using the criteria of successful
-compilation to LLVM IR, the existence of at least one local call site, and the
-ability to pass the teacher-selection step and corresponding IR rewriting
+compilation to LLVM IR, the existence of a minimum of one local call site, and
+the ability to pass the teacher-selection step and the corresponding IR rewriting
 process. These steps happen at the data-collection stage, before training the
-students. The features in the prototype are local-level approximations of the
-publicly available MLGO features: information about the call site, the caller
-and callee, and the program-level call graph, with flags for recursive
-functions, constants, number of calls, and number of instructions.
+students. The features in the prototype represent local-level approximations of
+the publicly available features used by MLGO: information about the call site,
+the caller and callee, and the general program-level call graph, with flags for
+recursive functions, constants, number of calls, and number of instructions.
 
 \begin{table}[H]
 \centering
@@ -1295,22 +1295,22 @@ the reference stayed at 1.10\% and \texttt{deep\_forest} stayed at 0.61\%.
 \begin{itemize}
 \setlength{\itemsep}{2pt}
   \item \textbf{Dataset scale.} One of the most important limitations is the
-  scale of the dataset. In the main experiment, 163 C/C++ files are compiled
-  successfully and 10394 call-site samples are extracted, including examples
-  from 76 public-source files. Even though this is enough for the implemented
-  prototype, stronger generalization would require larger benchmark families
-  such as SPEC, cBench/MiBench, SQLite builds, and wider LLVM test-suite
+  scale of the dataset. In the main experiment, 163 C/C++ files were
+  successfully compiled, and 10394 call-site samples were extracted, including
+  examples from 76 public-source files. Even though this is enough for the
+  implemented prototype, stronger generalization would require larger benchmark
+  families, such as SPEC, cBench/MiBench, SQLite builds, and wider LLVM test-suite
   subsets.
   \item \textbf{Held-out scope.} The held-out split contains 1385 samples from
   26 unseen modules. However, all modules still come from the same general
   source collection and generator regime. A stronger future evaluation would
-  use modules from more clearly different sources in order to test whether the
+  use modules from more clearly different sources, in order to test whether the
   learned students generalize outside the current dataset composition.
-  \item \textbf{Rewrite approximation.} In the main experiment, feature vectors
-  are extracted once from the initial LLVM IR. The chosen call sites are then
+  \item \textbf{Rewrite approximation.} In the main experiment, the feature
+  vectors are extracted once from the initial LLVM IR. The chosen call sites are then
   rewritten by cloning selected callees, marking them with
   \texttt{alwaysinline}, and letting LLVM \texttt{opt} perform the actual
-  inlining and cleanup. This is an offline approximation: the call graph and
+  inlining and cleanup. This is an offline approximation: the call graph and the
   feature vectors are not recomputed after every accepted decision, as they
   would be in a fuller online inlining system closer to LLVM's own inliner.
   \item \textbf{Metric scope.} The main scope of the prototype is minimizing
