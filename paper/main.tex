@@ -123,38 +123,45 @@
 
 \chapter{Introduction}
 
-The problem of choosing when to optimize during compilation remains difficult,
-because compilers try to keep outputs predictable across platforms while also
-minimizing code size. This has led to a preference for predetermined rules
-called heuristics, which estimate when an optimization is useful. The issue with
-normal heuristics is that they are not very adaptable, while choosing when to
-optimize depends on multiple factors that can change together with the call graph
-and with other compiler optimizations. This thesis studies inlining as one case
-where this situational complexity matters: one choice can influence which
-optimizations are possible next, the size of the code, and which other inlining
-choices can follow
+The problem of choosing when to optimize during compilation remains difficult
+in its attempt to keep outputs predictable and program runs deterministic
+across platforms, while also minimizing code size. This has led to a preference
+for predetermined rules called heuristics, which have long been perfected to
+give indications about when optimizations would be useful and would give the
+best results. The issue with normal heuristics is their lack of adaptability,
+since choosing when to optimize is dependent on multiple factors that keep
+changing with other optimizations of the call graph. This is why, in this
+thesis, inlining is looked at through a lens of situational complexity, taking
+into account how one choice impacts which optimizations will be possible next,
+the size of the code, and also which other inlining choices can follow
 \cite{godbolt2019optimizations,theodoridis2022optimal}.
 
-Inlining is one representative example of this compiler problem. By substituting
-a call site with the instructions corresponding to the called function, several
-simplification possibilities can appear: removing call overhead, enabling
-devirtualization, propagating constants, removing dead code, and simplifying the
-callee using information known in the caller. Although in many cases useful,
-inlining can also lead to unnecessary code growth. To avoid this, production
-compilers use thresholds and cost models that try to balance the cases where
-code size increases too much with the cases where inlining reveals useful
-optimization opportunities
+Inlining is one representative example of the above stated compiler problem.
+Through substituting a call site with the instructions corresponding to the
+called function, various possibilities for simplification can arise: saving the
+computational burden of function calls, meaning call overhead, enabling
+devirtualization, propagating constants, removing dead code, and so on.
+Although in many cases useful, inlining can lead to the unnecessary expansion
+of code. To avoid this, various thresholds and cost models are used in
+production, in order to balance the cases when code increases too much in size
+and the cases when inlining choices are good for revealing optimization
+opportunities
 \cite{godbolt2019optimizations,theodoridis2022optimal,mlgo}.
 
-In the proposed method, the starting point is represented by several
-deterministic heuristics called teacher policies. Models referred to as students
-are trained on these teachers, with the purpose of testing whether they can learn
-useful inlining rules from static call-site features. The pipeline keeps track
-of the inline/no-inline choices of all teachers, evaluates them per module,
-chooses the teacher whose rewrites give the smallest IR size, and uses that
-teacher's choices as labels for training. The idea of using feature vectors
-follows MLGO, while this prototype uses offline imitation learning instead of
-MLGO-style online reinforcement learning
+In the proposed method in this thesis, the starting point is represented by
+several deterministic heuristics called teacher policies, on which models
+referred to as students are trained, with the scope of determining whether they
+can learn more general rules than their context-specific teachers or give good
+indicators of when inlining would help. The pipeline keeps track of the
+inline/no-inline choices of all teachers, which are evaluated on every static
+call-site feature vector per module. The teacher that results in the smallest
+size of the rewritten IR is chosen per module, and that corresponding teacher's
+choices in that module become labels for training. Policies called students are
+trained on this best-teacher label dataset and learn to imitate the choices of
+the teachers. The idea of using vectors of features comes from MLGO, the
+difference being that this prototype implements this behavior-mimicking
+technique, called imitation learning, offline instead of using the MLGO
+reinforcement-learning approach
 \cite{milepostgcc,mlgo,llvmmlgo,bcmax}.
 
 The inlining of functions is a relevant case study, since it impacts both
@@ -168,10 +175,10 @@ which results in inline/no-inline choices. In the case of the teacher per
 module that gives the biggest reduction of the LLVM IR size metric, those
 choices become labels for the training of binary classifier students.
 
-For evaluation, LLVM IR is modified using LLVM's \texttt{opt} tool. The number
-of LLVM IR instructions after rewriting becomes the main metric for
-student-policy performance, while native object-file \texttt{.text} size is used
-as a secondary reference metric.
+The \texttt{opt} tool in LLVM is used in order to change the LLVM IR, and the
+number of LLVM IR instructions after rewriting becomes the main metric for
+student-policy performance, while the size of the native object-file
+\texttt{.text} section is used as a secondary measurement.
 
 \section{Research Questions and Contributions}
 
