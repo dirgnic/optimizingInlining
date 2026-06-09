@@ -27,9 +27,9 @@
 \renewbibmacro*{url+urldate}{}
 
 \usepackage{setspace}
-\onehalfspacing
+\setstretch{1.15}
 
-\usepackage[margin=2.5cm]{geometry}
+\usepackage[margin=2.3cm]{geometry}
 \usepackage{graphicx}
 \graphicspath{{./images/}{../out/figures/}}
 \usepackage{float}
@@ -214,10 +214,12 @@ missing full LLVM inliner integration. \\
 
 \section{Compilation Pipeline}
 
-Compilation transforms source code into representations that are easier for a
-machine to execute. This thesis focuses on LLVM IR, since choosing whether to
-inline affects the instruction count and can be inspected before
-backend-dependent machine choices are made. A simplified LLVM-based pipeline is:
+The goal of compilation is to obtain a representation of code that can be
+executed on a machine. The intermediate representation, LLVM IR, and its
+corresponding instruction count are analyzed in this thesis because they are
+affected by inlining choices while still being more general than machine code.
+LLVM IR is generated before backend-dependent decisions, so a simplified
+LLVM-based pipeline is:
 
 \begin{figure}[H]
 \centering
@@ -255,30 +257,32 @@ backend-dependent machine choices are made. A simplified LLVM-based pipeline is:
 \label{fig:llvm-pipeline}
 \end{figure}
 
-Through Clang, C or C++ source files are checked according to the language rules
-and translated into LLVM IR. After IR optimization, the backend chooses target
-instructions, maps virtual registers to real registers, and emits object code
-\cite{cooper2011engineering,muchnick1997advanced}. LLVM IR is therefore useful
-for this prototype: it is lower-level than source code but still abstract
-enough to remain independent of the final object-file format.
+Clang checks the syntax and converts C/C++ files into LLVM IR form. Following
+the optimization pass, the backend makes machine-dependent decisions, such as
+allocating virtual registers in the IR to real registers and writing the
+machine instructions that emit object files
+\cite{cooper2011engineering,muchnick1997advanced}. LLVM IR is helpful for the
+implementation because it is more abstract than machine code but still
+lower-level than source code.
 
 \section{LLVM and LLVM IR}
 
-LLVM is a compiler infrastructure project that includes optimizers, backend
-tools, and libraries. LLVM IR does not represent the entirety of the LLVM
-project, but only the intermediate representation used inside that
-infrastructure \cite{llvmlangref,llvmpasses}. It contains virtual registers,
-typed operations, branches, calls, and memory operations. These virtual
-registers are placeholders later lowered by the backend during instruction
-selection and register allocation.
+LLVM is a project for compiler infrastructure that includes optimization and
+backend tools, as well as libraries. LLVM IR is one part of the project,
+corresponding to LLVM's implementation of an intermediate representation
+\cite{llvmlangref,llvmpasses}. It has an abstract version of register allocation
+called virtual registers, which get allocated at the backend stage, and it also
+contains operations per variable type, memory-level operations, branches, and
+calls.
 
 \section{Static and Dynamic Measurements}
 
-In this thesis, a distinction is made between static representations and
-dynamic executions. A static call graph contains possible calls before one
-concrete run is chosen, while a dynamic call graph keeps only calls that occur
-for one input. Likewise, static code size is measured in an artifact such as a
-native text section, while dynamic instruction count refers to executed
+In the context of this thesis, two distinctions are used: static and dynamic
+call graphs, as well as static and dynamic code size. The static call graph
+contains all possible call choices, regardless of inputs, while the dynamic call
+graph is input-dependent and results from one execution of the code. Static
+code size refers to the dimension of a generated intermediate or final
+compilation representation, while dynamic code size is a measure of executed
 instructions
 \cite{cooper2011engineering,godbolt2019optimizations}.
 
@@ -288,20 +292,18 @@ instructions
 
 \chapter{Function Inlining}
 
-Through inlining as a case study, various compiler optimization issues can be
-highlighted. Although it seems simple at first glance, inlining is important
-because one binary call-site decision can propagate through later compiler
-passes. It removes a call boundary by
-materializing the callee's operations inside the caller. The original call
-instruction may disappear, the computational cost of dispatching through that
-call can be avoided, and later passes can optimize values and control flow
-across the merged code region
+Although inlining looks simple at a superficial level, when the problem is
+analyzed in depth it can be seen that one inline choice can integrate the
+callee into the caller's context and help further compact and optimize code by
+using known values or context-specific simplifications. The original call
+instruction may disappear, call overhead can be avoided, and later passes can
+optimize values and control flow across the merged code region
 \cite{cooper2011engineering,muchnick1997advanced,godbolt2019optimizations}.
 
 \section{Cases Where Inlining Helps}
 
-The examples in this chapter are simplified examples written for this thesis.
-Small arithmetic helper functions represent typical good inlining candidates:
+The examples given below were written for the purpose of this thesis. Small
+auxiliary functions can be simplified easily when inlined:
 
 \begin{figure}[H]
 \centering
@@ -323,15 +325,15 @@ int sum_ab(int a, int b) {
 \label{fig:ab-sum-ab-example}
 \end{figure}
 
-Inlining \texttt{ab} removes a function call and replaces it with a small
-multiplication expression. If this call belongs to a hot part of the program,
-meaning a part that is executed frequently, saving the call overhead can be
-beneficial.
+Through inlining, the call to \texttt{ab} is substituted with the multiplication
+returned by the function. This can improve the computation time needed for
+changing the call context, called call overhead, if \texttt{sum\_ab} is executed
+frequently, meaning it is in a hot path.
 
-Inlining is also useful in cases where constants can propagate. In the example
-below, after inlining, the compiler can understand that \texttt{c} is always
-zero in this call context, and this can lead to the simplification of the other
-branches:
+When the function call contains constants, inlining can eliminate unused cases,
+sometimes by propagating constants. In the example below, inlining shows that
+\texttt{c} is 0 and minimizes code size since the \texttt{c == 1} branch can be
+eliminated:
 
 \begin{figure}[H]
 \centering
@@ -367,8 +369,8 @@ string car_color(int i) {
 
 \section{Cases Where Inlining Hurts}
 
-Recursive functions can lead to uncontrolled code expansion, and in such cases
-inlining should usually be avoided:
+Most recursive cases lead to large increases in code size, which is why most
+optimization algorithms penalize inlining here:
 
 \begin{figure}[H]
 \centering
@@ -393,8 +395,8 @@ int sum(int x) {
 \label{fig:recursive-inline-risk}
 \end{figure}
 
-In contrast with hot parts of a program, choosing to inline a rarely called
-large function can be damaging:
+When a sequence in a program rarely gets executed, inlining can cause
+unnecessary growth of code:
 
 \begin{figure}[H]
 \centering
@@ -418,7 +420,8 @@ static code size and instruction-cache pressure with little hot-path benefit.}
 \label{fig:cold-path-example}
 \end{figure}
 
-Another bad case appears when a large callee is copied at multiple call sites:
+When a bigger function gets called many times, its inlining can also expand
+static code significantly:
 
 \begin{figure}[H]
 \centering
@@ -452,29 +455,32 @@ void info_candidates() {
 
 \chapter{Problem Formulation}
 
-Let \(P\) be a program or module, and let
+Consider \(P\) a program or module, and let
 \[
   C(P) = \{c_1,c_2,\ldots,c_n\}
 \]
-be the set of all call sites observed during the inlining pass. Call sites are the
-locations of function calls, where a caller function invokes another function,
-called the callee. For each call site \(c_i\), the compiler can extract
-information from the call site and from the call graph in order to form a
-feature vector:
+be the collection of call sites gathered in the order in which the program is
+parsed at inlining time. A call site represents a place where a function is
+called in a program. For each call site \(c_i\), a feature vector \(x_i\) is
+extracted during compilation, using data about the caller, the function which
+initiates the call, the callee, the function being called, and information from
+the call graph:
 \[
   x_i = \phi(c_i),
 \]
-where \(\phi\) is the feature-extraction function. In this thesis, the static
-features include caller and callee shape, instruction and call counts,
-constant-argument information, recursion information, and limited call-graph
-context.
+where \(\phi\) is the function that gathers features. In the context of this
+thesis, the features are static and contain information about caller and callee
+structure, length, functions that call them, how many constant arguments they
+have, whether they are recursive, and limited indices regarding the call graph.
 
 The possible action choice is binary:
 \[
   A = \{0,1\}, \qquad 0 = \text{do not inline}, \qquad 1 = \text{inline}.
 \]
 
-A probabilistic policy assigns a score or probability to each action:
+A policy is used to give insight into how good an action might be. For a
+feature vector \(x\), the probabilistic form gives a probability of action
+\(a\):
 \[
   \pi_\theta(a \mid x)
 \]
@@ -485,34 +491,33 @@ by the prototype is then
   d_\theta(x) = \arg\max_{a \in A}\pi_\theta(a \mid x).
 \]
 
-Because of inlining, the problem is chronological and interdependent. If a
-policy \(\pi\) is applied to a program \(P\), it creates the trajectory:
+Inlining gives the problem a chronological and interdependent nature. By
+applying policy \(\pi\) to program \(P\), the following trajectory is output:
 \[
   \tau_{\pi}(P)
   =
   ((x_1,a_1),(x_2,a_2),\ldots,(x_T,a_T)),
 \]
-where \(T\) is the number of inlining decisions made for that program. After
-one call site is inlined, the caller may grow, the callee may become dead, and
-later simplifications may appear. Local decisions are therefore not fully
-independent \cite{mlgo,bcmax}.
+where \(T\) represents how many inline/no-inline choices should be made for
+\(P\). As previously discussed, through the possibility of affecting later
+optimizations, the decisions are dependent on each other \cite{mlgo,bcmax}.
 
-The implementation uses a static offline approximation of this formulation: it
-collects call sites from the initial LLVM IR, predicts labels, and applies
-selected rewrites in one pass. It does not attempt online learning, where the
-model would keep learning from new feedback during compilation. It also does
-not update the call graph and recompute features after each individual rewrite,
-as LLVM's online inliner could. Instead, the experiment trains from a fixed
-dataset and applies a fixed batch of decisions to each module.
+In the presented prototype, the vector of features is static and collected at
+the initial compilation stage from LLVM IR. This is done in an offline fashion,
+because the information is not updated after every inlining choice or change of
+the call graph, as an online inliner would do. The labels are predicted on this
+raw data and then the call sites are changed in LLVM IR, without runtime
+information.
 
-The objective is to minimize generated code size. In the prototype, the main
-way of measuring how good a policy is uses the final rewritten LLVM IR
-instruction count:
+The main scope is minimizing the size of the IR. In order to measure how well
+policies perform in the implementation, the count of IR instructions after
+rewriting is used:
 \[
   \mathrm{Size}_{IR}(P,\pi), \qquad
   R(P,\pi) = -\mathrm{Size}_{IR}(P,\pi).
 \]
-A lower value is better; equivalently, the reward is written as negative size.
+The minus sign in the reward function is used because smaller values are
+desired.
 
 Let
 \[
@@ -520,24 +525,24 @@ Let
   h^\star(P_j)=
   \arg\min_{h_i \in \mathcal{H}} \mathrm{Size}_{IR}(P_j,h_i)
 \]
-be the set of teacher heuristics and the selected teacher for
-module \(P_j\). Each heuristic \(h_i\) maps call-site-level information to
-inline/no-inline choices.
+be the set of policies that act as teachers, and the selected teacher for
+module \(P_j\), which makes its IR size smallest. Every teacher heuristic
+outputs an inline/no-inline choice starting from information per call site.
 
-The trajectory corresponding to the selected teacher is then added to the
-supervised learning data:
+The path taken by the best teacher is then included in the supervised learning
+data for the students:
 \[
   \mathcal{D}
   =
   \bigcup_j
   \{(x_{j,t}, a^{\star}_{j,t})\}_{t=1}^{T_j},
 \]
-where \(a^{\star}_{j,t}\) is the action taken by the selected teacher
-\(h^\star(P_j)\) for feature vector \(x_{j,t}\).
+where \(a^{\star}_{j,t}\) is the action that the chosen teacher policy
+\(h^\star(P_j)\) decided on for feature vector \(x_{j,t}\).
 
-A student model \(\pi_\theta\) is trained through behavior cloning. In the
-ideal case, the student minimizes disagreement between its own choices and the
-actions chosen by the selected teacher:
+A new policy called a student is trained through behavior cloning. In the ideal
+case, the student aims to predict labels as closely as possible to its teachers,
+therefore minimizing a disagreement function:
 \[
   \min_{\theta}\sum_{(x,a)\in \mathcal{D}}
   \mathbf{1}[\pi_\theta(x) \neq a], \qquad
@@ -545,17 +550,18 @@ actions chosen by the selected teacher:
   =
   -\sum_{(x,a)\in\mathcal{D}}\log \pi_\theta(a \mid x).
 \]
-In practice, the implementation trains standard classifiers; for probabilistic
-models, the second expression is the binary cross-entropy.
+The practical implementation uses a more direct approach: standard classifiers.
+For probabilistic classifiers, this can also be written through binary
+cross-entropy in order to obtain a probability.
 
-After training, the student can be treated as a new heuristic. At each call
-site, it receives the current feature vector and predicts whether to inline:
+The newly trained student can be used as a new policy and added to the teacher
+set. It gives inline/no-inline predictions per feature vector corresponding to
+a call site:
 \[
   \hat{a} = \arg\max_{a\in\{0,1\}} \pi_\theta(a \mid x).
 \]
-The predicted decisions are then applied in the LLVM IR rewrite stage, which is
-necessary in order to obtain the final rewritten instruction count used as the
-metric.
+What the trained model predicts leads to rewrites in LLVM IR, and the number of
+instructions after rewriting is used as the performance metric.
 
 % =========================================================
 % CHAPTER 5
@@ -565,70 +571,71 @@ metric.
 
 \section{Classical and Empirical Views of Inlining}
 
-Inlining has been studied long before modern learned compiler policies. A
-classical inliner estimates the benefit of removing a call and enabling later
-optimizations, then compares it with the risk of code growth. Theodoridis,
-Grosser, and Su show that optimal inlining remains nontrivial because decisions
-interact with call chains, code size, and later passes
-\cite{theodoridis2022optimal}. Godbolt's compiler-optimization examples give
-the same practical motivation: inlining can expose constants, unreachable
-branches, and other caller-specific information hidden behind the call boundary
-\cite{godbolt2019optimizations,godbolt2025inlining}.
+Before ML models, this difficult problem was tackled using classical inliners.
+These attempted to find a compromise between code expansion and the chance for
+future code simplifications when choosing whether or not to remove call sites.
+Theodoridis, Grosser, and Su discuss how complex optimal inlining becomes when
+weighing the impact on consecutive chains of function calls, code size, and
+following optimization passes \cite{theodoridis2022optimal}. Godbolt gives a
+similar interpretation for the use of inlining: it can merge code by using
+known values, eliminate cases that are not needed, and simplify the callee with
+information known in the caller \cite{godbolt2019optimizations,godbolt2025inlining}.
 
 \section{Autotuning and Pre-MLGO Compiler Learning}
 
-Before MLGO, several works already treated compiler optimization as empirical
-search or learning. MILEPOST GCC uses program features to select optimization
-choices instead of relying only on one fixed optimization level
-\cite{milepostgcc}. Its relevance here is methodological: it shows that
-compiler heuristics can be learned from empirical data, although it addresses
-broader optimization selection rather than call-site-level inlining.
+The idea of empirical search, as well as learning approaches, preceded MLGO.
+MILEPOST GCC, for instance, constructs vectors of features in order to make the
+optimization process more adaptive \cite{milepostgcc}. This was helpful in the
+methodological sense for the thesis, since the concept of feature vectors was
+reproduced, and it showed that empirical data can be used for training
+policies, even though its focus was general compiler optimization, not inlining
+in particular.
 
-Inlining-specific autotuning also predates the current MLGO line of work.
-Cavazos and O'Boyle study automatic tuning of inlining heuristics, showing that
-parameters of an inliner can be adjusted empirically instead of being chosen
-entirely by hand \cite{cavazos2005automatic}. This is close to the problem in
-this thesis because it focuses on inlining, but the emphasis is different. The
-goal there is to tune a heuristic; the goal here is to learn a policy from
-selected teacher trajectories. In other words, autotuning searches for better
-heuristic parameters, while behavior cloning tries to learn a decision rule
-over call-site features.
+The issue of having fixed predetermined parameters in the inlining rules was
+tackled by Cavazos and O'Boyle. They showed useful results by using empirically
+adjustable parameters in place of static ones \cite{cavazos2005automatic}. The
+problem they approached is similar to the one proposed here, but with another
+scope, since they tried to perfect ways of tuning policies automatically, while
+here the policy is trained on other policies. The technical difference is
+therefore that autotuning tries to find more appropriate parameters for
+heuristics, while behavior cloning attempts to train a function starting from
+vectors of features at call-site level.
 
-More recently, MLGOPerf extends ML-guided inlining toward performance rather
-than only code size \cite{mlgoperf}. Runtime can be more directly useful for
-deployed software, but it introduces measurement noise and dependence on
-hardware and inputs. This thesis therefore uses LLVM IR instruction count as
-its primary low-compute metric and reports native \texttt{.text} size as a
-secondary metric.
+The focus on code size, specifically LLVM IR, is intentional. It is an
+easy-to-calculate and objective metric. Object size, also easy to calculate, is
+listed secondarily. In order to assess real-world performance, other metrics
+such as runtime have been attempted in the literature, despite their difficulty
+to measure objectively and their dependence on inputs and target platforms. In
+recent work, MLGOPerf uses ML techniques modified toward minimizing both code
+size and performance metrics \cite{mlgoperf}.
 
 \section{MLGO}
 
-MLGO represents a starting point and a primary example of how learned
-decision-making policies can be integrated into LLVM optimization heuristics
-\cite{mlgo,llvmmlgo}. For inlining, the state is represented by current
-call-graph and call-site features, the action is inline or no-inline, and the
-reward is a final compiled-program improvement, often native code-size
-reduction for inlining-for-size. Because the full call graph is expensive to
-use directly, the compiler exposes a feature vector about the caller, callee,
-call site, and global graph. The original MLGO inlining setup uses
-policy-gradient training with a delayed reward, which is powerful but expensive
-because each environment interaction requires compilation
-\cite{mlgo}.
+MLGO was the initial inspiration for this thesis, because of the idea of using
+trained models and their predictions for modifying LLVM IR with the purpose of
+minimizing size \cite{mlgo,llvmmlgo}. The reinforcement-learning model in MLGO
+uses states composed of call-graph indicators and call-site data, actions which
+can be either inlining or not, and a reward showing how well the final compiled
+program improved, usually through native code-size reduction. Using feature
+vectors avoids the computational burden of capturing all characteristics of the
+call graph. MLGO applies a policy-gradient technique, which is expensive since
+each change needs to be recompiled and the reward can be calculated only at the
+end \cite{mlgo}.
 
 \section{Offline Imitation Learning and BC-Max}
 
-Marinov, Agarwal, and Trofin propose a cheaper alternative to online
-reinforcement learning through offline imitation learning from multiple
-baselines \cite{bcmax}. In the inlining setting, let
+Marinov, Agarwal, and Trofin show that computationally expensive online
+reinforcement learning is not the only well-performing approach for the problem.
+They propose using an offline model trained on predefined teachers through
+imitation learning \cite{bcmax}. For the scope of inlining, let
 \[
   \mathcal{H} = \{h_0, h_1, \ldots, h_n\}
 \]
-be the set of teacher heuristics, where \(P_i\) is one module and
-\(\mathrm{Size}_{IR}(P_i, h)\) is the rewritten IR instruction count
-obtained when teacher \(h\) is applied to \(P_i\).
+represent the collection of heuristic teachers, and let \(P_i\) be a module
+with corresponding rewritten size \(\mathrm{Size}_{IR}(P_i, h)\). This value
+means the size of the rewritten IR with teacher \(h\).
 
-For each module, the best teacher is the one with the smallest rewritten IR
-size:
+The selected teacher per module has the smallest size of this rewritten IR:
 \[
   h^\star_i = \arg\min_{h \in \mathcal{H}} \mathrm{Size}_{IR}(P_i, h).
 \]
@@ -636,19 +643,15 @@ The selected-teacher trajectory is then:
 \[
   \tau_i = \{(s_1, h^\star_i(s_1)), \ldots, (s_m, h^\star_i(s_m))\}.
 \]
-Here, \(s_t\) is the feature vector for the \(t\)-th call site. The union of
-these trajectories becomes a supervised dataset, and a student policy
-\(h_{n+1}\) learns selected-teacher labels rather than exploring by repeated
-compilation.
+Here, \(s_t\) corresponds to the feature vector for call site number \(t\).
+Learning is done in a supervised way, from the labels of the union of selected
+teachers, rather than by means of exploration and recompiling.
 
-Teacher labels are not universal labels for isolated call sites. Rather, they
-represent what the selected teacher thinks is best in that setting. Since
-decisions are not only call-site-dependent, but also context-dependent, similar
-local call sites may receive different labels in different modules if the best
-module-level teacher is different. This creates possible label conflicts in the
-behavior-cloning dataset. It is also one reason why the final result must be
-measured after applying the predicted rewrites, not only by checking label
-agreement.
+What teachers label individual call sites is context-dependent and sometimes
+does not generalize. Different teachers may assign different labels to similar
+call sites in different modules, leading to disagreements in the set used for
+training the behavior-cloning students. This is why the actual rewrite impact is
+the real measure of success, not only how well students agree with teachers.
 
 \section{Positioning Against Prior Work}
 
@@ -710,34 +713,35 @@ This thesis
 
 \chapter{Methodology}
 
-The experimental pipeline follows Figure~\ref{fig:llvm-pipeline} until LLVM IR
-is produced, and the main goal is to output LLVM IR that is as small as
-possible. From that point, the prototype extracts call-site features, evaluates
-teachers, selects the best teacher per module, trains student classifiers, and
-applies predicted decisions through an \texttt{opt}-based IR rewrite. Source
-collection, IR generation, teacher choice, student training, rewriting, and
-measurement remain visible in the repository.
+The implementation follows Figure~\ref{fig:llvm-pipeline} until the output LLVM
+IR step, which is aimed to be minimized. For every individual call site, a
+vector of features is produced, the set of teachers is run to select the best
+one per module, students are trained on those labels, and the labels predicted
+by the student classifiers are reapplied to the IR using LLVM \texttt{opt}.
+How sources are collected, how IR is generated, how teachers and students are
+implemented, how IR is rewritten, and how IR size is determined remain visible
+in the repository.
 
-The C/C++ sources include a small DCMTK snapshot\footnote{DCMTK source
-repository: \url{https://github.com/DCMTK/dcmtk}.}, 70 deterministic generated
-modules, and 76 public-source files selected after compilation and
-inlining-relevance filtering. The generator samples a \(4^6=4096\)
-configuration space covering callee profiles, call mixes, argument patterns,
-helper-body shapes, driver shapes, and explicit size profiles. This creates
-tiny helpers, branch-heavy helpers, medium arithmetic helpers, large shared
-callees, recursive calls, variable operands, and constant operands. The 70
-generated modules contain 1120 driver call sites, giving the teachers both
-inline and no-inline cases while broader benchmark transfer remains future
-work.
+The dataset contains C/C++ files from various sources, including a small DCMTK
+snapshot\footnote{DCMTK source repository:
+\url{https://github.com/DCMTK/dcmtk}.}, 76 supplements from public sources
+selected with inlining-relevance criteria, and synthetic sources generated
+deterministically from a \(4^6=4096\) configuration space. For the generated
+sources, the format, content, and size of callees and callers can vary, as well
+as the order of calls and the arguments. This creates different function sizes,
+branches, mathematical functions, recursion, constants, and variables. The 70
+generated modules contain 1120 call sites, so teachers are run on both
+representative inline and no-inline scenarios. Extending transferability beyond
+this generated set remains future work.
 
-The public-source supplement is kept only when a file compiles to LLVM IR,
-exposes at least one local call site, and produces a measurable
-teacher-selection artifact through the rewrite pipeline. These filters are
-applied before student training and are part of dataset construction. The
-implemented features are a smaller local approximation of the public MLGO
-inlining schema: caller, callee, call-site, and module graph information, with
-instruction counts, call counts, constant arguments, and recursion indicators
-added for interpretability.
+Files from public sources are filtered using the criteria of successful
+compilation to LLVM IR, the existence of at least one local call site, and the
+ability to pass the teacher-selection step and corresponding IR rewriting
+process. These steps happen at the data-collection stage, before training the
+students. The features in the prototype are local-level approximations of the
+publicly available MLGO features: information about the call site, the caller
+and callee, and the program-level call graph, with flags for recursive
+functions, constants, number of calls, and number of instructions.
 
 \begin{table}[H]
 \centering
@@ -1266,37 +1270,52 @@ the reference stayed at 1.10\% and \texttt{deep\_forest} stayed at 0.61\%.
 \chapter{Limitations}
 \label{chap:limitations}
 
+\begingroup
+\small
 \begin{itemize}
 \setlength{\itemsep}{2pt}
   \item \textbf{Dataset scale.} One of the most important limitations is the
-  scale of the
-  dataset. The run uses 163 compiled C/C++ files and 10394 call-site samples,
-  including 76 public-source files. Broader transfer would still require larger
-  benchmark families such as SPEC, cBench/MiBench, SQLite builds, and wider
-  LLVM test-suite subsets.
-  \item \textbf{Held-out scope.} The hold-out split has 1385 samples from 26
-  unseen modules, but all modules still come from the same source snapshot and
-  generator regime. A stronger future test would use modules from more clearly
-  different sources.
-  \item \textbf{Rewrite approximation.} Features are extracted only once in the
-  main run, selected
-  callees are cloned and marked \texttt{alwaysinline}, and LLVM \texttt{opt}
-  performs the actual inlining. A fuller system would recompute features after
-  each accepted rewrite, closer to LLVM's online inliner.
-  \item \textbf{Metric scope.} Rewritten LLVM IR instruction count is the
-  primary reward. Native \texttt{.text} and object-file size remain secondary;
-  linked executable size and runtime are outside the current evaluation.
-  \item \textbf{Teacher and MLGO scope.} BC-Max can only select among available
-  candidate policies. The teachers are inspectable proxies rather than
-  production inliner policies, and full MLGO reproduction would require deeper
-  LLVM integration and a much larger corpus.
-  \item \textbf{Iterative scope.} The added three-round BC-Max-style check feeds
-  back the best student as a new measured policy, but it does not include the
-  uncertainty-based trajectory exploration used in larger BC-Max systems.
-  \item \textbf{Generated-data filtering.} A future generator could add a
-  discriminator that rejects near-duplicate modules and keeps rarer inlining
-  patterns before training.
+  scale of the dataset. In the main experiment, 163 C/C++ files are compiled
+  successfully and 10394 call-site samples are extracted, including examples
+  from 76 public-source files. Even though this is enough for the implemented
+  prototype, stronger generalization would require larger benchmark families
+  such as SPEC, cBench/MiBench, SQLite builds, and wider LLVM test-suite
+  subsets.
+  \item \textbf{Held-out scope.} The held-out split contains 1385 samples from
+  26 unseen modules. However, all modules still come from the same general
+  source collection and generator regime. A stronger future evaluation would
+  use modules from more clearly different sources in order to test whether the
+  learned students generalize outside the current dataset composition.
+  \item \textbf{Rewrite approximation.} In the main experiment, feature vectors
+  are extracted once from the initial LLVM IR. The chosen call sites are then
+  rewritten by cloning selected callees, marking them with
+  \texttt{alwaysinline}, and letting LLVM \texttt{opt} perform the actual
+  inlining and cleanup. This is an offline approximation: the call graph and
+  feature vectors are not recomputed after every accepted decision, as they
+  would be in a fuller online inlining system closer to LLVM's own inliner.
+  \item \textbf{Metric scope.} The main scope of the prototype is minimizing
+  rewritten LLVM IR instruction count. Native \texttt{.text} size and
+  object-file size are used as secondary measurements, but final linked
+  executable size and runtime behavior are outside the current evaluation.
+  Therefore, the results should be interpreted as IR-level and artifact-level
+  evidence, not as a complete performance evaluation.
+  \item \textbf{Teacher and MLGO scope.} BC-Max-style selection can only choose
+  among the available candidate policies. In this thesis, the teachers are
+  deterministic and inspectable proxy heuristics, not production inliner
+  policies. A full reproduction of MLGO would require deeper integration into
+  LLVM, stronger learned or production-level teachers, and a much larger corpus.
+  \item \textbf{Iterative scope.} A three-round BC-Max-style check was also
+  attempted, where the best learned student was fed back into the set of
+  measured candidate policies. This did not lead to larger improvements in the
+  reported run. Moreover, this check does not include the uncertainty-based
+  trajectory exploration used in larger BC-Max-style systems.
+  \item \textbf{Generated-data filtering.} The generated modules are useful
+  because they add diverse and controlled inlining cases, but they are still
+  synthetic. A future generator could add a discriminator that rejects
+  near-duplicate modules and keeps rarer or more informative inlining patterns
+  before training.
 \end{itemize}
+\endgroup
 
 % =========================================================
 % CHAPTER 10
@@ -1304,34 +1323,45 @@ the reference stayed at 1.10\% and \texttt{deep\_forest} stayed at 0.61\%.
 
 \chapter{Conclusions}
 
+\begingroup
+\small
 The purpose of this thesis was to study how compiler inlining can be optimized
 using offline methods for learning policies, and to implement a reproducible
-end-to-end pipeline that works with LLVM IR. The reported run compiles 163 C/C++
-sources, evaluates 150 modules with local call sites, runs 16 teacher
-heuristics, trains 7 students, and applies learned decisions back to LLVM IR
-through call-site-level rewrites.
+end-to-end pipeline that works with LLVM IR. In the reported run, 163 C/C++
+sources are compiled successfully, 150 LLVM modules with local call sites are
+evaluated, 16 teacher heuristics are run, 7 student models are trained, and the
+predicted inline/no-inline decisions are applied back to LLVM IR through
+call-site-level rewrites.
 
-The main held-out result is measured on a source-level mix of DCMTK, generated
-modules, and 76 public C/C++ source files. On the 26 held-out modules, the
-selected-teacher reference reduces average rewritten IR instruction count from
-1569.23 to 1552.04, a 1.10\% reduction relative to the never-inline
-teacher. When it comes to students, the best held-out model by IR size is
-\texttt{deep\_forest}, which reaches 1559.62 instructions on average, a 0.61\%
-reduction. On the full artifact set, \texttt{conservative\_forest} reaches
-1961.94 instructions and reduces rewritten IR by 1.18\%.
+The main held-out result is measured on a source-level mix composed of DCMTK
+files, generated modules, and 76 public C/C++ source files. On the 26 held-out
+modules, the selected-teacher reference reduces the average rewritten LLVM IR
+instruction count from 1569.23 to 1552.04, which corresponds to a 1.10\%
+reduction relative to the never-inline teacher. For the student models, the
+best held-out result by IR size is obtained by \texttt{deep\_forest}, which
+reaches 1559.62 average IR instructions, corresponding to a 0.61\% reduction.
+On the full artifact set, \texttt{conservative\_forest} reaches 1961.94 average
+instructions and reduces rewritten IR by 1.18\%.
 
-As shown before the conclusion, LLVM \texttt{-Oz} is much stronger on the
-standalone C/C++ files: relative to \texttt{no\_inline\_Oz}, it reduces native
-\texttt{.text} size by 14.91\% and object-file size by 28.76\%. The learned
-policies therefore demonstrate the workflow and formulation, not a
-production-ready replacement for LLVM's full size pipeline.
+The comparison with LLVM \texttt{-Oz} shows that the prototype should not be
+interpreted as a production-ready replacement for LLVM's full optimization
+pipeline. On the standalone C/C++ files, LLVM \texttt{-Oz} reduces native
+\texttt{.text} size by 14.91\% and object-file size by 28.76\% relative to
+\texttt{no\_inline\_Oz}. The learned policies therefore demonstrate the
+workflow and problem formulation, rather than outperforming LLVM's production
+size pipeline.
 
-The major contribution of this thesis is methodological: it connects source
-collection, LLVM IR generation, feature extraction, teacher evaluation,
-behavior-cloning dataset construction, student training, rewrite application,
-and artifact-level measurement in one reproducible workflow. Stronger results
-would require integration into LLVM's actual inliner, larger real benchmark
-suites, stronger teacher policies, and final linked-binary measurements.
+The major contribution of the thesis is methodological. The implementation
+connects source collection, LLVM IR generation, feature extraction, teacher
+evaluation, behavior-cloning dataset construction, student training, rewrite
+application, and artifact-level measurement in one reproducible workflow. The
+results show that call-site-level inlining can be framed as an offline
+policy-learning problem, where students imitate the best available teacher
+trajectories and their predictions are then tested through actual LLVM IR
+rewrites. Stronger future results would require integration with LLVM's real
+inliner, larger real benchmark suites, stronger teacher policies, and
+measurements on final linked binaries.
+\endgroup
 
 \appendix
 

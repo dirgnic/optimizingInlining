@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.10.1)  10 JUN 2026 00:59
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.10.1)  10 JUN 2026 01:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1261,15 +1261,15 @@ Package biblatex Info: Reference segment=0 on input line 90.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
-* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* h-part:(L,W,R)=(65.44142pt, 466.62503pt, 65.44142pt)
+* v-part:(T,H,B)=(65.44142pt, 714.164pt, 65.44142pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=455.24411pt
-* \textheight=702.78308pt
-* \oddsidemargin=-1.1381pt
-* \evensidemargin=-1.1381pt
-* \topmargin=-38.1381pt
+* \textwidth=466.62503pt
+* \textheight=714.164pt
+* \oddsidemargin=-6.82857pt
+* \evensidemargin=-6.82857pt
+* \topmargin=-43.82857pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
@@ -1390,11 +1390,11 @@ Chapter 3.
 \pydata@fh@_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted=\write8
 \openout8 = `_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted'.
 
-runsystem(latexminted config  --timestamp 20260610005909 FAD58DE7366495DB4650CF
+runsystem(latexminted config  --timestamp 20260610010858 FAD58DE7366495DB4650CF
 EFAC2FCD61)...executed safely (allowed).
 
 (./_FAD58DE7366495DB4650CFEFAC2FCD61.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20260610005909 FAD58DE7366495DB4
+runsystem(latexminted cleanconfig  --timestamp 20260610010858 FAD58DE7366495DB4
 650CFEFAC2FCD61)...executed safely (allowed).
 
 
@@ -1441,37 +1441,43 @@ Chapter 6.
 [12
 
 ]
-Underfull \hbox (badness 6691) in paragraph at lines 799--800
+Underfull \hbox (badness 10000) in paragraph at lines 803--804
 []|\TU/TimesNewRoman(0)/m/n/10.95 DCMTK, generated,
  []
 
 
-Underfull \hbox (badness 1325) in paragraph at lines 815--816
+Underfull \hbox (badness 3407) in paragraph at lines 819--820
 []|\TU/TimesNewRoman(0)/m/n/10.95 rewritten IR instruc-
  []
 
 
 
 [13]
-Underfull \hbox (badness 7740) in paragraph at lines 863--865
+Underfull \hbox (badness 10000) in paragraph at lines 867--869
 []|\TU/TimesNewRoman(0)/m/n/10 controlled inlining and no-
  []
 
 
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 915--915
+Underfull \hbox (badness 10000) in paragraph at lines 919--919
 []|\TU/lmtt/m/n/10 cost_budget\TU/TimesNewRoman(0)/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 921--922
+Underfull \hbox (badness 10000) in paragraph at lines 925--926
 []|\TU/lmtt/m/n/10 balanced_score\TU/TimesNewRoman(0)/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 921--922
+Underfull \hbox (badness 10000) in paragraph at lines 925--926
 \TU/lmtt/m/n/10 llvm_like_size\TU/TimesNewRoman(0)/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 1024) in paragraph at lines 938--940
+[]|\TU/TimesNewRoman(0)/m/n/10 Inline if immediate simplification plus future c
+all-graph value exceeds
  []
 
 
@@ -1479,30 +1485,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 921--922
 [15]
 Chapter 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1006
+Underfull \hbox (badness 10000) in paragraph at lines 1007--1010
 \TU/lmtt/m/n/10.95 all \TU/TimesNewRoman(0)/m/n/10.95 and the short demo comman
 d \TU/lmtt/m/n/10.95 python3
  []
 
 
-Underfull \hbox (badness 2012) in paragraph at lines 1007--1009
+Underfull \hbox (badness 4819) in paragraph at lines 1011--1013
 []|\TU/TimesNewRoman(0)/m/n/10.95 generates the deterministic synthetic modules
 , compiles
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1013--1013
+Underfull \hbox (badness 10000) in paragraph at lines 1017--1017
 []|\TU/lmtt/m/n/10.95 teach.py \TU/TimesNewRoman(0)/m/n/10.95 and
  []
 
 
-Underfull \hbox (badness 1642) in paragraph at lines 1017--1019
-[]|\TU/TimesNewRoman(0)/m/n/10.95 converts the selected teacher actions into th
-e behavior-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1027--1027
+Underfull \hbox (badness 10000) in paragraph at lines 1031--1031
 []|\TU/lmtt/m/n/10.95 graph.py\TU/TimesNewRoman(0)/m/n/10.95 , \TU/lmtt/m/n/10.
 95 paper.py\TU/TimesNewRoman(0)/m/n/10.95 ,
  []
@@ -1558,12 +1558,6 @@ File: ../out/figures/student_inline_decisions.pdf Graphic file (type pdf)
 
 
 [24]
-Underfull \hbox (badness 2799) in paragraph at lines 1392--1392
-\TU/TimesNewRoman(0)/m/n/12 tiple Baselines with Applications to Compiler Optim
-ization.” In: \TU/TimesNewRoman(0)/m/it/12 arXiv preprint
- []
-
-
 
 [25
 
@@ -1581,10 +1575,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  37831 strings out of 473832
  806990 string characters out of 5729481
- 1803917 words of memory out of 5000000
+ 1804914 words of memory out of 5000000
  60302 multiletter control sequences out of 15000+600000
  564513 words of font info for 94 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  82i,14n,93p,693b,5609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (29 pages, 532324 bytes).
+Output written on main.xdv (29 pages, 555848 bytes).

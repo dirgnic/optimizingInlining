@@ -35,39 +35,42 @@ of relying only on fixed classical heuristics.
 
 \begin{abstractpage}
 \begin{abstract}{romanian}
-Optimizarea compilatoarelor rămâne o ramură de cercetare importantă în
-informatică, deoarece tehnologia evoluează într-o direcție în care aplicațiile
-trebuie să fie compacte, rapide și eficiente pe platforme hardware diferite,
-ținând în același timp pasul cu cerințele de performanță ale industriei. Deși
-decizia de inlining la compilare reprezintă o optimizare fundamentală, alegerea
-call site-urilor care trebuie înlocuite prin inlining rămâne complicată,
-deoarece o decizie locală poate schimba graful de apeluri viitor, precum și
-posibilitățile de optimizare pe care compilatorul le mai poate folosi ulterior.
-Aceasta poate duce la creșterea sau scăderea dimensiunii reprezentării
-intermediare generate și a dimensiunii binarului final.
+În optimizarea compilatoarelor, problema de inlining este de mult studiată
+pentru a păstra o balanță între dimensiunea aplicațiilor și performanța
+acestora. Problema alegerii contextului potrivit pentru inlining rămâne
+complicată, deoarece funcțiile sunt interconectate prin intermediul grafului de
+apeluri, iar o decizie poate influența structura programului și viitoarele
+posibilități de optimizare. Toate aceste decizii pot influența dimensiunea
+reprezentării intermediare, precum și a binarului final, la finalul etapei de
+compilare.
 
-În această lucrare, problema inlining-ului este formulată într-o manieră de
-învățare offline. Pentru implementare, fișiere C și C++ sunt colectate dintr-un
-snapshot DCMTK, din surse generate sintetic și dintr-un supliment variat de
-surse publice selectate după compilare și filtrare după relevanța pentru
-inlining. Fișierele trec prin frontend-ul Clang, cu inlining-ul dezactivat,
-pentru a obține module LLVM IR. Informațiile extrase la nivel de call site sunt
-transformate în vectori de trăsături care includ informații despre caller,
-callee, call site și graful de apeluri.
+În contextul acestei teze, problema de inlining este tratată printr-o metodă
+de învățare offline, în care vectorii de atribute cu informații despre apelurile
+de funcții și graful de apeluri sunt extrași la începutul compilării, fără a se
+reactualiza la fiecare pas, precum ar funcționa învățarea online. Setul de date
+conține fișiere C/C++ din DCMTK și alte surse publice variate, alese pe
+criteriul relevanței pentru problema de inlining. Multiple surse sintetice au
+fost adăugate pentru a extinde setul de date și au fost generate combinatorial,
+pentru a se asigura diversitatea. Întregul set de date trece printr-un frontend
+Clang cu optimizarea de inlining dezactivată pentru a se obține reprezentarea
+intermediară LLVM corespunzătoare, de unde se extrag call site-urile și se
+construiesc vectorii de atribute corespunzători.
 
-Sunt folosite multiple euristici cu rol de profesor. Fiecare modul este evaluat
-de fiecare astfel de euristică, cu scopul de a determina care dintre ele
-minimizează cel mai bine dimensiunea LLVM IR rescrisă pentru modulul respectiv.
-Alegerile euristicii selectate la nivel de call site devin un set de antrenare
-pentru o strategie de învățare supervizată, în care modelele student învață să
-imite traiectoriile profesorilor prin behavior cloning. Predicțiile studenților
-sunt ulterior integrate înapoi în LLVM IR prin rescrieri la nivel de call site.
-Rularea raportată compilează 163 de surse C/C++, evaluează 150 de module LLVM
-cu call site-uri locale și extrage 10394 de exemple la nivel de call site. Pe
-split-ul held-out, referința selected-teacher reduce numărul de instrucțiuni
-LLVM IR rescrise cu 1.10\% față de never-inline, iar cel mai bun student ajunge
-la o reducere de 0.61\%. Rezultatele nu depășesc pipeline-ul de producție LLVM
-\texttt{-Oz}, dar demonstrează un workflow reproductibil de învățare offline
-pentru experimente cu politici de inlining la nivel de call site.
+Se definește un set de euristici numite profesori, care se rulează pe vectorii
+de atribute ai fiecărui program pentru a se obține etichete de inline/no-inline
+per call site. Profesorul care reușește să reducă numărul de instrucțiuni IR
+cel mai mult pentru un anumit program este folosit în setul pentru training
+supervizat. Setul de training este alcătuit astfel din reuniunea etichetelor
+profesorilor care au dus la cea mai mare reducere de IR per modul. Scopul este
+ca un student să fie capabil să copieze alegerile profesorilor săi, o tehnică
+numită behavior cloning. Deciziile studenților sunt aplicate prin rescrieri ale
+reprezentării intermediare la nivelul apelurilor de funcții. În experimentul
+principal, 163 fișiere C/C++ au fost compilate cu succes, dintre care 150 aveau
+apeluri locale de funcții și au rămas în setul de date. Numărul total de
+apeluri analizate este 10394. Pe setul held-out, cel mai bun model a dus la o
+reducere de IR de 0.61\% față de never-inline. Cel mai bun profesor, folosit ca
+referință selected-teacher, a dus la o reducere de 1.10\%. Deși rezultatele nu
+sunt mai bune decât LLVM \texttt{-Oz}, implementarea demonstrează că politicile
+de ML pot fi folosite în locul euristicilor clasice în problema de inlining.
 \end{abstract}
 \end{abstractpage}

@@ -18,7 +18,7 @@
 \contentsline {section}{\numberline {5.2}Autotuning and Pre-MLGO Compiler Learning}{9}{section.5.2}%
 \contentsline {section}{\numberline {5.3}MLGO}{10}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Offline Imitation Learning and BC-Max}{10}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Positioning Against Prior Work}{11}{section.5.5}%
+\contentsline {section}{\numberline {5.5}Positioning Against Prior Work}{10}{section.5.5}%
 \contentsline {chapter}{\numberline {6}Methodology}{12}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Dataset Summary}{13}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Teacher Heuristics}{14}{section.6.2}%
