@@ -24,13 +24,13 @@ the call sites are extracted and the feature vectors are constructed.
 A set of heuristics called teachers is defined and run on feature vectors per
 program. This is done in order to assign inline/no-inline labels per call site,
 and the heuristic that manages to reduce the IR most for a program file is
-chosen for the supervised training of students. The training set is therefore
+chosen for the supervised training of students. The training set is built as
 the union of the teachers' labels that performed best per module. The goal is
 to make the students able to shadow their teachers, a technique called behavior
 cloning. The choices of the student models are implemented by rewriting
 call-site sections of the LLVM IR. In the main experiment, a total of 163 C/C++
 files were successfully compiled, of which 150 had local call sites and
-therefore remained in the dataset. The total count of analyzed call sites is
+remained in the dataset. The total count of analyzed call sites is
 10394. A held-out split was used, where the best model showed an IR reduction
 of 0.61\% compared to never-inline. The best teacher, used as a
 selected-teacher reference, led to a reduction of 1.10\% compared to

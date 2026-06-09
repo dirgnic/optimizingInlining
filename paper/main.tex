@@ -130,10 +130,10 @@ for predetermined rules called heuristics, which have long been perfected to
 give indications about when optimizations would be useful and would give the
 best results. The issue with normal heuristics is their lack of adaptability,
 since choosing when to optimize is dependent on multiple factors that keep
-changing with other optimizations of the call graph. This is why, in this
-thesis, inlining is looked at through a lens of situational complexity, taking
-into account how one choice impacts which optimizations will be possible next,
-the size of the code, and also which other inlining choices can follow
+changing with other optimizations of the call graph. In this thesis, inlining is
+looked at through a lens of situational complexity, taking into account how one
+choice impacts which optimizations will be possible next, the size of the code,
+and also which other inlining choices can follow
 \cite{godbolt2019optimizations,theodoridis2022optimal}.
 
 Inlining is one representative example of the above stated compiler problem.
@@ -182,17 +182,17 @@ student-policy performance, while the size of the native object-file
 
 \section{Research Questions and Contributions}
 
-The research questions treat inlining not only as a fixed compiler heuristic,
-but as a decision problem where inline/no-inline choices can be learned from
-examples. The first goal is to check whether inlining can be formulated as an
-offline imitation-learning task, where teacher heuristics give labels and
+The research questions treat inlining as a decision problem where
+inline/no-inline choices can be learned from examples, not as a fixed compiler
+heuristic alone. The first goal is to check whether inlining can be formulated
+as an offline imitation-learning task, where teacher heuristics give labels and
 student models reproduce their behavior. The second goal is to see whether
 selecting the best teacher per module, in a BC-Max-style manner, can produce
 useful labels under a code-size objective.
 
-The contribution is not only the final numerical reduction, but also the full
-pipeline: static LLVM IR feature extraction, teacher definition and selection,
-student training, predicted LLVM IR rewrites, and artifact measurement.
+The contribution includes the final numerical reduction and the full pipeline:
+static LLVM IR feature extraction, teacher definition and selection, student
+training, predicted LLVM IR rewrites, and artifact measurement.
 Table~\ref{tab:questions-contributions} summarizes the research questions and
 corresponding contributions.
 
@@ -570,9 +570,8 @@ students:
 where \(a^{\star}_{j,t}\) is the action that the chosen teacher policy
 \(h^\star(P_j)\) decided on for the vector of features \(x_{j,t}\).
 
-The new policy called a student should theoretically aim to predict labels as
-closely as possible to its teachers, therefore minimizing a disagreement
-function:
+The new policy, called a student, should theoretically aim to predict labels as
+closely as possible to its teachers and minimize a disagreement function:
 \[
   \min_{\theta}\sum_{(x,a)\in \mathcal{D}}
   \mathbf{1}[\pi_\theta(x) \neq a], \qquad
@@ -626,10 +625,9 @@ tackled by Cavazos and O'Boyle. They showed useful results by using empirically
 adjustable parameters in place of static ones \cite{cavazos2005automatic}. The
 problem they approached is similar to the one proposed here, but with another
 scope, since they tried to tune policies automatically, while here the policy is
-trained on other policies. The technical difference is therefore that autotuning
-tries to find more appropriate parameters for heuristics, while behavior cloning
-attempts to train a decision rule starting from feature vectors at call-site
-level.
+trained on other policies. The technical difference is that autotuning tries to
+find more appropriate parameters for heuristics, while behavior cloning attempts
+to train a decision rule starting from feature vectors at call-site level.
 
 The focus on code size, specifically LLVM IR, is intentional in this thesis. It
 is an easy-to-calculate and objective metric. Object size, also easy to
@@ -683,9 +681,8 @@ the selected teachers, rather than by means of exploration and recompiling.
 What teachers label individual call sites is context-dependent and sometimes
 does not generalize. Two different teachers might assign different labels to
 similar call sites in different modules, leading to disagreements in the set used
-for training the behavior-cloning students. This is why the actual rewrite impact
-is the real measure of success, not only how well the students agree with
-teachers.
+for training the behavior-cloning students. The actual rewrite impact is the
+main measure of success, beyond how well students agree with teachers.
 
 \section{Positioning Against Prior Work}
 
@@ -959,7 +956,7 @@ remove branches or simplify expressions. \\
 \texttt{cost\_budget}, \texttt{growth\_budget} & Inline if estimated growth
 \(G\approx s\max(1,u)+b+\text{nested calls}\) stays under a budget. \\
 \hline
-\texttt{loop\_averse}, \texttt{hot\_leaf} & Prefer leaf-like callees; reject
+\texttt{loop\_averse}, \texttt{hot\_leaf} & Prefer callees without nested calls; reject
 large, branchy, or call-heavy callees. \\
 \hline
 \texttt{balanced\_score}, \texttt{llvm\_like\_size},
@@ -991,9 +988,9 @@ rewritten IR instruction count decreases. \\
 This distinction matters because the student does not learn from a universal
 oracle that is always correct for every call site. For every module, the system
 selects the teacher that gives the smallest rewritten IR, and that teacher's
-labels enter the training dataset. The dataset is therefore the union of
-decisions made by different teachers, each chosen because it performed best for
-one module. The main run uses one offline teacher-selection round; Chapter~8
+labels enter the training dataset. The dataset is the union of decisions made by
+different teachers, each chosen because it performed best for one module. The
+main run uses one offline teacher-selection round; Chapter~8
 also reports a three-round check where the best learned student is inserted back
 into the measured policy set.
 
@@ -1086,9 +1083,9 @@ module-level split support reproducibility.
 The rewrite algorithm works at call-site level. When a call site is selected for
 inlining, the callee is cloned, the selected call is redirected to that clone,
 and LLVM \texttt{opt} performs inlining and cleanup. Recursive, unresolved, or
-unsafe calls are skipped. This is not LLVM's production inliner, but a smaller
-mechanism built so predicted inline/no-inline decisions can be materialized and
-measured.
+unsafe calls are skipped. The implementation is a smaller experimental mechanism
+than LLVM's production inliner, built so predicted inline/no-inline decisions can
+be materialized and measured.
 
 The order of call sites is deterministic. Modules are processed in sorted LLVM
 IR filename order, functions are visited in the order in which their
@@ -1295,8 +1292,8 @@ held-out split.
 The LLVM \texttt{-Oz} comparison shows the distance from production
 optimization: it is much stronger on standalone C/C++ files, reducing native
 \texttt{.text} size and object-file size by a larger margin. The learned
-policies should therefore be read as a prototype and methodology result, not as
-a replacement for LLVM's full size-optimization pipeline. In the additional
+policies should be read as a prototype and methodology result, not as a
+replacement for LLVM's full size-optimization pipeline. In the additional
 three-round BC-Max-style check, feeding the best student back into the measured
 policy set does not improve held-out results: the reference stays at 1.10\% and
 \texttt{deep\_forest} remains best at 0.61\%.
@@ -1385,9 +1382,8 @@ The comparison with LLVM \texttt{-Oz} shows that the prototype should not be
 interpreted as a production-ready replacement for LLVM's full optimization
 pipeline. On the standalone C/C++ files, LLVM \texttt{-Oz} reduces native
 \texttt{.text} size by 14.91\% and object-file size by 28.76\% relative to
-\texttt{no\_inline\_Oz}. The learned policies therefore demonstrate the
-workflow and problem formulation, rather than outperforming LLVM's production
-size pipeline.
+\texttt{no\_inline\_Oz}. The learned policies demonstrate the workflow and
+problem formulation, rather than outperforming LLVM's production size pipeline.
 
 The major contribution of the thesis is methodological. The implementation
 connects source collection, LLVM IR generation, feature extraction, teacher
