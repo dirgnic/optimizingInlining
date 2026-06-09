@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.10.1)  10 JUN 2026 01:27
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.10.1)  10 JUN 2026 01:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1390,11 +1390,11 @@ Chapter 3.
 \pydata@fh@_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted=\write8
 \openout8 = `_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted'.
 
-runsystem(latexminted config  --timestamp 20260610012701 FAD58DE7366495DB4650CF
+runsystem(latexminted config  --timestamp 20260610013356 FAD58DE7366495DB4650CF
 EFAC2FCD61)...executed safely (allowed).
 
 (./_FAD58DE7366495DB4650CFEFAC2FCD61.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20260610012701 FAD58DE7366495DB4
+runsystem(latexminted cleanconfig  --timestamp 20260610013356 FAD58DE7366495DB4
 650CFEFAC2FCD61)...executed safely (allowed).
 
 
@@ -1431,7 +1431,7 @@ Chapter 5.
 [9
 
 ]
-Underfull \hbox (badness 1168) in paragraph at lines 649--653
+Underfull \hbox (badness 1168) in paragraph at lines 644--648
 \TU/TimesNewRoman(0)/m/n/12 represent the collection of heuristic teachers, and
  let $\OML/cmm/m/it/12 P[]$ \TU/TimesNewRoman(0)/m/n/12 be a module with corres
 ponding
@@ -1448,34 +1448,34 @@ Chapter 6.
 [12
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 823--824
+Underfull \hbox (badness 10000) in paragraph at lines 816--817
 []|\TU/TimesNewRoman(0)/m/n/10.95 DCMTK, generated,
  []
 
 
-Underfull \hbox (badness 3407) in paragraph at lines 839--840
+Underfull \hbox (badness 3407) in paragraph at lines 832--833
 []|\TU/TimesNewRoman(0)/m/n/10.95 rewritten IR instruc-
  []
 
 
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 939--939
+Underfull \hbox (badness 10000) in paragraph at lines 932--932
 []|\TU/lmtt/m/n/10 cost_budget\TU/TimesNewRoman(0)/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 945--946
+Underfull \hbox (badness 10000) in paragraph at lines 938--939
 []|\TU/lmtt/m/n/10 balanced_score\TU/TimesNewRoman(0)/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 945--946
+Underfull \hbox (badness 10000) in paragraph at lines 938--939
 \TU/lmtt/m/n/10 llvm_like_size\TU/TimesNewRoman(0)/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 1024) in paragraph at lines 958--960
+Underfull \hbox (badness 1024) in paragraph at lines 951--953
 []|\TU/TimesNewRoman(0)/m/n/10 Inline if immediate simplification plus future c
 all-graph value exceeds
  []
@@ -1487,24 +1487,24 @@ all-graph value exceeds
 [15]
 Chapter 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1027--1030
+Underfull \hbox (badness 10000) in paragraph at lines 1020--1023
 \TU/lmtt/m/n/10.95 all \TU/TimesNewRoman(0)/m/n/10.95 and the short demo comman
 d \TU/lmtt/m/n/10.95 python3
  []
 
 
-Underfull \hbox (badness 4819) in paragraph at lines 1031--1033
+Underfull \hbox (badness 4819) in paragraph at lines 1024--1026
 []|\TU/TimesNewRoman(0)/m/n/10.95 generates the deterministic synthetic modules
 , compiles
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1037--1037
+Underfull \hbox (badness 10000) in paragraph at lines 1030--1030
 []|\TU/lmtt/m/n/10.95 teach.py \TU/TimesNewRoman(0)/m/n/10.95 and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1051--1051
+Underfull \hbox (badness 10000) in paragraph at lines 1044--1044
 []|\TU/lmtt/m/n/10.95 graph.py\TU/TimesNewRoman(0)/m/n/10.95 , \TU/lmtt/m/n/10.
 95 paper.py\TU/TimesNewRoman(0)/m/n/10.95 ,
  []
@@ -1583,4 +1583,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  82i,14n,93p,693b,5609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (29 pages, 573428 bytes).
+Output written on main.xdv (29 pages, 564668 bytes).
