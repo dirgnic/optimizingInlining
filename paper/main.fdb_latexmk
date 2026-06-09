@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber main"] 1781042261.76556 "main.bcf" "main.bbl" "main" 1781045083.80982 0
+["biber main"] 1781042261.76556 "main.bcf" "main.bbl" "main" 1781046529.82731 0
   "bibliography.bib" 1780926138 3889 b66daca9050dfa0fd14d76424a4893cd ""
-  "main.bcf" 1781045083.22908 110184 3ce18fcb26f9a19c237bcb10ca9a1691 "xelatex"
+  "main.bcf" 1781046529.21852 110184 3ce18fcb26f9a19c237bcb10ca9a1691 "xelatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1781045083.30785 "main.xdv" "main.pdf" "main" 1781045083.81144 0
-  "main.xdv" 1781045083.23032 573392 f41c7157620f746eb67bbf5e5fb41ec4 "xelatex"
+["xdvipdfmx"] 1781046529.28985 "main.xdv" "main.pdf" "main" 1781046529.82894 0
+  "main.xdv" 1781046529.21937 586296 156523dfb03c99a23f318040700be661 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1781045081.1685 "main.tex" "main.xdv" "main" 1781045083.8099 0
+["xelatex"] 1781046527.37067 "main.tex" "main.xdv" "main" 1781046529.82739 0
   "../out/figures/selected_teacher_distribution.pdf" 1780941613.93618 14854 64190d089c250b4774ef8790a16d9553 ""
   "../out/figures/source_group_ir_reduction.pdf" 1780941613.77478 15735 9cb2b676cd36663248b4c667b6d47d71 ""
   "../out/figures/student_inline_decisions.pdf" 1780941614.56816 16016 69fdbba61c78994b782502c0f866643d ""
@@ -203,9 +203,9 @@
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1739380943 42148 61becc7c670cd061bb319c643c27fdd4 ""
   "/usr/local/texlive/2025/texmf-var/web2c/xetex/xelatex.fmt" 1759279255 5639808 2987dbfa76c41d5a4c72a944bc2e6137 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "0-abstract.aux" 1781045082.27031 4574 38b53493024dbb7dfd569d100467cd49 "xelatex"
-  "0-abstract.tex" 1781045011.80794 5425 1b393f15e05929a5448afb63608b1bb3 ""
-  "0-title.aux" 1781045082.24427 4414 ccce170d2fdda6855cfafb5956fc2f4d "xelatex"
+  "0-abstract.aux" 1781046528.34111 4574 38b53493024dbb7dfd569d100467cd49 "xelatex"
+  "0-abstract.tex" 1781046293.31687 5426 b02820e4d0dbe497612284a14ae55f39 ""
+  "0-title.aux" 1781046528.31416 4414 ccce170d2fdda6855cfafb5956fc2f4d "xelatex"
   "0-title.tex" 1780926138 1186 dcc3b8a7986930c0e2973049d73c1a57 ""
   "_minted/31213EF9D1D9EE82DAEC3962878ACD3C.highlight.minted" 1780926138 382 5168a2a6c8839ebe831b481732ddf974 ""
   "_minted/4795E4DBAAB69D8703B63EDFE492693A.highlight.minted" 1780926138 939 afddce1a533d0cd425a988e316a0b61b ""
@@ -221,12 +221,12 @@
   "_minted/default.style.minted" 1780926138 6426 e1fb43a91491f41b33310478eee48cdb ""
   "images/logo-fmi.png" 1780926138 31683 56c11fb2ffe327fff3b59ba821e52cbf ""
   "images/logo-ub.png" 1780926138 97709 078bc86249c299bf90bcca17671fe839 ""
-  "main.aux" 1781045083.22632 17881 8ceba6a6a3e6cc0d9f3c40436f443179 "xelatex"
+  "main.aux" 1781046529.21549 17881 2462f0de72260281c4a55839a438e4d1 "xelatex"
   "main.bbl" 1781042263.54119 22784 216f0b8036fbb7bd482e385bd3e6008d "biber main"
-  "main.out" 1781045083.22829 4287 029ef9a70c0a985525f9f131b3878045 "xelatex"
-  "main.run.xml" 1781045083.23 2406 f76e88cd7347555a5834a4339bf8f5c2 "xelatex"
-  "main.tex" 1781045028.06027 57395 b6176925c634737cb50ee5bb5e88ece8 ""
-  "main.toc" 1781045083.23023 2244 5538b31070a308c10f06f8e288fb6551 "xelatex"
+  "main.out" 1781046529.21763 4287 029ef9a70c0a985525f9f131b3878045 "xelatex"
+  "main.run.xml" 1781046529.21919 2406 f76e88cd7347555a5834a4339bf8f5c2 "xelatex"
+  "main.tex" 1781046522.32944 58588 b9adcb39e9d95dd0052c8457393ab3b8 ""
+  "main.toc" 1781046529.21933 2244 5538b31070a308c10f06f8e288fb6551 "xelatex"
   (generated)
   "0-abstract.aux"
   "0-title.aux"

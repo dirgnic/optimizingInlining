@@ -27,9 +27,9 @@
 \renewbibmacro*{url+urldate}{}
 
 \usepackage{setspace}
-\setstretch{1.15}
+\setstretch{1.08}
 
-\usepackage[margin=2.3cm]{geometry}
+\usepackage[margin=2.2cm]{geometry}
 \usepackage{graphicx}
 \graphicspath{{./images/}{../out/figures/}}
 \usepackage{float}
@@ -181,6 +181,20 @@ student-policy performance, while the size of the native object-file
 \texttt{.text} section is used as a secondary measurement.
 
 \section{Research Questions and Contributions}
+
+The research questions treat inlining not only as a fixed compiler heuristic,
+but as a decision problem where inline/no-inline choices can be learned from
+examples. The first goal is to check whether inlining can be formulated as an
+offline imitation-learning task, where teacher heuristics give labels and
+student models reproduce their behavior. The second goal is to see whether
+selecting the best teacher per module, in a BC-Max-style manner, can produce
+useful labels under a code-size objective.
+
+The contribution is not only the final numerical reduction, but also the full
+pipeline: static LLVM IR feature extraction, teacher definition and selection,
+student training, predicted LLVM IR rewrites, and artifact measurement.
+Table~\ref{tab:questions-contributions} summarizes the research questions and
+corresponding contributions.
 
 \begin{table}[H]
 \centering
@@ -663,7 +677,7 @@ following:
   \tau_i = \{(s_1, h^\star_i(s_1)), \ldots, (s_m, h^\star_i(s_m))\}.
 \]
 Here, \(s_t\) corresponds to the feature vector for call site number \(t\).
-Here, the learning is done in a supervised way, from the labels of the union of
+The learning is done in a supervised way, from the labels of the union of
 the selected teachers, rather than by means of exploration and recompiling.
 
 What teachers label individual call sites is context-dependent and sometimes
@@ -806,9 +820,10 @@ ordered feature list is fixed in \texttt{scripts/data.py}.}
 
 \section{Dataset Summary}
 
-The current prototype uses a DCMTK-based source snapshot, generated modules,
-and a public-source supplement in order to test the offline
-imitation-learning pipeline on a nontrivial number of call sites.
+The dataset is composed in order to test the inlining pipeline on more than one
+type of source: a DCMTK-based source snapshot, generated modules with controlled
+inline/no-inline cases, and 76 public-source files selected because they compile
+successfully and expose local call-site information for the feature extractor.
 
 \begin{table}[H]
 \centering
@@ -868,11 +883,14 @@ real-source modules.}
 \label{tab:source-group-reduction}
 \end{table}
 
-At call-site level, 9128 of the 10394 examples come from public source files.
-The train/test split is performed by module rather than by individual call
-site, so all call sites from one module stay on the same side of the split.
-This avoids testing on contexts that are nearly duplicated from the same caller,
-callee, or call graph.
+The resulting run starts from 164 candidate C/C++ files. Of these, 163 compile
+successfully, and 150 remain as LLVM modules with local call sites, giving 10394
+call-site samples. The split is done by module, not by individual call site, so
+nearly identical call contexts from the same file do not appear both in training
+and testing. At source-group level, generated modules show the largest reduction
+because they were designed to contain clearer inlining patterns, while
+real-source files often contain fewer profitable local call sites under the
+simplified rewrite objective.
 
 \begin{table}[H]
 \centering
@@ -901,22 +919,24 @@ kept in the repository manifests and source snapshot files.}
 
 \section{Teacher Heuristics}
 
-In this thesis, a teacher heuristic means a deterministic policy used to produce
-labels for student training. The local teacher set is intentionally simple and
-inspectable. The teachers use deterministic rules starting from the same
-call-site-level feature vector. Let \(s\) be callee size, \(u\) callee users,
-\(b\) branch count, \(k\) constant arguments, and \(r\) a recursion flag. Most
-rules use the following general shape:
+In this thesis, the teacher heuristics are deterministic policies that decide
+whether a call site should be inlined or kept. They are not production inliners,
+but inspectable rules for producing behavior-cloning labels. All teachers use
+the same LLVM IR feature vector, but prioritize different signals: callee size,
+users, constants, estimated growth, recursion, and call-graph context. Let \(s\)
+be callee size, \(u\) callee users, \(b\) branch count, \(k\) constant arguments,
+and \(r\) a recursion flag. Most rules use the following general shape:
 \[
   \text{inline if } B(x)-C(x)>0,\quad
   B(x)\approx 2k+\mathbf{1}_{u=1}+\text{depth signal},\quad
   C(x)\approx s+b+\text{nested calls}+r .
 \]
 The exact thresholds are fixed in \texttt{teach.py}; the table gives the
-readable form of each rule. The exception is \texttt{greedy\_ir\_size}, whose
-labels are produced by measured rewrites in \texttt{rewrite.py}. Therefore,
-most teachers are cheap proxy policies, while the greedy heuristic is slower
-because it actually tests candidate rewrites.
+readable form of each rule. Most teachers are cheap proxy policies: some prefer
+small callees, some prefer single-use callees, some reward constant arguments,
+and others reject recursive or branch-heavy cases. The measured teacher,
+\texttt{greedy\_ir\_size}, is more expensive because it tries candidate rewrites
+and keeps only those that reduce rewritten IR instruction count.
 
 \begin{table}[H]
 \centering
@@ -968,19 +988,14 @@ rewritten IR instruction count decreases. \\
 \label{tab:teacher-policies-readable}
 \end{table}
 
-The ML-, bandit-, and RL-inspired teachers are approximations rather than
-actually trained teachers. The measured greedy teacher is more expensive
-because it orders plausible candidates from static features, then uses the same
-clone-and-\texttt{alwaysinline} rewrite path as evaluation and keeps only
-locally improving rewrites. This distinction matters because the student does
-not learn from a single oracle; it learns from the teacher that behaves best
-for each module under the rewritten-IR objective.
-
-The main reported run uses one offline teacher-selection round: teachers are
-evaluated, one teacher trajectory is selected per module, and students imitate
-those selected labels. Chapter~8 also reports a small three-round check in
-which the best learned student is fed back as another measured candidate
-policy.
+This distinction matters because the student does not learn from a universal
+oracle that is always correct for every call site. For every module, the system
+selects the teacher that gives the smallest rewritten IR, and that teacher's
+labels enter the training dataset. The dataset is therefore the union of
+decisions made by different teachers, each chosen because it performed best for
+one module. The main run uses one offline teacher-selection round; Chapter~8
+also reports a three-round check where the best learned student is inserted back
+into the measured policy set.
 
 % =========================================================
 % CHAPTER 7
@@ -988,31 +1003,33 @@ policy.
 
 \chapter{Implementation}
 
-The main pipeline and implementation are located in the repository root. The
-implementation generates synthetic modules, uses
-compilation stages to reach LLVM IR, extracts call-site features, evaluates
-teacher policies, trains students from the best-performing teachers, rewrites
-selected call sites, and writes artifacts that can be inspected. The source
-repository is available at:
+The implementation is organized as a reproducible pipeline, starting from source
+files and ending with rewritten LLVM IR artifacts. The scripts generate
+synthetic modules, compile C/C++ sources to LLVM IR, extract call-site features,
+evaluate teacher policies, train student models, rewrite selected call sites,
+and produce the measurements and plots used in the thesis. The repository keeps
+the source collection, generated files, intermediate IR, model decisions, and
+final results inspectable:
 \begin{center}
 \small\url{https://github.com/dirgnic/optimizingInlining}
 \end{center}
 
 \section{Repository Structure and Execution}
 
-The scripts cover generation, feature extraction, teacher selection, student
-training, rewriting, and figure generation. After cloning the repository, the
-full pipeline can be run from the repository root with
-\texttt{python3 scripts/run.py all}. A short inspection run is available as
-\texttt{python3 scripts/run.py demo}; it compiles a few generated modules,
-prints the extracted call-site order and inline/keep decisions, and writes
-before/after demo IR under \texttt{out/demo/rewritten/}. The reported numbers
-come from deterministic source generation, a small number of DCMTK files, and a
-fixed module-level train/test split, with artifacts written under \texttt{out/}.
+The pipeline can be run in two main ways. The full run,
+\texttt{python3 scripts/run.py all}, executes the experiment and produces the
+reported numbers. The smaller demo run, \texttt{python3 scripts/run.py demo},
+compiles a few generated modules, prints the call-site order and inline/keep
+decisions, and writes before/after LLVM IR files under
+\texttt{out/demo/rewritten/}, making the rewrite step inspectable without the
+full dataset.
 
-The default execution path is organized as shown in
-Table~\ref{tab:pipeline-scripts}. Only scripts used by the reported run are
-listed here.
+The scripts follow the fixed execution order in
+Table~\ref{tab:pipeline-scripts}: define shared data structures, generate and
+compile sources, parse LLVM IR, extract local call-site features, apply teacher
+rules, select the best teacher per module, build the behavior-cloning dataset,
+train students, apply predictions through the rewrite path, measure rewritten IR
+and native text-section sizes, and generate summaries and figures.
 
 \begin{table}[H]
 \centering
@@ -1058,33 +1075,29 @@ and reporting. \\
 \label{tab:pipeline-scripts}
 \end{table}
 
-The local run uses macOS on Apple Silicon, Homebrew Clang/LLVM 15.0.7, and
-Python 3.9.6. Source files are translated to LLVM IR using the Clang frontend
-with a strict no-inlining configuration, in order to observe the call-graph
-structure before premade inlining optimizations. Reproducibility comes from
-deterministic generation, fixed model seeds in \texttt{learn.py}, and a
-deterministic module-level split.
+The local environment for the reported run is macOS on Apple Silicon, Homebrew
+Clang/LLVM 15.0.7, and Python 3.9.6. Sources are compiled with inlining
+disabled, so the call graph can be observed before normal inlining optimizations
+are applied. Deterministic generation, fixed model seeds, and a deterministic
+module-level split support reproducibility.
 
 \section{Rewrite Algorithm}
 
-The rewriting algorithm works at call-site level and applies an LLVM IR
-transformation. For each selected call site, the callee is cloned, the selected
-call is redirected to the clone, and LLVM performs inlining and cleanup.
-Recursive or unresolved cases are skipped. This step is not the actual LLVM
-inliner, but a smaller reproducible inlining mechanism built for the experiment.
-During evaluation, inline predictions trigger this rewrite path, while no-inline
-predictions leave the call site unchanged; the final metric is therefore
-measured after predictions are materialized in LLVM IR.
+The rewrite algorithm works at call-site level. When a call site is selected for
+inlining, the callee is cloned, the selected call is redirected to that clone,
+and LLVM \texttt{opt} performs inlining and cleanup. Recursive, unresolved, or
+unsafe calls are skipped. This is not LLVM's production inliner, but a smaller
+mechanism built so predicted inline/no-inline decisions can be materialized and
+measured.
 
-The call-site order is deterministic and textual. Modules are analyzed in sorted
-\texttt{.ll} filename order. Within each module, functions are visited in the
-order in which their LLVM \texttt{define} blocks appear. Within each function,
-call instructions are scanned from top to bottom. This is not dynamic execution
-order and not a topological call-graph order. Non-greedy teachers and student
-policies keep this extracted order when preparing rewrites. The measured
-\texttt{greedy\_ir\_size} teacher is the exception: it first filters plausible
-non-recursive candidates, orders them by benefit/cost score, and accepts a
-candidate only when the actual rewritten IR instruction count decreases.
+The order of call sites is deterministic. Modules are processed in sorted LLVM
+IR filename order, functions are visited in the order in which their
+\texttt{define} blocks appear, and calls are scanned from top to bottom inside
+each function. This is not dynamic execution order and not a topological
+ordering of the call graph. It is only the textual order used by the extractor.
+The measured \texttt{greedy\_ir\_size} teacher is the exception, because it
+reorders plausible candidates by an estimated benefit/cost score before trying
+rewrites.
 
 \begin{table}[H]
 \centering
@@ -1115,16 +1128,14 @@ Student model & Role in the experiment \\
 \label{tab:student-model-families}
 \end{table}
 
-The student models do not discover useful inlining decisions by recompiling
-programs or exploring random actions during training. They receive the same
-static call-site feature vectors and learn, through behavior cloning, to
-minimize disagreement with the selected teacher for each module. Their quality
-therefore depends on both parts of the setup: whether the teacher set contains
-useful trajectories and whether the chosen model family can generalize those
-trajectories to held-out modules. This is why several simple classifiers are
-used rather than a single learner; each one represents a different compromise
-between interpretability, flexibility, and risk of copying noise from the
-selected labels.
+The student models are standard supervised classifiers. They do not explore
+random inlining choices or recompile programs during training. They receive the
+same static feature vectors and try to reduce disagreement with the
+selected-teacher labels. The models are intentionally simple: logistic
+regression gives a linear baseline, trees and forests represent threshold-based
+rules, KNN checks nearby call sites, and a small MLP adds a lightweight neural
+model. Their purpose is to test whether selected teacher behavior can be
+imitated from static call-site information.
 
 % =========================================================
 % CHAPTER 8
@@ -1132,22 +1143,28 @@ selected labels.
 
 \chapter{Evaluation}
 
-In the evaluation stage, 163 C/C++ sources are compiled, resulting in 150 LLVM
-modules with local call sites and 10394 call-site samples. The deterministic
-module split uses 9009 samples from 124 modules for training and 1385 samples
-from 26 modules for held-out testing. Teacher-label match measures agreement
-with selected-teacher labels; the actual code-size effect is measured only
-after predicted rewrites are applied.
+The evaluation measures two aspects of the system: teacher-label match, which
+shows whether a student imitates selected-teacher labels on held-out call sites,
+and the actual size effect after applying predicted rewrites. This distinction
+matters because high label match does not automatically mean smaller rewritten
+IR; a few mistakes can be expensive if a student incorrectly inlines a large or
+risky callee.
 
-In the teacher-evaluation and selection stage, every teacher is run on each
-module in order to determine which one produces the smallest rewritten IR. On
-held-out modules, this selected teacher is an oracle-style reference because it
-is chosen after measuring all candidate teachers on those modules; it is not a
-single deployable policy. Across all 150 modules, average rewritten IR falls
-from 1985.39 instructions for never-inline to 1952.39 for this reference, a
-1.66\% reduction. On the held-out split, the corresponding reduction is 1.10\%:
-1569.23 average IR instructions for never-inline versus 1552.04 for the
-selected teacher.
+In the reported run, 163 C/C++ sources compile successfully and produce 150 LLVM
+modules with local call sites, from which 10394 call-site samples are extracted.
+The split is performed by module: 9009 samples from 124 modules are used for
+training, and 1385 samples from 26 modules are kept for held-out testing. This
+avoids testing on call sites from the same module that was already used during
+training.
+
+During teacher evaluation, all teacher policies are run on every module. For
+each module, the selected teacher is the one that gives the smallest rewritten
+IR size. On held-out modules, this selected teacher is an oracle-style reference
+because it is chosen after all candidate teachers are measured; it is not a
+single policy deployable without the selection step. Across all 150 modules, the
+selected-teacher reference reduces average rewritten IR from 1985.39 to 1952.39
+instructions, a 1.66\% reduction. On the held-out split, it reduces IR by
+1.10\%, from 1569.23 to 1552.04 average instructions.
 
 \begin{table}[H]
 \centering
@@ -1183,12 +1200,12 @@ teacher measure the rewritten-IR result.}
 \label{tab:held-out-student-results}
 \end{table}
 
-Teacher-label match is only a behavior-cloning diagnostic. The IR size is
-measured only after the predicted rewrites are applied and the instruction
-count is recomputed. \texttt{small\_mlp} matches labels reasonably well but
-still grows IR, while \texttt{deep\_forest} is closest to the selected-teacher
-reference in rewritten IR size. Similar label agreement can therefore lead to
-different code-size behavior.
+The results show that students can learn part of the selected-teacher behavior,
+but they do not reach the selected-teacher reference. This is expected because
+the selected labels come from multiple teachers and may contain context-dependent
+decisions. A model can imitate many labels correctly while still making a few
+costly mistakes that grow IR, which is why both label match and rewritten IR
+size are reported.
 
 The student families, thresholds, and hyperparameters are fixed in the scripts
 before this evaluation. The phrase ``best held-out student'' is descriptive:
@@ -1268,21 +1285,21 @@ real-source modules; the plot visualizes the same reductions as the table.}
 \label{tab:real-signal-all}
 \end{table}
 
-Positive reductions mean smaller rewritten IR than never-inline. The best
-held-out student is \texttt{deep\_forest}, with 1559.62 average IR instructions,
-a 0.61\% reduction, and a 7.58-instruction gap to the selected teacher. On the
-full artifact set, \texttt{conservative\_forest} is best, reducing all modules
-by 1.18\%. The held-out reductions remain small because many real-source modules
-leave little profitable local inlining margin and because features are not
-recomputed after each accepted rewrite.
+For the student models, the best held-out rewritten-IR result is obtained by
+\texttt{deep\_forest}: 1559.62 average IR instructions, or a 0.61\% reduction
+relative to never-inline. On the full artifact set,
+\texttt{conservative\_forest} is best, reaching 1961.94 average instructions and
+a 1.18\% reduction. The reductions are positive but modest, especially on the
+held-out split.
 
-Table~\ref{tab:llvm-oz-comparison} frames the learned policies as prototype
-results rather than production replacements. On held-out rewritten objects,
-\texttt{deep\_forest} reduces average \texttt{.text} from 5755.23 to 5705.23
-bytes, but LLVM \texttt{-Oz} remains the stronger native-size baseline. A
-three-round BC-Max-style check fed the previous best student back into the
-candidate pool, but the held-out result plateaued: the reference stayed at
-1.10\% and \texttt{deep\_forest} stayed at 0.61\%.
+The LLVM \texttt{-Oz} comparison shows the distance from production
+optimization: it is much stronger on standalone C/C++ files, reducing native
+\texttt{.text} size and object-file size by a larger margin. The learned
+policies should therefore be read as a prototype and methodology result, not as
+a replacement for LLVM's full size-optimization pipeline. In the additional
+three-round BC-Max-style check, feeding the best student back into the measured
+policy set does not improve held-out results: the reference stays at 1.10\% and
+\texttt{deep\_forest} remains best at 0.61\%.
 
 % =========================================================
 % CHAPTER 9
@@ -1389,10 +1406,10 @@ measurements on final linked binaries.
 \chapter{Additional Diagnostics}
 \label{app:additional-diagnostics}
 
-The generated \texttt{out/} directory contains the full JSON outputs used for
-inspection. Figures~\ref{fig:appendix-teachers}
-to~\ref{fig:appendix-decisions} keep the main diagnostics in portrait layout,
-with readable labels and values.
+The appendix contains diagnostic plots that support the main results. They show
+which teachers contribute labels, how generated and real-source modules differ,
+how well students imitate selected labels, and whether student decisions become
+too aggressive or too conservative after LLVM IR rewriting.
 
 \begin{figure}[H]
 \centering

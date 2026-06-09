@@ -4,8 +4,8 @@ In optimizing compilers, the problem of inlining has long been studied in order
 to increase performance across platforms while keeping the size of applications
 small. Choosing when to inline is complicated because, in the context of a
 program, functions are interconnected through the call graph, and one decision
-can influence the structure of the program and the future possible
-optimizations. All of these choices can affect the size of the intermediate
+can influence the structure of the program and future optimization
+opportunities. All of these choices can affect the size of the intermediate
 representation and of the final object file at the end of the compilation
 stage.
 
@@ -36,7 +36,7 @@ of 0.61\% compared to never-inline. The best teacher, used as a
 selected-teacher reference, led to a reduction of 1.10\% compared to
 never-inline. Even though the prototype does not do better than LLVM
 \texttt{-Oz}, it shows that ML policies can be used in inlining optimization
-instead of relying only on the normal heuristic approach.
+instead of relying only on classical heuristic approaches.
 \end{abstract}
 \end{abstractpage}
 
