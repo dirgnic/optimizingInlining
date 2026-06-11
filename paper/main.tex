@@ -635,8 +635,8 @@ trained on other policies. The technical difference is that autotuning tries to
 find more appropriate parameters for heuristics, while behavior cloning attempts
 to train a decision rule starting from feature vectors at call-site level.
 
-The focus on code size, specifically LLVM IR, is intentional in this thesis. It
-is an easy-to-calculate and objective metric. Object size, also easy to
+This thesis focuses on code size, specifically LLVM IR, because it is an
+easy-to-calculate and objective metric. Object size, also easy to
 calculate, is listed secondarily. In order to assess real-world
 performance, other metrics such as runtime have been attempted in the
 literature, despite their difficulty to measure objectively and their dependence
@@ -1411,7 +1411,7 @@ Student model & Role in the experiment \\
 \label{tab:student-model-families}
 \end{table}
 
-The student models are intentionally simple: logistic regression gives a linear
+The student models are kept simple: logistic regression gives a linear
 baseline, trees and forests represent threshold-based rules, KNN checks nearby
 call sites, and a small MLP adds a lightweight neural model. They receive the
 same static feature vectors and try to reduce disagreement with the

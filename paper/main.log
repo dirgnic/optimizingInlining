@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.21.0 (TeX Live 2025)  (format=lualatex 2025.10.1)  11 JUN 2026 21:20
+This is LuaHBTeX, Version 1.21.0 (TeX Live 2025)  (format=lualatex 2025.10.1)  11 JUN 2026 21:22
  system commands enabled.
 **main.tex
 (./main.tex
@@ -1463,10 +1463,10 @@ Chapter 3.
 \pydata@fh@_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted=\write8
 
 \openout8 = _FAD58DE7366495DB4650CFEFAC2FCD61.data.minted
-runsystem(latexminted config  --timestamp 20260611212008 FAD58DE7366495DB4650CFE
+runsystem(latexminted config  --timestamp 20260611212229 FAD58DE7366495DB4650CFE
 FAC2FCD61)...executed.
 (./_FAD58DE7366495DB4650CFEFAC2FCD61.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20260611212008 FAD58DE7366495DB46
+runsystem(latexminted cleanconfig  --timestamp 20260611212229 FAD58DE7366495DB46
 50CFEFAC2FCD61)...executed.
 
 (./_minted/default.style.minted)
@@ -1691,7 +1691,7 @@ nts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts
 r12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
 pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (29 pages, 455387 bytes).
+Output written on main.pdf (29 pages, 455355 bytes).
 
 PDF statistics: 742 PDF objects out of 1000 (max. 8388607)
  445 compressed objects within 5 object streams
