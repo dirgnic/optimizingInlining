@@ -1411,11 +1411,10 @@ Student model & Role in the experiment \\
 \label{tab:student-model-families}
 \end{table}
 
-The student models are kept simple: logistic regression gives a linear
-baseline, trees and forests represent threshold-based rules, KNN checks nearby
-call sites, and a small MLP adds a lightweight neural model. They receive the
-same static feature vectors and try to reduce disagreement with the
-selected-teacher labels.
+The model set includes a linear baseline through logistic regression,
+threshold-based rules through trees and forests, nearby-vector comparison
+through KNN, and one small neural classifier. They receive the same static
+feature vectors and try to reduce disagreement with the selected-teacher labels.
 
 \section{Diagnostic Plots}
 
