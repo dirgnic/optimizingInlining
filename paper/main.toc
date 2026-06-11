@@ -22,11 +22,11 @@
 \contentsline {chapter}{\numberline {6}Methodology}{12}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Dataset Summary}{13}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Teacher Heuristics}{14}{section.6.2}%
-\contentsline {chapter}{\numberline {7}Implementation}{16}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Repository Structure and Execution}{16}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Rewrite Algorithm}{17}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Evaluation}{19}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Limitations}{21}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Conclusions}{22}{chapter.10}%
-\contentsline {chapter}{\numberline {A}Additional Diagnostics}{23}{appendix.A}%
+\contentsline {chapter}{\numberline {7}Implementation Summary}{16}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Evaluation}{17}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Limitations}{19}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Conclusions}{20}{chapter.10}%
+\contentsline {chapter}{\numberline {A}Additional Diagnostics}{21}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Implementation Details}{21}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Diagnostic Plots}{23}{section.A.2}%
 \contentsline {chapter}{Bibliography}{25}{appendix*.2}%

@@ -235,6 +235,12 @@ missing full LLVM inliner integration. \\
 \label{tab:questions-contributions}
 \end{table}
 
+The thesis is organized as follows. Chapters 2 and 3 introduce the compiler and
+inlining background. Chapter 4 formulates the offline policy-learning problem.
+Chapter 5 positions the work against related compiler-learning approaches.
+Chapters 6, 7, and 8 describe the dataset, implementation, and evaluation,
+while Chapters 9 and 10 summarize limitations and conclusions.
+
 % =========================================================
 % CHAPTER 2
 % =========================================================
@@ -688,7 +694,7 @@ main measure of success, beyond how well students agree with teachers.
 
 Table~\ref{tab:related-work-summary} summarizes how the prototype borrows the
 policy-learning view from MLGO and BC-Max while remaining smaller and more
-inspectable than production compiler infrastructure.
+transparent than production compiler infrastructure.
 
 \begin{table}[H]
 \centering
@@ -730,7 +736,7 @@ Theodoridis et al. \cite{theodoridis2022optimal}
 This thesis
 & BC-Max-style supervised pipeline over static call-site features
 & rewritten IR and native text-section reference
-& inspectable offline pipeline for call-site-level policy experiments \\
+& reproducible offline pipeline for call-site-level policy experiments \\
 \hline
 \end{tabular}
 \renewcommand{\arraystretch}{1}
@@ -918,7 +924,7 @@ kept in the repository manifests and source snapshot files.}
 
 In this thesis, the teacher heuristics are deterministic policies that decide
 whether a call site should be inlined or kept. They are not production inliners,
-but inspectable rules for producing behavior-cloning labels. All teachers use
+but transparent rules for producing behavior-cloning labels. All teachers use
 the same LLVM IR feature vector, but prioritize different signals: callee size,
 users, constants, estimated growth, recursion, and call-graph context. Let \(s\)
 be callee size, \(u\) callee users, \(b\) branch count, \(k\) constant arguments,
@@ -998,87 +1004,20 @@ into the measured policy set.
 % CHAPTER 7
 % =========================================================
 
-\chapter{Implementation}
+\chapter{Implementation Summary}
 
-The implementation is organized as a reproducible pipeline, starting from source
-files and ending with rewritten LLVM IR artifacts. The scripts generate
-synthetic modules, compile C/C++ sources to LLVM IR, extract call-site features,
-evaluate teacher policies, train student models, rewrite selected call sites,
-and produce the measurements and plots used in the thesis. The repository keeps
-the source collection, generated files, intermediate IR, model decisions, and
-final results inspectable:
+The implementation is organized as a reproducible pipeline from C/C++ sources
+to rewritten LLVM IR artifacts. The full run is executed with
+\texttt{python3 scripts/run.py all}, while a shorter inspection run is available
+through \texttt{python3 scripts/run.py demo}. The scripts generate synthetic
+modules, compile sources to LLVM IR, extract call-site features, evaluate
+teachers, train students, apply predicted rewrites, and measure rewritten IR and
+native \texttt{.text} size. The repository keeps the source collection,
+generated files, intermediate IR, model decisions, and final results
+reproducible:
 \begin{center}
 \small\url{https://github.com/dirgnic/optimizingInlining}
 \end{center}
-
-\section{Repository Structure and Execution}
-
-The pipeline can be run in two main ways. The full run,
-\texttt{python3 scripts/run.py all}, executes the experiment and produces the
-reported numbers. The smaller demo run, \texttt{python3 scripts/run.py demo},
-compiles a few generated modules, prints the call-site order and inline/keep
-decisions, and writes before/after LLVM IR files under
-\texttt{out/demo/rewritten/}, making the rewrite step inspectable without the
-full dataset.
-
-The scripts follow the fixed execution order in
-Table~\ref{tab:pipeline-scripts}: define shared data structures, generate and
-compile sources, parse LLVM IR, extract local call-site features, apply teacher
-rules, select the best teacher per module, build the behavior-cloning dataset,
-train students, apply predictions through the rewrite path, measure rewritten IR
-and native text-section sizes, and generate summaries and figures.
-
-\begin{table}[H]
-\centering
-{\small
-\begin{tabular}{|p{0.07\textwidth}|p{0.24\textwidth}|p{0.58\textwidth}|}
-\hline
-Step & Script & Role \\
-\hline
-0 & \texttt{data.py} & defines shared directories, feature names, and
-call-site data structures. \\
-\hline
-1 & \texttt{run.py} & coordinates the full command
-\texttt{python3 scripts/run.py all} and the short demo command
-\texttt{python3 scripts/run.py demo}. \\
-\hline
-2 & \texttt{build.py} & generates the deterministic synthetic modules, compiles
-C/C++ sources to LLVM IR, and measures native compiler baselines. \\
-\hline
-3 & \texttt{ir.py} & parses LLVM IR and extracts feature vectors for local call
-sites. \\
-\hline
-4 & \texttt{teach.py} and \texttt{rewrite.py} & apply teacher rules, rewrite IR
-with LLVM \texttt{opt}, and select the best teacher per module by rewritten IR
-instruction count. \\
-\hline
-5 & \texttt{teach.py} & converts the selected teacher actions into the
-behavior-cloning dataset. \\
-\hline
-6 & \texttt{learn.py} & trains the student classifiers and stores their
-inline/no-inline predictions. \\
-\hline
-7 & \texttt{rewrite.py} & applies student predictions through the same
-clone-and-\texttt{opt} rewrite path, then measures rewritten IR and native
-text-section size. \\
-\hline
-8 & \texttt{graph.py}, \texttt{paper.py}, and \texttt{visual.py} & write the
-call-graph trace, generated Markdown summary, and figures used for inspection
-and reporting. \\
-\hline
-\end{tabular}
-}
-\caption{Default script order for the reported thesis pipeline.}
-\label{tab:pipeline-scripts}
-\end{table}
-
-The local environment for the reported run is macOS on Apple Silicon, Homebrew
-Clang/LLVM 15.0.7, and Python 3.9.6. Sources are compiled with inlining
-disabled, so the call graph can be observed before normal inlining optimizations
-are applied. Deterministic generation, fixed model seeds, and a deterministic
-module-level split support reproducibility.
-
-\section{Rewrite Algorithm}
 
 The rewrite algorithm works at call-site level. When a call site is selected for
 inlining, the callee is cloned, the selected call is redirected to that clone,
@@ -1087,52 +1026,12 @@ unsafe calls are skipped. The implementation is a smaller experimental mechanism
 than LLVM's production inliner, built so predicted inline/no-inline decisions can
 be materialized and measured.
 
-The order of call sites is deterministic. Modules are processed in sorted LLVM
-IR filename order, functions are visited in the order in which their
-\texttt{define} blocks appear, and calls are scanned from top to bottom inside
-each function. This is not dynamic execution order and not a topological
-ordering of the call graph. It is only the textual order used by the extractor.
-The measured \texttt{greedy\_ir\_size} teacher is the exception, because it
-reorders plausible candidates by an estimated benefit/cost score before trying
-rewrites.
-
-\begin{table}[H]
-\centering
-{\small
-\renewcommand{\arraystretch}{1.08}
-\setlength{\tabcolsep}{4pt}
-\begin{tabular}{|p{0.26\textwidth}|p{0.64\textwidth}|}
-\hline
-Student model & Role in the experiment \\
-\hline
-\texttt{logistic\_regression} & Linear, interpretable classifier. \\
-\hline
-\texttt{decision\_tree} & Small threshold tree over individual features. \\
-\hline
-\texttt{knn} & Copies labels from nearby feature vectors. \\
-\hline
-\texttt{random\_forest} & Ensemble of shallow trees. \\
-\hline
-\texttt{deep\_forest} & Forest with deeper trees, giving a more flexible rule set. \\
-\hline
-\texttt{conservative\_forest} & Forest variant with a higher effective inline threshold. \\
-\hline
-\texttt{small\_mlp} & One-hidden-layer neural classifier. \\
-\hline
-\end{tabular}%
-}
-\caption{Student model families used for behavior cloning.}
-\label{tab:student-model-families}
-\end{table}
-
 The student models are standard supervised classifiers. They do not explore
-random inlining choices or recompile programs during training. They receive the
-same static feature vectors and try to reduce disagreement with the
-selected-teacher labels. The models are intentionally simple: logistic
-regression gives a linear baseline, trees and forests represent threshold-based
-rules, KNN checks nearby call sites, and a small MLP adds a lightweight neural
-model. Their purpose is to test whether selected teacher behavior can be
-imitated from static call-site information.
+random inlining choices or recompile programs during training; they test
+whether selected teacher behavior can be imitated from static call-site
+information. Additional implementation details, script order, student model
+descriptions, diagnostic plots, and artifact summaries are included in
+Appendix~\ref{app:additional-diagnostics}.
 
 % =========================================================
 % CHAPTER 8
@@ -1336,7 +1235,7 @@ policy set does not improve held-out results: the reference stays at 1.10\% and
   evidence, not as a complete performance evaluation.
   \item \textbf{Teacher and MLGO scope.} BC-Max-style selection can only choose
   among the available candidate policies. In this thesis, the teachers are
-  deterministic and inspectable proxy heuristics, not production inliner
+  deterministic and transparent proxy heuristics, not production inliner
   policies. A full reproduction of MLGO would require deeper integration into
   LLVM, stronger learned or production-level teachers, and a much larger corpus.
   \item \textbf{Iterative scope.} A three-round BC-Max-style check was also
@@ -1402,10 +1301,128 @@ measurements on final linked binaries.
 \chapter{Additional Diagnostics}
 \label{app:additional-diagnostics}
 
-The appendix contains diagnostic plots that support the main results. They show
-which teachers contribute labels, how generated and real-source modules differ,
-how well students imitate selected labels, and whether student decisions become
-too aggressive or too conservative after LLVM IR rewriting.
+This appendix contains the implementation details moved out of the main body,
+plus diagnostic plots that support the main results. The details cover the
+script order, local environment, deterministic call-site order, student model
+families, and demo artifacts.
+
+\section{Implementation Details}
+
+The pipeline can be run in two main ways. The full run,
+\texttt{python3 scripts/run.py all}, executes the experiment and produces the
+reported numbers. The smaller demo run, \texttt{python3 scripts/run.py demo},
+compiles a few generated modules, prints the call-site order and inline/keep
+decisions, and writes before/after LLVM IR files under
+\texttt{out/demo/rewritten/}, making the rewrite step reproducible without the
+full dataset.
+
+The scripts follow the fixed execution order in
+Table~\ref{tab:pipeline-scripts}: define shared data structures, generate and
+compile sources, parse LLVM IR, extract local call-site features, apply teacher
+rules, select the best teacher per module, build the behavior-cloning dataset,
+train students, apply predictions through the rewrite path, measure rewritten IR
+and native text-section sizes, and generate summaries and figures.
+
+\begin{table}[H]
+\centering
+{\small
+\begin{tabular}{|p{0.07\textwidth}|p{0.24\textwidth}|p{0.58\textwidth}|}
+\hline
+Step & Script & Role \\
+\hline
+0 & \texttt{data.py} & defines shared directories, feature names, and
+call-site data structures. \\
+\hline
+1 & \texttt{run.py} & coordinates the full command
+\texttt{python3 scripts/run.py all} and the short demo command
+\texttt{python3 scripts/run.py demo}. \\
+\hline
+2 & \texttt{build.py} & generates the deterministic synthetic modules, compiles
+C/C++ sources to LLVM IR, and measures native compiler baselines. \\
+\hline
+3 & \texttt{ir.py} & parses LLVM IR and extracts feature vectors for local call
+sites. \\
+\hline
+4 & \texttt{teach.py} and \texttt{rewrite.py} & apply teacher rules, rewrite IR
+with LLVM \texttt{opt}, and select the best teacher per module by rewritten IR
+instruction count. \\
+\hline
+5 & \texttt{teach.py} & converts the selected teacher actions into the
+behavior-cloning dataset. \\
+\hline
+6 & \texttt{learn.py} & trains the student classifiers and stores their
+inline/no-inline predictions. \\
+\hline
+7 & \texttt{rewrite.py} & applies student predictions through the same
+clone-and-\texttt{opt} rewrite path, then measures rewritten IR and native
+text-section size. \\
+\hline
+8 & \texttt{graph.py}, \texttt{paper.py}, and \texttt{visual.py} & write the
+call-graph trace, generated Markdown summary, and figures used for inspection
+and reporting. \\
+\hline
+\end{tabular}
+}
+\caption{Default script order for the reported thesis pipeline.}
+\label{tab:pipeline-scripts}
+\end{table}
+
+The local environment for the reported run is macOS on Apple Silicon, Homebrew
+Clang/LLVM 15.0.7, and Python 3.9.6. Sources are compiled with inlining
+disabled, so the call graph can be observed before normal inlining optimizations
+are applied. Deterministic generation, fixed model seeds, and a deterministic
+module-level split support reproducibility.
+
+The order of call sites is deterministic. Modules are processed in sorted LLVM
+IR filename order, functions are visited in the order in which their
+\texttt{define} blocks appear, and calls are scanned from top to bottom inside
+each function. This is not dynamic execution order and not a topological
+ordering of the call graph. It is only the textual order used by the extractor.
+The measured \texttt{greedy\_ir\_size} teacher is the exception, because it
+reorders plausible candidates by an estimated benefit/cost score before trying
+rewrites.
+
+\begin{table}[H]
+\centering
+{\small
+\renewcommand{\arraystretch}{1.08}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{|p{0.26\textwidth}|p{0.64\textwidth}|}
+\hline
+Student model & Role in the experiment \\
+\hline
+\texttt{logistic\_regression} & Linear, interpretable classifier. \\
+\hline
+\texttt{decision\_tree} & Small threshold tree over individual features. \\
+\hline
+\texttt{knn} & Copies labels from nearby feature vectors. \\
+\hline
+\texttt{random\_forest} & Ensemble of shallow trees. \\
+\hline
+\texttt{deep\_forest} & Forest with deeper trees, giving a more flexible rule set. \\
+\hline
+\texttt{conservative\_forest} & Forest variant with a higher effective inline threshold. \\
+\hline
+\texttt{small\_mlp} & One-hidden-layer neural classifier. \\
+\hline
+\end{tabular}%
+}
+\caption{Student model families used for behavior cloning.}
+\label{tab:student-model-families}
+\end{table}
+
+The student models are intentionally simple: logistic regression gives a linear
+baseline, trees and forests represent threshold-based rules, KNN checks nearby
+call sites, and a small MLP adds a lightweight neural model. They receive the
+same static feature vectors and try to reduce disagreement with the
+selected-teacher labels.
+
+\section{Diagnostic Plots}
+
+The diagnostic plots show which teachers contribute labels, how generated and
+real-source modules differ, how well students imitate selected labels, and
+whether student decisions become too aggressive or too conservative after LLVM
+IR rewriting.
 
 \begin{figure}[H]
 \centering
