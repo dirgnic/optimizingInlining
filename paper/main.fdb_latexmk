@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1781201558.8599 "main.bcf" "main.bbl" "main" 1781201936.49572 0
+["biber main"] 1781201558.8599 "main.bcf" "main.bbl" "main" 1781202011.46696 0
   "bibliography.bib" 1780926138 3889 b66daca9050dfa0fd14d76424a4893cd ""
-  "main.bcf" 1781201936.27789 110184 3ce18fcb26f9a19c237bcb10ca9a1691 "lualatex"
+  "main.bcf" 1781202011.25498 110184 3ce18fcb26f9a19c237bcb10ca9a1691 "lualatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["lualatex"] 1781201933.44161 "main.tex" "main.pdf" "main" 1781201936.49599 0
+["lualatex"] 1781202008.48767 "main.tex" "main.pdf" "main" 1781202011.46719 0
   "../out/figures/selected_teacher_distribution.pdf" 1780941613.93618 14854 64190d089c250b4774ef8790a16d9553 ""
   "../out/figures/source_group_ir_reduction.pdf" 1780941613.77478 15735 9cb2b676cd36663248b4c667b6d47d71 ""
   "../out/figures/student_inline_decisions.pdf" 1780941614.56816 16016 69fdbba61c78994b782502c0f866643d ""
@@ -278,9 +278,9 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1759279329 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/tex/generic/config/language.dat.lua" 1741450487 18150 01a2e206ca86a51fb879f8fcf0965d9f ""
   "/usr/local/texlive/2025/texmf-var/web2c/luahbtex/lualatex.fmt" 1759279293 5582796 22533cd25a32339381301bc580654d1d ""
-  "0-abstract.aux" 1781201935.14096 4544 232ebf2639459c73cc08de92c274edef "lualatex"
+  "0-abstract.aux" 1781202010.10999 4544 232ebf2639459c73cc08de92c274edef "lualatex"
   "0-abstract.tex" 1781046969.87578 5415 4ec4b8001cb805d6f76fa309e178808c ""
-  "0-title.aux" 1781201935.10217 4384 65f42c10a87c660cb16c071e448350a1 "lualatex"
+  "0-title.aux" 1781202010.07155 4384 65f42c10a87c660cb16c071e448350a1 "lualatex"
   "0-title.tex" 1780926138 1186 dcc3b8a7986930c0e2973049d73c1a57 ""
   "_minted/31213EF9D1D9EE82DAEC3962878ACD3C.highlight.minted" 1780926138 382 5168a2a6c8839ebe831b481732ddf974 ""
   "_minted/4795E4DBAAB69D8703B63EDFE492693A.highlight.minted" 1780926138 939 afddce1a533d0cd425a988e316a0b61b ""
@@ -295,12 +295,12 @@
   "_minted/default.style.minted" 1780926138 6426 e1fb43a91491f41b33310478eee48cdb ""
   "images/logo-fmi.png" 1780926138 31683 56c11fb2ffe327fff3b59ba821e52cbf ""
   "images/logo-ub.png" 1780926138 97709 078bc86249c299bf90bcca17671fe839 ""
-  "main.aux" 1781201936.27502 17864 3830c3e619fec0c3159e76013bc08541 "lualatex"
+  "main.aux" 1781202011.25203 17856 148e5dbdccbf3fcbce056f84cada9dc5 "lualatex"
   "main.bbl" 1781201561.09563 22784 216f0b8036fbb7bd482e385bd3e6008d "biber main"
-  "main.out" 1781201936.27707 4261 b37d35e6fd8017b5988d67238fad531a "lualatex"
-  "main.run.xml" 1781201936.27908 2406 f76e88cd7347555a5834a4339bf8f5c2 "lualatex"
-  "main.tex" 1781201928.34505 59393 d4a3c3730a93303c6d5419e07e55c267 ""
-  "main.toc" 1781201936.27922 2239 567bce9a7737c8541d1a8001a95c2466 "lualatex"
+  "main.out" 1781202011.25412 4218 9d1c3577397b1eb940e56efbd47beed8 "lualatex"
+  "main.run.xml" 1781202011.25554 2406 f76e88cd7347555a5834a4339bf8f5c2 "lualatex"
+  "main.tex" 1781201999.55669 59385 6ff005ed064b5f89772c9f9fcabde9ba ""
+  "main.toc" 1781202011.25561 2231 b312a1f29d98cc5424382aa17c1e998e "lualatex"
   (generated)
   "0-abstract.aux"
   "0-title.aux"

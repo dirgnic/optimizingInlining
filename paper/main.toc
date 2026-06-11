@@ -22,7 +22,7 @@
 \contentsline {chapter}{\numberline {6}Methodology}{12}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Dataset Summary}{13}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Teacher Heuristics}{14}{section.6.2}%
-\contentsline {chapter}{\numberline {7}Implementation Summary}{16}{chapter.7}%
+\contentsline {chapter}{\numberline {7}Implementation}{16}{chapter.7}%
 \contentsline {chapter}{\numberline {8}Evaluation}{17}{chapter.8}%
 \contentsline {chapter}{\numberline {9}Limitations}{19}{chapter.9}%
 \contentsline {chapter}{\numberline {10}Conclusions}{20}{chapter.10}%
