@@ -235,11 +235,11 @@ missing full LLVM inliner integration. \\
 \label{tab:questions-contributions}
 \end{table}
 
-The thesis is organized as follows. Chapters 2 and 3 introduce the compiler and
-inlining background. Chapter 4 formulates the offline policy-learning problem.
-Chapter 5 positions the work against related compiler-learning approaches.
-Chapters 6, 7, and 8 describe the dataset, implementation, and evaluation,
-while Chapters 9 and 10 summarize limitations and conclusions.
+In Chapters 2 and 3, the compiler background and the inlining problem are
+introduced. Chapter 4 formulates the offline policy-learning problem. Chapter 5
+positions the work against related compiler-learning approaches. Chapters 6, 7,
+and 8 describe the dataset, implementation, and evaluation, while Chapters 9
+and 10 summarize limitations and conclusions.
 
 % =========================================================
 % CHAPTER 2
@@ -249,12 +249,13 @@ while Chapters 9 and 10 summarize limitations and conclusions.
 
 \section{Compilation Pipeline}
 
-The goal of compilation is to obtain a representation of code that can be
+The scope of compilation is to transform source code into a form that can be
 executed on a machine. The intermediate representation, LLVM IR, and its
 corresponding instruction count are analyzed in this thesis because they are
 affected by inlining choices while still being more general than machine code.
 LLVM IR is generated before backend-dependent decisions, so it is useful for
-studying optimization choices before the final target-specific code is emitted.
+studying optimization choices before the final target-specific code is emitted
+\cite{kuchler2022llvmir}.
 A simple version of an LLVM compilation pipeline is:
 
 \begin{figure}[H]
@@ -344,15 +345,15 @@ auxiliary functions can be simplified easily when inlined:
 \centering
 \begin{minipage}[t]{0.36\textwidth}
 \begin{minted}[fontsize=\footnotesize,breaklines]{cpp}
-int ab(int a, int b) {
-    return a * b;
+int light_rb(int redInt, int blueInt) {
+    return 3.353 * redInt * blueInt;
 }
 \end{minted}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.55\textwidth}
 \begin{minted}[fontsize=\footnotesize,breaklines]{cpp}
-int sum_ab(int a, int b) {
-    return a + b + ab(a, b);
+int power_light(int redInt, int blueInt) {
+    return redInt + blueInt + light_rb(redInt, blueInt);
 }
 \end{minted}
 \end{minipage}
@@ -360,10 +361,10 @@ int sum_ab(int a, int b) {
 \label{fig:ab-sum-ab-example}
 \end{figure}
 
-Through inlining, the call to \texttt{ab} is substituted with the multiplication
-returned by the function. This can improve the computation time needed for
-changing the call context, called call overhead, if \texttt{sum\_ab} is executed
-frequently, meaning it is in a hot path.
+Through inlining, the call to \texttt{light\_rb} is substituted with the
+arithmetic expression returned by the function. This can improve the computation
+time needed for changing the call context, called call overhead, if
+\texttt{power\_light} is executed frequently, meaning it is in a hot path.
 
 When the function call contains constants, inlining can eliminate unused cases,
 sometimes by propagating constants. In the example below, inlining shows that
@@ -464,7 +465,7 @@ static code significantly:
 \begin{minted}[fontsize=\footnotesize,breaklines]{cpp}
 int get_info(int id) {
     int s = id;
-    for (int i = 0; i < 1000; ++i)
+    for (int i = 0; i < 250; i++)
         s = (s * 33) ^ i;
     return s;
 }
@@ -595,8 +596,8 @@ a call site:
 \[
   \hat{a} = \arg\max_{a\in\{0,1\}} \pi_\theta(a \mid x).
 \]
-What the trained model predicts leads to rewrites in LLVM IR, and the number of
-instructions after rewriting is used as the performance metric.
+The trained model's predictions are then applied as LLVM IR rewrites, and how
+many instructions the rewritten IR has is used as the performance indicator.
 
 % =========================================================
 % CHAPTER 5

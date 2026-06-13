@@ -319,6 +319,44 @@
       \field{title}{Offline Imitation Learning from Multiple Baselines with Applications to Compiler Optimization}
       \field{year}{2024}
     \endentry
+    \entry{kuchler2022llvmir}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=042bf49ee584314f51e90647c26c9909}{%
+           family={Küchler},
+           familyi={K\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2b672ad4a111592e1d9608fae5d844da}{%
+           family={Banse},
+           familyi={B\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{29fab4f3b2418385f5982854865175a2}
+      \strng{fullhash}{29fab4f3b2418385f5982854865175a2}
+      \strng{fullhashraw}{29fab4f3b2418385f5982854865175a2}
+      \strng{bibnamehash}{29fab4f3b2418385f5982854865175a2}
+      \strng{authorbibnamehash}{29fab4f3b2418385f5982854865175a2}
+      \strng{authornamehash}{29fab4f3b2418385f5982854865175a2}
+      \strng{authorfullhash}{29fab4f3b2418385f5982854865175a2}
+      \strng{authorfullhashraw}{29fab4f3b2418385f5982854865175a2}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Information Security}
+      \field{series}{Lecture Notes in Computer Science}
+      \field{title}{Representing LLVM-IR in a Code Property Graph}
+      \field{year}{2022}
+      \field{pages}{360\bibrangedash 380}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1007/978-3-031-22390-7_21
+      \endverb
+    \endentry
     \entry{cooper2011engineering}{book}{}{}
       \name{author}{2}{}{%
         {{hash=71f400e279a0a15beb329315b99759a1}{%
@@ -343,8 +381,8 @@
       \strng{authornamehash}{20c3aa52a2c2f48897c61f024ac0318b}
       \strng{authorfullhash}{20c3aa52a2c2f48897c61f024ac0318b}
       \strng{authorfullhashraw}{20c3aa52a2c2f48897c61f024ac0318b}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2}
@@ -370,8 +408,8 @@
       \strng{authornamehash}{0a97048feccb8b4dd125e4f154fa4d8a}
       \strng{authorfullhash}{0a97048feccb8b4dd125e4f154fa4d8a}
       \strng{authorfullhashraw}{0a97048feccb8b4dd125e4f154fa4d8a}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Advanced Compiler Design and Implementation}
@@ -392,8 +430,8 @@
       \strng{authorfullhash}{8e794f3113c883242c2533ada58d710d}
       \strng{authorfullhashraw}{8e794f3113c883242c2533ada58d710d}
       \field{extraname}{2}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{LLVM Language Reference Manual}
@@ -423,8 +461,8 @@
       \strng{authorfullhash}{8e794f3113c883242c2533ada58d710d}
       \strng{authorfullhashraw}{8e794f3113c883242c2533ada58d710d}
       \field{extraname}{3}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{LLVM Passes}

@@ -1,0 +1,5 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nf}{power\PYGZus{}light}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{redInt}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{blueInt}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{redInt}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{blueInt}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{light\PYGZus{}rb}\PYG{p}{(}\PYG{n}{redInt}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{blueInt}\PYG{p}{)}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}
