@@ -235,8 +235,8 @@ missing full LLVM inliner integration. \\
 \label{tab:questions-contributions}
 \end{table}
 
-In Chapters 2 and 3, the compiler background and the inlining problem are
-introduced. Chapter 4 formulates the offline policy-learning problem. Chapter 5
+In Chapters 2 and 3, the compiler and inlining background are introduced.
+Chapter 4 formulates the offline policy-learning problem. Chapter 5
 positions the work against related compiler-learning approaches. Chapters 6, 7,
 and 8 describe the dataset, implementation, and evaluation, while Chapters 9
 and 10 summarize limitations and conclusions.
@@ -362,8 +362,8 @@ int power_light(int redInt, int blueInt) {
 \end{figure}
 
 Through inlining, the call to \texttt{light\_rb} is substituted with the
-arithmetic expression returned by the function. This can improve the computation
-time needed for changing the call context, called call overhead, if
+multiplication returned by the function. This can improve the computation time
+needed for changing the call context, called call overhead, if
 \texttt{power\_light} is executed frequently, meaning it is in a hot path.
 
 When the function call contains constants, inlining can eliminate unused cases,
@@ -596,8 +596,8 @@ a call site:
 \[
   \hat{a} = \arg\max_{a\in\{0,1\}} \pi_\theta(a \mid x).
 \]
-The trained model's predictions are then applied as LLVM IR rewrites, and how
-many instructions the rewritten IR has is used as the performance indicator.
+What the trained model predicts leads to rewrites in LLVM IR, and how many
+instructions the rewritten IR has is used as the performance indicator.
 
 % =========================================================
 % CHAPTER 5
