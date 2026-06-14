@@ -278,11 +278,6 @@ INPUT ./_FAD58DE7366495DB4650CFEFAC2FCD61.config.minted
 INPUT ./_minted/default.style.minted
 INPUT ./_minted/3066BF7C24DA0502453D3406B593D655.highlight.minted
 INPUT /tmp/texmf-var/luatex-cache/generic/fonts/otl/lmmonolt10-bold.luc
-INPUT /tmp/texmf-var/luatex-cache/generic/fonts/otl/lmmono8-regular.luc
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi5.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy5.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr5.tfm
 INPUT ./_minted/B39C9995E814563EF950E89D093C5D05.highlight.minted
 INPUT ./_minted/9B67549281E8BB0F4A0BD8A9643F6144.highlight.minted
 INPUT /tmp/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-italic.luc
@@ -295,12 +290,16 @@ INPUT ./_minted/3E760AFC5E11635F227F1C65108544B4.highlight.minted
 INPUT ./_minted/4795E4DBAAB69D8703B63EDFE492693A.highlight.minted
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi7.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi5.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy7.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy5.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr7.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr5.tfm
 INPUT ../out/real_signal_run_all/summary_plot.pdf
 INPUT ../out/real_signal_run_all/summary_plot.pdf
 INPUT ../out/figures/selected_teacher_distribution.pdf
@@ -327,5 +326,4 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb

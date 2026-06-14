@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.21.0 (TeX Live 2025)  (format=lualatex 2025.10.1)  14 JUN 2026 05:19
+This is LuaHBTeX, Version 1.21.0 (TeX Live 2025)  (format=lualatex 2025.10.1)  14 JUN 2026 13:41
  system commands enabled.
 **main.tex
 (./main.tex
@@ -1463,10 +1463,10 @@ Chapter 3.
 \pydata@fh@_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted=\write8
 
 \openout8 = _FAD58DE7366495DB4650CFEFAC2FCD61.data.minted
-runsystem(latexminted config  --timestamp 20260614051944 FAD58DE7366495DB4650CFE
+runsystem(latexminted config  --timestamp 20260614134152 FAD58DE7366495DB4650CFE
 FAC2FCD61)...executed.
 (./_FAD58DE7366495DB4650CFEFAC2FCD61.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20260614051944 FAD58DE7366495DB46
+runsystem(latexminted cleanconfig  --timestamp 20260614134152 FAD58DE7366495DB46
 50CFEFAC2FCD61)...executed.
 
 (./_minted/default.style.minted)
@@ -1502,7 +1502,7 @@ Chapter 5.
 [9
 
 ]
-Underfull \hbox (badness 1668) in paragraph at lines 670--674
+Underfull \hbox (badness 1668) in paragraph at lines 672--676
 \TU/TimesNewRoman(0)/m/n/12 rep-re-sent the col-lec-tion of heuris-tic teach-ers
 , and let $\OML/cmm/m/it/12 P[]$ \TU/TimesNewRoman(0)/m/n/12 be a mod-ule with 
 cor-re-spond-ing
@@ -1519,12 +1519,12 @@ Chapter 6.
 [12
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 842--843
+Underfull \hbox (badness 10000) in paragraph at lines 844--845
 []|\TU/TimesNewRoman(0)/m/n/10.95 DCMTK, gen-er-ated,
  []
 
 
-Underfull \hbox (badness 4981) in paragraph at lines 858--859
+Underfull \hbox (badness 4981) in paragraph at lines 860--861
 []|\TU/TimesNewRoman(0)/m/n/10.95 rewrit-ten IR in-struc-
  []
 
@@ -1533,17 +1533,17 @@ Underfull \hbox (badness 4981) in paragraph at lines 858--859
 [13]
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 965--965
+Underfull \hbox (badness 10000) in paragraph at lines 967--967
 []|\TU/lmtt/m/n/10 cost_budget\TU/TimesNewRoman(0)/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 973--974
+Underfull \hbox (badness 10000) in paragraph at lines 975--976
 []|\TU/lmtt/m/n/10 balanced_score\TU/TimesNewRoman(0)/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 973--974
+Underfull \hbox (badness 10000) in paragraph at lines 975--976
 \TU/lmtt/m/n/10 llvm_like_size\TU/TimesNewRoman(0)/m/n/10 ,
  []
 
@@ -1562,12 +1562,12 @@ Chapter 8.
 [17
 
 ]
-<../out/real_signal_run_all/summary_plot.pdf, id=337, 490.15999pt x 250.59622pt
+<../out/real_signal_run_all/summary_plot.pdf, id=336, 490.15999pt x 250.59622pt
 >
 File: ../out/real_signal_run_all/summary_plot.pdf Graphic file (type pdf)
 <use ../out/real_signal_run_all/summary_plot.pdf>
 Package luatex.def Info: ../out/real_signal_run_all/summary_plot.pdf  used on i
-nput line 1186.
+nput line 1188.
 (luatex.def)             Requested size: 264.49577pt x 135.22433pt.
 
 
@@ -1586,18 +1586,18 @@ Chapter 10.
 ]
 Appendix A.
 
-Underfull \hbox (badness 1769) in paragraph at lines 1344--1347
+Underfull \hbox (badness 1769) in paragraph at lines 1346--1349
 []|\TU/TimesNewRoman(0)/m/n/10.95 co-or-di-nates the full com-mand \TU/lmtt/m/n
 /10.95 python3 scripts/run.py
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1354--1354
+Underfull \hbox (badness 10000) in paragraph at lines 1356--1356
 []|\TU/lmtt/m/n/10.95 teach.py \TU/TimesNewRoman(0)/m/n/10.95 and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1368--1368
+Underfull \hbox (badness 10000) in paragraph at lines 1370--1370
 []|\TU/lmtt/m/n/10.95 graph.py\TU/TimesNewRoman(0)/m/n/10.95 , \TU/lmtt/m/n/10.
 95 paper.py\TU/TimesNewRoman(0)/m/n/10.95 ,
  []
@@ -1609,38 +1609,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 1368--1368
 ]
 
 [22]
-<../out/figures/selected_teacher_distribution.pdf, id=406, 459.66292pt x 259.20
+<../out/figures/selected_teacher_distribution.pdf, id=405, 459.66292pt x 259.20
 024pt>
 File: ../out/figures/selected_teacher_distribution.pdf Graphic file (type pdf)
 <use ../out/figures/selected_teacher_distribution.pdf>
 Package luatex.def Info: ../out/figures/selected_teacher_distribution.pdf  used
- on input line 1435.
+ on input line 1437.
 (luatex.def)             Requested size: 319.1597pt x 179.97157pt.
-<../out/figures/source_group_ir_reduction.pdf, id=407, 448.27187pt x 287.0863pt
+<../out/figures/source_group_ir_reduction.pdf, id=406, 448.27187pt x 287.0863pt
 >
 File: ../out/figures/source_group_ir_reduction.pdf Graphic file (type pdf)
 <use ../out/figures/source_group_ir_reduction.pdf>
 Package luatex.def Info: ../out/figures/source_group_ir_reduction.pdf  used on 
-input line 1445.
+input line 1447.
 (luatex.def)             Requested size: 217.26794pt x 139.14468pt.
-<../out/figures/student_teacher_match.pdf, id=408, 410.23389pt x 267.6849pt>
+<../out/figures/student_teacher_match.pdf, id=407, 410.23389pt x 267.6849pt>
 File: ../out/figures/student_teacher_match.pdf Graphic file (type pdf)
 <use ../out/figures/student_teacher_match.pdf>
 Package luatex.def Info: ../out/figures/student_teacher_match.pdf  used on inpu
-t line 1451.
+t line 1453.
 (luatex.def)             Requested size: 236.16434pt x 154.10143pt.
-<../out/figures/student_ir_reduction.pdf, id=409, 447.18443pt x 260.4579pt>
+<../out/figures/student_ir_reduction.pdf, id=408, 447.18443pt x 260.4579pt>
 File: ../out/figures/student_ir_reduction.pdf Graphic file (type pdf)
 <use ../out/figures/student_ir_reduction.pdf>
 Package luatex.def Info: ../out/figures/student_ir_reduction.pdf  used on input
- line 1460.
+ line 1462.
 (luatex.def)             Requested size: 296.63014pt x 172.76912pt.
-<../out/figures/student_inline_decisions.pdf, id=410, 553.0673pt x 586.12564pt>
+<../out/figures/student_inline_decisions.pdf, id=409, 553.0673pt x 586.12564pt>
 
 File: ../out/figures/student_inline_decisions.pdf Graphic file (type pdf)
 <use ../out/figures/student_inline_decisions.pdf>
 Package luatex.def Info: ../out/figures/student_inline_decisions.pdf  used on i
-nput line 1468.
+nput line 1470.
 (luatex.def)             Requested size: 285.29277pt x 302.34549pt.
 
 
@@ -1665,15 +1665,15 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 38824 strings out of 475506
+ 38821 strings out of 475506
  125083,1977958 words of node,token memory allocated
  666 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 24 attribute, 72 glue_spec
 , 24 attribute_list, 2 write nodes
    avail lists: 1:3,2:2375,3:653,4:838,5:201,6:132,7:7341,8:55,9:990,10:15,11:97
 2
- 60825 multiletter control sequences out of 65536+600000
- 82 fonts using 20408743 bytes
+ 60822 multiletter control sequences out of 65536+600000
+ 81 fonts using 20282655 bytes
  82i,14n,92p,692b,2168s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </System/Library/Fonts/Supplemental/Times New Roman Italic.ttf></usr/local/texli
 ve/2025/texmf-dist/fonts/opentype/public/lm/lmmono10-italic.otf></usr/local/texl
@@ -1690,12 +1690,11 @@ nts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts
 /cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 r12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
 pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><
-/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (29 pages, 464760 bytes).
+b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (29 pages, 457313 bytes).
 
-PDF statistics: 748 PDF objects out of 1000 (max. 8388607)
- 450 compressed objects within 5 object streams
+PDF statistics: 744 PDF objects out of 1000 (max. 8388607)
+ 447 compressed objects within 5 object streams
  96 named destinations out of 1000 (max. 131072)
  232 words of extra memory for PDF output out of 10000 (max. 100000000)
 

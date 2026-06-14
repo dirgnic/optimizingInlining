@@ -343,15 +343,17 @@ auxiliary functions can be simplified easily when inlined:
 
 \begin{figure}[H]
 \centering
-\begin{minipage}[t]{0.36\textwidth}
-\begin{minted}[fontsize=\footnotesize,breaklines]{cpp}
+\begin{minipage}[t]{0.72\textwidth}
+\begin{minted}[fontsize=\footnotesize]{cpp}
 int light_rb(int redInt, int blueInt) {
     return 3.353 * redInt * blueInt;
 }
 \end{minted}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.55\textwidth}
-\begin{minted}[fontsize=\footnotesize,breaklines]{cpp}
+\end{minipage}
+\vspace{0.35em}
+
+\begin{minipage}[t]{0.72\textwidth}
+\begin{minted}[fontsize=\footnotesize]{cpp}
 int power_light(int redInt, int blueInt) {
     return redInt + blueInt + light_rb(redInt, blueInt);
 }
