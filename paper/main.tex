@@ -812,7 +812,7 @@ Module graph & module edge count and node count & numeric & rough module-level
 density, used to distinguish sparse files from call-heavy modules where one
 decision can interact with many nearby calls \\
 \hline
-Safety signal & recursive-call indicator & binary & marks recursive expansion
+Safety feature & recursive-call indicator & binary & marks recursive expansion
 patterns, where repeated inlining can grow code unnecessarily \\
 \hline
 \end{tabular}
@@ -910,7 +910,7 @@ Generated modules & 70 & 70 & controlled inlining and no-inlining
 patterns \\
 \hline
 Public sources & 76 & 76 & compiled C/C++ files with local call-site
-signal \\
+information \\
 \hline
 \end{tabular}
 }
@@ -926,11 +926,11 @@ kept in the repository manifests and source snapshot files.}
 In this thesis, the teacher heuristics are deterministic policies that decide
 whether a call site should be inlined or kept. They are not production inliners,
 but transparent rules for producing behavior-cloning labels. All teachers use
-the same LLVM IR feature vector, but prioritize different signals: callee size,
+the same LLVM IR feature vector, but prioritize different features: callee size,
 users, constants, estimated growth, recursion, and call-graph context. Let \(s\)
 be callee size, \(u\) callee users, \(b\) branch count, \(k\) constant arguments,
 \(r\) a recursion flag, \(h\) call-site height as a rough call-graph depth
-signal, and \(\tau\) a fixed threshold. Most rules use the following general
+feature, and \(\tau\) a fixed threshold. Most rules use the following general
 shape:
 \[
   \text{inline if } B(x)-C(x)\ge \tau,\quad
