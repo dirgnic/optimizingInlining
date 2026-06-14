@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.21.0 (TeX Live 2025)  (format=lualatex 2025.10.1)  14 JUN 2026 02:27
+This is LuaHBTeX, Version 1.21.0 (TeX Live 2025)  (format=lualatex 2025.10.1)  14 JUN 2026 03:22
  system commands enabled.
 **main.tex
 (./main.tex
@@ -1463,10 +1463,10 @@ Chapter 3.
 \pydata@fh@_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted=\write8
 
 \openout8 = _FAD58DE7366495DB4650CFEFAC2FCD61.data.minted
-runsystem(latexminted config  --timestamp 20260614022744 FAD58DE7366495DB4650CFE
+runsystem(latexminted config  --timestamp 20260614032212 FAD58DE7366495DB4650CFE
 FAC2FCD61)...executed.
 (./_FAD58DE7366495DB4650CFEFAC2FCD61.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20260614022744 FAD58DE7366495DB46
+runsystem(latexminted cleanconfig  --timestamp 20260614032212 FAD58DE7366495DB46
 50CFEFAC2FCD61)...executed.
 
 (./_minted/default.style.minted)
@@ -1614,33 +1614,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 1361--1361
 File: ../out/figures/selected_teacher_distribution.pdf Graphic file (type pdf)
 <use ../out/figures/selected_teacher_distribution.pdf>
 Package luatex.def Info: ../out/figures/selected_teacher_distribution.pdf  used
- on input line 1429.
+ on input line 1428.
 (luatex.def)             Requested size: 319.1597pt x 179.97157pt.
 <../out/figures/source_group_ir_reduction.pdf, id=407, 448.27187pt x 287.0863pt
 >
 File: ../out/figures/source_group_ir_reduction.pdf Graphic file (type pdf)
 <use ../out/figures/source_group_ir_reduction.pdf>
 Package luatex.def Info: ../out/figures/source_group_ir_reduction.pdf  used on 
-input line 1439.
+input line 1438.
 (luatex.def)             Requested size: 217.26794pt x 139.14468pt.
 <../out/figures/student_teacher_match.pdf, id=408, 410.23389pt x 267.6849pt>
 File: ../out/figures/student_teacher_match.pdf Graphic file (type pdf)
 <use ../out/figures/student_teacher_match.pdf>
 Package luatex.def Info: ../out/figures/student_teacher_match.pdf  used on inpu
-t line 1445.
+t line 1444.
 (luatex.def)             Requested size: 236.16434pt x 154.10143pt.
 <../out/figures/student_ir_reduction.pdf, id=409, 447.18443pt x 260.4579pt>
 File: ../out/figures/student_ir_reduction.pdf Graphic file (type pdf)
 <use ../out/figures/student_ir_reduction.pdf>
 Package luatex.def Info: ../out/figures/student_ir_reduction.pdf  used on input
- line 1454.
+ line 1453.
 (luatex.def)             Requested size: 296.63014pt x 172.76912pt.
 <../out/figures/student_inline_decisions.pdf, id=410, 553.0673pt x 586.12564pt>
 
 File: ../out/figures/student_inline_decisions.pdf Graphic file (type pdf)
 <use ../out/figures/student_inline_decisions.pdf>
 Package luatex.def Info: ../out/figures/student_inline_decisions.pdf  used on i
-nput line 1462.
+nput line 1461.
 (luatex.def)             Requested size: 285.29277pt x 302.34549pt.
 
 
@@ -1692,7 +1692,7 @@ r12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
 pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><
 /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (29 pages, 463361 bytes).
+Output written on main.pdf (29 pages, 463314 bytes).
 
 PDF statistics: 748 PDF objects out of 1000 (max. 8388607)
  450 compressed objects within 5 object streams

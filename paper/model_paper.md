@@ -1,6 +1,6 @@
 # Offline Imitation Learning for LLVM Inlining
 
-This generated Markdown summary mirrors the LaTeX paper but stays shorter.
+This experiment summary mirrors the LaTeX paper but stays shorter.
 The full paper source is `paper/main.tex`.
 
 ## Pipeline
