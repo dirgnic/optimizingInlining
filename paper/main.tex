@@ -929,11 +929,12 @@ but transparent rules for producing behavior-cloning labels. All teachers use
 the same LLVM IR feature vector, but prioritize different signals: callee size,
 users, constants, estimated growth, recursion, and call-graph context. Let \(s\)
 be callee size, \(u\) callee users, \(b\) branch count, \(k\) constant arguments,
-and \(r\) a recursion flag. Most rules use the following general shape:
+\(r\) a recursion flag, and \(h\) call-site height. Most rules use the
+following general shape:
 \[
-  \text{inline if } B(x)-C(x)>0,\quad
-  B(x)\approx 2k+\mathbf{1}_{u=1}+\text{depth signal},\quad
-  C(x)\approx s+b+\text{nested calls}+r .
+  \text{inline if } B(x)-C(x)\ge \tau,\quad
+  B(x)\approx a_1k+a_2\mathbf{1}_{u\le1}+a_3h,\quad
+  C(x)\approx c_1s+c_2b+c_3\text{nested calls}+c_4r .
 \]
 The exact thresholds are fixed in \texttt{teach.py}; the table gives the
 readable form of each rule. Most teachers are cheap proxy policies: some prefer
@@ -954,33 +955,36 @@ Teacher & Short rule \\
 \hline
 \texttt{small\_callee} & Inline if \(s\) is small and \(r=0\). \\
 \hline
-\texttt{single\_caller} & Inline if \(u=1\) and the callee is not large; the
+\texttt{single\_caller} & Inline if \(u\le1\) and the callee is not large; the
 standalone helper may disappear after cleanup. \\
 \hline
-\texttt{constant\_argument} & Inline if \(k>0\), so caller-known constants may
-remove branches or simplify expressions. \\
+\texttt{constant\_argument} & Inline if \(k>0\) and estimated cost stays small,
+so caller-known constants may remove branches or simplify expressions. \\
 \hline
 \texttt{cost\_budget}, \texttt{growth\_budget} & Inline if estimated growth
-\(G\approx s\max(1,u)+b+\text{nested calls}\) stays under a budget. \\
+or cost stays under a fixed budget, while rejecting recursive or clearly
+expensive cases. \\
 \hline
-\texttt{loop\_averse}, \texttt{hot\_leaf} & Prefer callees without nested calls; reject
-large, branchy, or call-heavy callees. \\
+\texttt{loop\_averse}, \texttt{hot\_leaf} & Prefer callees without nested calls
+or with simple leaf structure; reject recursive, large, branchy, or call-heavy
+callees. \\
 \hline
 \texttt{balanced\_score}, \texttt{llvm\_like\_size},
-\texttt{benefit\_cost\_ratio} & Inline if \(B(x)/\max(1,C(x))\) passes a
-threshold. \\
+\texttt{benefit\_cost\_ratio} & Inline if a hand-written score, adaptive
+threshold, or benefit/cost ratio passes its fixed threshold. \\
 \hline
 \texttt{aggressive\_speed} & Accept more small and medium calls, while still
 rejecting recursive or clearly large cases. \\
 \hline
-\texttt{ml\_linear\_score} & Inline if \(w\cdot x+\beta>0\), using fixed
-hand-written weights rather than training. \\
+\texttt{ml\_linear\_score} & Inline if \(w\cdot x+\beta\) passes a fixed
+threshold, using hand-written weights rather than training. \\
 \hline
-\texttt{bandit\_ucb\_proxy} & Inline if \(\widehat{g}(x)+\alpha/\sqrt{1+u}>0\):
-estimated gain plus a small uncertainty bonus. \\
+\texttt{bandit\_ucb\_proxy} & Inline if
+\(\widehat{g}(x)+\alpha/(1+u)+\beta\min(n,20)\ge p\): estimated gain plus a
+small proxy bonus for low-user callees and larger call graphs. \\
 \hline
 \texttt{rl\_value\_proxy} & Inline if immediate simplification plus future
-call-graph value exceeds growth penalty. \\
+call-graph value exceeds growth penalty, using a fixed value score. \\
 \hline
 \texttt{greedy\_ir\_size} & Measured teacher: order plausible non-recursive
 candidates, try candidate rewrites, and keep a candidate only when the actual
@@ -1139,17 +1143,19 @@ selected teacher & 1552.04 & 1.10\% \\
 \begin{minipage}[t]{0.42\textwidth}
 \centering
 {\footnotesize
-\setlength{\tabcolsep}{2pt}
-\begin{tabular}{|p{0.42\linewidth}|r|r|}
+\setlength{\tabcolsep}{1pt}
+\begin{tabular}{|p{0.28\linewidth}|r|r|r|r|}
 \hline
-Native workflow & \shortstack{\texttt{.text}\\bytes} &
-\shortstack{Obj.\\bytes} \\
+Optimization & \shortstack{\texttt{.text}\\bytes} &
+\shortstack{\texttt{.text}\\red.} &
+\shortstack{Obj.\\bytes} &
+\shortstack{Obj.\\red.} \\
 \hline
-\texttt{no\_inline\_Oz} & 674660 & 2225096 \\
+no-inline \texttt{-Oz} & 674660 & -- & 2225096 & -- \\
 \hline
-\texttt{llvm\_Oz} & 574044 & 1585120 \\
+LLVM \texttt{-Oz} & 574044 & 14.91\% & 1585120 & 28.76\% \\
 \hline
-Reduction & 14.91\% & 28.76\% \\
+held-out best & 148336 & 0.87\% & 453936 & 1.93\% \\
 \hline
 \end{tabular}
 \renewcommand{\arraystretch}{1}
