@@ -929,8 +929,9 @@ but transparent rules for producing behavior-cloning labels. All teachers use
 the same LLVM IR feature vector, but prioritize different signals: callee size,
 users, constants, estimated growth, recursion, and call-graph context. Let \(s\)
 be callee size, \(u\) callee users, \(b\) branch count, \(k\) constant arguments,
-\(r\) a recursion flag, and \(h\) call-site height. Most rules use the
-following general shape:
+\(r\) a recursion flag, \(h\) call-site height as a rough call-graph depth
+signal, and \(\tau\) a fixed threshold. Most rules use the following general
+shape:
 \[
   \text{inline if } B(x)-C(x)\ge \tau,\quad
   B(x)\approx a_1k+a_2\mathbf{1}_{u\le1}+a_3h,\quad
