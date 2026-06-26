@@ -1,3 +1,5 @@
+"""Apply teacher and student inline decisions to llvm ir artifacts."""
+
 from __future__ import annotations
 
 import json
@@ -43,6 +45,7 @@ def run(cmd: list[str], *, timeout: int | None = None) -> subprocess.CompletedPr
 
 
 def native_text_size(path: Path) -> int | None:
+    # Prefer llvm-size, then fall back to the platform size tool.
     llvm_size = shutil.which("llvm-size")
     if llvm_size:
         proc = run([llvm_size, "--format=sysv", str(path)])
@@ -143,6 +146,7 @@ def local_call_count(path: Path) -> int:
 
 
 def prepare_policy_ir(source: Path, target: Path, inline_rows: list[Callsite]) -> dict:
+    # Clone selected callees, redirect matching calls, and mark clones alwaysinline.
     lines = source.read_text(encoding="utf-8", errors="ignore").splitlines()
     cleaned = []
     for line in lines:
@@ -219,6 +223,7 @@ def prepare_policy_ir(source: Path, target: Path, inline_rows: list[Callsite]) -
 
 
 def rewrite_module(module: str, policy: str, inline_rows: list[Callsite]) -> dict:
+    # Let opt perform the actual inline and cleanup passes after call redirection.
     source = IR_DIR / module
     policy_dir = REWRITE_DIR / policy
     policy_dir.mkdir(parents=True, exist_ok=True)
@@ -429,7 +434,7 @@ def rewrite_student_policies(dataset: dict, results: dict, report_path: Path | N
 
 
 def compile_rewritten_native_sizes(results: dict | None = None) -> dict:
-    """Compile rewritten LLVM IR to object files and measure native text size."""
+    """Compile rewritten llvm ir to object files and measure native text size."""
     llc = llc_path()
     if REWRITTEN_NATIVE_DIR.exists():
         shutil.rmtree(REWRITTEN_NATIVE_DIR)

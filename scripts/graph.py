@@ -1,3 +1,5 @@
+"""Create traces that show how inline decisions change call graphs."""
+
 from __future__ import annotations
 
 import json
@@ -7,6 +9,7 @@ from teach import teacher_action
 
 
 def traces_by_module(rows: list[Callsite], dataset: dict) -> dict[str, list[dict]]:
+    # Replay teacher decisions while keeping only local call edges.
     by_module: dict[str, list[Callsite]] = {}
     for row in rows:
         by_module.setdefault(row.module, []).append(row)
@@ -78,6 +81,7 @@ def detailed_trace_for_module(rows: list[Callsite], dataset: dict, module_name: 
 
 
 def changing_callgraph_trace(rows: list[Callsite], dataset: dict) -> dict[str, list[dict]]:
+    # Write both machine-readable traces and a short Markdown view.
     traces = traces_by_module(rows, dataset)
     if not traces:
         return {}

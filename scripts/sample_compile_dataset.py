@@ -1,3 +1,5 @@
+"""Sample ComPile rows into llvm ir files for optional real-ir imports."""
+
 from __future__ import annotations
 
 import argparse
@@ -40,6 +42,7 @@ def content_to_bytes(value: Any) -> bytes | None:
 
 
 def content_to_ir_text(value: Any, source_name: str) -> tuple[str | None, str]:
+    # Accept either text llvm ir or encoded bitcode content.
     data = content_to_bytes(value)
     if data is None:
         return None, "missing or unsupported content value"
@@ -81,6 +84,7 @@ def load_pyarrow():
 
 
 def sample_parquet(args: argparse.Namespace) -> dict[str, Any]:
+    # Filter local parquet rows before writing accepted ir modules.
     pq = load_pyarrow()
     out_dir = args.out
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -226,6 +230,7 @@ def fetch_rows(dataset: str, config: str, split: str, offset: int, length: int) 
 
 
 def sample_hf_rows(args: argparse.Namespace) -> dict[str, Any]:
+    # Fetch and filter dataset-viewer rows in small batches.
     out_dir = args.out
     out_dir.mkdir(parents=True, exist_ok=True)
     if args.clear:

@@ -1,3 +1,5 @@
+"""Run a local similarity and missing-citation check over thesis files."""
+
 from __future__ import annotations
 
 import argparse
@@ -38,6 +40,7 @@ def ngrams(words: list[str], size: int) -> set[str]:
 
 
 def build_source_index(source_pdfs: list[Path], ngram_size: int) -> dict[str, list[Occurrence]]:
+    # Index exact normalized phrases from the local research pdfs.
     index: dict[str, list[Occurrence]] = collections.defaultdict(list)
     for pdf in source_pdfs:
         for page_number, text in enumerate(extract_pdf_pages(pdf), start=1):
@@ -60,6 +63,7 @@ def find_matches(
 
 
 def latex_paragraphs_without_cites(tex_paths: list[Path], min_words: int) -> list[tuple[str, int, int, str]]:
+    # Flag long prose paragraphs that do not contain a latex citation command.
     findings: list[tuple[str, int, int, str]] = []
     skip_env = False
     for tex_path in tex_paths:

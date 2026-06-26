@@ -1,3 +1,5 @@
+"""Shared paths and data records used by the pipeline."""
+
 from __future__ import annotations
 
 import re

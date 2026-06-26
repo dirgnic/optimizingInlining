@@ -1,3 +1,5 @@
+"""Small parallel-map helper used by heavier pipeline stages."""
+
 from __future__ import annotations
 
 import os
@@ -21,6 +23,7 @@ def pipeline_workers() -> int:
 
 
 def parallel_map(task: Callable[[T], R], items: Iterable[T], workers: int | None = None) -> list[R]:
+    # Keep single-item runs simple and deterministic.
     sequence = list(items)
     if len(sequence) <= 1:
         return [task(item) for item in sequence]

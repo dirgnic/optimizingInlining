@@ -1,3 +1,5 @@
+"""Build synthetic, public-source, and native compiler artifacts."""
+
 from __future__ import annotations
 
 import json
@@ -137,6 +139,7 @@ def generate_synthetic_sources() -> None:
     for old in GENERATED_DIR.glob("generated_*.cc"):
         old.unlink()
 
+    # Enumerate fixed source shapes so repeated runs produce the same modules.
     for module in range(GENERATED_MODULES):
         domain = ["game", "image", "packet", "matrix"][module % 4]
         prefix = f"{domain}_{module:03d}"
@@ -311,6 +314,7 @@ def artifact_name(source: Path, suffix: str) -> str:
 
 
 def compile_source_to_ir(source: Path) -> dict:
+    # Compile with inlining disabled so the rewrite step owns the inline choice.
     compiler = compiler_for(source)
     target = IR_DIR / artifact_name(source, ".ll")
     cmd = [
@@ -431,6 +435,7 @@ def text_size(path: Path) -> int | None:
 
 
 def compile_native_source(source: Path, *, mode: str, flags: list[str], mode_dir: Path) -> dict:
+    # Native object files are used for size measurements after compilation.
     compiler = compiler_for(source)
     target = mode_dir / artifact_name(source, ".o")
     cmd = [compiler, standard_for(source), *flags, "-c", str(source), "-o", str(target)]

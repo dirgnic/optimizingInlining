@@ -1,3 +1,5 @@
+"""Probe extra real-source files for modules with measurable ir reduction."""
+
 from __future__ import annotations
 
 import json
@@ -30,6 +32,7 @@ def existing(rel_paths: list[str]) -> list[Path]:
 
 
 def candidate_sources() -> list[Path]:
+    # Prefer known benchmark-style C sources, capped to keep the probe quick.
     cbench_roots = [
         "source_snapshot/public_repos/ctuning-programs/program/cbench-bzip2",
         "source_snapshot/public_repos/ctuning-programs/program/cbench-automotive-bitcount",
@@ -107,6 +110,7 @@ def candidate_sources() -> list[Path]:
 
 
 def configure_probe_dirs() -> None:
+    # Redirect shared module globals so the probe writes into its own output tree.
     if PROBE.exists():
         shutil.rmtree(PROBE)
     PROBE_IR.mkdir(parents=True, exist_ok=True)

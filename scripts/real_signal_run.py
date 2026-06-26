@@ -1,3 +1,5 @@
+"""Run the isolated real-source subset experiment."""
+
 from __future__ import annotations
 
 import json
@@ -24,6 +26,7 @@ def run_dir_for_limit(limit: int | None) -> Path:
 
 
 def select_modules(limit: int | None, teacher_rewrite: dict) -> list[str]:
+    # Rank real-source modules by selected-teacher ir-size improvement.
     rows = []
     for module, counts in teacher_rewrite["teacher_instruction_counts"].items():
         if not is_real_source_module(module):
@@ -157,6 +160,7 @@ def write_summary_plot(summary: dict, run_dir: Path) -> None:
 
 
 def run_real_signal_pipeline(limit: int | None = DEFAULT_LIMIT) -> dict:
+    # Write the subset run into its own directory.
     run_dir = run_dir_for_limit(limit)
     run_dir.mkdir(parents=True, exist_ok=True)
     full_dataset = load_json(OUT / "bc_dataset.json")

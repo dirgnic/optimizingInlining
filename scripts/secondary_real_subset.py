@@ -1,3 +1,5 @@
+"""Write a secondary diagnostic summary for real-source modules."""
+
 from __future__ import annotations
 
 import json
@@ -19,6 +21,7 @@ def load_json(path: Path) -> dict:
 
 
 def write_secondary_real_subset(limit: int = 30) -> dict:
+    # Select the top real-source modules by selected-teacher reduction.
     teacher_rewrite = load_json(OUT / "ir_rewrite_teachers.json")
     student_rewrite = load_json(OUT / "ir_rewrite_students.json")
 

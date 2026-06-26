@@ -1,3 +1,5 @@
+"""Train small supervised students from selected-teacher labels."""
+
 from __future__ import annotations
 
 import json
@@ -58,6 +60,7 @@ class DecisionTree:
         return 1.0 - p * p - (1.0 - p) * (1.0 - p)
 
     def _build(self, xs: list[list[float]], ys: list[int], depth: int):
+        # Split on the feature threshold that lowers Gini impurity most.
         p = sum(ys) / max(1, len(ys))
         if depth == 0 or p in {0.0, 1.0} or len(xs) <= 2:
             return {"p": p}
@@ -230,6 +233,7 @@ def selected_teacher_name(dataset: dict, module: str) -> str:
 
 
 def choose_split_modules(dataset: dict, modules: list[str]) -> tuple[set[str], set[str], dict]:
+    # Keep source kind and selected teacher represented in the held-out split.
     groups: dict[tuple[str, str], list[str]] = {}
     for module in modules:
         key = (module_source_kind(module), selected_teacher_name(dataset, module))

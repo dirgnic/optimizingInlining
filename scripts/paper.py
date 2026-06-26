@@ -1,3 +1,5 @@
+"""Write compact generated summaries used while checking paper artifacts."""
+
 from __future__ import annotations
 
 from statistics import mean, median

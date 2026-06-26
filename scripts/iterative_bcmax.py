@@ -1,3 +1,5 @@
+"""Run an iterative bc max style student-as-candidate experiment."""
+
 from __future__ import annotations
 
 import json
@@ -31,6 +33,7 @@ def build_dataset(
     candidates: dict[str, dict[str, dict]],
     round_index: int,
 ) -> dict:
+    # Re-select the best available policy per module for this round.
     by_module: dict[str, list[Callsite]] = {}
     for row in rows:
         by_module.setdefault(row.module, []).append(row)
@@ -124,6 +127,7 @@ def summarize_round(
 
 
 def main(rounds: int = 3) -> None:
+    # Preserve one-shot artifacts, then add the best student as a new candidate.
     ITER_DIR.mkdir(parents=True, exist_ok=True)
     rows = extract_features()
     teacher_rewrite = load_json(OUT / "ir_rewrite_teachers.json")

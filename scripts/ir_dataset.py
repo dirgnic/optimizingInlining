@@ -1,3 +1,5 @@
+"""Import external llvm ir modules into the local experiment dataset."""
+
 from __future__ import annotations
 
 import gzip
@@ -21,8 +23,8 @@ from ir import (
 )
 
 
-# Only LLVM test-suite is used as the default real IR source for benchmark consistency.
-# ComPile and compile_sample are legacy and should only be imported via explicit THESIS_REAL_IR_DIRS.
+# Only the llvm test-suite is used as the default real ir source for benchmark consistency.
+# ComPile and compile_sample are legacy and should only be imported via explicit configuration.
 DEFAULT_REAL_IR_ROOTS = [
     ROOT / "source_snapshot" / "llvm_test_suite_ir",
 ]
@@ -46,13 +48,13 @@ def env_int(name: str, default: int) -> int:
 def configured_real_ir_roots(extra_roots: list[Path] | None = None) -> list[Path]:
     env_roots = os.environ.get("THESIS_REAL_IR_DIRS", "")
     if env_roots.strip():
-        # When THESIS_REAL_IR_DIRS is set, use ONLY those roots (exclusive mode for reproducibility).
+        # When configured, use only those roots for reproducibility.
         roots = []
         for raw in env_roots.split(os.pathsep):
             if not raw.strip():
                 continue
             path = Path(raw).expanduser()
-            # Resolve relative paths relative to ROOT for consistent behavior.
+            # Resolve relative paths relative to the repo root for consistent behavior.
             if not path.is_absolute():
                 path = ROOT / path
             roots.append(path)
@@ -126,6 +128,7 @@ def read_ir_text(path: Path) -> tuple[str | None, str]:
 
 
 def profile_ir_text(text: str, module_name: str) -> dict[str, Any]:
+    # Check whether a candidate module has enough local calls to be useful.
     functions = parse_functions_from_lines(text.splitlines(), module_name)
     edges: list[tuple[str, str, str]] = []
     for caller, fn in functions.items():
@@ -200,6 +203,7 @@ def imported_name_for(path: Path, index: int) -> str:
 
 
 def import_external_ir_modules(extra_roots: list[Path] | None = None) -> dict[str, Any]:
+    # Copy only bounded-size modules that satisfy the local call-site filters.
     roots = configured_real_ir_roots(extra_roots)
     max_modules = env_int("THESIS_REAL_IR_MAX_MODULES", 128)
     max_bytes = env_int("THESIS_REAL_IR_MAX_BYTES", 2_500_000)

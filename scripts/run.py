@@ -1,3 +1,5 @@
+"""Command dispatcher for the thesis experiment pipeline."""
+
 from __future__ import annotations
 
 import argparse
@@ -29,6 +31,7 @@ from visual import write_visuals
 
 
 def all_pipeline() -> None:
+    # Produce the dataset, rewrites, measurements, summaries, and figures.
     OUT.mkdir(exist_ok=True)
     sources = source_files()
     compile_report = compile_to_ir(sources)
@@ -71,6 +74,7 @@ def sanitize_demo_ir(path: Path) -> None:
 
 
 def demo_pipeline() -> None:
+    # Run a compact artifact path that is fast enough to inspect manually.
     report = compile_demo_sources()
     demo_dir = OUT / "demo"
     rewrite_dir = demo_dir / "rewritten"
@@ -171,6 +175,7 @@ def demo_pipeline() -> None:
 
 
 def main() -> None:
+    # Expose each pipeline stage as a small command-line entry point.
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "command",

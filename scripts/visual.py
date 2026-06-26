@@ -1,3 +1,5 @@
+"""Generate plots and gifs for the experiment artifacts."""
+
 from __future__ import annotations
 
 import math
@@ -73,6 +75,7 @@ def axis_labels(labels: list[str]) -> tuple[list[str], int, str]:
 
 
 def save_figure(fig, path: Path) -> None:
+    # Store raster and pdf versions for different artifact views.
     fig.savefig(path, dpi=240, bbox_inches="tight", pad_inches=0.08)
     fig.savefig(path.with_suffix(".pdf"), bbox_inches="tight", pad_inches=0.08)
 
@@ -925,7 +928,7 @@ def write_visuals(compile_report: dict, dataset: dict, results: dict, native: di
     else:
         module_name = ""
         trace = []
-    # Full GIF generation is expensive and not used in the thesis PDF. Keep one
+    # Full gif generation is expensive and not used in the thesis pdf. Keep one
     # small inspection artifact instead of rendering every module.
     gif_traces = {module_name: trace} if trace else {}
     gifs = callgraph_gifs(gif_traces)

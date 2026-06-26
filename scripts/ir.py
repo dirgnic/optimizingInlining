@@ -1,3 +1,5 @@
+"""Parse llvm ir and extract static call-site features."""
+
 from __future__ import annotations
 
 import json
@@ -9,6 +11,7 @@ from data import Callsite, FEATURE_NAMES, FunctionIR, IR_DIR, OUT, is_local_copy
 
 
 def parse_functions_from_lines(lines: list[str], module: str) -> dict[str, FunctionIR]:
+    # Keep function bodies as text so later stages can match original call lines.
     functions: dict[str, FunctionIR] = {}
     current_name: str | None = None
     current_lines: list[str] = []
@@ -103,6 +106,7 @@ def extract_features_from_paths(module_paths: list[Path], output_path: Path | No
                 if callee in functions and is_project_function(caller) and is_project_function(callee):
                     edges.append((caller, callee, line))
 
+        # Build local graph counts before emitting one feature row per call site.
         indegree = {name: 0 for name in functions}
         reverse_edges: dict[str, list[str]] = {}
         for caller, callee, _ in edges:

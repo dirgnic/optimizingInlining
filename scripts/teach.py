@@ -1,3 +1,5 @@
+"""Define hand-written teacher policies and selected-teacher labels."""
+
 from __future__ import annotations
 
 import json
@@ -30,6 +32,7 @@ def values(row: Callsite) -> dict[str, float]:
 
 
 def teacher_action(name: str, row: Callsite) -> int:
+    # Each teacher returns a binary inline decision from static call-site features.
     v = values(row)
     if name == "never_inline":
         return 0
@@ -126,6 +129,7 @@ def teacher_action(name: str, row: Callsite) -> int:
 
 
 def simulated_module_size(rows: list[Callsite], actions: list[int]) -> float:
+    # Lightweight proxy used only when rewritten ir sizes are unavailable.
     if not rows:
         return 0.0
     per_func: dict[str, float] = {}
@@ -153,6 +157,7 @@ def simulated_module_size(rows: list[Callsite], actions: list[int]) -> float:
 
 
 def make_bc_dataset(rows: list[Callsite], actual_report: dict | None = None) -> dict:
+    # Select the best teacher per module, then turn its decisions into labels.
     by_module: dict[str, list[Callsite]] = {}
     for row in rows:
         by_module.setdefault(row.module, []).append(row)
