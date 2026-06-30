@@ -337,7 +337,7 @@
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.49\textwidth}
 \centering
-\textbf{Forest}\\[-0.02cm]
+\textbf{Forest}\\[0.16cm]
 \begin{tikzpicture}[scale=0.58, transform shape]
 \node[box, minimum width=1.15cm] (rA) at (0,2.2) {$T_1$};
 \node[box, minimum width=1.15cm] (rB) at (1.35,2.2) {$T_2$};
@@ -363,7 +363,7 @@
 \end{column}
 \begin{column}{0.49\textwidth}
 \centering
-\textbf{MLP}\\[-0.02cm]
+\textbf{MLP}\\[0.16cm]
 \begin{tikzpicture}[scale=0.50, transform shape]
 \foreach \y/\n in {0/iA,0.55/iB,1.1/iC,1.65/iD}
   \node[circle, draw=caiBlue, fill=softGray, minimum size=5mm] (\n) at (0,\y) {};
@@ -442,11 +442,11 @@
 \draw[edgekeep] (h4) -- (callee);
 
 % Decision pipeline
-\node[pipe, minimum width=2.65cm] (feat) at (0,1.75) {1. features\\call site};
+\node[pipe, minimum width=2.65cm] (feat) at (0,1.96) {1. features\\call site};
 \node[greenbox, minimum width=2.65cm] (model) at (0,0.55) {2. student\\$p(\mathrm{inline})$};
-\node[goldbox, minimum width=2.65cm] (rewrite) at (0,-0.72) {3. rescriere IR\\+\texttt{opt}};
+\node[goldbox, minimum width=2.65cm] (rewrite) at (0,-0.94) {3. rescriere IR\\+\texttt{opt}};
 \draw[arrow] (feat) -- (model);
-\draw[arrow] (model) -- node[right=2pt, font=\scriptsize, text=caiGreen]{inline} (rewrite);
+\draw[arrow] (model) -- node[right=4pt, font=\scriptsize, text=caiGreen]{inline} (rewrite);
 \draw[arrow] (-2.95,1.0) -- (feat.west);
 \draw[arrow] (rewrite.east) -- (2.75,0.9);
 
