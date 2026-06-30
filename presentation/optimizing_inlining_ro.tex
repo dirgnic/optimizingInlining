@@ -116,7 +116,7 @@
 \begin{center}
 \begin{tikzpicture}[node distance=0.28cm, scale=0.82, transform shape]
 \node[box, minimum width=5.2cm, align=left] (before)
-{\ttfamily\scriptsize
+{\ttfamily\small
 \begin{tabular}{@{}l@{}}
 \cpptype{string} \cppfn{light\_color}(\cpptype{int} c, \cpptype{int} i) \{\\
 \quad \cppkw{if} (c == \cppnum{0}) \cppkw{return} \cppfn{light\_red}(i);\\
@@ -129,14 +129,14 @@
 \}
 \end{tabular}};
 \node[greenbox, below=of before, minimum width=5.2cm, align=left] (after)
-{\ttfamily\scriptsize
+{\ttfamily\small
 \begin{tabular}{@{}l@{}}
 \cpptype{string} \cppfn{car\_color}(\cpptype{int} i) \{\\
 \quad \cpptype{int} f = i;\\
 \quad \cppkw{return} \cppfn{light\_red}(\cppnum{2} + f);\\
 \}
 \end{tabular}};
-\draw[lightarrow] (before) -- node[right, font=\scriptsize]{inline} (after);
+\draw[lightarrow] (before) -- node[right, font=\small]{inline} (after);
 \end{tikzpicture}
 \end{center}
 \scriptsize Apelul cu \texttt{c = 0} face ramura relevantă vizibilă pentru optimizări.
@@ -147,7 +147,7 @@
 \begin{center}
 \begin{tikzpicture}[node distance=0.28cm, scale=0.82, transform shape]
 \node[box, minimum width=5.2cm, align=left] (before)
-{\ttfamily\scriptsize
+{\ttfamily\small
 \begin{tabular}{@{}l@{}}
 \cpptype{int} \cppfn{sum}(\cpptype{int} x) \{\\
 \quad \cppkw{if} (x <= \cppnum{0}) \cppkw{return} \cppnum{0};\\
@@ -155,7 +155,7 @@
 \}
 \end{tabular}};
 \node[redbox, below=of before, minimum width=5.2cm, align=left] (after)
-{\ttfamily\scriptsize
+{\ttfamily\small
 \begin{tabular}{@{}l@{}}
 \cpptype{int} \cppfn{sum}(\cpptype{int} x) \{\\
 \quad \cppkw{if} (x <= \cppnum{0}) \cppkw{return} \cppnum{0};\\
@@ -163,7 +163,7 @@
 \quad \cppcom{// apelul recursiv rămâne}\\
 \}
 \end{tabular}};
-\draw[arrow] (before) -- node[right, font=\scriptsize]{inline} (after);
+\draw[arrow] (before) -- node[right, font=\small]{inline} (after);
 \end{tikzpicture}
 \end{center}
 \scriptsize Rescrierea expune din nou aceeași structură, deci este nevoie de verificări de recursivitate și creștere.
@@ -222,8 +222,8 @@
 \node[box, minimum width=2.45cm] (raw) at (0,0) {apel LLVM};
 \node[greenbox, minimum width=3.1cm] (vec) at (4.2,0) {$x \in \mathbb{R}^{16}$};
 \node[goldbox, minimum width=3.1cm] (action) at (9.4,0) {$y \in \{0,1\}$};
-\draw[arrow] (raw.east) -- node[above, midway, font=\scriptsize, fill=white, inner sep=1pt]{parser IR} (vec.west);
-\draw[arrow] (vec.east) -- node[above=2pt, midway, font=\scriptsize, fill=white, inner sep=1pt]{profesor / student} (action.west);
+\draw[arrow] (raw.east) -- node[above, midway, font=\small, fill=white, inner sep=1pt]{parser IR} (vec.west);
+\draw[arrow] (vec.east) -- node[above=2pt, midway, font=\small, fill=white, inner sep=1pt]{profesor / student} (action.west);
 \end{tikzpicture}
 \end{center}
 \end{frame}
@@ -273,7 +273,7 @@
 \node[goldbox, right=of p1, minimum width=2.55cm] (p2) {16 teacher-e};
 \node[greenbox, right=of p2, minimum width=2.75cm] (p3) {best per modul};
 \draw[arrow] (p1) -- (p2);
-\draw[arrow] (p2) -- node[above, font=\tiny]{măsurare IR} (p3);
+\draw[arrow] (p2) -- node[above, font=\scriptsize]{măsurare IR} (p3);
 \end{tikzpicture}
 \end{center}
 \end{column}
@@ -415,10 +415,10 @@
 \centering
 \begin{tikzpicture}[
   scale=0.84, transform shape,
-  callnode/.style={circle, draw=caiBlue!65, fill=softGray, thick, minimum size=11mm, align=center, font=\scriptsize},
-  focusnode/.style={circle, draw=caiGreen!80, fill=caiGreen!10, very thick, minimum size=13mm, align=center, font=\scriptsize\bfseries},
-  gone/.style={circle, draw=caiRed!65, fill=caiRed!7, thick, dashed, minimum size=11mm, align=center, font=\scriptsize},
-  pipe/.style={rounded corners=3pt, draw=caiGold!75, fill=caiGold!10, thick, align=center, inner sep=5pt, font=\scriptsize},
+  callnode/.style={circle, draw=caiBlue!65, fill=softGray, thick, minimum size=11mm, align=center, font=\small},
+  focusnode/.style={circle, draw=caiGreen!80, fill=caiGreen!10, very thick, minimum size=13mm, align=center, font=\small\bfseries},
+  gone/.style={circle, draw=caiRed!65, fill=caiRed!7, thick, dashed, minimum size=11mm, align=center, font=\small},
+  pipe/.style={rounded corners=3pt, draw=caiGold!75, fill=caiGold!10, thick, align=center, inner sep=5pt, font=\small},
   edgekeep/.style={-{Latex[length=2mm]}, draw=caiBlue!45, thick},
   edgeinline/.style={-{Latex[length=2mm]}, draw=caiGreen!85, ultra thick},
   edgeremoved/.style={draw=caiRed!75, ultra thick, dashed}
@@ -434,7 +434,7 @@
 \node[callnode] (h2) at (-4.8,-1.0) {helper\\B};
 \node[callnode] (h3) at (-3.0,-0.45) {lib\\call};
 \node[callnode] (h4) at (-4.95,2.28) {util};
-\draw[edgeinline] (caller) -- node[above=2pt, font=\tiny, text=caiGreen] {call site selectat} (callee);
+\draw[edgeinline] (caller) -- node[above=2pt, font=\scriptsize, text=caiGreen] {call site selectat} (callee);
 \draw[edgekeep] (caller) -- (h1);
 \draw[edgekeep] (caller) -- (h2);
 \draw[edgekeep] (callee) -- (h2);
@@ -446,7 +446,7 @@
 \node[greenbox, minimum width=2.65cm] (model) at (0,0.55) {2. student\\$p(\mathrm{inline})$};
 \node[goldbox, minimum width=2.65cm] (rewrite) at (0,-0.72) {3. rescriere IR\\+\texttt{opt}};
 \draw[arrow] (feat) -- (model);
-\draw[arrow] (model) -- node[right=2pt, font=\tiny, text=caiGreen]{inline} (rewrite);
+\draw[arrow] (model) -- node[right=2pt, font=\scriptsize, text=caiGreen]{inline} (rewrite);
 \draw[arrow] (-2.95,1.0) -- (feat.west);
 \draw[arrow] (rewrite.east) -- (2.75,0.9);
 
@@ -457,7 +457,7 @@
 \node[callnode] (a2) at (4.65,-1.0) {helper\\B};
 \node[callnode] (a3) at (6.35,-0.45) {lib\\call};
 \node[callnode] (a4) at (5.15,2.28) {util};
-\draw[edgeremoved] (caller2) -- node[above=2pt, font=\tiny, text=caiRed] {muchie eliminată} (callee2);
+\draw[edgeremoved] (caller2) -- node[above=2pt, font=\scriptsize, text=caiRed] {muchie eliminată} (callee2);
 \draw[caiRed!75, ultra thick] ($(caller2)!0.52!(callee2)+(0,0.13)$) -- ($(caller2)!0.52!(callee2)+(0,-0.13)$);
 \draw[edgekeep] (caller2) -- (a1);
 \draw[edgekeep] (caller2) -- (a2);
