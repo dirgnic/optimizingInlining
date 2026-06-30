@@ -304,23 +304,23 @@
 \centering
 \textbf{Logistic regression}\\[-0.02cm]
 \begin{tikzpicture}[scale=0.62, transform shape]
-\draw[->, thick, caiBlue!70] (-0.2,0) -- (3.7,0) node[right, font=\tiny]{callee size};
-\draw[->, thick, caiBlue!70] (0,-0.2) -- (0,2.55) node[above, font=\tiny]{cost};
+\draw[->, thick, caiBlue!70] (-0.2,0) -- (3.7,0) node[right=3pt, font=\scriptsize]{callee size};
+\draw[->, thick, caiBlue!70] (0,-0.2) -- (0,2.55) node[above=4pt, font=\scriptsize]{cost};
 \foreach \x/\y in {0.45/0.5,0.8/0.8,1.05/0.45,1.35/0.95,1.7/0.6}
   \fill[caiGreen] (\x,\y) circle (2.4pt);
 \foreach \x/\y in {2.0/2.0,2.45/1.65,2.8/2.22,3.2/1.9,3.4/2.35}
   \fill[caiRed] (\x,\y) circle (2.4pt);
 \draw[thick, caiGold] (0.38,2.25) -- (3.35,0.38);
 \node[goldbox, minimum width=2.6cm] at (1.9,-0.55) {$p=\sigma(w^\top x+b)$};
-\end{tikzpicture}\\[-0.02cm]
+\end{tikzpicture}\\[0.16cm]
 \scriptsize Un scor liniar peste vectorul de 16 features.
 \end{column}
 \begin{column}{0.49\textwidth}
 \centering
 \textbf{KNN}\\[-0.02cm]
 \begin{tikzpicture}[scale=0.62, transform shape]
-\draw[->, thick, caiBlue!70] (-0.2,0) -- (3.7,0) node[right, font=\tiny]{feature 1};
-\draw[->, thick, caiBlue!70] (0,-0.2) -- (0,2.55) node[above, font=\tiny]{feature 2};
+\draw[->, thick, caiBlue!70] (-0.2,0) -- (3.7,0) node[right=3pt, font=\scriptsize]{feature 1};
+\draw[->, thick, caiBlue!70] (0,-0.2) -- (0,2.55) node[above=4pt, font=\scriptsize]{feature 2};
 \foreach \x/\y in {0.55/0.5,0.9/1.0,1.25/0.68,2.65/0.62,3.15/0.9}
   \fill[caiGreen] (\x,\y) circle (2.4pt);
 \foreach \x/\y in {1.75/1.85,2.2/1.45,2.55/2.0,3.0/1.65}
@@ -328,7 +328,7 @@
 \node[diamond, draw=caiGold, fill=caiGold, inner sep=1.8pt] at (2.05,1.28) {};
 \draw[dashed, thick, caiGold] (2.05,1.28) circle (0.78);
 \node[goldbox, minimum width=2.6cm] at (1.9,-0.55) {vot între vecini};
-\end{tikzpicture}\\[-0.02cm]
+\end{tikzpicture}\\[0.16cm]
 \scriptsize Decizia vine din call site-uri similare.
 \end{column}
 \end{columns}
@@ -358,7 +358,7 @@
 \draw[arrow] (aA) -- (vote);
 \draw[arrow] (bB) -- (vote);
 \draw[arrow] (aC) -- (vote);
-\end{tikzpicture}\\[-0.02cm]
+\end{tikzpicture}\\[0.16cm]
 \scriptsize Media voturilor stabilizează decizia.
 \end{column}
 \begin{column}{0.49\textwidth}
@@ -372,9 +372,9 @@
 \node[circle, draw=caiRed, fill=caiRed!10, minimum size=5mm] (o) at (2.5,0.85) {};
 \foreach \i in {iA,iB,iC,iD} \foreach \h in {hA,hB,hC} \draw[caiBlue!35] (\i) -- (\h);
 \foreach \h in {hA,hB,hC} \draw[caiGreen!45] (\h) -- (o);
-\node[align=center, font=\scriptsize, fill=white, inner sep=1pt] at (0,-0.52) {features};
-\node[align=center, font=\scriptsize, fill=white, inner sep=1pt] at (2.5,-0.52) {$p$};
-\end{tikzpicture}\\[-0.02cm]
+\node[align=center, font=\small, fill=white, inner sep=1.2pt] at (0,-0.72) {features};
+\node[align=center, font=\small, fill=white, inner sep=1.2pt] at (2.5,-0.72) {$p$};
+\end{tikzpicture}\\[0.16cm]
 \scriptsize Straturile ascunse modelează interacțiuni între features.
 \end{column}
 \end{columns}
