@@ -75,8 +75,8 @@ experiments and overwrite the corresponding files in `out/`.
 | 8 | `scripts/paper.py` | Writes generated Markdown summaries. |
 | 9 | `scripts/visual.py` | Generates result figures and visual inspection artifacts. |
 
-Optional helpers, such as `sample_compile_dataset.py`, `ir_dataset.py`, and
-`local_integrity_check.py`, are not part of the reported default run.
+Optional helpers, such as `sample_compile_dataset.py` and `ir_dataset.py`, are
+not part of the reported default run.
 
 ## Inputs
 
