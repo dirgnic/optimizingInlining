@@ -86,7 +86,7 @@
 \begin{column}{0.56\textwidth}
 \begin{itemize}
   \item La fiecare apel, compilatorul decide: \textbf{inline} sau \textbf{keep}.
-  \item Inlining-ul elimină overhead-ul apelului și poate debloca optimizări ulterioare.
+  \item Inlining-ul elimină overhead-ul apelului și poate dezvălui optimizări ulterioare.
   \item Poate duplica mult cod, crește binarul și schimba oportunitățile de optimizare.
 \end{itemize}
 \vspace{0.25cm}
@@ -230,16 +230,17 @@
 
 \begin{frame}{Pipeline-ul complet}
 \centering
-\begin{tikzpicture}[node distance=0.34cm and 0.16cm, scale=0.76, transform shape]
+\begin{tikzpicture}[node distance=0.38cm and 0.18cm, scale=0.75, transform shape]
 \node[box] (src) {surse\\C++};
-\node[box, right=of src] (clang) {Clang\\\texttt{-O0 -fno-inline}};
+\node[box, right=0.45cm of src] (clang) {Clang\\\texttt{-O0 -fno-inline}};
 \node[box, right=of clang] (ir) {module\\LLVM IR};
 \node[greenbox, right=of ir] (feat) {features\\call site};
-\node[goldbox, below=0.75cm of feat] (teach) {politici\\profesor};
-\node[goldbox, left=of teach] (bc) {etichetare\\BC-Max};
-\node[greenbox, left=of bc] (student) {modele\\student};
-\node[box, left=of student] (rewrite) {rescriere IR\\+\texttt{opt}};
-\node[box, below=0.75cm of rewrite] (eval) {mărime IR +\\\texttt{.text} nativ};
+\node[goldbox, below=0.82cm of feat] (teach) {politici\\profesor};
+\node[goldbox, left=0.36cm of teach] (bc) {etichetare\\BC-Max};
+\node[greenbox, left=0.36cm of bc] (student) {modele\\student};
+\node[box, left=0.48cm of student] (rewrite) {rescriere IR\\+\texttt{opt}};
+\node[box, below=0.86cm of rewrite] (eval) {mărime IR +\\\texttt{.text} nativ};
+\node[box, below=0.86cm of bc, minimum width=2.35cm] (metric) {Metrica};
 \draw[arrow] (src) -- (clang);
 \draw[arrow] (clang) -- (ir);
 \draw[arrow] (ir) -- (feat);
@@ -248,7 +249,8 @@
 \draw[arrow] (bc) -- (student);
 \draw[arrow] (student) -- (rewrite);
 \draw[arrow] (rewrite) -- (eval);
-\draw[lightarrow] (eval.east) -- ++(1.0,0) |- (teach.east);
+\draw[lightarrow] (eval.east) -- (metric.west);
+\draw[lightarrow] (metric.north) -- (bc.south);
 \end{tikzpicture}
 \vspace{0.35cm}
 \begin{itemize}
@@ -372,8 +374,8 @@
 \node[circle, draw=caiRed, fill=caiRed!10, minimum size=5mm] (o) at (2.5,0.85) {};
 \foreach \i in {iA,iB,iC,iD} \foreach \h in {hA,hB,hC} \draw[caiBlue!35] (\i) -- (\h);
 \foreach \h in {hA,hB,hC} \draw[caiGreen!45] (\h) -- (o);
-\node[align=center, font=\small, fill=white, inner sep=1.2pt] at (0,-0.72) {features};
-\node[align=center, font=\small, fill=white, inner sep=1.2pt] at (2.5,-0.72) {$p$};
+\node[align=center, font=\normalsize, fill=white, inner sep=1.4pt] at (0,-0.78) {features};
+\node[align=center, font=\normalsize, fill=white, inner sep=1.4pt] at (2.5,-0.78) {$p$};
 \end{tikzpicture}\\[0.16cm]
 \scriptsize Straturile ascunse modelează interacțiuni între features.
 \end{column}
@@ -500,7 +502,7 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}{Demo pregătit}
+\begin{frame}{Demo}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.47\textwidth}
 \textbf{Comandă}
@@ -512,7 +514,7 @@
   \item compilează module C++ generate în LLVM IR;
   \item extrage features pentru call site-uri;
   \item aplică decizii prin același mecanism clone-and-\texttt{opt};
-  \item scrie decizii și IR rescris în \texttt{out/demo/}.
+  \item scrie decizii (\texttt{0=keep}, \texttt{1=inline}) și IR rescris în \texttt{out/demo/}.
 \end{itemize}
 \end{column}
 \begin{column}{0.49\textwidth}
